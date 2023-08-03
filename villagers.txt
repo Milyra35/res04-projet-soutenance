@@ -1,0 +1,19 @@
+[
+    {
+        "name" : "Alex",
+        "is_datable" : true,
+        "birthday" : "13 Eté",
+        "planning" : {
+            "Season" : "Spring",
+            "Agenda" : 
+        },
+        "events" : {
+            "Two hearts" : "On a sunny summer day, visit the beach when Alex is there.",
+            "Four hearts" : "Enter town between 9am and 4pm.",
+            "Five hearts" : "Enter Alex's house when he's there.",
+            "Six hearts" : "Enter Alex's house when he's there.",
+            "Eight hearts" : "On a sunny day, visit the beach when Alex is there. He is only scheduled to go to the beach in summer, but may pass by on the way to the Ginger Island resort in any season after it is completed.",
+            "Ten hearts" : "Alex will send you a letter to meet him at the Saloon after dark. After receiving the letter, enter the Saloon between 7pm and 10pm.",
+        },
+    }
+]
