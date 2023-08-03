@@ -1,6 +1,6 @@
 <?php
 
-class Category {
+class Role {
     private ?int $id;
     private string $name;
 
@@ -9,6 +9,7 @@ class Category {
         $this->id = null;
         $this->name = $name;
     }
+
 
     public function getId() : ?int
     {
