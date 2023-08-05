@@ -1,19 +1,927 @@
 [
     {
-        "name" : "Alex",
-        "is_datable" : true,
-        "birthday" : "13 Eté",
-        "planning" : {
-            "Season" : "Spring",
-            "Agenda" : 
+        "name": "Alex",
+        "loves": ["Complete breakfast", "Salmon dinner", "all universal loves"],
+        "likes": ["All universal likes", "all eggs (except Void egg)"],
+        "neutral": ["All universaire neutrals", "All fruits", "All milk", "Chanterelle", "Common mushroom", "Daffodil", "Dandelion", "Ginger", "Hazelnut", "Leek", "Magma cap", "Morel", "Purple mushroom", "Snow yam", "Winter root"],
+        "dislikes": ["All universal dislikes", "Salmonberry", "Wild horseradish"],
+        "hates": ["All universal hates", "Holly", "Quartz"],
+        "schedule": {
+            "Spring": {
+                "Rainy day": [
+                    {"Time": "8:00 AM", "Location": "Leaves his room and stands in the entryway."},
+                    {"Time": "1:00 PM", "Location": "Goes to his room to lift weights."},
+                    {"Time": "4:00 PM", "Location": "Leaves his room to go stand outside by the dog pen."},
+                    {"Time": "6:30 PM", "Location": "Goes back into his house and stands in the entryway."},
+                    {"Time": "8:00 PM", "Location": "Goes to his room and stands by his dresser."},
+                    {"Time": "10:00 PM", "Location": "Goes to bed."}
+                ],
+                "Wednesday If the player has less than 6 hearts with Haley": [
+                    {"Time": "8:00 AM", "Location": "Leaves his room to go outside and stand beneath nearby tree."},
+                    {"Time": "12:00 PM", "Location": "Goes to Haley and Emily's house."},
+                    {"Time": "4:30 PM", "Location": "Leaves Haley and Emily's house to go stand by the dog pen."},
+                    {"Time": "6:40 PM", "Location": "Goes back into his house and stands in the entryway."},
+                    {"Time": "8:00 PM", "Location": "Goes to his room and stands by his dresser."},
+                    {"Time": "10:00 PM", "Location": "Goes to bed."}
+                ],
+                "Regular Schedule": [
+                    {"Time": "8:00 AM", "Location": "Leaves his room to go outside and stand beneath nearby tree."},
+                    {"Time": "1:00 PM", "Location": "Leaves the tree to go back to his room to lift weights."},
+                    {"Time": "4:00 PM", "Location": "Leaves his room to go stand outside by the dog pen."},
+                    {"Time": "6:30 PM", "Location": "Goes back into his house and stands in the entryway."},
+                    {"Time": "8:00 PM", "Location": "Goes to his room and stands by his dresser."},
+                    {"Time": "10:00 PM", "Location": "Goes to bed."}
+                ]
+            },
+            "Summer": {
+                "Tuesday the 16th": [
+                    {"Time": "8:00 AM", "Location": "Leaves his room to go outside and stand beneath nearby tree."},
+                    {"Time": "10:30 AM", "Location": "Goes to clinic."},
+                    {"Time": "11:00 AM", "Location": "In clinic waiting room."},
+                    {"Time": "1:40 PM", "Location": "Clinic examination room."},
+                    {"Time": "4:00 PM", "Location": "Returns home for the night."}
+                ],
+                "Rainy day": [
+                    {"Time": "8:00 AM", "Location": "Leaves his room and stands in the entryway."},
+                    {"Time": "1:00 PM", "Location": "Goes to his room to lift weights."},
+                    {"Time": "4:00 PM", "Location": "Leaves his house to go stand by the dog pen."},
+                    {"Time": "6:30 PM", "Location": "Goes back into his house and stands in the entryway."},
+                    {"Time": "8:00 PM", "Location": "Goes to his room and stands by his dresser."},
+                    {"Time": "10:00 PM", "Location": "Goes to bed."}
+                ],
+                "Wednesday If the player has less than 6 hearts with Haley": [
+                    {"Time": "8:00 AM", "Location": "Leaves his room to go outside and stand beneath nearby tree."},
+                    {"Time": "12:00 PM", "Location": "Goes to Haley and Emily's house."},
+                    {"Time": "4:30 PM", "Location": "Leaves Haley and Emily's house to go stand by the dog pen."},
+                    {"Time": "6:40 PM", "Location": "Goes back into his house and stands in the entryway."},
+                    {"Time": "8:00 PM", "Location": "Goes to his room and stands by his dresser."},
+                    {"Time": "10:00 PM", "Location": "Goes to bed."}
+                ],
+                "Regular Schedule": [
+                    {"Time": "7:50 AM", "Location": "Leaves home to go to the beach."},
+                    {"Time": "12:00 PM", "Location": "Leaves the beach to go work at the ice cream stand."},
+                    {"Time": "5:00 PM", "Location": "Heads home to lift weights in his room."},
+                    {"Time": "7:00 PM", "Location": "Stands in front entryway of the house."},
+                    {"Time": "8:00 PM", "Location": "Goes to his room to stand by his dresser."},
+                    {"Time": "10:00 PM", "Location": "Goes to bed."}
+                ]
+            },
+            "Fall": {
+                "Rainy day": [
+                    {"Time": "8:00 AM", "Location": "Leaves his room and stands in the entryway."},
+                    {"Time": "1:00 PM", "Location": "Goes to his room to lift weights."},
+                    {"Time": "4:00 PM", "Location": "Leaves his house to go stand by the dog pen."},
+                    {"Time": "6:30 PM", "Location": "Goes back into his house and stands in the entryway."},
+                    {"Time": "8:00 PM", "Location": "Goes to his room and stands by his dresser."},
+                    {"Time": "10:00 PM", "Location": "Goes to bed."}
+                ],
+                "Wednesday If the player has less than 6 hearts with Haley": [
+                    {"Time": "8:00 AM", "Location": "Leaves his room to go outside and stand beneath nearby tree."},
+                    {"Time": "12:00 PM", "Location": "Goes to Haley and Emily's house."},
+                    {"Time": "4:30 PM", "Location": "Leaves Haley and Emily's house to go stand by the dog pen."},
+                    {"Time": "6:40 PM", "Location": "Goes back into his house and stands in the entryway."},
+                    {"Time": "8:00 PM", "Location": "Goes to his room and stands by his dresser."},
+                    {"Time": "10:00 PM", "Location": "Goes to bed."}
+                ],
+                "Regular Schedule": [
+                    {"Time": "8:00 AM", "Location": "Leaves his room to go outside and stand beneath nearby tree."},
+                    {"Time": "1:00 PM", "Location": "Goes to his room to lift weights."},
+                    {"Time": "4:00 PM", "Location": "Leaves his house to go stand by the dog pen."},
+                    {"Time": "6:30 PM", "Location": "Goes back into his house and stands in the entryway."},
+                    {"Time": "8:00 PM", "Location": "Goes to his room and stands by his dresser."},
+                    {"Time": "10:00 PM", "Location": "Goes to bed."}
+                ]
+            },
+            "Winter": {
+                "Wednesday, Winter 17": [
+                    {"Time": "9:00 AM", "Location": "Leaves his house to go to the Spa."},
+                    {"Time": "3:00 PM", "Location": "Leaves the gym section of the Spa, heads to the beach to attend the Night Market."},
+                    {"Time": "12:00 AM", "Location": "Leaves the Night Market and returns home."}
+                ],
+                "Wednesday If the player has less than 6 hearts with Haley": [
+                    {"Time": "8:00 AM", "Location": "Leaves his room to go outside and stand beneath nearby tree."},
+                    {"Time": "12:00 PM", "Location": "Goes to Haley and Emily's house."},
+                    {"Time": "4:30 PM", "Location": "Leaves Haley and Emily's house to go stand by the dog pen."},
+                    {"Time": "6:40 PM", "Location": "Goes back into his house and stands in the entryway."},
+                    {"Time": "8:00 PM", "Location": "Goes to his room and stands by his dresser."},
+                    {"Time": "10:00 PM", "Location": "Goes to bed."}
+                ],
+                "Regular Schedule": [
+                    {"Time": "8:00 AM", "Location": "In his bedroom."},
+                    {"Time": "9:00 AM", "Location": "Leaves his house to go to the Spa."},
+                    {"Time": "3:00 PM", "Location": "Leaves the gym section of the Spa, heads home to his room."},
+                    {"Time": "6:00 PM", "Location": "Leaves his house to stand by the dog kennel."},
+                    {"Time": "7:30 PM", "Location": "Goes back inside his house and stands in the entryway."},
+                    {"Time": "9:00 PM", "Location": "Goes back to his bedroom and stands by his dresser."},
+                    {"Time": "10:40 PM", "Location": "Goes to bed."}
+                ]
+            },
+            "Marriage": {
+                "Monday": [
+                    {"Time": "8:30 AM", "Location": "Leaves farm to visit his grandparents."},
+                    {"Time": "6:00 PM", "Location": "Heads back to farm."},
+                    {"Time": "10:00 PM", "Location": "Goes to bed."}
+                ],
+                "Sunday If the player has seen Alex's 14-heart event": [
+                    {"Time": "8:30 AM", "Location": "Leaves farm to go stand beneath a tree by his grandparent's house."},
+                    {"Time": "11:00 AM", "Location": "Goes to the back room of the Stardrop Saloon."},
+                    {"Time": "3:00 PM", "Location": "Leaves to stand by the dog kennel."},
+                    {"Time": "6:30 PM", "Location": "Goes inside of his grandparent's house and stands in the entryway."},
+                    {"Time": "8:00 PM", "Location": "Goes to stand inside of his room."},
+                    {"Time": "10:00 PM", "Location": "Leaves for the Farmhouse."}
+                ],
+                "Regular Schedule": [
+                    {"Time": "8:30 AM", "Location": "Leaves farm to visit his grandparents."},
+                    {"Time": "6:00 PM", "Location": "Heads back to farm."},
+                    {"Time": "10:00 PM", "Location": "Goes to bed."}
+                ]
+            }
         },
+        "is datable": true,
+        "birthday": "13 Eté",
+        "events": {
+            "Two hearts": "On a sunny summer day, visit the beach when Alex is there.",
+            "Four hearts": "Enter town between 9am and 4pm.",
+            "Five hearts": "Enter Alex's house when he's there.",
+            "Six hearts": "Enter Alex's house when he's there.",
+            "Eight hearts": "On a sunny day, visit the beach when Alex is there. He is only scheduled to go to the beach in summer, but may pass by on the way to the Ginger Island resort in any season after it is completed.",
+            "Ten hearts": "Alex will send you a letter to meet him at the Saloon after dark. After receiving the letter, enter the Saloon between 7pm and 10pm.",
+            "Fourteen hearts": "Exit the Farmhouse in year 2+ between 6am and 8:20am on any day other than Sunday. You must have 5,000g available."
+        }
+    },
+
+    {
+        "name" : "Elliott",
+        "loves" : ["All universal loves", "Crab cake", "Duck Feather", "Lobster", "Pomegranate", "Squid ink", "Tom Kka soup"],
+        "likes" : ["All universal likes", "All fruits(except Pomegranate and Salmonberry)", "Octopus", "Squid"],
+        "neutral" : ["All universal neutrals", "All eggs (except Void egg)", "All fish (except Carp, Lobster, Octopus, Sea cucumber, Snail, Squid)"],
+        "dislikes" : ["All universal dislikes (except fish)", "All milk", "Chanterelle", "Common mushroom", "Daffodil", "Dandelion", "Ginger", "Hazelnut", "Holly", "Leek", "Magma cap", "Morel", "Pizza", "Purple mushroom", "Snow yam", "Wild horseradish", "Winter root"],
+        "hates" : ["All universal hates", "Amaranth", "Quartz", "Salmonberry", "Sea cucumber"],
+        "schedule" : {
+            "Spring": {
+                "Raining": [
+                    {"Time": "All day", "Location": "Inside his house"}
+                ],
+                "Thursday": [
+                    {"Time": "8:00 am", "Location": "At home"},
+                    {"Time": "11:30 am", "Location": "Leaves home and heads to Pierre's General Store"},
+                    {"Time": "5:30 pm", "Location": "Leaves Pierre's and heads home for the night"}
+                ],
+                "Friday if the player has 6+ hearts with Leah": [
+                    {"Time": "8:00 am", "Location": "At home"},
+                    {"Time": "11:30 am", "Location": "Leaves home and heads to Pierre's General Store"},
+                    {"Time": "5:30 pm", "Location": "Leaves Pierre's and heads home for the night"}
+                ],
+                "Friday and Sunday If the player has less than 6 hearts with Leah": [
+                    {"Time": "8:00 am", "Location": "At home"},
+                    {"Time": "12:00 pm", "Location": "Leaves his cabin to stand on the docks next to Willy's house"},
+                    {"Time": "5:00 pm", "Location": "Leaves the docks to visit The Stardrop Saloon"},
+                    {"Time": "11:40 pm", "Location": "Leaves the saloon to return home for the night"}
+                ],
+                "Regular Schedule": [
+                    {"Time": "8:00 am", "Location": "At home"},
+                    {"Time": "12:00 pm", "Location": "Leaves his cabin to stand on the beach south of his house"},
+                    {"Time": "1:30 pm", "Location": "Leaves the beach and returns to his cabin"},
+                    {"Time": "3:00 pm", "Location": "Leaves his cabin to stand on the bridge just north of the beach"},
+                    {"Time": "6:00 pm", "Location": "Leaves the bridge to return home for the night"}
+                ]
+            },
+            "Summer": {
+                "Tuesday the 9th": [
+                    {"Time": "10:30 am", "Location": "Leaves his house and goes to the Clinic"},
+                    {"Time": "1:30 pm", "Location": "Moves from waiting room to examination room inside Clinic"},
+                    {"Time": "4:00 pm", "Location": "Leaves the clinic and returns home for the night"}
+                ],
+                "Raining": [
+                    {"Time": "All day", "Location": "Inside his house"}
+                ],
+                "Thursday": [
+                    {"Time": "8:00 am", "Location": "At home"},
+                    {"Time": "11:30 am", "Location": "Leaves home and heads to Pierre's General Store"},
+                    {"Time": "5:30 pm", "Location": "Leaves Pierre's and heads home for the night"}
+                ],
+                "Friday and Sunday if the player has 6+ hearts with Leah": [
+                    {"Time": "8:00 am", "Location": "At home"},
+                    {"Time": "12:00 pm", "Location": "Leaves his cabin to stand on the beach south of his house"},
+                    {"Time": "1:30 pm", "Location": "Leaves the beach and returns to his cabin"},
+                    {"Time": "3:00 pm", "Location": "Leaves his cabin to stand on the bridge just north of the beach"},
+                    {"Time": "6:00 pm", "Location": "Leaves the bridge to return home for the night"}
+                ],
+                "Friday and Sunday If the player has less than 6 hearts with Leah": [
+                    {"Time": "8:00 am", "Location": "At home"},
+                    {"Time": "11:00 am", "Location": "Leaves his cabin to stand on the docks next to Willy's house"},
+                    {"Time": "5:00 pm", "Location": "Leaves the docks to visit The Stardrop Saloon"},
+                    {"Time": "11:40 pm", "Location": "Leaves the saloon to return home for the night"}
+                ],
+                "Regular Schedule": [
+                    {"Time": "8:00 am", "Location": "At home"},
+                    {"Time": "11:30 am", "Location": "Leaves home, heads to the forest south of Leah's Cottage"},
+                    {"Time": "6:00 pm", "Location": "Leaves the forest to return home for the night"},
+                    {"Time": "7:40 pm", "Location": "Arrives home and goes to bed"}
+                ]
+            },
+            "Fall": {
+                "Raining": [
+                    {"Time": "All day", "Location": "Inside his house"}
+                ],
+                "Thursday": [
+                    {"Time": "8:00 am", "Location": "At home"},
+                    {"Time": "11:30 am", "Location": "Leaves home and heads to Pierre's General Store"},
+                    {"Time": "5:30 pm", "Location": "Leaves Pierre's and heads home for the night"}
+                ],
+                "Friday if the player has 6+ hearts with Leah": [
+                    {"Time": "8:00 am", "Location": "At home"},
+                    {"Time": "11:30 am", "Location": "Leaves home and heads to Pierre's General Store"},
+                    {"Time": "5:30 pm", "Location": "Leaves Pierre's and heads home for the night"}
+                ],
+                "Friday and Sunday If the player has less than 6 hearts with Leah": [
+                    {"Time": "8:00 am", "Location": "At home"},
+                    {"Time": "12:00 pm", "Location": "Leaves his cabin to stand on the docks next to Willy's house"},
+                    {"Time": "5:00 pm", "Location": "Leaves the docks to visit The Stardrop Saloon"},
+                    {"Time": "11:40 pm", "Location": "Leaves the saloon to return home for the night"}
+                ],
+                "Regular Schedule": [
+                    {"Time": "8:00 am", "Location": "At home"},
+                    {"Time": "11:30 am", "Location": "Leaves home, heads to the Library"},
+                    {"Time": "5:30 pm", "Location": "Leaves the library to return home for the night"},
+                    {"Time": "6:40 pm", "Location": "Returns home and stands by his bonsai tree"},
+                    {"Time": "9:00 pm", "Location": "Leaves his bonsai tree and walks over to his writing desk"}
+                ]
+            },
+            "Winter": {
+                "Raining": [
+                    {"Time": "All day", "Location": "Inside his house"}
+                ],
+                "Wednesday the 17th": [
+                    {"Time": "8:00 am", "Location": "At home"},
+                    {"Time": "11:30 am", "Location": "Leaves home, heads to the Museum"},
+                    {"Time": "4:50 pm", "Location": "Leaves the library to attend the Night Market"},
+                    {"Time": "1:00 am", "Location": "Leaves the Night Market and returns to his cabin"}
+                ],
+                "Thursday": [
+                    {"Time": "8:00 am", "Location": "At home"},
+                    {"Time": "11:30 am", "Location": "Leaves home and heads to Pierre's General Store"},
+                    {"Time": "5:30 pm", "Location": "Leaves Pierre's and heads home for the night"}
+                ],
+                "Friday if the player has 6+ hearts with Leah": [
+                    {"Time": "8:00 am", "Location": "At home"},
+                    {"Time": "11:30 am", "Location": "Leaves home and heads to Pierre's General Store"},
+                    {"Time": "5:30 pm", "Location": "Leaves Pierre's and heads home for the night"}
+                ],
+                "Friday and Sunday If the player has less than 6 hearts with Leah": [
+                    {"Time": "8:00 am", "Location": "At home"},
+                    {"Time": "12:00 pm", "Location": "Leaves his cabin to stand on the docks next to Willy's house"},
+                    {"Time": "5:00 pm", "Location": "Leaves the docks to visit The Stardrop Saloon"},
+                    {"Time": "11:40 pm", "Location": "Leaves the saloon to return home for the night"}
+                ],
+                "Regular Schedule": [
+                    {"Time": "8:00 am", "Location": "At home"},
+                    {"Time": "11:30 am", "Location": "Leaves home, heads to the Library"},
+                    {"Time": "5:30 pm", "Location": "Leaves the library to return home for the night"}
+                ]
+            },
+            "Marriage": {
+                "Raining": [
+                    {"Time": "All day", "Location": "Inside Farmhouse"}
+                ],
+                "Monday": [
+                    {"Time": "8:30 am", "Location": "Leaves the Farmhouse and heads to the beach"},
+                    {"Time": "5:00 pm", "Location": "Leaves the beach and heads home to the farm"}
+                ]
+            }
+        }
+        "is datable" : true,
+        "birthday" : "Fall 9",
         "events" : {
-            "Two hearts" : "On a sunny summer day, visit the beach when Alex is there.",
-            "Four hearts" : "Enter town between 9am and 4pm.",
-            "Five hearts" : "Enter Alex's house when he's there.",
-            "Six hearts" : "Enter Alex's house when he's there.",
-            "Eight hearts" : "On a sunny day, visit the beach when Alex is there. He is only scheduled to go to the beach in summer, but may pass by on the way to the Ginger Island resort in any season after it is completed.",
-            "Ten hearts" : "Alex will send you a letter to meet him at the Saloon after dark. After receiving the letter, enter the Saloon between 7pm and 10pm.",
-        },
+            "Two hearts" : "Enter Elliott's cabin when he's there.",
+            "Four hearts" : "Enter the Stardrop Saloon between 3pm and 10pm when Gus is there.",
+            "Six hearts" : "Enter Elliott's home when he's there.", 
+            "Eight hearts" : "After receiving a letter from Elliott, visit the museum between 1pm and 7pm. (It doesn't need to be the same day.)",
+            "Ten hearts" : "Go to the beach on a day when it is not raining between 7am and 1pm. A letter will be sent to you but it is not needed to trigger the event.",
+            "Fourteen hearts" : "Exit the farm house between 6am and 3pm on a day when there are no Festivals occurring for the next 8 days."
+        }
+    },
+
+    {
+        "name" : "Harvey",
+        "loves" : ["All universal loves", "Coffee", "Pickles", "Super meal", "Truffle Oil", "Wine"],
+        "likes" : ["All universal likes (except Cheese, Goat cheese, Blueberry tart, Chocolate cake, Cookie, Cranberry Sauce, Fried mushroom, Glazed yams, Hashbrowns, Ice cream, Pancakes, Pink cake, Pizza, Rhubarb Pie and Rice pudding)", "All fruits (except Salmonberry and Spice berry)", "Chanterelle", "Common mushroom", "Daffodil", "Dandelion", "Duck egg", "Duck feather", "Ginger", "Goat milk", "Hazelnut", "Holly", "Large goat milk", "Leek", "Magma cap", "Morel", "Purple mushroom", "Quartz", "Snow yam", "Spring onion", "Wild horseradish", "Winter root"],
+        "neutral" : ["All universal neutrals (except Duck feather, Bread, Coral, Nautilus shell and Rainbow Shell)", "All eggs (except Duck egg and Void egg)", "Large milk", "Milk"],
+        "dislikes" : ["All universal dislikes (except Spring onion)", "Blueberry tart", "Bread", "Cheese", "Chocolate cake", "Cookie", "Cranberry sauce", "Fried mushroom", "Glazed yams", "Goat cheese", "Hashbrowns", "Ice cream", "Pancakes", "Pink cake", "Pizza", "Rhubarb pie", "Rice pudding"],
+        "hates" : ["All universal hates", "Coral", "Nautilus shell", "Rainbow shell", "Salmonberry", "Spice berry"],
+        "schedule" : {
+            "Spring": {
+                "Raining": [
+                    {"Time": "8:00 AM", "Location": "In his room"},
+                    {"Time": "8:40 AM", "Location": "Works at the clinic's front desk"},
+                    {"Time": "12:00 PM", "Location": "Goes upstairs to his room, sits in front of radio"},
+                    {"Time": "4:00 PM", "Location": "Moves to bookshelf to read"},
+                    {"Time": "5:30 PM", "Location": "Heads to The Stardrop Saloon"},
+                    {"Time": "10:00 PM", "Location": "Returns home and goes to bed"}
+                ],
+                "Tuesday & Thursday": [
+                    {"Time": "7:30 AM", "Location": "In exam room of clinic"},
+                    {"Time": "12:50 PM", "Location": "Moves to waiting room"},
+                    {"Time": "1:30 PM", "Location": "Returns to exam room"},
+                    {"Time": "4:30 PM", "Location": "Works at the clinic's front desk"},
+                    {"Time": "6:00 PM", "Location": "Goes upstairs to his room, reads in front of bookshelf"},
+                    {"Time": "11:00 PM", "Location": "Goes to bed"}
+                ],
+                "Friday": [
+                    {"Time": "7:00 AM", "Location": "Stands in front of refrigerator in his room"},
+                    {"Time": "8:30 AM", "Location": "Works at the clinic's front desk"},
+                    {"Time": "12:00 PM", "Location": "Goes to Pierre's General Store"},
+                    {"Time": "3:00 PM", "Location": "Returns to his room above the clinic"},
+                    {"Time": "10:00 PM", "Location": "Goes to bed"}
+                ],
+                "Saturday": [
+                    {"Time": "8:30 AM", "Location": "Leaves home to go to the Museum"},
+                    {"Time": "3:00 PM", "Location": "Leaves the Museum to return to his room above the clinic."},
+                ],
+                "Regular Schedule" : [
+                    {"Time": "7:30 AM", "Location": "Stands in front of refrigerator in his room"},
+                    {"Time": "8:30 AM", "Location": "Works at the clinic's front desk"},
+                    {"Time": "12:00 PM", "Location": "Walks around the park west of the town square"},
+                    {"Time": "5:30 PM", "Location": "Returns to clinic, stands at right side of front desk"},
+                    {"Time": "6:40 PM", "Location": "Goes upstairs to his room, reads in front of bookshelf"},
+                    {"Time": "10:00 PM", "Location": "Goes to bed"}
+                ] 
+            },
+            "Summer": {
+                "Raining": [
+                    {"Time": "8:00 AM", "Location": "In his room"},
+                    {"Time": "8:40 AM", "Location": "Works at the clinic's front desk"},
+                    {"Time": "12:00 PM", "Location": "Goes upstairs to his room, sits in front of radio"},
+                    {"Time": "4:00 PM", "Location": "Moves to bookshelf to read"},
+                    {"Time": "5:30 PM", "Location": "Heads to The Stardrop Saloon"},
+                    {"Time": "10:00 PM", "Location": "Returns home and goes to bed"}
+                ],
+                "Tuesday & Thursday": [
+                    {"Time": "7:30 AM", "Location": "In exam room of clinic"},
+                    {"Time": "12:50 PM", "Location": "Moves to waiting room"},
+                    {"Time": "1:30 PM", "Location": "Returns to exam room"},
+                    {"Time": "4:30 PM", "Location": "Works at the clinic's front desk"},
+                    {"Time": "6:00 PM", "Location": "Goes upstairs to his room, reads in front of bookshelf"},
+                    {"Time": "11:00 PM", "Location": "Goes to bed"}
+                ],
+                "Friday": [
+                    {"Time": "7:00 AM", "Location": "Stands in front of refrigerator in his room"},
+                    {"Time": "8:30 AM", "Location": "Works at the clinic's front desk"},
+                    {"Time": "12:00 PM", "Location": "Goes to Pierre's General Store"},
+                    {"Time": "3:00 PM", "Location": "Returns to his room above the clinic"},
+                    {"Time": "10:00 PM", "Location": "Goes to bed"}
+                ],
+                "Saturday": [
+                    {"Time": "8:30 AM", "Location": "Leaves home to go to the Museum"},
+                    {"Time": "3:00 PM", "Location": "Leaves the Museum to return to his room above the clinic."}
+                ],
+                "Regular Schedule" : [
+                    {"Time": "7:00 AM", "Location": "Stands in front of refrigerator in his room"},
+                    {"Time": "8:30 AM", "Location": "Works at the clinic's front desk"},
+                    {"Time": "12:00 PM", "Location": "Walks south of fountain west of the Community Center"},
+                    {"Time": "5:30 PM", "Location": "Returns to clinic, stands at right side of front desk"},
+                    {"Time": "6:40 PM", "Location": "Goes upstairs to his room, reads in front of bookshelf"},
+                    {"Time": "10:00 PM", "Location": "Goes to bed"}
+                ]
+            },
+            "Fall": {
+                "Raining": [
+                    {"Time": "8:00 AM", "Location": "In his room"},
+                    {"Time": "8:40 AM", "Location": "Works at the clinic's front desk"},
+                    {"Time": "12:00 PM", "Location": "Goes upstairs to his room, sits in front of radio"},
+                    {"Time": "4:00 PM", "Location": "Moves to bookshelf to read"},
+                    {"Time": "5:30 PM", "Location": "Heads to The Stardrop Saloon"},
+                    {"Time": "10:00 PM", "Location": "Returns home and goes to bed"}
+                ],
+                "Tuesday & Thursday": [
+                    {"Time": "7:30 AM", "Location": "In exam room of clinic"},
+                    {"Time": "12:50 PM", "Location": "Moves to waiting room"},
+                    {"Time": "1:30 PM", "Location": "Returns to exam room"},
+                    {"Time": "4:30 PM", "Location": "Works at the clinic's front desk"},
+                    {"Time": "6:00 PM", "Location": "Goes upstairs to his room, reads in front of bookshelf"},
+                    {"Time": "11:00 PM", "Location": "Goes to bed"}
+                ],
+                "Friday": [
+                    {"Time": "7:00 AM", "Location": "Stands in front of refrigerator in his room"},
+                    {"Time": "8:30 AM", "Location": "Works at the clinic's front desk"},
+                    {"Time": "12:00 PM", "Location": "Goes to Pierre's General Store"},
+                    {"Time": "3:00 PM", "Location": "Returns to his room above the clinic"},
+                    {"Time": "10:00 PM", "Location": "Goes to bed"}
+                ],
+                "Saturday": [
+                    {"Time": "8:30 AM", "Location": "Leaves home to go to the Museum"},
+                    {"Time": "3:00 PM", "Location": "Leaves the Museum to return to his room above the clinic."},
+                ],
+                "Regular Schedule" : [
+                    {"Time": "7:00 AM", "Location": "Stands in front of refrigerator in his room"},
+                    {"Time": "8:30 AM", "Location": "Works at the clinic's front desk"},
+                    {"Time": "12:00 PM", "Location": "Walks into town, stands by tree west of bridge to beach"},
+                    {"Time": "5:00 PM", "Location": "Returns to his room, sits in front of radio"},
+                    {"Time": "10:00 PM", "Location": "Goes to bed"}
+                ]
+            },
+            "Winter": {
+                "Monday, Winter 15": [
+                    {"Time": "8:00 AM", "Location": "Stands in front of microwave in his room"},
+                    {"Time": "8:40 AM", "Location": "Works at the clinic's front desk"},
+                    {"Time": "12:00 PM", "Location": "Goes upstairs to his room, sits in front of radio"},
+                    {"Time": "4:00 PM", "Location": "Moves to bookshelf in his room"},
+                    {"Time": "5:00 PM", "Location": "Walks to beach to attend Night Market"},
+                    {"Time": "12:00 AM", "Location": "Returns home and goes to bed"}
+                ],
+                "Raining": [
+                    {"Time": "8:00 AM", "Location": "In his room"},
+                    {"Time": "8:40 AM", "Location": "Works at the clinic's front desk"},
+                    {"Time": "12:00 PM", "Location": "Goes upstairs to his room, sits in front of radio"},
+                    {"Time": "4:00 PM", "Location": "Moves to bookshelf to read"},
+                    {"Time": "5:30 PM", "Location": "Heads to The Stardrop Saloon"},
+                    {"Time": "10:00 PM", "Location": "Returns home and goes to bed"}
+                ],
+                "Tuesday & Thursday": [
+                    {"Time": "7:30 AM", "Location": "In exam room of clinic"},
+                    {"Time": "12:50 PM", "Location": "Moves to waiting room"},
+                    {"Time": "1:30 PM", "Location": "Returns to exam room"},
+                    {"Time": "4:30 PM", "Location": "Works at the clinic's front desk"},
+                    {"Time": "6:00 PM", "Location": "Goes upstairs to his room, reads in front of bookshelf"},
+                    {"Time": "11:00 PM", "Location": "Goes to bed"}
+                ],
+                "Friday": [
+                    {"Time": "7:00 AM", "Location": "Stands in front of refrigerator in his room"},
+                    {"Time": "8:30 AM", "Location": "Works at the clinic's front desk"},
+                    {"Time": "12:00 PM", "Location": "Goes to Pierre's General Store"},
+                    {"Time": "3:00 PM", "Location": "Returns to his room above the clinic"},
+                    {"Time": "10:00 PM", "Location": "Goes to bed"}
+                ],
+                "Saturday": [
+                    {"Time": "8:30 AM", "Location": "Leaves home to go to the Museum"},
+                    {"Time": "3:00 PM", "Location": "Leaves the Museum to return to his room above the clinic."}
+                ],
+                "Regular Schedule" : [
+                    {"Time": "8:00 AM", "Location": "In his room"},
+                    {"Time": "8:40 AM", "Location": "Works at the clinic's front desk"},
+                    {"Time": "12:00 PM", "Location": "Goes upstairs to his room, sits in front of radio"},
+                    {"Time": "4:00 PM", "Location": "Moves to bookshelf to read"},
+                    {"Time": "5:50 PM", "Location": "Heads to The Stardrop Saloon"},
+                    {"Time": "10:00 PM", "Location": "Returns home and goes to bed"}
+                ]
+            },
+            "Marriage": {
+                "Monday": [
+                    {"Time": "8:30 AM", "Location": "Leaves the farmhouse and heads to Pierre's General Store."},
+                    {"Time": "12:00 PM", "Location": "Walks to fountain left of Community Center."},
+                    {"Time": "5:00 PM", "Location": "Leaves town and heads home to the farm."}
+                ],
+                "Tuesday & Thursday": [
+                    {"Time": "6:30 AM", "Location": "Leaves the farmhouse and heads to the clinic."},
+                    {"Time": "6:00 PM", "Location": "Leaves the clinic to return home to the farm."}
+                ]
+            }
+        }
+        "is datable" : true,
+        "birthday" : "Winter 14",
+        "events" : {
+            "Two hearts" : "Enter George's house while George is there.",
+            "Four hearts" : "Enter the clinic when Harvey is there.",
+            "Six hearts" : "Enter the general store between 11am and 3pm.",
+            "Eight hearts" : "Enter the clinic.",
+            "Ten hearts" : "Harvey sends you a letter asking to meet at the railroad tracks. Go there between 9am and 5pm.",
+            "Fourteen hearts" : "Enter an upgraded farm house (needs to be upgraded at least twice) between 8pm and midnight."
+        }
+    },
+
+    {
+        "name" : "Sam",
+        "loves" : ["All universal loves", "Cactus fruit", "Maple bar", "Pizza", "Tigerseye"],
+        "likes" : ["All universal likes (except Duck mayonnaise, Mayonnaise, Pickles and Vegetables)", "Joja Cola"],
+        "neutral" : ["All universal neutrals", "All fruits (except Cactus fruit and Salmonberry)", "All milk"],
+        "dislikes" : ["All universal dislikes (except Coal, Copper Bars, Gold Bars, Gold Ore, Iridium Bars, Iridium Ore, Iron Bars, Refined Quartz and Tigerseye)", "All vegetables (except Hops, Tea leaves and Wheat)", "Chanterelle", "Common mushroom", "Daffodil", "Dandelion", "Ginger", "Hazelnut", "Holly", "Leek", "Magma cap", "Morel", "Purple mushroom", "Quartz", "Salmonberry", "Seaweed", "Snow yam", "Wild horseradish", "Winter root"],
+        "hates" : ["All universal hates (except Joja Cola and Seaweed)", "Coal", "Copper Bar", "Duck mayonnaise", "Gold Bar", "Gold Ore", "Iridium Bar", "Iridium Ore", "Iron Bar", "Pickles", "Refined Quartz"],
+        "schedule" : {
+            "Spring" : {
+                "Monday": [
+                    {"Time": "10:00 AM", "Location": "Wakes up and stands in the middle of his bedroom."},
+                    {"Time": "11:00 AM", "Location": "Leaves his bedroom and walks to JojaMart (or Museum if Community Center is restored)."},
+                    {"Time": "12:50 PM", "Location": "Arrives at JojaMart (or Museum if Community Center is restored) and starts work."},
+                    {"Time": "4:00 PM", "Location": "Finshes work at JojaMart (or Museum if Community Center is restored) and walks home."},
+                    {"Time": "6:00 PM", "Location": "Arrives in his bedroom and stands in front of his bookshelf."},
+                    {"Time": "9:30 PM", "Location": "Goes to bed."}
+                ],
+                "Tuesday": [
+                    {"Time": "10:00 AM", "Location": "Wakes up and stands in the middle of his bedroom."},
+                    {"Time": "10:40 AM", "Location": "Plays his guitar in his bedroom."},
+                    {"Time": "2:00 PM", "Location": "Leaves house and stands near Mayor's Manor by the river."},
+                    {"Time": "6:30 PM", "Location": "Heads back home."}
+                ],
+                "Wednesday": [
+                    {"Time": "10:00 AM", "Location": "Wakes up and stands in the middle of his bedroom."},
+                    {"Time": "11:00 AM", "Location": "Leaves his bedroom and walks to JojaMart (or Museum if Community Center is restored)."},
+                    {"Time": "12:50 PM", "Location": "Arrives at JojaMart (or Museum if Community Center is restored) and starts work."},
+                    {"Time": "4:00 PM", "Location": "Finshes work at JojaMart (or Museum if Community Center is restored) and walks home."},
+                    {"Time": "6:00 PM", "Location": "Arrives in his bedroom and stands in front of his bookshelf."},
+                    {"Time": "9:30 PM", "Location": "Goes to bed."}
+                ],
+                "Thursday": [
+                    {"Time": "10:00 AM", "Location": "Wakes up and stands in front of his dresser."},
+                    {"Time": "10:40 AM", "Location": "Plays guitar inside his bedroom."},
+                    {"Time": "1:40 PM", "Location": "Leaves his bedroom and walks to the bush southeast of Lewis' house."},
+                    {"Time": "3:00 PM", "Location": "Stands in front of the bush to the southeast of Lewis' house."},
+                    {"Time": "6:30 PM", "Location": "Starts walking home."},
+                    {"Time": "7:50 PM", "Location": "Arrives in his bedroom and stands in front of his desk."},
+                    {"Time": "9:00 PM", "Location": "Goes to bed."}
+                ],
+                "Friday": [
+                    {"Time": "10:00 AM", "Location": "Wakes up and plays guitar inside his bedroom."},
+                    {"Time": "11:00 AM", "Location": "Leaves his bedroom and skateboards outside of his house."},
+                    {"Time": "3:00 PM", "Location": "Walks to the Stardrop Saloon."},
+                    {"Time": "4:00 PM", "Location": "Arrives at the Stardrop Saloon and plays pool near the arcade."},
+                    {"Time": "9:20 PM", "Location": "Leaves the Stardrop Saloon and walks home."},
+                    {"Time": "10:20 PM", "Location": "Arrives at home."}
+                ],
+                "Regular Schedule": [
+                    {"Time": "10:00 AM", "Location": "Wakes up for the day, moves around his room."},
+                    {"Time": "10:40 AM", "Location": "Plays guitar inside his bedroom."},
+                    {"Time": "1:40 PM", "Location": "Leaves his bedroom, walks into town, and stands near Lewis' house by the river."},
+                    {"Time": "6:30 PM", "Location": "Returns home from town."},
+                    {"Time": "9:00 PM", "Location": "Goes into his bedroom to go to bed."}
+                ],
+                "Rainy day": [
+                    {"Time": "9:00 AM", "Location": "Wakes up and stands in front of his dresser."},
+                    {"Time": "11:00 AM", "Location": "Leaves his bedroom and walks to the bridge near the Museum."},
+                    {"Time": "12:00 PM", "Location": "Arrives at the bridge near the Museum."},
+                    {"Time": "4:00 PM", "Location": "Leaves the bridge near the Museum and walks to the tree in front of Emily and Haley's house."},
+                    {"Time": "4:40 PM", "Location": "Arrives at the tree outside Emily and Haley's house and plays his handheld video game."},
+                    {"Time": "7:00 PM", "Location": "Walks home."},
+                    {"Time": "7:30 PM", "Location": "Arrives in his bedroom and stands in front of his bookshelf."},
+                    {"Time": "9:30 PM", "Location": "Goes to bed."}
+                ]
+            }
+            "Summer" : {
+                "Monday": [
+                    {"Time": "10:00 AM", "Location": "Wakes up and stands in the middle of his bedroom."},
+                    {"Time": "11:00 AM", "Location": "Leaves his bedroom and walks to JojaMart (or Museum if Community Center is restored)."},
+                    {"Time": "12:50 PM", "Location": "Arrives at JojaMart (or Museum if Community Center is restored) and starts work."},
+                    {"Time": "4:00 PM", "Location": "Finishes work at JojaMart (or Museum if Community Center is restored) and walks home."},
+                    {"Time": "6:00 PM", "Location": "Arrives in his bedroom and stands in front of his bookshelf."},
+                    {"Time": "9:30 PM", "Location": "Goes to bed."}
+                ],
+                "Wednesday": [
+                    {"Time": "10:00 AM", "Location": "Wakes up and stands in the middle of his bedroom."},
+                    {"Time": "11:00 AM", "Location": "Leaves his bedroom and walks to JojaMart (or Museum if Community Center is restored)."},
+                    {"Time": "12:50 PM", "Location": "Arrives at JojaMart (or Museum if Community Center is restored) and starts work."},
+                    {"Time": "4:00 PM", "Location": "Finishes work at JojaMart (or Museum if Community Center is restored) and walks home."},
+                    {"Time": "6:00 PM", "Location": "Arrives in his bedroom and stands in front of his bookshelf."},
+                    {"Time": "9:30 PM", "Location": "Goes to bed."}
+                ],
+                "Saturday": [
+                    {"Time": "10:00 AM", "Location": "Wakes up and stands in the middle of his bedroom."},
+                    {"Time": "2:00 PM", "Location": "Stands with Sebastian in his room."},
+                    {"Time": "6:00 PM", "Location": "Leaves his bedroom with Sebastian and stands by the river in front of his house."},
+                    {"Time": "7:50 PM", "Location": "Arrives home and goes to bed."}
+                ],
+                "Birthday (JojaMart open, And Raining)": [
+                    {"Time": "10:00 AM", "Location": "Wakes up for the day, moves around his room."},
+                    {"Time": "11:00 AM", "Location": "Starts playing his guitar in his room."},
+                    {"Time": "3:00 PM", "Location": "Leaves bedroom, stands in kitchen and plays his handheld video game."},
+                    {"Time": "5:00 PM", "Location": "Heads back to his bedroom, moves around."},
+                    {"Time": "8:00 PM", "Location": "Goes to bed."}
+                ],
+                "Rainy Day": [
+                    {"Time": "10:00 AM", "Location": "Wakes up for the day, moves around his room."},
+                    {"Time": "11:00 AM", "Location": "Starts playing his guitar in his room."},
+                    {"Time": "3:00 PM", "Location": "Leaves bedroom, stands in kitchen and plays his handheld video game."},
+                    {"Time": "5:00 PM", "Location": "Heads back to his bedroom, moves around."},
+                    {"Time": "8:00 PM", "Location": "Goes to bed."}
+                ],
+                "Regular Schedule": [
+                    {"Time": "10:00 AM", "Location": "Wakes up for the day, moves around his room."},
+                    {"Time": "11:00 AM", "Location": "Plays guitar inside his bedroom."},
+                    {"Time": "1:40 PM", "Location": "Leaves his bedroom and walks to the beach by the firepit with his brother Vincent."},
+                    {"Time": "7:00 PM", "Location": "Returns home from the beach."},
+                    {"Time": "9:00 PM", "Location": "Goes into his bedroom to go to bed."}
+                ]
+            }
+            "Fall" : {
+                "Fall 11": [
+                    {"Time": "10:00 AM", "Location": "Wakes up for the day inside his bedroom. 'I gotta go visit Uncle Doctor today... Great.'"},
+                    {"Time": "11:30 AM", "Location": "Walks to the clinic for his annual checkup, plays his handheld video game in the waiting room."},
+                    {"Time": "1:30 PM", "Location": "Gets medical checkup at the clinic. 'I'm a healthy boy, doc. Can I go now? This is boring.'"},
+                    {"Time": "4:00 PM", "Location": "Leaves the clinic to walk into town. 'I just got out of the doctor's office. Completely healthy and vigorous, just as I expected.'"},
+                    {"Time": "9:00 PM", "Location": "Returns to his bedroom to go to bed."}
+                ],
+                "Regular Schedule": [
+                    {"Time": "10:00 AM", "Location": "Wakes up for the day, moves around his room."},
+                    {"Time": "10:40 AM", "Location": "Plays guitar inside his bedroom."},
+                    {"Time": "1:20 PM", "Location": "Leaves his bedroom walks to The Forest southwest of Leah's Cottage."},
+                    {"Time": "7:00 PM", "Location": "Returns home from The Forest."},
+                    {"Time": "9:00 PM", "Location": "Goes into his bedroom to go to bed."}
+                ]
+            }
+            "Winter": {
+                "Regular Schedule": [
+                    {"Time": "10:00 AM", "Location": "Wakes up for the day, moves around his room."},
+                    {"Time": "10:40 AM", "Location": "Plays guitar inside his bedroom."},
+                    {"Time": "1:20 PM", "Location": "Leaves his bedroom and walks to the Stardrop Saloon."},
+                    {"Time": "7:00 PM", "Location": "Returns home from the Stardrop Saloon."},
+                    {"Time": "9:00 PM", "Location": "Goes into his bedroom to go to bed."}
+                ]
+            }
+            "Deviations": {
+                "Day 9": [
+                    {"Time": "6:00 AM", "Location": "Sleeps in his bed at his home."},
+                    {"Time": "9:00 AM", "Location": "Wakes up and stands in his bedroom."},
+                    {"Time": "11:00 AM", "Location": "Walks into town, stands on the bridge near the Ice Cream Stand."},
+                    {"Time": "4:00 PM", "Location": "Walk to the pink tree in front of 2 Willow Lane, plays his handheld video game."},
+                    {"Time": "7:00 PM", "Location": "Returns home from town."},
+                    {"Time": "9:30 PM", "Location": "Goes into his bedroom to go to bed."}
+                ],
+                "Day 23 (If less than 6 hearts with both Penny & Sam)": [
+                    {"Time": "6:00 AM", "Location": "Sleeps in his bed at his home."},
+                    {"Time": "9:00 AM", "Location": "Wakes up and stands in his bedroom."},
+                    {"Time": "11:00 AM", "Location": "Walks into town, stands on the bridge near the Ice Cream Stand."},
+                    {"Time": "4:00 PM", "Location": "Walk to the pink tree in front of 2 Willow Lane, plays his handheld video game."},
+                    {"Time": "7:00 PM", "Location": "Returns home from town."},
+                    {"Time": "9:30 PM", "Location": "Goes into his bedroom to go to bed."}
+                ],
+                "Winter 17": [
+                    {"Time": "10:00 AM", "Location": "Wakes up for the day, moves around his room."},
+                    {"Time": "10:40 AM", "Location": "Plays guitar inside his bedroom."},
+                    {"Time": "5:00 PM", "Location": "Attends the Night Market."},
+                    {"Time": "12:00 AM", "Location": "Goes into his bedroom to go to bed."}
+                ],
+                "Raining - Random choice #1": [
+                    {"Time": "10:00 AM", "Location": "Wakes up for the day, stands in front of the dresser in his room."},
+                    {"Time": "11:00 AM", "Location": "Plays guitar inside his room."},
+                    {"Time": "3:00 PM", "Location": "Plays his handheld video game in the kitchen inside his house."},
+                    {"Time": "5:00 PM", "Location": "Returns to his bedroom. and stands in front of his dresser."},
+                    {"Time": "6:30 PM", "Location": "At his desk inside his bedroom."},
+                    {"Time": "8:00 PM", "Location": "Goes to go to bed."}
+                ],
+                "Raining - Random choice #2": [
+                    {"Time": "10:00 AM", "Location": "Wakes up for the day, moves around his room."},
+                    {"Time": "11:00 AM", "Location": "Moves around inside his home."},
+                    {"Time": "2:00 PM", "Location": "Leaves the his bedroom walks to The Stardrop Saloon. 'Nothing like an ice cold Joja Cola on a sopping wet day, huh? Just kidding. Hehehe.'"},
+                    {"Time": "7:40 PM", "Location": "Leaves The Stardrop Saloon and returns to his bedroom to go to bed."}
+                ],
+                "Saturday": [
+                    {"Time": "8:00 AM", "Location": "Wakes up for the day inside his bedroom and walks just outside to stand by the river in front of Haley and Emily's house."},
+                    {"Time": "11:00 AM", "Location": "Walks to a nearby bush and plays his handheld video game in town."},
+                    {"Time": "12:30 PM", "Location": "Leaves town, goes to his bedroom with Sebastian to practice guitar."},
+                    {"Time": "3:00 PM", "Location": "Hangs out in his room with Sebastian."},
+                    {"Time": "6:00 PM", "Location": "Leaves his home to walk to the river in front of his house with Sebastian."},
+                    {"Time": "7:40 PM", "Location": "Returns to his bedroom to go to bed."}
+                ],
+                "Monday & Wednesday, Community Center Restored": [
+                    {"Time": "10:00 AM", "Location": "Wakes up for the day inside his bedroom."},
+                    {"Time": "11:00 AM", "Location": "Leaves the his bedroom walks to the Museum."},
+                    {"Time": "4:00 PM", "Location": "Leaves the Museum, and heads home."},
+                    {"Time": "6:00 PM", "Location": "Arrives home, stands in his bedroom in front of bookshelf."},
+                    {"Time": "9:30 PM", "Location": "In his bedroom in bed."}
+                ],
+                "Friday": [
+                    {"Time": "10:00 AM", "Location": "Wakes up for the day, plays guitar inside his bedroom."},
+                    {"Time": "11:00 AM", "Location": "Leaves his bedroom and walks into town to go skateboarding."},
+                    {"Time": "3:00 PM", "Location": "Walks to The Stardrop Saloon to play pool near the arcade."},
+                    {"Time": "9:20 PM", "Location": "Leaves the Stardrop Saloon and walks home to his bedroom to go to bed."}
+                ]
+            }
+            "Marriage": {
+                "Monday": [
+                    {"Time": "6:00 AM", "Location": "At home."},
+                    {"Time": "8:00 AM", "Location": "Leaves home and heads for Pelican Town."},
+                    {"Time": "9:30 AM", "Location": "Arrives at 1 Willow Lane and stands in the kitchen."},
+                    {"Time": "11:00 AM", "Location": "Moves to living room."},
+                    {"Time": "3:00 PM", "Location": "Leaves 1 Willow Lane to return home."},
+                    {"Time": "4:00 PM", "Location": "Arrives at the farmhouse."},
+                    {"Time": "10:00 PM", "Location": "Goes to bed."}
+                ],
+                "Friday": [
+                    {"Time": "6:00 AM", "Location": "At home."},
+                    {"Time": "8:00 AM", "Location": "Leaves home and heads for Pelican Town."},
+                    {"Time": "9:30 AM", "Location": "Arrives at 1 Willow Lane and stands in the kitchen."},
+                    {"Time": "11:00 AM", "Location": "Leaves house."},
+                    {"Time": "11:50 AM", "Location": "Skateboarding south of the Stardrop Saloon, by the benches."},
+                    {"Time": "3:00 PM", "Location": "Heads into the Stardrop Saloon."},
+                    {"Time": "3:30 PM", "Location": "Playing pool in the Stardrop Saloon."},
+                    {"Time": "9:00 PM", "Location": "Leaves the Saloon to return home."},
+                    {"Time": "11:00 PM", "Location": "Arrives at the farmhouse."}
+                ]
+            }
+        }
+        "is datable" : true,
+        "birthday" : "Summer 17",
+        "events" : {
+            "Two hearts": "Enter Sam's house when he's there.",
+            "Three hearts": "In any season except winter, enter the beach on a sunny day between 7am and 3pm. This event only happens in Year 1.",
+            "Four hearts": "Enter Sam's house when he's there.",
+            "Six hearts": "On any day when it's not raining, enter the town between noon and 4pm.",
+            "Eight hearts": "Sam shows up at your doorstep between 6am and 8am. Only triggers if you've seen his two-heart event.",
+            "Ten hearts": "After receiving a letter from Sam, enter the town on a sunny day between 8pm and midnight.",
+            "Fourteen hearts": "Part 1: Enter an upgraded farmhouse (needs to be upgraded at least twice) between 6:10am and 5:00pm, when Sam is inside.
+            Part 2: Three days later, enter the farmhouse between 6:10am and 5pm, when Sam is inside.
+            Part 3: Three days later, enter the farmhouse between 6:10am and 5pm, when Sam is inside.
+            Part 4: Four days later, enter the farmhouse between 6:10am and 5pm, when Sam is inside."
+        }
+    },
+
+    {
+        "name": "Sebastian",
+        "loves": ["All universal loves", "Frozen tear", "Obsidian", "Pumpkin soup", "Sashimi", "Void egg"],
+        "likes": ["All universal likes (except Flowers, Complete breakfast, Farmer's lunch, Omelet, Artisan goods other than Coffee, Green tea and Oil)", "Flounder", "Quartz"],
+        "neutral": ["All universale neutrals", "All fruits (except Fruit Tree Fruit and Salmonberry)", "All fish (except Carp, Flounder and Snail)", "All milk"],
+        "dislikes": ["All universal dislikes (except Clay, Fish, Obsidian and Void egg)", "All flowers (except Poppy)", "Chanterelle", "Common mushroom", "Daffodil", "Dandelion", "Ginger", "Hazelnut", "Holly", "Leek", "Magma cap", "Morel", "Purple mushroom", "Quartz", "Salmonberry", "Seaweed", "Snow yam", "Wild horseradish", "Winter root"],
+        "hates": ["All universal hates", "All Artisan goods (except Coffee, Green tea and Oil)", "All eggs (except Void egg)", "Clay", "Complete breakfast", "Farmer's lunch", "Omelet", "Pina Colada"],
+        "schedule": {
+            "Spring": {
+                "11th (Less than 6 hearts with Sebastian) and 15th (Any hearts)": [
+                    {"Time": "9:00 AM", "Location": "In his bed."},
+                    {"Time": "10:00 AM", "Location": "Gets out of bed and moves to his computer."},
+                    {"Time": "12:00 PM", "Location": "In his room, standing by couch."},
+                    {"Time": "5:30 PM", "Location": "Leaving his room to go to the kitchen."},
+                    {"Time": "6:30 PM", "Location": "On his computer."},
+                    {"Time": "9:30 PM", "Location": "Goes to bed."}
+                ],
+                "11th & 25th (6+ hearts with Sebastian)": [
+                    {"Time": "9:00 AM", "Location": "In his bed."},
+                    {"Time": "10:30 AM", "Location": "Gets out of bed and moves to his computer."},
+                    {"Time": "3:00 PM", "Location": "Leaves his computer and goes to the kitchen."},
+                    {"Time": "3:30 PM", "Location": "Leaves the kitchen to go back to his room."},
+                    {"Time": "4:10 PM", "Location": "On his computer."},
+                    {"Time": "6:30 PM", "Location": "Leaves home and walks to lake next to his house to smoke."},
+                    {"Time": "7:30 PM", "Location": "Smoking by the lake next to his house."},
+                    {"Time": "9:30 PM", "Location": "Goes back to his house."}
+                ],
+                "Rainy day (option 1)": [
+                    {"Time": "9:00 AM", "Location": "In his bed."},
+                    {"Time": "10:30 AM", "Location": "Gets out of bed and leaves house to go to the beach."},
+                    {"Time": "1:30 PM", "Location": "Standing at the end of long pier to the left of the fish shop."},
+                    {"Time": "5:00 PM", "Location": "Leaves the pier to go home."},
+                    {"Time": "7:40 PM", "Location": "Arrives home and goes to bed."}
+                ],
+                "Rainy day (option 2)": [
+                    {
+                    "Time": "9:00 AM",
+                    "Location": "In his bed."
+                    },
+                    {
+                    "Time": "10:30 AM",
+                    "Location": "Gets out of bed and moves to his computer."
+                    },
+                    {
+                    "Time": "3:00 PM",
+                    "Location": "Leaving house to go to the Saloon."
+                    },
+                    {
+                    "Time": "5:20 PM",
+                    "Location": "At the Saloon, standing by red sofa in arcade."
+                    },
+                    {
+                    "Time": "9:10 PM",
+                    "Location": "Heads home."
+                    },
+                    {
+                    "Time": "11:10 PM",
+                    "Location": "Arrives home."
+                    }
+                ],
+                "Thursday (After unlocking railroad)": [
+                    {
+                    "Time": "9:00 AM",
+                    "Location": "In his bed."
+                    },
+                    {
+                    "Time": "10:30 AM",
+                    "Location": "Gets out of bed and moves to his computer."
+                    },
+                    {
+                    "Time": "2:00 PM",
+                    "Location": "Leaving home to go smoke by train station."
+                    },
+                    {
+                    "Time": "3:00 PM",
+                    "Location": "Smoking by the train station."
+                    },
+                    {
+                    "Time": "6:20 PM",
+                    "Location": "Standing east of train station, by tunnel."
+                    },
+                    {
+                    "Time": "8:10 PM",
+                    "Location": "Standing west of train station, by tunnel."
+                    },
+                    {
+                    "Time": "9:30 PM",
+                    "Location": "Heads home."
+                    },
+                    {
+                    "Time": "10:20 PM",
+                    "Location": "Arrives home."
+                    }
+                ],
+                "Friday": [
+                    {
+                    "Time": "9:00 AM",
+                    "Location": "In his bed."
+                    },
+                    {
+                    "Time": "10:30 AM",
+                    "Location": "Gets out of bed and moves to his computer."
+                    },
+                    {
+                    "Time": "3:00 PM",
+                    "Location": "Leaves his room to go play pool with Sam at the Saloon."
+                    },
+                    {
+                    "Time": "5:20 PM",
+                    "Location": "In the Saloon, playing pool with Sam."
+                    },
+                    {
+                    "Time": "9:10 PM",
+                    "Location": "Heads home."
+                    },
+                    {
+                    "Time": "11:10 PM",
+                    "Location": "Arrives home."
+                    }
+                ],
+                "Saturday": [
+                    {
+                    "Time": "9:00 AM",
+                    "Location": "Leaves house to go to Sam's house."
+                    },
+                    {
+                    "Time": "11:30 AM",
+                    "Location": "In front of Haley and Emily's house with Sam."
+                    },
+                    {
+                    "Time": "12:30 PM",
+                    "Location": "Follows Sam to his room."
+                    },
+                    {
+                    "Time": "1:00 PM",
+                    "Location": "In Sam's room."
+                    },
+                    {
+                    "Time": "6:00 PM",
+                    "Location": "Leaves Sam's house with Sam and goes to the river."
+                    },
+                    {
+                    "Time": "6:20 PM",
+                    "Location": "Smoking by the river outside Sam's house with him."
+                    },
+                    {
+                    "Time": "7:30 PM",
+                    "Location": "Going home from in front of Sam's house."
+                    },
+                    {
+                    "Time": "9:40 PM",
+                    "Location": "Arrives home."
+                    }
+                ],
+                "Regular Schedule": [
+                    {
+                    "Time": "9:00 AM",
+                    "Location": "In his bed."
+                    },
+                    {
+                    "Time": "10:30 AM",
+                    "Location": "Gets out of bed and moves to his computer."
+                    },
+                    {
+                    "Time": "3:00 PM",
+                    "Location": "Leaves his computer and goes to the kitchen."
+                    },
+                    {
+                    "Time": "3:30 PM",
+                    "Location": "Leaves the kitchen to go back to his room."
+                    },
+                    {
+                    "Time": "4:10 PM",
+                    "Location": "On his computer."
+                    },
+                    {
+                    "Time": "6:30 PM",
+                    "Location": "Leaves home and walks to lake next to his house to smoke."
+                    },
+                    {
+                    "Time": "7:30 PM",
+                    "Location": "Smoking by the lake next to his house."
+                    },
+                    {
+                    "Time": "9:30 PM",
+                    "Location": "Goes back to his house."
+                    }
+                ]
+            }
+        }
+        "is datable": true,
+        "birthday": "Winter 10",
+        "events" : {
+            "Two hearts": "Enter Sebastian's room when he's there.",
+            "Four hearts": "Go to the Mountain between 11am and 5pm.",
+            "Six hearts": "Enter Sebastian's room when he's there.",
+            "Eight hearts": "Go to the beach on a rainy day between noon and 11pm.",
+            "Ten hearts": "Go to the Mountain between 8pm and midnight.",
+            "Fourteen hearts": "Go to the Mountain on a rainy day between 6am and 7pm."
+        }
     }
 ]
