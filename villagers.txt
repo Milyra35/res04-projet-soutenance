@@ -758,158 +758,308 @@
                     {"Time": "7:40 PM", "Location": "Arrives home and goes to bed."}
                 ],
                 "Rainy day (option 2)": [
-                    {
-                    "Time": "9:00 AM",
-                    "Location": "In his bed."
-                    },
-                    {
-                    "Time": "10:30 AM",
-                    "Location": "Gets out of bed and moves to his computer."
-                    },
-                    {
-                    "Time": "3:00 PM",
-                    "Location": "Leaving house to go to the Saloon."
-                    },
-                    {
-                    "Time": "5:20 PM",
-                    "Location": "At the Saloon, standing by red sofa in arcade."
-                    },
-                    {
-                    "Time": "9:10 PM",
-                    "Location": "Heads home."
-                    },
-                    {
-                    "Time": "11:10 PM",
-                    "Location": "Arrives home."
-                    }
+                    {"Time": "9:00 AM", "Location": "In his bed."},
+                    {"Time": "10:30 AM", "Location": "Gets out of bed and moves to his computer."},
+                    {"Time": "3:00 PM", "Location": "Leaving house to go to the Saloon."},
+                    {"Time": "5:20 PM", "Location": "At the Saloon, standing by red sofa in arcade."},
+                    {"Time": "9:10 PM", "Location": "Heads home."},
+                    {"Time": "11:10 PM", "Location": "Arrives home."}
                 ],
                 "Thursday (After unlocking railroad)": [
-                    {
-                    "Time": "9:00 AM",
-                    "Location": "In his bed."
-                    },
-                    {
-                    "Time": "10:30 AM",
-                    "Location": "Gets out of bed and moves to his computer."
-                    },
-                    {
-                    "Time": "2:00 PM",
-                    "Location": "Leaving home to go smoke by train station."
-                    },
-                    {
-                    "Time": "3:00 PM",
-                    "Location": "Smoking by the train station."
-                    },
-                    {
-                    "Time": "6:20 PM",
-                    "Location": "Standing east of train station, by tunnel."
-                    },
-                    {
-                    "Time": "8:10 PM",
-                    "Location": "Standing west of train station, by tunnel."
-                    },
-                    {
-                    "Time": "9:30 PM",
-                    "Location": "Heads home."
-                    },
-                    {
-                    "Time": "10:20 PM",
-                    "Location": "Arrives home."
-                    }
+                    {"Time": "9:00 AM", "Location": "In his bed."},
+                    {"Time": "10:30 AM", "Location": "Gets out of bed and moves to his computer."},
+                    {"Time": "2:00 PM", "Location": "Leaving home to go smoke by train station."},
+                    {"Time": "3:00 PM", "Location": "Smoking by the train station."},
+                    {"Time": "6:20 PM", "Location": "Standing east of train station, by tunnel."},
+                    {"Time": "8:10 PM", "Location": "Standing west of train station, by tunnel."},
+                    {"Time": "9:30 PM", "Location": "Heads home."},
+                    {"Time": "10:20 PM", "Location": "Arrives home."}
                 ],
                 "Friday": [
-                    {
-                    "Time": "9:00 AM",
-                    "Location": "In his bed."
-                    },
-                    {
-                    "Time": "10:30 AM",
-                    "Location": "Gets out of bed and moves to his computer."
-                    },
-                    {
-                    "Time": "3:00 PM",
-                    "Location": "Leaves his room to go play pool with Sam at the Saloon."
-                    },
-                    {
-                    "Time": "5:20 PM",
-                    "Location": "In the Saloon, playing pool with Sam."
-                    },
-                    {
-                    "Time": "9:10 PM",
-                    "Location": "Heads home."
-                    },
-                    {
-                    "Time": "11:10 PM",
-                    "Location": "Arrives home."
-                    }
+                    {"Time": "9:00 AM", "Location": "In his bed."},
+                    {"Time": "10:30 AM", "Location": "Gets out of bed and moves to his computer."},
+                    {"Time": "3:00 PM", "Location": "Leaves his room to go play pool with Sam at the Saloon."},
+                    {"Time": "5:20 PM", "Location": "In the Saloon, playing pool with Sam."},
+                    {"Time": "9:10 PM", "Location": "Heads home."},
+                    {"Time": "11:10 PM", "Location": "Arrives home."}
                 ],
                 "Saturday": [
-                    {
-                    "Time": "9:00 AM",
-                    "Location": "Leaves house to go to Sam's house."
-                    },
-                    {
-                    "Time": "11:30 AM",
-                    "Location": "In front of Haley and Emily's house with Sam."
-                    },
-                    {
-                    "Time": "12:30 PM",
-                    "Location": "Follows Sam to his room."
-                    },
-                    {
-                    "Time": "1:00 PM",
-                    "Location": "In Sam's room."
-                    },
-                    {
-                    "Time": "6:00 PM",
-                    "Location": "Leaves Sam's house with Sam and goes to the river."
-                    },
-                    {
-                    "Time": "6:20 PM",
-                    "Location": "Smoking by the river outside Sam's house with him."
-                    },
-                    {
-                    "Time": "7:30 PM",
-                    "Location": "Going home from in front of Sam's house."
-                    },
-                    {
-                    "Time": "9:40 PM",
-                    "Location": "Arrives home."
-                    }
+                    {"Time": "9:00 AM", "Location": "Leaves house to go to Sam's house."},
+                    {"Time": "11:30 AM", "Location": "In front of Haley and Emily's house with Sam."},
+                    {"Time": "12:30 PM", "Location": "Follows Sam to his room."},
+                    {"Time": "1:00 PM", "Location": "In Sam's room."},
+                    {"Time": "6:00 PM", "Location": "Leaves Sam's house with Sam and goes to the river."},
+                    {"Time": "6:20 PM", "Location": "Smoking by the river outside Sam's house with him."},
+                    {"Time": "7:30 PM", "Location": "Going home from in front of Sam's house."},
+                    {"Time": "9:40 PM", "Location": "Arrives home."}
                 ],
                 "Regular Schedule": [
-                    {
-                    "Time": "9:00 AM",
-                    "Location": "In his bed."
-                    },
-                    {
-                    "Time": "10:30 AM",
-                    "Location": "Gets out of bed and moves to his computer."
-                    },
-                    {
-                    "Time": "3:00 PM",
-                    "Location": "Leaves his computer and goes to the kitchen."
-                    },
-                    {
-                    "Time": "3:30 PM",
-                    "Location": "Leaves the kitchen to go back to his room."
-                    },
-                    {
-                    "Time": "4:10 PM",
-                    "Location": "On his computer."
-                    },
-                    {
-                    "Time": "6:30 PM",
-                    "Location": "Leaves home and walks to lake next to his house to smoke."
-                    },
-                    {
-                    "Time": "7:30 PM",
-                    "Location": "Smoking by the lake next to his house."
-                    },
-                    {
-                    "Time": "9:30 PM",
-                    "Location": "Goes back to his house."
-                    }
+                    {"Time": "9:00 AM", "Location": "In his bed."},
+                    {"Time": "10:30 AM", "Location": "Gets out of bed and moves to his computer."},
+                    {"Time": "3:00 PM", "Location": "Leaves his computer and goes to the kitchen."},
+                    {"Time": "3:30 PM", "Location": "Leaves the kitchen to go back to his room."},
+                    {"Time": "4:10 PM", "Location": "On his computer."},
+                    {"Time": "6:30 PM", "Location": "Leaves home and walks to lake next to his house to smoke."},
+                    {"Time": "7:30 PM", "Location": "Smoking by the lake next to his house."},
+                    {"Time": "9:30 PM", "Location": "Goes back to his house."}
+                ]
+            }
+            "Summer": {
+                "Summer 4": [
+                    {"Time": "9:00 AM", "Location": "In his room, by bookcase."},
+                    {"Time": "10:00 AM", "Location": "Leaving house to go to the clinic."},
+                    {"Time": "11:50 AM", "Location": "In the clinic's waiting room."},
+                    {"Time": "1:40 PM", "Location": "In the clinic's examination room."},
+                    {"Time": "4:00 PM", "Location": "Heads home."},
+                    {"Time": "6:00 PM", "Location": "Arrives at his room and goes to bed."}
+                ],
+                "11th (Less than 6 hearts with Sebastian) and 15th (Any hearts)": [
+                    {"Time": "9:00 AM", "Location": "In his bed."},
+                    {"Time": "10:00 AM", "Location": "Gets out of bed and moves to his computer."},
+                    {"Time": "12:00 PM", "Location": "In his room, standing by couch."},
+                    {"Time": "5:30 PM", "Location": "Leaving his room to go to the kitchen."},
+                    {"Time": "6:30 PM", "Location": "On his computer."},
+                    {"Time": "9:30 PM", "Location": "Goes to bed."}
+                ],
+                "11th & 25th (6+ hearts with Sebastian)": [
+                    {"Time": "9:00 AM", "Location": "In his bed."},
+                    {"Time": "10:30 AM", "Location": "Gets out of bed and moves to his computer."},
+                    {"Time": "3:00 PM", "Location": "Leaves his computer and goes to the kitchen."},
+                    {"Time": "3:30 PM", "Location": "Leaves the kitchen to go back to his room."},
+                    {"Time": "4:10 PM", "Location": "On his computer."},
+                    {"Time": "6:30 PM", "Location": "Leaves home and walks to lake next to his house to smoke."},
+                    {"Time": "7:30 PM", "Location": "Smoking by the lake next to his house."},
+                    {"Time": "9:30 PM", "Location": "Goes back to his house."}
+                ],
+                "Rainy day (option 1)": [
+                    {"Time": "9:00 AM", "Location": "In his bed."},
+                    {"Time": "10:30 AM", "Location": "Gets out of bed and leaves house to go to the beach."},
+                    {"Time": "1:30 PM", "Location": "Standing at the end of long pier to the left of the fish shop."},
+                    {"Time": "5:00 PM", "Location": "Leaves the pier to go home."},
+                    {"Time": "7:40 PM", "Location": "Arrives home and goes to bed."}
+                ],
+                "Rainy day (option 2)": [
+                    {"Time": "9:00 AM", "Location": "In his bed."},
+                    {"Time": "10:30 AM", "Location": "Gets out of bed and moves to his computer."},
+                    {"Time": "3:00 PM", "Location": "Leaving house to go to the Saloon."},
+                    {"Time": "5:20 PM", "Location": "At the Saloon, standing by red sofa in arcade."},
+                    {"Time": "9:10 PM", "Location": "Heads home."},
+                    {"Time": "11:10 PM", "Location": "Arrives home."}
+                ],
+                "Thursday (After unlocking railroad)": [
+                    {"Time": "9:00 AM", "Location": "In his bed."},
+                    {"Time": "10:30 AM", "Location": "Gets out of bed and moves to his computer."},
+                    {"Time": "2:00 PM", "Location": "Leaving home to go smoke by train station."},
+                    {"Time": "3:00 PM", "Location": "Smoking by the train station."},
+                    {"Time": "6:20 PM", "Location": "Standing east of train station, by tunnel."},
+                    {"Time": "8:10 PM", "Location": "Standing west of train station, by tunnel."},
+                    {"Time": "9:30 PM", "Location": "Heads home."},
+                    {"Time": "10:20 PM", "Location": "Arrives home."}
+                ],
+                "Friday": [
+                    {"Time": "9:00 AM", "Location": "In his bed."},
+                    {"Time": "10:30 AM", "Location": "Gets out of bed and moves to his computer."},
+                    {"Time": "3:00 PM", "Location": "Leaves his room to go play pool with Sam at the Saloon."},
+                    {"Time": "5:20 PM", "Location": "In the Saloon, playing pool with Sam."},
+                    {"Time": "9:10 PM", "Location": "Heads home."},
+                    {"Time": "11:10 PM", "Location": "Arrives home."}
+                ],
+                "Saturday": [
+                    {"Time": "9:00 AM", "Location": "Leaves house to go to Sam's house."},
+                    {"Time": "11:30 AM", "Location": "In front of Haley and Emily's house with Sam."},
+                    {"Time": "12:30 PM", "Location": "Follows Sam to his room."},
+                    {"Time": "1:00 PM", "Location": "In Sam's room."},
+                    {"Time": "6:00 PM", "Location": "Leaves Sam's house with Sam and goes to the river."},
+                    {"Time": "6:20 PM", "Location": "Smoking by the river outside Sam's house with him."},
+                    {"Time": "7:30 PM", "Location": "Going home from in front of Sam's house."},
+                    {"Time": "9:40 PM", "Location": "Arrives home."}
+                ],
+                "Regular Schedule": [
+                    {"Time": "9:00 AM", "Location": "In his bed."},
+                    {"Time": "10:30 AM", "Location": "Gets out of bed and moves to his computer."},
+                    {"Time": "3:00 PM", "Location": "Leaves his computer and goes to the kitchen."},
+                    {"Time": "3:30 PM", "Location": "Leaves the kitchen to go back to his room."},
+                    {"Time": "4:10 PM", "Location": "On his computer."},
+                    {"Time": "6:30 PM", "Location": "Leaves home and walks to lake next to his house to smoke."},
+                    {"Time": "7:30 PM", "Location": "Smoking by the lake next to his house."},
+                    {"Time": "9:30 PM", "Location": "Goes back to his house."}
+                ]
+            }
+            "Fall": {
+                "11th (Less than 6 hearts with Sebastian) and 15th (Any hearts)": [
+                    {"Time": "9:00 AM", "Location": "In his bed."},
+                    {"Time": "10:00 AM", "Location": "Gets out of bed and moves to his computer."},
+                    {"Time": "12:00 PM", "Location": "In his room, standing by couch."},
+                    {"Time": "5:30 PM", "Location": "Leaving his room to go to the kitchen."},
+                    {"Time": "6:00 PM", "Location": "Leaves the kitchen to go back to his room."},
+                    {"Time": "6:30 PM", "Location": "On his computer."},
+                    {"Time": "9:30 PM", "Location": "Goes to bed."}
+                ],
+                "11th & 25th (When raining or player has 6+ hearts with Sebastian)": [
+                    {"Time": "9:00 AM", "Location": "In his bed."},
+                    {"Time": "10:30 AM", "Location": "Gets out of bed and moves to his computer."},
+                    {"Time": "3:00 PM", "Location": "Leaves his computer and goes to the kitchen."},
+                    {"Time": "3:30 PM", "Location": "Leaves the kitchen to go back to his room."},
+                    {"Time": "4:10 PM", "Location": "On his computer."},
+                    {"Time": "6:30 PM", "Location": "Leaves home and walks to lake next to his house to smoke."},
+                    {"Time": "7:30 PM", "Location": "Smoking by the lake next to his house."},
+                    {"Time": "9:30 PM", "Location": "Goes back to his house."}
+                ],
+                "Rainy day (option 1)": [
+                    {"Time": "9:00 AM", "Location": "In his bed."},
+                    {"Time": "10:30 AM", "Location": "Gets out of bed and leaves house to go to the beach."},
+                    {"Time": "1:30 PM", "Location": "Standing at the end of long pier to the left of the fish shop."},
+                    {"Time": "5:00 PM", "Location": "Leaves the pier to go home."},
+                    {"Time": "7:40 PM", "Location": "Arrives home and goes to bed."}
+                ],
+                "Rainy day (option 2)": [
+                    {"Time": "9:00 AM", "Location": "In his bed."},
+                    {"Time": "10:30 AM", "Location": "Gets out of bed and moves to his computer."},
+                    {"Time": "3:00 PM", "Location": "Leaving house to go to the Saloon."},
+                    {"Time": "5:20 PM", "Location": "At the Saloon, standing by red sofa in arcade."},
+                    {"Time": "9:10 PM", "Location": "Heads home."},
+                    {"Time": "11:10 PM", "Location": "Arrives home."}
+                ],
+                "Thursday (After unlocking railroad)": [
+                    {"Time": "9:00 AM", "Location": "In his bed."},
+                    {"Time": "10:30 AM", "Location": "Gets out of bed and moves to his computer."},
+                    {"Time": "2:00 PM", "Location": "Leaving home to go smoke by train station."},
+                    {"Time": "3:00 PM", "Location": "Smoking by the train station."},
+                    {"Time": "6:20 PM", "Location": "Standing east of train station, by tunnel."},
+                    {"Time": "8:10 PM", "Location": "Standing west of train station, by tunnel."},
+                    {"Time": "9:30 PM", "Location": "Heads home."},
+                    {"Time": "10:20 PM", "Location": "Arrives home."}
+                ],
+                "Friday": [
+                    {"Time": "9:00 AM", "Location": "In his bed."},
+                    {"Time": "10:30 AM", "Location": "Gets out of bed and moves to his computer."},
+                    {"Time": "3:00 PM", "Location": "Leaves his room to go play pool with Sam at the Saloon."},
+                    {"Time": "5:20 PM", "Location": "In the Saloon, playing pool with Sam."},
+                    {"Time": "9:10 PM", "Location": "Heads home."},
+                    {"Time": "11:10 PM", "Location": "Arrives home."}
+                ],
+                "Saturday": [
+                    {"Time": "9:00 AM", "Location": "Leaves house to go to Sam's house."},
+                    {"Time": "11:30 AM", "Location": "In front of Haley and Emily's house with Sam."},
+                    {"Time": "12:30 PM", "Location": "Follows Sam to his room."},
+                    {"Time": "1:00 PM", "Location": "In Sam's room."},
+                    {"Time": "6:00 PM", "Location": "Leaves Sam's house with Sam and goes to the river."},
+                    {"Time": "6:20 PM", "Location": "Smoking by the river outside Sam's house with him."},
+                    {"Time": "7:30 PM", "Location": "Going home from in front of Sam's house."},
+                    {"Time": "9:40 PM", "Location": "Arrives home."}
+                ],
+                "Regular Schedule": [
+                    {"Time": "9:00 AM", "Location": "In his bed."},
+                    {"Time": "10:30 AM", "Location": "Gets out of bed and moves to his computer."},
+                    {"Time": "12:00 PM", "Location": "Leaves home and walks to lake next to his house."},
+                    {"Time": "2:00 PM", "Location": "Goes to the part of the lake outside the mines entrance."},
+                    {"Time": "3:00 PM", "Location": "Leaves the mines entrance and heads to the other side of the lake."},
+                    {"Time": "3:30 PM", "Location": "Is smoking at the edge of the lake close to the bridge."},
+                    {"Time": "4:00 PM", "Location": "Returns home to his kitchen."},
+                    {"Time": "5:30 PM", "Location": "Leaves his kitchen."},
+                    {"Time": "6:00 PM", "Location": "On his computer."},
+                    {"Time": "9:30 PM", "Location": "Leaves his computer and goes to bed."}
+                ]
+            }
+            "Winter": {
+                "Winter 16": [
+                    {"Time": "10:30 AM", "Location": "Wakes up and goes to his computer."},
+                    {"Time": "3:00 PM", "Location": "Leaves room and goes to kitchen."},
+                    {"Time": "3:40 PM", "Location": "Goes back to room and returns to his computer."},
+                    {"Time": "5:00 PM", "Location": "Leaves his home to attend Night Market."},
+                    {"Time": "11:30 PM", "Location": "Leaves Night Market to return home."}
+                ],
+                "11th (Less than 6 hearts with Sebastian) and 15th (Any hearts)": [
+                    {"Time": "9:00 AM", "Location": "In his bed."},
+                    {"Time": "10:00 AM", "Location": "Gets out of bed and moves to his computer."},
+                    {"Time": "12:00 PM", "Location": "In his room, standing by couch."},
+                    {"Time": "5:30 PM", "Location": "Leaving his room to go to the kitchen."},
+                    {"Time": "6:30 PM", "Location": "On his computer."},
+                    {"Time": "9:30 PM", "Location": "Goes to bed."}
+                ],
+                "11th & 25th (6+ hearts with Sebastian)": [
+                    {"Time": "9:00 AM", "Location": "In his bed."},
+                    {"Time": "10:30 AM", "Location": "Gets out of bed and moves to his computer."},
+                    {"Time": "3:00 PM", "Location": "Leaves his computer and goes to the kitchen."},
+                    {"Time": "3:30 PM", "Location": "Leaves the kitchen to go back to his room."},
+                    {"Time": "4:10 PM", "Location": "On his computer."},
+                    {"Time": "6:30 PM", "Location": "Leaves home and walks to lake next to his house to smoke."},
+                    {"Time": "7:30 PM", "Location": "Smoking by the lake next to his house."},
+                    {"Time": "9:30 PM", "Location": "Goes back to his house."}
+                ],
+                "Rainy day (option 1)": [
+                    {"Time": "9:00 AM", "Location": "In his bed."},
+                    {"Time": "10:30 AM", "Location": "Gets out of bed and leaves house to go to the beach."},
+                    {"Time": "1:30 PM", "Location": "Standing at the end of long pier to the left of the fish shop."},
+                    {"Time": "5:00 PM", "Location": "Leaves the pier to go home."},
+                    {"Time": "7:40 PM", "Location": "Arrives home and goes to bed."}
+                ],
+                "Rainy day (option 2)": [
+                    {"Time": "9:00 AM", "Location": "In his bed."},
+                    {"Time": "10:30 AM", "Location": "Gets out of bed and moves to his computer."},
+                    {"Time": "3:00 PM", "Location": "Leaving house to go to the Saloon."},
+                    {"Time": "5:20 PM", "Location": "At the Saloon, standing by red sofa in arcade."},
+                    {"Time": "9:10 PM", "Location": "Heads home."},
+                    {"Time": "11:10 PM", "Location": "Arrives home."}
+                ],
+                "Thursday (After unlocking railroad)": [
+                    {"Time": "9:00 AM", "Location": "In his bed."},
+                    {"Time": "10:30 AM", "Location": "Gets out of bed and moves to his computer."},
+                    {"Time": "2:00 PM", "Location": "Leaving home to go smoke by train station."},
+                    {"Time": "3:00 PM", "Location": "Smoking by the train station."},
+                    {"Time": "6:20 PM", "Location": "Standing east of train station, by tunnel."},
+                    {"Time": "8:10 PM", "Location": "Standing west of train station, by tunnel."},
+                    {"Time": "9:30 PM", "Location": "Heads home."},
+                    {"Time": "10:20 PM", "Location": "Arrives home."}
+                ],
+                "Friday": [
+                    {"Time": "9:00 AM", "Location": "In his bed."},
+                    {"Time": "10:30 AM", "Location": "Gets out of bed and moves to his computer."},
+                    {"Time": "3:00 PM", "Location": "Leaves his room to go play pool with Sam at the Saloon."},
+                    {"Time": "5:20 PM", "Location": "In the Saloon, playing pool with Sam."},
+                    {"Time": "9:10 PM", "Location": "Heads home."},
+                    {"Time": "11:10 PM", "Location": "Arrives home."}
+                ],
+                "Saturday": [
+                    {"Time": "9:00 AM", "Location": "Leaves house to go to Sam's house."},
+                    {"Time": "11:30 AM", "Location": "In front of Haley and Emily's house with Sam."},
+                    {"Time": "12:30 PM", "Location": "Follows Sam to his room."},
+                    {"Time": "1:00 PM", "Location": "In Sam's room."},
+                    {"Time": "6:00 PM", "Location": "Leaves Sam's house with Sam and goes to the river."},
+                    {"Time": "6:20 PM", "Location": "Smoking by the river outside Sam's house with him."},
+                    {"Time": "7:30 PM", "Location": "Going home from in front of Sam's house."},
+                    {"Time": "9:40 PM", "Location": "Arrives home."}
+                ],
+                "Regular Schedule": [
+                    {"Time": "9:00 AM", "Location": "In his bed."},
+                    {"Time": "10:30 AM", "Location": "Gets out of bed and moves to his computer."},
+                    {"Time": "3:00 PM", "Location": "Leaves his computer and goes to the kitchen."},
+                    {"Time": "3:30 PM", "Location": "Leaves the kitchen to go back to his room."},
+                    {"Time": "4:10 PM", "Location": "On his computer."},
+                    {"Time": "6:30 PM", "Location": "Leaves home and walks to lake next to his house to smoke."},
+                    {"Time": "7:30 PM", "Location": "Smoking by the lake next to his house."},
+                    {"Time": "9:30 PM", "Location": "Goes back to his house."}
+                ]
+            }
+            "Marriage": {
+                "Monday": [
+                    {"Time": "6:00 AM", "Location": "At home."},
+                    {"Time": "9:00 AM", "Location": "Leaves to go to the mountain."},
+                    {"Time": "9:30 AM", "Location": "Walks through the town square."},
+                    {"Time": "10:30 AM", "Location": "Arrives at his old spot by the mountain lake."},
+                    {"Time": "1:00 PM", "Location": "Leaves to go visit Robin."},
+                    {"Time": "5:20 PM", "Location": "Leaves the mountain and heads home."},
+                    {"Time": "7:20 PM", "Location": "Arrives home."},
+                    {"Time": "10:00 PM", "Location": "Goes to bed."}
+                ],
+                "Friday": [
+                    {"Time": "6:00 AM", "Location": "At home."},
+                    {"Time": "9:00 AM", "Location": "Leaves to go to the beach."},
+                    {"Time": "11:00 AM", "Location": "Standing at the end of the long pier to the left of the fish shop."},
+                    {"Time": "3:00 PM", "Location": "Leaves to go to The Stardrop Saloon."},
+                    {"Time": "4:30 PM", "Location": "Arrives at the saloon, playing at the pool table with Sam."},
+                    {"Time": "9:30 PM", "Location": "Leaves to go home."},
+                    {"Time": "10:50 PM", "Location": "Arrives home."}
                 ]
             }
         }
@@ -923,5 +1073,534 @@
             "Ten hearts": "Go to the Mountain between 8pm and midnight.",
             "Fourteen hearts": "Go to the Mountain on a rainy day between 6am and 7pm."
         }
-    }
+    },
+
+    {
+        "name": "Shane",
+        "loves": ["All universal loves", "Beer", "Hot pepper", "Pepper poppers", "Pizza"],
+        "likes": ["All universal likes (except Pickles)", "All eggs (except Void egg)", "All fruits (except Hot pepper)"],
+        "neutral": ["All universal neutrals", "All milk"],
+        "dislikes": ["All universal dislikes", "Chanterelle", "Common mushroom", "Daffodil", "Dandelion", "Ginger", "Hazelnut", "Holly", "Leek", "Magma cap", "Morel", "Purple mushroom", "Seaweed", "Snow Yam", "Wild horseradish", "Winter root"],
+        "hates": ["All universal hates (except Seaweed)", "Pickles", "Quartz"],
+        "schedule": {
+            "Spring": {
+                "Monday - Friday (Community Center Not Restored)": [
+                    { "Time": "7:10 AM", "Location": "Leaves Marnie's Ranch and heads to JojaMart." },
+                    { "Time": "5:00 PM", "Location": "Leaves JojaMart and heads for the Stardrop Saloon." },
+                    { "Time": "11:10 PM", "Location": "Leaves the Stardrop Saloon and heads back to Marnie's Ranch." }
+                ],
+                "Raining (Community Center Not Restored)": [
+                    { "Time": "7:10 AM", "Location": "Leaves Marnie's Ranch and heads to JojaMart." },
+                    { "Time": "5:00 PM", "Location": "Leaves JojaMart and heads for the Stardrop Saloon." },
+                    { "Time": "11:10 PM", "Location": "Leaves the Stardrop Saloon and heads back to Marnie's Ranch." }
+                ],
+                "Saturday (Community Center Not Restored)": [
+                    { "Time": "9:00 AM", "Location": "Leaves his room and stands in kitchen at Marnie's Ranch." },
+                    { "Time": "12:00 PM", "Location": "Leaves Marnie's Ranch and heads to Joja Mart." },
+                    { "Time": "5:00 PM", "Location": "Leaves Joja Mart and heads to the Stardrop Saloon." },
+                    { "Time": "11:00 PM", "Location": "Leaves the Stardrop Saloon and heads back to Marnie's Ranch." }
+                ],
+                "Sunday (Community Center Not Restored)": [
+                    { "Time": "All Day", "Location": "Standing in his room at Marnie's Ranch." }
+                ],
+                "Monday - Friday (Community Center Restored)": [
+                    { "Time": "9:00 AM", "Location": "Leaves his room and stands in kitchen at Marnie's Ranch." },
+                    { "Time": "11:00 AM", "Location": "Leaves the kitchen and returns to his room." },
+                    { "Time": "12:00 PM", "Location": "Leaves his room and stands by the fireplace at Marnie's Ranch." },
+                    { "Time": "2:00 PM", "Location": "Leaves Marnie's Ranch and heads to the Stardrop Saloon." },
+                    { "Time": "11:00 PM", "Location": "Leaves the Stardrop Saloon and heads back to Marnie's Ranch." }
+                ],
+                "Saturday (Community Center Restored)": [
+                    { "Time": "9:00 AM", "Location": "Leaves his room and stands in kitchen at Marnie's Ranch." },
+                    { "Time": "12:00 PM", "Location": "Leaves Marnie's Ranch and heads to Pierre's General Store." },
+                    { "Time": "5:00 PM", "Location": "Leaves Pierre's General Store and heads to the Stardrop Saloon." },
+                    { "Time": "11:00 PM", "Location": "Leaves the Stardrop Saloon and heads back to Marnie's Ranch." }
+                ]
+            },
+            "Summer": {
+                "Monday - Friday (Community Center Not Restored)": [
+                    { "Time": "7:10 AM", "Location": "Leaves Marnie's Ranch and heads to JojaMart." },
+                    { "Time": "5:00 PM", "Location": "Leaves JojaMart and heads for the Stardrop Saloon." },
+                    { "Time": "11:10 PM", "Location": "Leaves the Stardrop Saloon and heads back to Marnie's Ranch." }
+                ],
+                "Raining (Community Center Not Restored)": [
+                    { "Time": "7:10 AM", "Location": "Leaves Marnie's Ranch and heads to JojaMart." },
+                    { "Time": "5:00 PM", "Location": "Leaves JojaMart and heads for the Stardrop Saloon." },
+                    { "Time": "11:10 PM", "Location": "Leaves the Stardrop Saloon and heads back to Marnie's Ranch." }
+                ],
+                "Saturday (Community Center Not Restored)": [
+                    { "Time": "9:00 AM", "Location": "Leaves his room and stands in kitchen at Marnie's Ranch." },
+                    { "Time": "12:00 PM", "Location": "Leaves Marnie's Ranch and heads to Pierre's General Store." },
+                    { "Time": "5:00 PM", "Location": "Leaves Pierre's General Store and heads to the Stardrop Saloon." },
+                    { "Time": "11:00 PM", "Location": "Leaves the Stardrop Saloon and heads back to Marnie's Ranch." }
+                ],
+                "Sunday (Community Center Not Restored)": [
+                    { "Time": "12:30 PM", "Location": "In kitchen at Marnie's Ranch" },
+                    { "Time": "6:00 PM", "Location": "Leaves Marnie's Ranch and heads to the Stardrop Saloon." },
+                    { "Time": "12:00 AM", "Location": "Leaves the Stardrop Saloon and heads back to Marnie's Ranch." }
+                ],
+                "Monday - Friday (Community Center Restored)": [
+                    { "Time": "9:00 AM", "Location": "Leaves his room and stands in kitchen at Marnie's Ranch." },
+                    { "Time": "11:00 AM", "Location": "Leaves the kitchen and returns to his room." },
+                    { "Time": "12:00 PM", "Location": "Leaves his room and stands by the fireplace at Marnie's Ranch." },
+                    { "Time": "2:00 PM", "Location": "Leaves Marnie's Ranch and heads to the Stardrop Saloon." },
+                    { "Time": "11:00 PM", "Location": "Leaves the Stardrop Saloon and heads back to Marnie's Ranch." }
+                ],
+                "Saturday (Community Center Restored)": [
+                    { "Time": "9:00 AM", "Location": "Leaves his room and stands in kitchen at Marnie's Ranch." },
+                    { "Time": "12:00 PM", "Location": "Leaves Marnie's Ranch and heads to Pierre's General Store." },
+                    { "Time": "5:00 PM", "Location": "Leaves Pierre's General Store and heads to the Stardrop Saloon." },
+                    { "Time": "11:00 PM", "Location": "Leaves the Stardrop Saloon and heads back to Marnie's Ranch." }
+                ]
+            },
+            "Fall": {
+                "Monday - Friday (Community Center Not Restored)": [
+                    { "Time": "7:10 AM", "Location": "Leaves Marnie's Ranch and heads to JojaMart." },
+                    { "Time": "5:00 PM", "Location": "Leaves JojaMart and heads for the Stardrop Saloon." },
+                    { "Time": "11:10 PM", "Location": "Leaves the Stardrop Saloon and heads back to Marnie's Ranch." }
+                ],
+                "Raining (Community Center Not Restored)": [
+                    { "Time": "7:10 AM", "Location": "Leaves Marnie's Ranch and heads to JojaMart." },
+                    { "Time": "5:00 PM", "Location": "Leaves JojaMart and heads for the Stardrop Saloon." },
+                    { "Time": "11:10 PM", "Location": "Leaves the Stardrop Saloon and heads back to Marnie's Ranch." }
+                ],
+                "Saturday (Community Center Not Restored)": [
+                    { "Time": "9:00 AM", "Location": "Leaves his room and stands in kitchen at Marnie's Ranch." },
+                    { "Time": "12:00 PM", "Location": "Leaves Marnie's Ranch and heads to Pierre's General Store." },
+                    { "Time": "5:00 PM", "Location": "Leaves Pierre's General Store and heads to the Stardrop Saloon." },
+                    { "Time": "11:00 PM", "Location": "Leaves the Stardrop Saloon and heads back to Marnie's Ranch." }
+                ],
+                "Sunday (Community Center Not Restored)": [
+                    { "Time": "9:00 AM", "Location": "Leaves his room and stands in kitchen at Marnie's Ranch." },
+                    { "Time": "12:00 AM", "Location": "Leaves the kitchen and goes to bed." }
+                ],
+                "Monday - Friday (Community Center Restored)": [
+                    { "Time": "9:00 AM", "Location": "Leaves his room and stands in kitchen at Marnie's Ranch." },
+                    { "Time": "11:00 AM", "Location": "Leaves the kitchen and returns to his room." },
+                    { "Time": "12:00 PM", "Location": "Leaves his room and stands by the fireplace at Marnie's Ranch." },
+                    { "Time": "2:00 PM", "Location": "Leaves Marnie's Ranch and heads to the Stardrop Saloon." },
+                    { "Time": "11:00 PM", "Location": "Leaves the Stardrop Saloon and heads back to Marnie's Ranch." }
+                ],
+                "Saturday (Community Center Restored)": [
+                    { "Time": "9:00 AM", "Location": "Leaves his room and stands in kitchen at Marnie's Ranch." },
+                    { "Time": "12:00 PM", "Location": "Leaves Marnie's Ranch and heads to Pierre's General Store." },
+                    { "Time": "5:00 PM", "Location": "Leaves Pierre's General Store and heads to the Stardrop Saloon." },
+                    { "Time": "11:00 PM", "Location": "Leaves the Stardrop Saloon and heads back to Marnie's Ranch." }
+                ]
+            },
+            "Winter": {
+                "Winter 15": [
+                    { "Time": "7:00 AM", "Location": "At Marnie's Ranch" },
+                    { "Time": "11:00 AM", "Location": "Leaves the kitchen to head to his room." },
+                    { "Time": "3:00 PM", "Location": "Leaves Marnie's Ranch to attend the Night Market." },
+                    { "Time": "11:00 PM", "Location": "Leaves the Night Market to return home." }
+                ],
+                "Monday - Friday (Community Center Not Restored)": [
+                    { "Time": "7:10 AM", "Location": "Leaves Marnie's Ranch and heads to JojaMart." },
+                    { "Time": "5:00 PM", "Location": "Leaves JojaMart and heads for the Stardrop Saloon." },
+                    { "Time": "11:10 PM", "Location": "Leaves the Stardrop Saloon and heads back to Marnie's Ranch." }
+                ],
+                "Raining (Community Center Not Restored)": [
+                    { "Time": "7:10 AM", "Location": "Leaves Marnie's Ranch and heads to JojaMart." },
+                    { "Time": "5:00 PM", "Location": "Leaves JojaMart and heads for the Stardrop Saloon." },
+                    { "Time": "11:10 PM", "Location": "Leaves the Stardrop Saloon and heads back to Marnie's Ranch." }
+                ],
+                "Saturday (Community Center Not Restored)": [
+                    { "Time": "9:00 AM", "Location": "Standing in kitchen at Marnie's Ranch." },
+                    { "Time": "12:00 PM", "Location": "Leaves Marnie's Ranch and heads for Pierre's General Store." },
+                    { "Time": "5:00 PM", "Location": "Leaves Pierre's General Store and heads to the Stardrop Saloon." },
+                    { "Time": "11:00 PM", "Location": "Leaves the Stardrop Saloon and heads back to Marnie's Ranch." }
+                ],
+                "Sunday (Community Center Not Restored)": [
+                    { "Time": "9:00 AM", "Location": "Standing in kitchen at Marnie's Ranch." },
+                    { "Time": "2:00 AM", "Location": "Still standing in kitchen..." }
+                ],
+                "Sunday (Community Center Restored)": [
+                    { "Time": "1:10 PM", "Location": "Standing in his room at Marnie's Ranch." },
+                    { "Time": "3:10 PM", "Location": "Standing in shop room at Marnie's Ranch." },
+                    { "Time": "7:30 PM", "Location": "Standing in Saloon." }
+                ],
+                "Monday - Friday (Community Center Restored)": [
+                    { "Time": "9:00 AM", "Location": "Leaves his room and stands in kitchen at Marnie's Ranch." },
+                    { "Time": "11:00 AM", "Location": "Leaves the kitchen and returns to his room." },
+                    { "Time": "12:00 PM", "Location": "Leaves his room and stands by the fireplace at Marnie's Ranch." },
+                    { "Time": "2:00 PM", "Location": "Leaves Marnie's Ranch and heads to the Stardrop Saloon." },
+                    { "Time": "11:00 PM", "Location": "Leaves the Stardrop Saloon and heads back to Marnie's Ranch." }
+                ],
+                "Saturday (Community Center Restored)": [
+                    { "Time": "9:00 AM", "Location": "Leaves his room and stands in kitchen at Marnie's Ranch." },
+                    { "Time": "12:00 PM", "Location": "Leaves Marnie's Ranch and heads to Pierre's General Store." },
+                    { "Time": "5:00 PM", "Location": "Leaves Pierre's General Store and heads to the Stardrop Saloon." },
+                    { "Time": "11:00 PM", "Location": "Leaves the Stardrop Saloon and heads back to Marnie's Ranch." }
+                ]
+            },
+            "Marriage": {
+                "Monday": [
+                    { "Time": "6:00 AM", "Location": "At home." },
+                    { "Time": "9:30 AM", "Location": "Starts leaving home." },
+                    { "Time": "10:30 AM", "Location": "Arrives at Marnie's Ranch." },
+                    { "Time": "11:30 AM", "Location": "Leaves Marnie's Ranch." },
+                    { "Time": "11:50 AM", "Location": "Stands under big tree, north in Cindersap Forest." },
+                    { "Time": "05:00 PM", "Location": "Leaves big tree and heads home." },
+                    { "Time": "07:30 PM", "Location": "Arrives at home." },
+                    { "Time": "10:00 PM", "Location": "Goes to bed." }
+                ],
+                "Friday": [
+                    { "Time": "6:00 AM", "Location": "At home." },
+                    { "Time": "8:30 AM", "Location": "Leaves home and heads for the river in Pelican Town." },
+                    { "Time": "10:00 AM", "Location": "Standing by river." },
+                    { "Time": "1:00 PM", "Location": "Leaves the river and heads to Pierre's General Store." },
+                    { "Time": "5:00 PM", "Location": "Leaves Pierre's General Store and heads to the Stardrop Saloon." },
+                    { "Time": "10:00 PM", "Location": "Leaves the Stardrop Saloon and heads back home." }
+                ]
+            }
+        },
+        "is datable": true,
+        "birthday": "Sring 20",
+        "events": {
+            "Two hearts": "Enter Cindersap Forest between 8pm and midnight.",
+            "Three hearts": "After reaching 3 hearts with Shane, he will send you a recipe in the mail. He will also become slightly less rude to you during dialogues.",
+            "Four hearts": "Enter Marnie's Ranch at any time.",
+            "Six hearts": "Enter Cindersap Forest between 9am and 8pm while storming or raining.", 
+            "Seven hearts I": "Enter Marnie's Ranch while Shane is home after triggering Shane's six heart event.",
+            "Seven hearts II": "Enter the town between 10am and 4pm on a sunny day. (Also requires 2 hearts with both Emily and Clint.)",
+            "Seven hearts III": "After reaching 7 hearts with Shane, he will send you a recipe in the mail.",
+            "Eight hearts" : "Enter Marnie's Ranch while Shane is home. Note: Will not trigger until the player has seen the follow-up visit from Shane after his 6-heart event.",
+            "Ten hearts": "Exit your house before 6:30am to initiate the event, then walk to the Bus Stop between 4pm and 6pm.",
+            "Fourteen hearts": "Enter town on a non-Friday between 8am and 5pm. For parts II and III enter town anytime each of the next two days."
+        }
+    },
+
+    {
+        "name": "Abigail",
+        "loves": ["All universal loves", "Amethyst", "Banana pudding", "Blackberry cobbler", "Chocolate cake", "Pufferfish", "Pumpkin", "Spicy eel"],
+        "likes": ["All universal likes (except Vegetables)", "Quartz"],
+        "neutral": ["All universal neutrals", "All milk", "Chanterelle", "Common mushroom", "Daffodil", "Dandelion", "Ginger", "Hazelnut", "Leek", "Magma cap", "Morel", "Purple mushroom", "Snow yam", "Winter root"],
+        "dislikes": ["All universal dislikes (except Clay and Pufferfish)", "All eggs", "All fruits (except Fruit Tree Fruit)", "All Vegetables (except Hops, Pumpkin, Tea leaves and Wheat)", "Sugar", "Wild horseradish"],
+        "hates": ["All universale hates (except Suger)", "Clay", "Holly"],
+        "schedule": {
+            "Spring": {
+                "Spring 4": [
+                    { "Time": "9:00 AM", "Location": "In her room" },
+                    { "Time": "12:30 PM", "Location": "Leaves her room to go to the clinic for her annual check-up" },
+                    { "Time": "1:30 PM", "Location": "Leaves the waiting room and enters the exam room of Harvey's Clinic" },
+                    { "Time": "4:00 PM", "Location": "Leaves the clinic and goes home back to her room" },
+                    { "Time": "8:00 PM", "Location": "Goes to bed" }
+                ],
+                "Monday": [
+                    { "Time": "9:00 AM", "Location": "Leaves her room to go to the kitchen" },
+                    { "Time": "10:30 AM", "Location": "Leaves the kitchen to stand in Pierre's store" },
+                    { "Time": "1:00 PM", "Location": "Leaves the house to go to stand on bridge near JojaMart" },
+                    { "Time": "1:30 PM", "Location": "Standing on the bridge near JojaMart" },
+                    { "Time": "4:30 PM", "Location": "Heads home" },
+                    { "Time": "5:20 PM", "Location": "In her room, playing video games" },
+                    { "Time": "7:30 PM", "Location": "Goes to bed" }
+                ],
+                "Tuesday": [
+                    { "Time": "9:00 AM", "Location": "Leaves her room to go to the kitchen" },
+                    { "Time": "10:30 AM", "Location": "Leaves the kitchen to stand in Pierre's store" },
+                    { "Time": "1:00 PM", "Location": "Leaves the house to go to stand on bridge near JojaMart" },
+                    { "Time": "1:30 PM", "Location": "Standing on the bridge near JojaMart" },
+                    { "Time": "4:30 PM", "Location": "Heads home" },
+                    { "Time": "5:20 PM", "Location": "In her room, playing video games" },
+                    { "Time": "7:30 PM", "Location": "Goes to bed" }
+                ],
+                "Wednesday": [
+                    { "Time": "10:00 AM", "Location": "Leaves home to go to Museum" },
+                    { "Time": "12:00 PM", "Location": "Inside Museum library looking at books" },
+                    { "Time": "6:00 PM", "Location": "Walks to the Graveyard" },
+                    { "Time": "7:00 PM", "Location": "Standing in front of Mona's grave" },
+                    { "Time": "10:00 PM", "Location": "Heads home" },
+                    { "Time": "10:40 PM", "Location": "Arrives at home" }
+                ],
+                "Thursday": [
+                    { "Time": "9:00 AM", "Location": "Leaves her room to go to the kitchen" },
+                    { "Time": "10:30 AM", "Location": "Leaves the kitchen to stand in Pierre's store" },
+                    { "Time": "1:00 PM", "Location": "Leaves the house to go to stand on bridge near JojaMart" },
+                    { "Time": "1:30 PM", "Location": "Standing on the bridge near JojaMart" },
+                    { "Time": "4:30 PM", "Location": "Heads home" },
+                    { "Time": "5:20 PM", "Location": "In her room, playing video games" },
+                    { "Time": "7:30 PM", "Location": "Goes to bed" }
+                ],
+                "Friday": [
+                    { "Time": "9:00 AM", "Location": "Leaving her room to go to the kitchen" },
+                    { "Time": "11:00 AM", "Location": "Leaves the kitchen to stand in Pierre's General Store" },
+                    { "Time": "3:00 PM", "Location": "Leaving home to go to the Saloon" },
+                    { "Time": "3:50 PM", "Location": "In The Stardrop Saloon, sitting on a sofa in the arcade" },
+                    { "Time": "9:00 PM", "Location": "Heads home" },
+                    { "Time": "9:40 PM", "Location": "Arrives home" }
+                ],
+                "Saturday": [
+                    { "Time": "9:00 AM", "Location": "Leaves her room to go into Caroline and Pierre's room" },
+                    { "Time": "1:00 PM", "Location": "Leaving home to go to the Wizard's Tower" },
+                    { "Time": "4:00 PM", "Location": "Near Wizard's Tower in Cindersap Forest" },
+                    { "Time": "8:00 PM", "Location": "Heads home" },
+                    { "Time": "10:30 PM", "Location": "Arrives home" }
+                ],
+                "Sunday": [
+                    { "Time": "9:00 AM", "Location": "In her room" },
+                    { "Time": "10:30 AM", "Location": "Leaves her room to go into Caroline and Pierre's room" },
+                    { "Time": "1:00 PM", "Location": "Leaving home to go to the Wizard's Tower" },
+                    { "Time": "4:00 PM", "Location": "Near Wizard's Tower in Cindersap Forest" },
+                    { "Time": "8:00 PM", "Location": "Heads home" },
+                    { "Time": "10:30 PM", "Location": "Arrives home" }
+                ]
+            },
+            "Summer": {
+                "Monday": [
+                    { "Time": "9:00 AM", "Location": "Leaving her room to go to the kitchen" },
+                    { "Time": "11:00 AM", "Location": "Leaves home, walks to the Train Platform" },
+                    { "Time": "1:00 PM", "Location": "Waiting in front of the Train Platform" },
+                    { "Time": "2:00 PM", "Location": "Walks to the lake east of the Carpenter's Shop" },
+                    { "Time": "3:00 PM", "Location": "Standing by The Mountain lake east of the Carpenter's Shop" },
+                    { "Time": "5:30 PM", "Location": "Heads home" },
+                    { "Time": "7:30 PM", "Location": "Arrives home" },
+                    { "Time": "8:00 PM", "Location": "Plays video games" },
+                    { "Time": "8:10 PM", "Location": "Goes to bed" }
+                ],
+                "Tuesday": [
+                    { "Time": "9:00 AM", "Location": "Leaving her room to go to the kitchen" },
+                    { "Time": "11:00 AM", "Location": "Leaves home, walks to the Train Platform" },
+                    { "Time": "1:00 PM", "Location": "Waiting in front of the Train Platform" },
+                    { "Time": "2:00 PM", "Location": "Walks to the lake east of the Carpenter's Shop" },
+                    { "Time": "3:00 PM", "Location": "Standing by The Mountain lake east of the Carpenter's Shop" },
+                    { "Time": "5:30 PM", "Location": "Heads home" },
+                    { "Time": "7:30 PM", "Location": "Arrives home" },
+                    { "Time": "8:00 PM", "Location": "Plays video games" },
+                    { "Time": "8:10 PM", "Location": "Goes to bed" }
+                ],
+                "Thursday": [
+                    { "Time": "9:00 AM", "Location": "Leaving her room to go to the kitchen" },
+                    { "Time": "11:00 AM", "Location": "Leaves home, walks to the Train Platform" },
+                    { "Time": "1:00 PM", "Location": "Waiting in front of the Train Platform" },
+                    { "Time": "2:00 PM", "Location": "Walks to the lake east of the Carpenter's Shop" },
+                    { "Time": "3:00 PM", "Location": "Standing by The Mountain lake east of the Carpenter's Shop" },
+                    { "Time": "5:30 PM", "Location": "Heads home" },
+                    { "Time": "7:30 PM", "Location": "Arrives home" },
+                    { "Time": "8:00 PM", "Location": "Plays video games" },
+                    { "Time": "8:10 PM", "Location": "Goes to bed" }
+                ],
+                "Saturday": [
+                    { "Time": "9:00 AM", "Location": "Leaving her room to go to the kitchen" },
+                    { "Time": "11:00 AM", "Location": "Leaves the kitchen to stand in Pierre's General Store" },
+                    { "Time": "3:00 PM", "Location": "Leaving home to go to the The Stardrop Saloon" },
+                    { "Time": "3:50 PM", "Location": "In The Stardrop Saloon, sitting on a sofa in the arcade" },
+                    { "Time": "9:00 PM", "Location": "Heads home" },
+                    { "Time": "9:40 PM", "Location": "Arrives home" }
+                ],
+                "Wednesday": [
+                    { "Time": "10:00 AM", "Location": "Leaves home to go to the library" },
+                    { "Time": "12:00 PM", "Location": "Inside library, looking at books" },
+                    { "Time": "6:00 PM", "Location": "Walks to Graveyard" },
+                    { "Time": "7:00 PM", "Location": "Standing in front of Mona's grave" },
+                    { "Time": "10:00 PM", "Location": "Heads home" },
+                    { "Time": "10:40 PM", "Location": "Arrives at home" }
+                ],
+                "Friday": [
+                    { "Time": "9:00 AM", "Location": "Leaving her room to go to the kitchen" },
+                    { "Time": "11:00 AM", "Location": "Leaves the kitchen to stand in Pierre's General Store" },
+                    { "Time": "3:00 PM", "Location": "Leaving home to go to the The Stardrop Saloon" },
+                    { "Time": "3:50 PM", "Location": "In The Stardrop Saloon, sitting on a sofa in the arcade" },
+                    { "Time": "9:00 PM", "Location": "Heads home" },
+                    { "Time": "9:40 PM", "Location": "Arrives home" }
+                ],
+                "Sunday": [
+                    { "Time": "10:30 AM", "Location": "Leaves her room to go into Caroline and Pierre's room" },
+                    { "Time": "1:00 PM", "Location": "Leaves home, walks to the Wizard's Tower" },
+                    { "Time": "4:00 PM", "Location": "Standing in front of the Wizard's Tower in Cindersap Forest" },
+                    { "Time": "8:00 PM", "Location": "Heads home" },
+                    { "Time": "10:30 PM", "Location": "Arrives home" }
+                ]
+            },
+            "Fall": {
+                "Monday": [
+                    { "Time": "9:00 AM", "Location": "In her room" },
+                    { "Time": "11:00 AM", "Location": "Leaving home to go to The Beach" },
+                    { "Time": "1:00 PM", "Location": "Standing at the end of long pier to the left of the Fish Shop" },
+                    { "Time": "6:00 PM", "Location": "Heads home" },
+                    { "Time": "7:30 PM", "Location": "Arrives home and goes to bed" }
+                ],
+                "Tuesday": [
+                    { "Time": "9:00 AM", "Location": "Leaves her room to go to the kitchen" },
+                    { "Time": "10:30 AM", "Location": "Leaves the kitchen to stand in Pierre's General Store" },
+                    { "Time": "1:00 PM", "Location": "Leaving the house to go to stand at Bus Stop" },
+                    { "Time": "2:20 PM", "Location": "Standing at bus stop" },
+                    { "Time": "5:00 PM", "Location": "Heads home" },
+                    { "Time": "6:30 PM", "Location": "In her room, playing video games" },
+                    { "Time": "7:30 PM", "Location": "Goes to bed" }
+                ],
+                "Thursday": [
+                    { "Time": "9:00 AM", "Location": "Leaves her room to go to the kitchen" },
+                    { "Time": "10:30 AM", "Location": "Leaves the kitchen to stand in Pierre's General Store" },
+                    { "Time": "1:00 PM", "Location": "Leaving the house to go to stand at Bus Stop" },
+                    { "Time": "2:20 PM", "Location": "Standing at bus stop" },
+                    { "Time": "5:00 PM", "Location": "Heads home" },
+                    { "Time": "6:30 PM", "Location": "In her room, playing video games" },
+                    { "Time": "7:30 PM", "Location": "Goes to bed" }
+                ],
+                "Saturday": [
+                    { "Time": "9:00 AM", "Location": "Leaves her room to go to the kitchen" },
+                    { "Time": "10:30 AM", "Location": "Leaves the kitchen to stand in Pierre's General Store" },
+                    { "Time": "1:00 PM", "Location": "Leaving the house to go to stand at Bus Stop" },
+                    { "Time": "2:20 PM", "Location": "Standing at bus stop" },
+                    { "Time": "5:00 PM", "Location": "Heads home" },
+                    { "Time": "6:30 PM", "Location": "In her room, playing video games" },
+                    { "Time": "7:30 PM", "Location": "Goes to bed" }
+                ],
+                "Wednesday": [
+                    { "Time": "10:30 AM", "Location": "Leaves home to go to library" },
+                    { "Time": "12:00 PM", "Location": "Inside library, looking at books" },
+                    { "Time": "6:00 PM", "Location": "Walks to Graveyard" },
+                    { "Time": "7:00 PM", "Location": "Standing in front of Mona's grave" },
+                    { "Time": "10:00 PM", "Location": "Heads home" },
+                    { "Time": "10:40 PM", "Location": "Arrives at home" }
+                ],
+                "Friday": [
+                    { "Time": "9:00 AM", "Location": "Leaving her room to go to the kitchen" },
+                    { "Time": "11:00 AM", "Location": "Leaves the kitchen to stand in Pierre's General Store" },
+                    { "Time": "3:00 PM", "Location": "Leaving Pierre's General Store to go to The Stardrop Saloon" },
+                    { "Time": "3:50 PM", "Location": "In The Stardrop Saloon, sitting on a sofa in the arcade" },
+                    { "Time": "9:00 PM", "Location": "Heads home" },
+                    { "Time": "9:40 PM", "Location": "Arrives home" }
+                ],
+                "Sunday": [
+                    { "Time": "9:00 AM", "Location": "In her room" },
+                    { "Time": "10:30 AM", "Location": "Leaves her room to go into Caroline and Pierre's room" },
+                    { "Time": "1:00 PM", "Location": "Leaving home to go to the Wizard's Tower" },
+                    { "Time": "4:00 PM", "Location": "Near the Wizard's Tower in Cindersap Forest" },
+                    { "Time": "8:00 PM", "Location": "Heads home" },
+                    { "Time": "10:30 PM", "Location": "Arrives at home" }
+                ]
+            },
+            "Winter": {
+                "Winter 15": [
+                    { "Time": "9:00 AM", "Location": "Leaving her room to go to the kitchen" },
+                    { "Time": "10:30 AM", "Location": "Walking to the Carpenter's Shop. Stands next to the counter" },
+                    { "Time": "2:30 PM", "Location": "Heads to the beach for the Night Market" },
+                    { "Time": "12:00 AM", "Location": "Back at home" }
+                ],
+                "Monday": [
+                    { "Time": "9:00 AM", "Location": "Leaving her room to go to the kitchen" },
+                    { "Time": "10:30 AM", "Location": "Walking to the Carpenter's Shop. Stands next to the counter" },
+                    { "Time": "2:30 PM", "Location": "Heads back home and plays video games" },
+                    { "Time": "7:30 PM", "Location": "Goes to bed" }
+                ],
+                "Tuesday": [
+                    { "Time": "9:00 AM", "Location": "Leaving her room to go to the kitchen" },
+                    { "Time": "10:30 AM", "Location": "Walking to the Carpenter's Shop. Stands next to the counter" },
+                    { "Time": "2:30 PM", "Location": "Heads back home and plays video games" },
+                    { "Time": "7:30 PM", "Location": "Goes to bed" }
+                ],
+                "Thursday": [
+                    { "Time": "9:00 AM", "Location": "Leaving her room to go to the kitchen" },
+                    { "Time": "10:30 AM", "Location": "Walking to the Carpenter's Shop. Stands next to the counter" },
+                    { "Time": "2:30 PM", "Location": "Heads back home and plays video games" },
+                    { "Time": "7:30 PM", "Location": "Goes to bed" }
+                ],
+                "Saturday": [
+                    { "Time": "9:00 AM", "Location": "Leaving her room to go to the kitchen" },
+                    { "Time": "10:30 AM", "Location": "Walking to the Carpenter's Shop. Stands next to the counter" },
+                    { "Time": "2:30 PM", "Location": "Heads back home and plays video games" },
+                    { "Time": "7:30 PM", "Location": "Goes to bed" }
+                ],
+                "Wednesday": [
+                    { "Time": "10:00 AM", "Location": "Leaves home to go to the library" },
+                    { "Time": "12:00 PM", "Location": "Inside the library, looking at books" },
+                    { "Time": "6:00 PM", "Location": "Walks to Graveyard" },
+                    { "Time": "7:00 PM", "Location": "Standing in front of Mona's grave" },
+                    { "Time": "10:00 PM", "Location": "Heads home" },
+                    { "Time": "10:40 PM", "Location": "Arrives at home" }
+                ],
+                "Friday": [
+                    { "Time": "9:00 AM", "Location": "Leaving her room to go to the kitchen" },
+                    { "Time": "11:00 AM", "Location": "Leaves the kitchen to stand in Pierre's General Store" },
+                    { "Time": "3:00 PM", "Location": "Leaving Pierre's General Store to go to The Stardrop Saloon" },
+                    { "Time": "3:50 PM", "Location": "In The Stardrop Saloon, sitting on a sofa in the arcade" },
+                    { "Time": "9:00 PM", "Location": "Heads home" },
+                    { "Time": "9:40 PM", "Location": "Arrives home" }
+                ],
+                "Sunday": [
+                    { "Time": "9:00 AM", "Location": "In her room" },
+                    { "Time": "10:30 AM", "Location": "Leaves her room to go into Caroline and Pierre's room" },
+                    { "Time": "1:00 PM", "Location": "Leaving home to go to the Wizard's Tower" },
+                    { "Time": "4:00 PM", "Location": "Near the Wizard's Tower in Cindersap Forest" },
+                    { "Time": "8:00 PM", "Location": "Heads home" },
+                    { "Time": "10:30 PM", "Location": "Arrives at home" }
+                ]
+            },
+            "Deviations": {
+                "Rainy Day (Option 1)": [
+                    { "Time": "9:00 AM", "Location": "In her room" },
+                    { "Time": "11:00 AM", "Location": "Leaves her room to stand in Pierre's General Store" },
+                    { "Time": "1:00 PM", "Location": "Goes to the kitchen" },
+                    { "Time": "3:00 PM", "Location": "Returns to her room" },
+                    { "Time": "10:00 PM", "Location": "Goes to bed" }
+                ],
+                "Rainy Day (Option 2)": [
+                    { "Time": "9:00 AM", "Location": "Leaving her room to go to the kitchen" },
+                    { "Time": "11:00 AM", "Location": "Leaves the kitchen to stand in Pierre's General Store" },
+                    { "Time": "2:00 PM", "Location": "Leaving the house to go to The Stardrop Saloon" },
+                    { "Time": "2:50 PM", "Location": "In The Stardrop Saloon, sitting on a sofa in the arcade" },
+                    { "Time": "9:00 PM", "Location": "Heads home" },
+                    { "Time": "10:00 PM", "Location": "Goes to bed" }
+                ],
+                "6th or 16th of any Season": [
+                    { "Time": "9:00 AM", "Location": "Leaving her room to go to the kitchen" },
+                    { "Time": "10:30 AM", "Location": "Leaves the kitchen to stand in Pierre's General Store" },
+                    { "Time": "3:00 PM", "Location": "Goes to The Mountain, standing on the southwest corner of the lake, playing the flute" },
+                    { "Time": "8:00 PM", "Location": "Heads home to go to bed" },
+                    { "Time": "9:40 PM", "Location": "Arrives at home" }
+                ],
+                "11th & 25th (When you have less than 6 hearts with Sebastian, except in Winter)": [
+                    { "Time": "9:00 AM", "Location": "In her bed" },
+                    { "Time": "10:00 AM", "Location": "Leaves home to go to Sebastian's room" },
+                    { "Time": "12:10 PM", "Location": "In Sebastian's room" },
+                    { "Time": "5:00 PM", "Location": "Heads home to go to bed" }
+                ],
+                "11th & 25th of any season (When you have more than 6 hearts with Sebastian)": [
+                    { "Time": "9:00 AM", "Location": "Leaves her room to go to the kitchen" },
+                    { "Time": "10:30 AM", "Location": "Leaves the kitchen to stand in Pierre's General Store" },
+                    { "Time": "1:00 PM", "Location": "Leaving the house to go to stand on the bridge near JojaMart" },
+                    { "Time": "1:30 PM", "Location": "Standing on the bridge near JojaMart" },
+                    { "Time": "4:30 PM", "Location": "Heads home" },
+                    { "Time": "5:20 PM", "Location": "In her room, playing video games" },
+                    { "Time": "7:30 PM", "Location": "Goes to bed" }
+                ]
+            },
+            "Marriage": {
+                "Monday": [
+                    { "Time": "6:00 AM", "Location": "At home, in the kitchen" },
+                    { "Time": "8:30 AM", "Location": "Leaves home to go to Pierre's General Store" },
+                    { "Time": "9:30 AM", "Location": "Arrives at Pierre's General Store, stands by the counter near Pierre" },
+                    { "Time": "1:00 PM", "Location": "Leaves Pierre's General Store, walking to the Graveyard" },
+                    { "Time": "1:40 PM", "Location": "Standing in front of Mona's grave" },
+                    { "Time": "5:00 PM", "Location": "Leaves the Graveyard, heading to The Stardrop Saloon" },
+                    { "Time": "5:30 PM", "Location": "Arrives at The Stardrop Saloon, heads to the arcade" },
+                    { "Time": "5:40 PM", "Location": "Begins playing Journey of the Prairie King" },
+                    { "Time": "8:30 PM", "Location": "Stops playing Journey of the Prairie King, starts walking home" },
+                    { "Time": "10:00 PM", "Location": "At home in bed" }
+                ],
+                "Friday": [
+                    { "Time": "6:00 AM", "Location": "At home" },
+                    { "Time": "8:30 AM", "Location": "Heads to Pierre's General Store and stands in the kitchen" },
+                    { "Time": "11:00 AM", "Location": "Walking to The Mountain" },
+                    { "Time": "11:40 AM", "Location": "West side of the mountain lake" },
+                    { "Time": "3:00 PM", "Location": "Walking to The Stardrop Saloon" },
+                    { "Time": "5:30 PM", "Location": "In The Stardrop Saloon, sitting on a sofa in the arcade" },
+                    { "Time": "8:30 PM", "Location": "Walking home" },
+                    { "Time": "10:00 PM", "Location": "At home in bed" }
+                ]
+            }
+        },
+        "is datable": true,
+        "birthday": "Fall 13",
+        "events": {
+            "Two hearts": "Enter Pierre's General Store when Abigail is there, any day except Saturday.",
+            "Four hearts": "Visit the mountain between noon and 7pm on a rainy day, any season except Winter.",
+            "Six hearts": "Between 9pm and midnight on a day when it is not raining, enter Pelican Town from any direction. (This includes exiting homes or shops in Town.)",
+            "Eight hearts": "After receiving a letter from Abigail, enter Pierre's General Store between 8pm and 10pm when she's there. (Note that, unless you have the Key To The Town, you cannot enter the store from outside after 9pm, but you can wait in Caroline's greenhouse and trigger the event by exiting to the kitchen.)",
+            "Ten hearts": "After you give Abigail a Bouquet, enter the mines or the Quarry Mine between 5pm and midnight. The event won't trigger if you've already given her the Mermaid's Pendant.",
+            "Fourteen hearts": "Enter the Backwoods between 6:10am and 5pm."
+        }
+    },
 ]
