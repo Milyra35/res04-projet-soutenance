@@ -2469,4 +2469,371 @@
             "Fourteen hearts": "Part 1: Enter the Farmhouse between 6:10am and 5pm on a non-Sunday non-winter day. Part 2: Enter the Mountains between 10:00pm and 1:00am on a sunny day."
         }
     },
+
+    {
+        "name": "Penny",
+        "loves": ["All universal loves (except Rabbit's foot)", "Diamond", "Emerald", "Melon", "Poppy", "Poppyseed muffin", "Red plate", "Roots platter", "Sandfish", "Tom Kha Soup"],
+        "likes": ["All universal likes (except Algae soup, Beer, Mead, Pale ale, Pale broth, Pina Colada, Tom Kha Soup and Wine)", "All milk", "All Artifacts", "Dandelion", "Leek"],
+        "neutral": ["All universal neutrals (except Duck feather, Hops and Wool)", "All eggs (except Void egg)", "All fruits (except Fruit tree fruit, Grape, Melon and Salmonberry)", "Chanterelle", "Common mushroom", "Daffodil", "Ginger", "Hazelnut", "Magma cap", "Morel", "Snow yam", "Wild horseradish", "Winter root"],
+        "dislikes": ["All universal dislikes (except Artifacts and Sandfish)", "Algae soup", "Duck feather", "Pale broth", "Purple mushroom", "Quartz", "Red mushroom", "Salmonberry", "Wool"],
+        "hates": ["All universal hates (except Poppy and Red mushroom)", "Beer", "Grape", "Holly", "Hops", "Mead", "Pale ale", "Pina Colada", "Rabbit's foot", "Wine"],
+        "schedule": {
+            "Spring": {
+                "Monday": [
+                    {"Time": "8:00 AM", "Location": "Leaves her trailer and goes outside to read near the Graveyard."},
+                    {"Time": "12:30 PM", "Location": "Returns to the trailer to wash dishes."},
+                    {"Time": "4:00 PM", "Location": "Leaves the trailer again to go outside the saloon where she sits on a bench with Maru."},
+                    {"Time": "6:40 PM", "Location": "Returns to her trailer for the evening."}
+                ],
+                "Tuesday": [
+                    {"Time": "9:00 AM", "Location": "Leaves her trailer and goes to the museum/library to tutor Jas and Vincent."},
+                    {"Time": "2:00 PM", "Location": "Leaves the library and stands near the Ice Cream Stand watching over Jas and Vincent."},
+                    {"Time": "4:20 PM", "Location": "Walks Vincent to 1 Willow Lane and says goodbye."},
+                    {"Time": "5:50 PM", "Location": "Walks Jas to Marnie's Ranch and says goodbye."},
+                    {"Time": "6:30 PM", "Location": "Returns to her trailer for the evening."}
+                ],
+                "Wednesday": [
+                    {"Time": "9:00 AM", "Location": "Leaves her trailer and goes to the museum/library to tutor Jas and Vincent."},
+                    {"Time": "2:00 PM", "Location": "Leaves the library and stands near the Ice Cream Stand watching over Jas and Vincent."},
+                    {"Time": "4:20 PM", "Location": "Walks Vincent to 1 Willow Lane and says goodbye."},
+                    {"Time": "5:50 PM", "Location": "Walks Jas to Marnie's Ranch and says goodbye."},
+                    {"Time": "6:30 PM", "Location": "Returns to her trailer for the evening."}
+                ],
+                "Thursday": [
+                    {"Time": "8:00 AM", "Location": "Leaves her trailer and goes outside to read near the Graveyard."},
+                    {"Time": "12:30 PM", "Location": "Returns to the trailer to wash dishes."},
+                    {"Time": "4:00 PM", "Location": "Leaves the trailer again to go outside the saloon where she sits on a bench with Maru."},
+                    {"Time": "6:40 PM", "Location": "Returns to her trailer for the evening."}
+                ],
+                "Friday": [
+                    {"Time": "9:00 AM", "Location": "Leaves her trailer and goes to the museum/library to tutor Jas and Vincent."},
+                    {"Time": "2:00 PM", "Location": "Leaves the library and stands near the Ice Cream Stand watching over Jas and Vincent."},
+                    {"Time": "4:20 PM", "Location": "Walks Vincent to 1 Willow Lane and says goodbye."},
+                    {"Time": "5:50 PM", "Location": "Walks Jas to Marnie's Ranch and says goodbye."},
+                    {"Time": "6:30 PM", "Location": "Returns to her trailer for the evening."}
+                ],
+                "Saturday": [
+                    {"Time": "9:00 AM", "Location": "In her room."},
+                    {"Time": "10:00 AM", "Location": "Leaves her trailer to meet up with Jas and Vincent near the town graveyard."},
+                    {"Time": "12:00 PM", "Location": "Walks Jas and Vincent to the playground north of the plaza and watches them play."},
+                    {"Time": "5:00 PM", "Location": "Walks Jas and Vincent back to town and drops them off in front of Emily and Haley's house."},
+                    {"Time": "6:30 PM", "Location": "Returns to her trailer for the evening."}
+                ],
+                "Sunday": [
+                    {"Time": "8:00 AM", "Location": "Leaves her trailer and goes outside to read near the Graveyard."},
+                    {"Time": "12:30 PM", "Location": "Returns to the trailer to wash dishes."},
+                    {"Time": "4:00 PM", "Location": "Leaves the trailer again to go outside the saloon where she sits on a bench with Maru."},
+                    {"Time": "6:40 PM", "Location": "Returns to her trailer for the evening."}
+                ]
+            },
+            "Summer": {
+                "Sunday": [
+                    {"Time": "8:00 AM", "Location": "Leaves her trailer and walks to the river above JojaMart."},
+                    {"Time": "1:00 PM", "Location": "Goes to the garden beside the Community Center and sits inside."},
+                    {"Time": "6:00 PM", "Location": "Leaves Community Center Garden and returns to the trailer to do dishes."},
+                    {"Time": "9:00 PM", "Location": "Goes to bed in her room in the trailer for the evening."}
+                ],
+                "Monday": [
+                    {"Time": "8:00 AM", "Location": "Wakes up and walks through town to stand by the river behind JojaMart."},
+                    {"Time": "9:30 AM", "Location": "Watching the river behind JojaMart."},
+                    {"Time": "1:00 PM", "Location": "Walks back through town and to the community center."},
+                    {"Time": "2:30 PM", "Location": "Sitting on a bench to the right of the community center."},
+                    {"Time": "6:00 PM", "Location": "Leaves town and returns to the trailer."},
+                    {"Time": "7:00 PM", "Location": "Arrives at the trailer for the evening."}
+                ],
+                "Tuesday": [
+                    {"Time": "9:00 AM", "Location": "Leaves the trailer and walks to the Museum."},
+                    {"Time": "10:00 AM", "Location": "In the Museum."},
+                    {"Time": "2:00 PM", "Location": "Pelican Town, outside of the Museum near bridge."},
+                    {"Time": "4:00 PM", "Location": "Outside 2 Willow Lane, walking Vincent and Jas home."},
+                    {"Time": "6:30 PM", "Location": "Leaves Marnie's Ranch and returns to home for the evening."},
+                    {"Time": "8:00 PM", "Location": "Arrives at the trailer for the evening."}
+                ],
+                "Wednesday": [
+                    {"Time": "9:00 AM", "Location": "Leaves the trailer and walks to the Museum."},
+                    {"Time": "10:00 AM", "Location": "In the Museum."},
+                    {"Time": "2:00 PM", "Location": "Pelican Town, outside of the Museum near bridge."},
+                    {"Time": "4:00 PM", "Location": "Outside 2 Willow Lane, walking Vincent and Jas home."},
+                    {"Time": "6:30 PM", "Location": "Leaves Marnie's Ranch and returns to home for the evening."},
+                    {"Time": "8:00 PM", "Location": "Arrives at the trailer for the evening."}
+                ],
+                "Thursday": [
+                    {"Time": "8:00 AM", "Location": "Wakes up and walks through town to stand by the river behind JojaMart."},
+                    {"Time": "9:30 AM", "Location": "Watching the river behind JojaMart."},
+                    {"Time": "1:00 PM", "Location": "Walks back through town and to the community center."},
+                    {"Time": "2:30 PM", "Location": "Sitting on a bench to the right of the community center."},
+                    {"Time": "6:00 PM", "Location": "Leaves town and returns to the trailer."},
+                    {"Time": "7:00 PM", "Location": "Arrives at the trailer for the evening."}
+                ],
+                "Friday": [
+                    {"Time": "9:00 AM", "Location": "Leaves the trailer and walks to the Museum."},
+                    {"Time": "10:00 AM", "Location": "In the Museum."},
+                    {"Time": "2:00 PM", "Location": "Pelican Town, outside of the Museum near bridge."},
+                    {"Time": "4:00 PM", "Location": "Outside 2 Willow Lane, walking Vincent and Jas home."},
+                    {"Time": "6:30 PM", "Location": "Leaves Marnie's Ranch and returns to home for the evening."},
+                    {"Time": "8:00 PM", "Location": "Arrives at the trailer for the evening."}
+                ],
+                "Saturday": [
+                    {"Time": "10:00 AM", "Location": "Leaves her trailer and goes outside near the town graveyard."},
+                    {"Time": "11:00 AM", "Location": "With the kids near the town graveyard."},
+                    {"Time": "12:00 PM", "Location": "Walk kids to the playground, west of the community center."},
+                    {"Time": "1:00 PM", "Location": "At the playground, play with kids."},
+                    {"Time": "5:00 PM", "Location": "Walks Jas and Vincent to Emily's house."},
+                    {"Time": "6:00 PM", "Location": "Beside Emily's house, talking with Jas and Vincent."},
+                    {"Time": "8:00 PM", "Location": "Goes to the trailer."},
+                    {"Time": "9:00 PM", "Location": "Arrives at the trailer for the evening."}
+                ]
+            },
+            "Fall": {
+                "Sunday": [
+                    {"Time": "8:00 AM", "Location": "Wakes up for the day, leaves her trailer and goes outside to read near the town graveyard."},
+                    {"Time": "12:30 PM", "Location": "Returns to the trailer to wash dishes."},
+                    {"Time": "4:00 PM", "Location": "Leaves the trailer again to go outside The Stardrop Saloon where she sits on a bench, with Maru on Sundays and Mondays, alone on Thursdays."},
+                    {"Time": "6:40 PM", "Location": "Returns to her trailer for the evening."},
+                    {"Time": "7:20 PM", "Location": "Goes to bed."}
+                ],
+                "Monday": [
+                    {"Time": "8:00 AM", "Location": "Wakes up for the day, leaves her trailer and goes outside to read near the town graveyard."},
+                    {"Time": "12:30 PM", "Location": "Returns to the trailer to wash dishes."},
+                    {"Time": "4:00 PM", "Location": "Leaves the trailer again to go outside The Stardrop Saloon where she sits on a bench, with Maru on Sundays and Mondays, alone on Thursdays."},
+                    {"Time": "6:40 PM", "Location": "Returns to her trailer for the evening."},
+                    {"Time": "7:20 PM", "Location": "Goes to bed."}
+                ],
+                "Thursday": [
+                    {"Time": "8:00 AM", "Location": "Wakes up for the day, leaves her trailer and goes outside to read near the town graveyard."},
+                    {"Time": "12:30 PM", "Location": "Returns to the trailer to wash dishes."},
+                    {"Time": "4:00 PM", "Location": "Leaves the trailer again to go outside The Stardrop Saloon where she sits on a bench, with Maru on Sundays and Mondays, alone on Thursdays."},
+                    {"Time": "6:40 PM", "Location": "Returns to her trailer for the evening."},
+                    {"Time": "7:20 PM", "Location": "Goes to bed."}
+                ],
+                "Tuesday": [
+                    {"Time": "9:00 AM", "Location": "Leaves the trailer and walks to the Museum."},
+                    {"Time": "10:00 AM", "Location": "In the Museum. Vincent joins her at 10:30 AM, Jas at 11:00 AM."},
+                    {"Time": "2:00 PM", "Location": "Goes outside the Museum, near the river, at the bridge."},
+                    {"Time": "4:20 PM", "Location": "Leaves for 2 Willow Lane, walking Vincent and Jas home. Pauses there."},
+                    {"Time": "5:50 PM", "Location": "Continues to Marnie's Ranch, walking Jas home for the evening."},
+                    {"Time": "6:30 PM", "Location": "Leaves Jas at Marnie's Ranch and returns to home for the evening."},
+                    {"Time": "8:00 PM", "Location": "Arrives at the trailer, then goes to bed."}
+                ],
+                "Wednesday": [
+                    {"Time": "9:00 AM", "Location": "Leaves the trailer and walks to the Museum."},
+                    {"Time": "10:00 AM", "Location": "In the Museum. Vincent joins her at 10:30 AM, Jas at 11:00 AM."},
+                    {"Time": "2:00 PM", "Location": "Goes outside the Museum, near the river, at the bridge."},
+                    {"Time": "4:20 PM", "Location": "Leaves for 2 Willow Lane, walking Vincent and Jas home. Pauses there."},
+                    {"Time": "5:50 PM", "Location": "Continues to Marnie's Ranch, walking Jas home for the evening."},
+                    {"Time": "6:30 PM", "Location": "Leaves Jas at Marnie's Ranch and returns to home for the evening."},
+                    {"Time": "8:00 PM", "Location": "Arrives at the trailer, then goes to bed."}
+                ],
+                "Friday": [
+                    {"Time": "9:00 AM", "Location": "Leaves the trailer and walks to the Museum."},
+                    {"Time": "10:00 AM", "Location": "In the Museum. Vincent joins her at 10:30 AM, Jas at 11:00 AM."},
+                    {"Time": "2:00 PM", "Location": "Goes outside the Museum, near the river, at the bridge."},
+                    {"Time": "4:20 PM", "Location": "Leaves for 2 Willow Lane, walking Vincent and Jas home. Pauses there."},
+                    {"Time": "5:50 PM", "Location": "Continues to Marnie's Ranch, walking Jas home for the evening."},
+                    {"Time": "6:30 PM", "Location": "Leaves Jas at Marnie's Ranch and returns to home for the evening."},
+                    {"Time": "8:00 PM", "Location": "Arrives at the trailer, then goes to bed."}
+                ],
+                "Saturday": [
+                    {"Time": "10:00 AM", "Location": "Leaves the trailer to meet Jas and Vincent at the tree west of the graveyard."},
+                    {"Time": "12:00 PM", "Location": "All three leave for the playground."},
+                    {"Time": "1:00 PM", "Location": "At the playground with Jas and Vincent."},
+                    {"Time": "5:00 PM", "Location": "Leaves the playground and walks to Emily's house with Jas and Vincent."},
+                    {"Time": "6:20 PM", "Location": "Arrives outside Emily's house."},
+                    {"Time": "8:00 PM", "Location": "Jas and Vincent head for home, while Penny goes home to the trailer."},
+                    {"Time": "8:40 PM", "Location": "Arrives at the trailer and goes to bed."}
+                ]
+            },
+            "Winter": {
+                "Winter 4": [
+                    {"Time": "9:00 AM", "Location": "Wakes up and moves around her trailer."},
+                    {"Time": "11:30 AM", "Location": "Walks from her trailer to Harvey's Clinic for her annual checkup."},
+                    {"Time": "1:30 PM", "Location": "Continues getting checkup at clinic."},
+                    {"Time": "4:00 PM", "Location": "Leaves clinic and goes to sit by the bridge west from JojaMart."},
+                    {"Time": "7:00 PM", "Location": "Leaves town and returns to the trailer to do dishes."},
+                    {"Time": "9:00 PM", "Location": "Goes to bed in her room in the trailer for the evening."}
+                ],
+                "Winter 15": [
+                    {"Time": "9:00 AM", "Location": "Trailer is unlocked. Penny is in her bedroom."},
+                    {"Time": "11:00 AM", "Location": "Moves to the kitchen."},
+                    {"Time": "1:00 PM", "Location": "Does some dishes."},
+                    {"Time": "3:00 PM", "Location": "Sits on the couch, probably watching TV."},
+                    {"Time": "4:00 PM", "Location": "Attends the Night Market."},
+                    {"Time": "11:50 PM", "Location": "Goes to bed for the evening."}
+                ],
+                "Tuesday, Wednesday, Friday": [
+                    {"Time": "9:00 AM", "Location": "Leaves the trailer and walks to the Museum."},
+                    {"Time": "10:00 AM", "Location": "In the Museum. Vincent joins her at 10:30 AM, Jas at 11:00 AM."},
+                    {"Time": "2:00 PM", "Location": "Goes outside the Museum, near the river, at the bridge."},
+                    {"Time": "4:20 PM", "Location": "Leaves for 2 Willow Lane, walking Vincent and Jas home. Pauses there."},
+                    {"Time": "5:40 PM", "Location": "Continues to Marnie's Ranch, walking Jas home for the evening."},
+                    {"Time": "6:30 PM", "Location": "Leaves Jas at Marnie's Ranch and returns to home for the evening."},
+                    {"Time": "8:00 PM", "Location": "Arrives at the trailer, then goes to bed."}
+                ],
+                "Saturday": [
+                    {"Time": "2:30 PM", "Location": "At the playground with Jas and Vincent."},
+                    {"Time": "5:00 PM", "Location": "Walks Jas and Vincent to Emily's house."},
+                    {"Time": "6:20 PM", "Location": "Beside Emily's house, talking with Jas and Vincent."},
+                    {"Time": "8:00 PM", "Location": "Goes to the trailer with Jas."},
+                    {"Time": "8:10 PM", "Location": "Arrives at the trailer for the evening."}
+                ],
+                "Sunday, Thursday, Monday (Community Center Restored)": [
+                    {"Time": "9:00 AM", "Location": "Wakes up and moves around her trailer."},
+                    {"Time": "10:30 AM", "Location": "Leaves her trailer and walks to the community center to read."},
+                    {"Time": "3:00 PM", "Location": "Continues moving around the community center."},
+                    {"Time": "6:00 PM", "Location": "Leaves the community center and returns to the trailer to do dishes."},
+                    {"Time": "9:00 PM", "Location": "Goes to bed in her room in the trailer for the evening."}
+                ],
+                "Sunday, Thursday, Monday (Community Center not restored)": [
+                    {"Time": "9:00 AM", "Location": "Wakes up and moves around her trailer."},
+                    {"Time": "10:30 AM", "Location": "Leaves her trailer and walks to the tree west of the graveyard to read."},
+                    {"Time": "6:00 PM", "Location": "Leaves the Museum and returns to the trailer to do dishes."},
+                    {"Time": "9:00 PM", "Location": "Goes to bed in her room in the trailer for the evening."}
+                ]
+            },
+            "Deviations": {
+                "Day 9 & Day 23 (With less than 6 hearts with both Penny and Sam)": [
+                    {"Time": "6:00 AM", "Location": "Sleeps in her bed in the trailer."},
+                    {"Time": "9:00 AM", "Location": "Wakes up and stands in her bedroom."},
+                    {"Time": "11:00 AM", "Location": "Walks to town and sits on the bridge near the Ice Cream Stand."},
+                    {"Time": "4:00 PM", "Location": "Returns from town to the trailer and does some dishes."},
+                    {"Time": "6:40 PM", "Location": "Goes to bed in her room in the trailer for the evening."}
+                ],
+                "Day 9 & Day 23 (with at least 6 hearts with Penny or Sam)": [
+                    {"Time": "6:00 AM", "Location": "Sleeps in her bed in the trailer."},
+                    {"Time": "8:00 AM", "Location": "Leaves her trailer and goes outside to read near the town graveyard."},
+                    {"Time": "12:30 PM", "Location": "Returns to the trailer to wash dishes."},
+                    {"Time": "4:00 PM", "Location": "Leaves the trailer again to go outside the saloon where she sits on a bench with Maru."},
+                    {"Time": "6:40 PM", "Location": "Returns to her trailer for the evening."}
+                ],
+                "Raining (Alternative A)": [
+                    {"Time": "9:00 AM", "Location": "In her bedroom in the Trailer."},
+                    {"Time": "11:00 AM", "Location": "Moves to the kitchen."},
+                    {"Time": "1:00 PM", "Location": "Does some dishes."},
+                    {"Time": "3:00 PM", "Location": "Sits on the couch, probably watching TV."},
+                    {"Time": "6:00 PM", "Location": "Returns to her bedroom, reading by the bookshelf."},
+                    {"Time": "9:00 PM", "Location": "Goes to bed for the evening."}
+                ],
+                "Raining (Alternative B)": [
+                    {"Time": "8:10 AM", "Location": "Leaves the trailer and walks to the Museum to sit outside."},
+                    {"Time": "12:00 PM", "Location": "Goes inside the Museum to look at the bookshelves."},
+                    {"Time": "4:00 PM", "Location": "Leaves the Museum and returns to the trailer to watch some television."},
+                    {"Time": "7:00 PM", "Location": "Moves over to the sink in the trailer to do some dishes."},
+                    {"Time": "9:00 PM", "Location": "Goes to bed for the evening."}
+                ]
+            },
+            "Marriage": {
+                "Monday": [
+                    {"Time": "8:30 AM", "Location": "Leaves the farmhouse and heads to Pierre's General Store."},
+                    {"Time": "11:30 AM", "Location": "Leaves Pierre's. In town, reading."},
+                    {"Time": "4:00 PM", "Location": "Sitting in town."},
+                    {"Time": "6:10 PM", "Location": "Leaves town to return home to the farm."},
+                    {"Time": "10:00 PM", "Location": "Goes to bed"}
+                ],
+                "Tuesday, Wednesday, Friday": [
+                    {"Time": "8:30 AM", "Location": "Leaves the farm and walks to the Museum."},
+                    {"Time": "2:00 PM", "Location": "Leaves the Museum and walks with Vincent and Jas to town."},
+                    {"Time": "4:20 PM", "Location": "In front of Haley and Emily's house while walking Vincent and Jas home."},
+                    {"Time": "5:50 PM", "Location": "Walks Jas home to Marnie's Ranch in the woods west of town."},
+                    {"Time": "6:30 PM", "Location": "Leaves Marnie's Ranch and returns to home for the evening."},
+                    {"Time": "8:10 PM", "Location": "Arrives back at the Farmhouse."},
+                    {"Time": "10:00 PM", "Location": "Goes to bed"}
+                ]
+            }
+        },
+        "is datable": true,
+        "birthday": "Fall 2",
+        "events": {
+            "Two hearts": "Enter Pelican Town on a sunny day between 9am and 2pm.",
+            "Four hearts": "Enter the trailer when she's home.",
+            "Six hearts": "Enter the trailer when she's home.",
+            "Eight hearts": "Enter Cindersap Forest between 9am and 4pm.",
+            "Ten hearts": "You receive a letter from Penny. After receiving the letter, enter the pool area of the spa between 7pm and midnight.",
+            "Fourteen hearts": "Enter the farm house between 3pm and 7pm when she's home."
+        }
+    },
+
+    {
+        "name": "Caroline",
+        "loves": ["All universal loves", "Fish taco", "Green tea", "Summer spangle", "Tropical Curry"],
+        "likes": ["All universal likes (except Amaranth, Duck mayonnaise and Mayonnaise)", "Daffodil", "Tea leaves"],
+        "neutral": ["All universal neutrals (except Tea leaves)", "All eggs (except Void egg)", "All fruits (except Fruit tree fruit and Salmonberry)", "All milk"],
+        "dislikes": ["All universal dislikes", "Amaranth", "Chanterelle", "Common mushroom", "Dandelion", "Duck mayonnaise", "Ginger", "Hazelnut", "Holly", "Leek", "Magma cap", "Mayonnaise", "Morel", "Purple mushroom", "Snow yam", "Wild horseradish", "Winter root"],
+        "hates": ["All universal hates", "Quartz", "Salmonberry"],
+        "schedule": {
+            "Fall 25": [
+                {"Time": "8:00 am", "Location": "In the kitchen of Pierre's General Store."},
+                {"Time": "10:00 am", "Location": "Leaves the kitchen, walks to her bedroom."},
+                {"Time": "12:00 pm", "Location": "Walks to Harvey's Clinic and stands in waiting room."},
+                {"Time": "1:30 pm", "Location": "Moves to the left examination room in Harvey's Clinic."},
+                {"Time": "4:00 pm", "Location": "Returns home and stands in her living room."},
+                {"Time": "9:00 pm", "Location": "Goes to bed."}
+            ],
+            "Winter 16": [
+                {"Time": "8:00 am", "Location": "In the kitchen of Pierre's General Store."},
+                {"Time": "12:00 pm", "Location": "Walks to an aisle of the general store."},
+                {"Time": "1:30 pm", "Location": "Goes to stand in the town square."},
+                {"Time": "4:00 pm", "Location": "Leaves the town square to attend the Night Market."},
+                {"Time": "11:30 pm", "Location": "Leaves the Night Market to return home and sleep."}
+            ],
+            "Raining": [
+                {"Time": "8:00 am", "Location": "In the kitchen of Pierre's General Store."},
+                {"Time": "12:00 pm", "Location": "Walks to an aisle of the general store."},
+                {"Time": "1:30 pm", "Location": "Walks to her bedroom and reads next to her bookcase."},
+                {"Time": "4:00 pm", "Location": "Leaves bedroom to stand in the living room."},
+                {"Time": "9:00 pm", "Location": "Goes to bed."}
+            ],
+            "Tuesday": [
+                {"Time": "8:00 am", "Location": "In her living room, near the uppermost dresser."},
+                {"Time": "10:30 am", "Location": "Moves more towards the middle of the living room."},
+                {"Time": "1:00 pm", "Location": "Caroline exercises with the Aerobics class in her living room."},
+                {"Time": "4:00 pm", "Location": "Aerobics class ends, she stands in the living room chatting."},
+                {"Time": "6:10 pm", "Location": "Walks to the kitchen and eats some cookies."},
+                {"Time": "9:00 pm", "Location": "Goes to bed."}
+            ],
+            "Wednesday": [
+                {"Time": "8:00 am", "Location": "In the kitchen of Pierre's General Store."},
+                {"Time": "10:00 am", "Location": "In her sunroom, near her tea sapling."},
+                {"Time": "12:00 pm", "Location": "Walks to the fountain to the west of the Community Center."},
+                {"Time": "5:00 pm", "Location": "Returns home and stands in her living room."},
+                {"Time": "9:00 pm", "Location": "Goes to bed."}
+            ],
+            "Friday": [
+                {"Time": "8:00 am", "Location": "In the kitchen of Pierre's General Store."},
+                {"Time": "10:00 am", "Location": "In her sunroom, near her tea sapling."},
+                {"Time": "12:00 pm", "Location": "Goes to the Museum to read between some bookshelves."},
+                {"Time": "5:00 pm", "Location": "Returns home and stands in her living room."},
+                {"Time": "9:00 pm", "Location": "Goes to bed."}
+            ],
+            "Saturday, Community Center restored": [
+                {"Time": "8:00 am", "Location": "In the kitchen of Pierre's General Store."},
+                {"Time": "11:00 am", "Location": "Walks to Community Center and stands in the reading area in the main room."},
+                {"Time": "5:00 pm", "Location": "Returns home and stands in her living room."},
+                {"Time": "9:00 pm", "Location": "Goes to bed."}
+            ],
+            "Sunday": [
+                {"Time": "9:00 am", "Location": "Stands in her bedroom."},
+                {"Time": "10:40 am", "Location": "Moves one space over to stand in front of her bookshelf."},
+                {"Time": "1:30 pm", "Location": "Walks to an aisle of the general store."},
+                {"Time": "2:40 pm", "Location": "Leaves home to stand below the tree south of the Community Center."},
+                {"Time": "6:30 pm", "Location": "Returns home to stand in her bedroom."},
+                {"Time": "9:00 pm", "Location": "Goes to bed."}
+            ],
+            "Regular Schedule": [
+                {"Time": "8:00 am", "Location": "In the kitchen of Pierre's General Store."},
+                {"Time": "10:00 am", "Location": "In her sunroom, near her tea sapling."},
+                {"Time": "12:00 pm", "Location": "Walks to an aisle of the general store."},
+                {"Time": "1:30 pm", "Location": "Leaves home to stand in town square with Jodi."},
+                {"Time": "4:00 pm", "Location": "Returns home and stands in her living room."},
+                {"Time": "9:00 pm", "Location": "Goes to bed."}
+            ]
+        },
+        "is datable": false,
+        "birthday": "Winter 7",
+        "events": {
+            "Two hearts": "Enter the sunroom via the door in Caroline's kitchen between 9am and 5pm on a day when it's not raining.",
+            "Three hearts": "Caroline sends you a recipe in the mail.",
+            "Six hearts": "Enter Pierre's General Store when Caroline and Abigail are there.",
+            "Seven hearts": "Caroline sends you a recipe in the mail."
+        }
+    }
 ]
