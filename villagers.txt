@@ -3577,5 +3577,550 @@
             "Three hearts II": "After reaching three hearts with Kent, he will send the player a recipe in the mail.",
             "Seven hearts": "After reaching seven hearts with Kent, he will send the player a recipe in the mail."
         }
+    },
+
+    {
+        "name": "Krobus",
+        "loves": ["All universal loves", "Diamdon", "Iridium Bar", "Pumpkin", "Void egg", "Void mayonnaise", "Wild horseradish"],
+        "likes": ["All universal likes (except Life Elixir and all Cooking other than Seafoam pudding)", "Gold Bar", "Quartz"],
+        "neutral": ["All universal neutrals", "All eggs", "All fruits (except Fruit tree fruit and Salmonberry)", "All milk"],
+        "dislikes": ["All universal dislikes (except Gold Bar, Iridium Bar and Void egg)", "All Cooking (except Bread, Fried egg, Seafoam pudding and Strange bun)", "Chanterelle", "Common mushroom", "Daffodil", "Dandelion", "Ginger", "Hazelnut", "Holly", "Leek", "Life Elixir", "Magma cap", "Morel", "Purple mushroom", "Salmonberry", "Snow yam", "Winter root"],
+        "hates": ["All universal hates (except Void mayonnaise)"],
+        "schedule": {
+            "Anytime": "Krobus can always be found in the sewers once the player obtains the Rusty Key."
+        },
+        "is datable": false,
+        "birthday": "Winter 1",
+        "events": {
+            "Three Hearts": "After reaching 3 hearts with Krobus, he will send you a recipe in the mail.",
+            "Fourteen hearts": "Enter the beach between 8pm and 1am on a non-rainy day."
+        }
+    },
+
+    {
+        "name": "Leo",
+        "loves": ["All universal loves", "Duck feather", "Mango", "Ostrich egg", "Poi"],
+        "likes": ["All universal likes (except Beer, Coffee, Life Elixir, Mead, Pale ale, Pickles, Pina Colada, Wine and Cooking other than Bread, Fried egg, Poi, Mango Sticky Rice and Triple shot espresso)", "Dragon Tooth", "Mango Sticky Rice", "Nautilus Shell", "Quartz", "Rainbow Shell", "Sea Urchin", "Spice berry"],
+        "neutral": ["All universal neutrals (except Duck feather, Hops, Nautilus Shell and Rainbow Shell)", "All eggs (except Ostrich eff and Void egg)", "All fish (except Carp and Snail)", "All fruits (except Fruit tree fruit, Mango, Salmonberry and Spice berry)", "All milk", "Coffee"],
+        "dislikes": ["All universal dislikes (except Oil, unmilled rice and Fish)", "All Cooked dishes (other than Bread, Fried egg, Poi, Mango Sticky Rice and Triple shot espresso)", "Chanterelle", "Common mushroom", "Daffodil", "Dandelion", "Ginger", "Hazelnut", "Leek", "Like Elixir", "Magma cap", "Pickles", "Purple mushroom", "Salmonberry", "Snow yam", "Wild horseradish", "Winter root"],
+        "hates": ["All universal hates (except Dragon Tooth and Sea urchin)", "Beer", "Holly", "Hops", "Mead", "Morel", "Oil", "Pale ale", "Pina Colada", "Triple shot espresso", "Unmilled rice", "Wine"],
+        "schedule": {
+            "Fewer than 6 hearts": {
+                "Rain": [
+                    {"Time": "9:00am", "Location": "Inside his hut"},
+                    {"Time": "11:00am", "Location": "Stands outside the entrance to his hut"},
+                    {"Time": "2:00pm", "Location": "Returns inside his hut"},
+                    {"Time": "9:00pm", "Location": "Goes to bed"}
+                ],
+                "Tuesday": [
+                    {"Time": "9:00am", "Location": "Inside his hut"},
+                    {"Time": "10:30am", "Location": "Walks to the dock on Island South, stands near the entrance to Island southeast"},
+                    {"Time": "1:30pm", "Location": "Walks to the jungle outside his hut (Island East), stands near the bushes at the southwest corner"},
+                    {"Time": "5:00pm", "Location": "Walks to Island North, stands to the right of the Island Trader"},
+                    {"Time": "8:00pm", "Location": "Goes home to bed"}
+                ],
+                "Sunday": [
+                    {"Time": "9:00am", "Location": "Inside his hut"},
+                    {"Time": "9:30am", "Location": "Walks to the Gem Bird Shrine, through the hidden passage in the east of the Jungle"},
+                    {"Time": "2:00pm", "Location": "Stands outside the entrance to his hut"},
+                    {"Time": "5:00pm", "Location": "Enters his hut"},
+                    {"Time": "9:00pm", "Location": "Goes to bed"}
+                ],
+                "Regular Schedule": [
+                    {"Time": "9:00am", "Location": "Inside his hut"},
+                    {"Time": "10:30am", "Location": "Stands outside the entrance to his hut"},
+                    {"Time": "12:00pm", "Location": "Walks to the docks at Island South, stands at the northwest corner, next to the parrot perch"},
+                    {"Time": "3:00pm", "Location": "Walks to Island North, stands at the northwest corner of the map, west of the volcano entrance"},
+                    {"Time": "8:00pm", "Location": "Returns home and goes to bed"}
+                ]
+            },
+            "Spring": {
+                "Monday": [
+                    {"Time": "6:00am", "Location": "In his hut on Ginger Island"},
+                    {"Time": "9:30am", "Location": "Next to the parrot perch in Island South"},
+                    {"Time": "2:00pm", "Location": "Stands outside his hut"},
+                    {"Time": "5:00pm", "Location": "Enters his hut"},
+                    {"Time": "9:00pm", "Location": "Goes to bed"}
+                ],
+                "Tuesday and Wednesday": [
+                    {"Time": "6:00am", "Location": "In his treehouse"},
+                    {"Time": "9:00am", "Location": "In the museum library"},
+                    {"Time": "2:00pm", "Location": "South of the museum"},
+                    {"Time": "4:20pm", "Location": "Stands to the east of his treehouse"},
+                    {"Time": "8:00pm", "Location": "Enters his treehouse"},
+                    {"Time": "10:00pm", "Location": "Goes to bed"}
+                ],
+                "Thursday and Friday": [
+                    {"Time": "6:30am", "Location": "In his treehouse"},
+                    {"Time": "7:00am", "Location": "Stands to the east of his treehouse"},
+                    {"Time": "9:30am", "Location": "Stands to the west of the mountain lake"},
+                    {"Time": "2:00pm", "Location": "Stands to the east of his treehouse"},
+                    {"Time": "7:00pm", "Location": "Enters his treehouse"},
+                    {"Time": "10:00pm", "Location": "Goes to bed"}
+                ],
+                "Saturday": [
+                    {"Time": "9:40am", "Location": "Stands next to Haley and Emily's house"},
+                    {"Time": "12:00pm", "Location": "Plays on the playground"},
+                    {"Time": "5:00pm", "Location": "Stands to the east of his treehouse"},
+                    {"Time": "7:00pm", "Location": "Enters his treehouse"},
+                    {"Time": "10:00pm", "Location": "Goes to bed"}
+                ],
+                "Sunday": [
+                    {"Time": "6:10am", "Location": "In his hut on Ginger Island"},
+                    {"Time": "10:30am", "Location": "In Island South, near the entrance to Island Southeast"},
+                    {"Time": "1:30pm", "Location": "Outside his hut"},
+                    {"Time": "5:00pm", "Location": "To the east of the Island Trader"},
+                    {"Time": "8:00pm", "Location": "Goes to bed in his hut"}
+                ]
+            },
+            "Summer": {
+                "Monday": [
+                    {"Time": "6:00am", "Location": "In his hut on Ginger Island"},
+                    {"Time": "9:30am", "Location": "Next to the parrot perch in Island South"},
+                    {"Time": "2:00pm", "Location": "Stands outside his hut"},
+                    {"Time": "5:00pm", "Location": "Enters his hut"},
+                    {"Time": "9:00pm", "Location": "Goes to bed"}
+                ],
+                "Tuesday and Wednesday": [
+                    {"Time": "6:00am", "Location": "In his treehouse"},
+                    {"Time": "9:00am", "Location": "In the museum library"},
+                    {"Time": "2:00pm", "Location": "South of the museum"},
+                    {"Time": "4:20pm", "Location": "Stands to the east of his treehouse"},
+                    {"Time": "8:00pm", "Location": "Enters his treehouse"},
+                    {"Time": "10:00pm", "Location": "Goes to bed"}
+                ],
+                "Thursday and Friday": [
+                    {"Time": "6:30am", "Location": "Stands outside of his treehouse"},
+                    {"Time": "9:40am", "Location": "Stands on the west edge of the mountain lake"},
+                    {"Time": "1:00pm", "Location": "Walks around the tree to the southwest of the mountain lake"},
+                    {"Time": "4:00pm", "Location": "Stands to the east of his treehouse"},
+                    {"Time": "8:00pm", "Location": "Enters his treehouse"},
+                    {"Time": "10:00pm", "Location": "Goes to bed"}
+                ],
+                "Saturday": [
+                    {"Time": "9:40am", "Location": "Stands next to Haley and Emily's house"},
+                    {"Time": "12:00pm", "Location": "Plays on the playground"},
+                    {"Time": "5:00pm", "Location": "Stands to the east of his treehouse"},
+                    {"Time": "7:00pm", "Location": "Enters his treehouse"},
+                    {"Time": "10:00pm", "Location": "Goes to bed"}
+                ],
+                "Sunday": [
+                    {"Time": "6:10am", "Location": "In his hut on Ginger Island"},
+                    {"Time": "10:30am", "Location": "In Island South, near the entrance to Island Southeast"},
+                    {"Time": "1:30pm", "Location": "Outside his hut"},
+                    {"Time": "5:00pm", "Location": "To the east of the Island Trader"},
+                    {"Time": "8:00pm", "Location": "Goes to bed in his hut"}
+                ]
+            },
+            "Fall": {
+                "Monday": [
+                    {"Time": "6:00am", "Location": "In his hut on Ginger Island"},
+                    {"Time": "9:30am", "Location": "Next to the parrot perch in Island South"},
+                    {"Time": "2:00pm", "Location": "Stands outside his hut"},
+                    {"Time": "5:00pm", "Location": "Enters his hut"},
+                    {"Time": "9:00pm", "Location": "Goes to bed"}
+                ],
+                "Tuesday and Wednesday": [
+                    {"Time": "6:00am", "Location": "In his treehouse"},
+                    {"Time": "9:00am", "Location": "In the museum library"},
+                    {"Time": "2:00pm", "Location": "South of the museum"},
+                    {"Time": "4:20pm", "Location": "Stands to the east of his treehouse"},
+                    {"Time": "8:00pm", "Location": "Enters his treehouse"},
+                    {"Time": "10:00pm", "Location": "Goes to bed"}
+                ],
+                "Thursday and Friday": [
+                    {"Time": "7:00am", "Location": "In his treehouse"},
+                    {"Time": "7:40am", "Location": "Stands to the east of his treehouse"},
+                    {"Time": "9:00am", "Location": "Stands south of the community center"},
+                    {"Time": "2:00pm", "Location": "Stands to the west of the mountain lake"},
+                    {"Time": "8:00pm", "Location": "Enters his treehouse"},
+                    {"Time": "10:00pm", "Location": "Goes to bed"}
+                ],
+                "Saturday": [
+                    {"Time": "9:40am", "Location": "Stands next to Haley and Emily's house"},
+                    {"Time": "12:00pm", "Location": "Plays on the playground"},
+                    {"Time": "5:00pm", "Location": "Stands to the east of his treehouse"},
+                    {"Time": "7:00pm", "Location": "Enters his treehouse"},
+                    {"Time": "10:00pm", "Location": "Goes to bed"}
+                ],
+                "Sunday": [
+                    {"Time": "6:10am", "Location": "In his hut on Ginger Island"},
+                    {"Time": "10:30am", "Location": "In Island South, near the entrance to Island Southeast"},
+                    {"Time": "1:30pm", "Location": "Outside his hut"},
+                    {"Time": "5:00pm", "Location": "To the east of the Island Trader"},
+                    {"Time": "8:00pm", "Location": "Goes to bed in his hut"}
+                ]
+            },
+            "Winter": {
+                "Winter 15": [
+                    {"Time": "11:00am", "Location": "Walks to Linus’ tent and stands outside the entrance"},
+                    {"Time": "4:00pm", "Location": "Walks to the Night Market"},
+                    {"Time": "11:30pm", "Location": "Goes home to bed"}
+                ],
+                "Monday": [
+                    {"Time": "6:00am", "Location": "In his hut on Ginger Island"},
+                    {"Time": "9:30am", "Location": "Next to the parrot perch in Island South"},
+                    {"Time": "2:00pm", "Location": "Stands outside his hut"},
+                    {"Time": "5:00pm", "Location": "Enters his hut"},
+                    {"Time": "9:00pm", "Location": "Goes to bed"}
+                ],
+                "Tuesday and Wednesday": [
+                    {"Time": "6:00am", "Location": "In his treehouse"},
+                    {"Time": "9:00am", "Location": "In the museum library"},
+                    {"Time": "2:00pm", "Location": "South of the museum"},
+                    {"Time": "4:20pm", "Location": "Stands to the east of his treehouse"},
+                    {"Time": "8:00pm", "Location": "Enters his treehouse"},
+                    {"Time": "10:00pm", "Location": "Goes to bed"}
+                ],
+                "Thursday and Friday": [
+                    {"Time": "11:00am", "Location": "Stands to the east of his treehouse"},
+                    {"Time": "2:00pm", "Location": "Reads books in the museum library"},
+                    {"Time": "8:00pm", "Location": "Enters his treehouse"},
+                    {"Time": "10:00pm", "Location": "Goes to bed"}
+                ],
+                "Saturday": [
+                    {"Time": "9:40am", "Location": "Stands next to Haley and Emily's house"},
+                    {"Time": "12:00pm", "Location": "Plays on the playground"},
+                    {"Time": "5:00pm", "Location": "Stands to the east of his treehouse"},
+                    {"Time": "7:00pm", "Location": "Enters his treehouse"},
+                    {"Time": "10:00pm", "Location": "Goes to bed"}
+                ],
+                "Sunday": [
+                    {"Time": "6:10am", "Location": "In his hut on Ginger Island"},
+                    {"Time": "10:30am", "Location": "In Island South, near the entrance to Island Southeast"},
+                    {"Time": "1:30pm", "Location": "Outside his hut"},
+                    {"Time": "5:00pm", "Location": "To the east of the Island Trader"},
+                    {"Time": "8:00pm", "Location": "Goes to bed in his hut"}
+                ]
+            }
+            "Deviations": {
+                "9th & 23rd of any season (when you have less than 6 hearts with both Penny and Sam)": [
+                    {"Time": "6:30am", "Location": "In his treehouse"},
+                    {"Time": "7:00am", "Location": "Stands to the east of his treehouse"},
+                    {"Time": "9:30am", "Location": "Stands to the west of the mountain lake"},
+                    {"Time": "2:00pm", "Location": "Stands to the east of his treehouse"},
+                    {"Time": "7:00pm", "Location": "Enters his treehouse"},
+                    {"Time": "10:00pm", "Location": "Goes to bed"}
+                ],
+                "Rain": [
+                    {"Time": "7:00am", "Location": "In his treehouse"},
+                    {"Time": "10:00am", "Location": "Visits Linus’ tent"},
+                    {"Time": "3:00pm", "Location": "Stands to the east of his treehouse"},
+                    {"Time": "7:00pm", "Location": "Enters his treehouse"},
+                    {"Time": "10:00pm", "Location": "Goes to bed"}
+                ]
+            }
+        },
+        "is datable": false,
+        "birthday": "Summer 26",
+        "events": {
+            "Two hearts": "Enter Island West on a sunny day between 6am and 6pm.",
+            "Three hearts": "After reaching three hearts with Leo, he sends the player a recipe in the mail.",
+            "Four hearts": "Enter Island North on a sunny day between 6am and 6pm.",
+            "Six hearts": "Enter Island South on a sunny day between 6am and 6pm.",
+            "Seven hearts": "After reaching seven hearts with Leo, he sends the player a recipe in the mail.",
+            "Nine hearts": "Enter the Mountain on a non-rainy day between 6am and 7pm."
+        }
+    },
+
+    {
+        "name": "Lewis",
+        "loves": ["All universal loves", "Autumn's bounty", "Glazed yams", "Green tea", "Hot pepper", "Vegetable medley"],
+        "likes": ["All universal likes", "Blueberry", "Cactus fruit", "Coconut"],
+        "neutral": ["All universal neutrals", "All eggs (except Void egg)", "All fruits (except Blueberry, Cactus fruit, Coconut, Fruit tree fruit, Hot pepper and Salmonberry)", "Chanterelle", "Common mushroom", "Daffodil", "Dandelion", "Ginger", "Hazelnut", "Leek", "Magma cap", "Morel", "Purple mushroom", "Snow yam", "Winter root"],
+        "dislikes": ["All universal dislikes", "All milk", "Salmonberry", "Wild horseradish"],
+        "hates": ["All universal hates", "Holly", "Quartz"],
+        "schedule": {
+            "Spring": {
+                "Monday": [
+                    { "Time": "10:00 AM", "Location": "Wakes up and exits Manor" },
+                    { "Time": "11:00 AM", "Location": "Walks into Local Shop (Willy's, Pierre's or Robin's)" },
+                    { "Time": "4:00 PM", "Location": "Exits Local Shop" },
+                    { "Time": "5:00 PM", "Location": "Enters Manor and stares at stove (presumably cooking)" },
+                    { "Time": "9:00 PM", "Location": "Moves from stove to Pelican Town Data Book" },
+                    { "Time": "10:00 PM", "Location": "Heads to Bed" }
+                ],
+                "Tuesday": [
+                    { "Time": "10:00 AM", "Location": "Wakes up and exits Manor." },
+                    { "Time": "10:10 AM", "Location": "Gardening in front of Manor" },
+                    { "Time": "11:30 AM", "Location": "Stops gardening and heads towards Pierre's" },
+                    { "Time": "12:20 PM", "Location": "Enters Pierre's" },
+                    { "Time": "4:00 PM", "Location": "Leaves Pierre's" },
+                    { "Time": "4:50 PM", "Location": "Enters Manor and stares at stove (presumably cooking)" },
+                    { "Time": "9:00 PM", "Location": "Moves from stove to Pelican Town Data Book" },
+                    { "Time": "10:00 PM", "Location": "Heads to Bed" }
+                ],
+                "Wednesday - Community Center Not Restored": [
+                    { "Time": "10:00 AM", "Location": "Wakes up and exits Manor." },
+                    { "Time": "4:00 PM", "Location": "Leaves Marnie's house" },
+                    { "Time": "5:00 PM", "Location": "Enters Manor for the rest of the day." }
+                ],
+                "Thursday - Community Center Not Restored": [
+                    { "Time": "8:30 AM", "Location": "Standing in his kitchen at home" },
+                    { "Time": "10:00 AM", "Location": "Exits Manor." },
+                    { "Time": "10:10 AM", "Location": "Gardening in front of Manor" },
+                    { "Time": "11:30 AM", "Location": "Stops gardening and heads to Pierre's" },
+                    { "Time": "12:30 PM", "Location": "Standing in front of tree to the left of Clinic" },
+                    { "Time": "2:00 PM", "Location": "Leaves tree and stands in front of Pierre's" },
+                    { "Time": "4:00 PM", "Location": "Heads home" },
+                    { "Time": "4:30 PM", "Location": "Arrives home for the night" }
+                ],
+                "Thursday - Community Center Restored": [
+                    { "Time": "12:00 PM", "Location": "Leaves Manor headed to Community Center" },
+                    { "Time": "6:30 PM", "Location": "Leaves Community Center and heads home" },
+                    { "Time": "7:30 PM", "Location": "Arrives home and stands in kitchen." }
+                ],
+                "Friday": [
+                    { "Time": "10:00 AM", "Location": "Wakes up and exits Manor" },
+                    { "Time": "10:10 AM", "Location": "Gardening in front of Manor" },
+                    { "Time": "11:40 AM", "Location": "Stops gardening and heads towards Pierre's" },
+                    { "Time": "12:30 PM", "Location": "Stands outside of Clinic in front of tree" },
+                    { "Time": "2:00 PM", "Location": "Moves to the fountain" },
+                    { "Time": "9:30 PM", "Location": "In The Stardrop Saloon" },
+                    { "Time": "11:10 PM", "Location": "Goes back to Manor" }
+                ],
+                "Saturday": [
+                    { "Time": "8:30 AM", "Location": "Stands in the kitchen of the Manor" },
+                    { "Time": "10:00 AM", "Location": "Leaves the Manor and heads to the Blacksmith" },
+                    { "Time": "11:00 AM", "Location": "Arrives at the Blacksmith" },
+                    { "Time": "1:00 PM", "Location": "Leaves the Blacksmith and heads to the Museum" },
+                    { "Time": "1:20 PM", "Location": "Arrives at the Museum" },
+                    { "Time": "4:00 PM", "Location": "Leaves the Museum and heads Home" },
+                    { "Time": "4:40 PM", "Location": "Returns to the Manor and heads to bed" }
+                ],
+                "Sunday": [
+                    { "Time": "11:00 AM", "Location": "Gardening in front of Manor" },
+                    { "Time": "12:30 PM", "Location": "Standing by the tree to the left of Harvey's Clinic" },
+                    { "Time": "4:30 PM", "Location": "Home" }
+                ],
+                "Sunday - Community Center Restored": [
+                    { "Time": "11:50 AM", "Location": "Arrives at the Community Center" },
+                    { "Time": "12:20 PM", "Location": "Staring at the safe inside the Community Center" }
+                ]
+            },
+            "Summer": {
+                "Monday": [
+                    { "Time": "8:30 AM", "Location": "Inside home standing in kitchen." },
+                    { "Time": "10:00 AM", "Location": "Exits home." },
+                    { "Time": "11:00 AM", "Location": "Enters Local Shop (Willy's, Pierre's, or Robin's)." },
+                    { "Time": "4:00 PM", "Location": "Exits Local Shop." },
+                    { "Time": "5:00 PM", "Location": "Enter's home and stands at stove." },
+                    { "Time": "9:00 PM", "Location": "Moves from stove to Pelican Town Data Book." },
+                    { "Time": "10:00 PM", "Location": "Goes to bed." }
+                ],
+                "Tuesday": [
+                    { "Time": "8:30 AM", "Location": "Standing in his kitchen." },
+                    { "Time": "10:00 AM", "Location": "Tends to his garden." },
+                    { "Time": "11:30 AM", "Location": "Leaves his garden and heads towards Pierre's General Store." },
+                    { "Time": "12:20 PM", "Location": "Arrives at Pierre's General Store." },
+                    { "Time": "4:00 PM", "Location": "Leaves Pierre's General Store to go to the Manor" },
+                    { "Time": "4:40 PM", "Location": "Arrives The Mayor's Manor and stands in kitchen." },
+                    { "Time": "10:00 PM", "Location": "Heads to bed." }
+                ],
+                "Wednesday": [
+                    { "Time": "4:00 PM", "Location": "Leaves Marnie's house" },
+                    { "Time": "5:00 PM", "Location": "Enters Manor." }
+                ],
+                "Thursday": [
+                    { "Time": "8:30 AM", "Location": "Standing in kitchen." },
+                    { "Time": "10:00 AM", "Location": "Walks outside to stand in his garden." },
+                    { "Time": "11:40 AM", "Location": "Walks to town square." },
+                    { "Time": "12:30 PM", "Location": "Stands in front of tree beside Harvey's Clinic." },
+                    { "Time": "2:00 PM", "Location": "Stands in front of bulletin board at Pierre's." },
+                    { "Time": "4:00 PM", "Location": "Walks home to his Manor." }
+                ],
+                "Friday": [
+                    { "Time": "11:00 AM", "Location": "Working in his flower bed." },
+                    { "Time": "11:40 AM", "Location": "Leaves the Manor." },
+                    { "Time": "12:30 PM", "Location": "Standing in front of tree beside the Clinic." },
+                    { "Time": "4:00 PM", "Location": "Standing by water fountain." },
+                    { "Time": "5:00 PM", "Location": "Arrives at The Saloon." }
+                ],
+                "Saturday": [
+                    { "Time": "10:00 AM", "Location": "Leaves Manor." },
+                    { "Time": "10:50 AM", "Location": "Collects business tax from Blacksmith." },
+                    { "Time": "1:20 PM", "Location": "Arrives at Museum." },
+                    { "Time": "4:50 PM", "Location": "Returns to Manor (presumably cooking)." },
+                    { "Time": "9:00 PM", "Location": "Looks at Pelican Town book in his Manor." },
+                    { "Time": "10:00 PM", "Location": "Goes to sleep." }
+                ],
+                "Sunday": [
+                    { "Time": "10:00 AM", "Location": "Leaves his Manor." },
+                    { "Time": "10:10 AM", "Location": "Gardening in front of his Manor" },
+                    { "Time": "1:00 PM", "Location": "Standing on the pier at the The Beach." },
+                    { "Time": "4:50 PM", "Location": "Enters his Manor." }
+                ]
+            },
+            "Fall": {
+                "Monday": [
+                    { "Time": "8:30 AM", "Location": "At home, in the kitchen" },
+                    { "Time": "10:00 AM", "Location": "Leaves the Manor; starts walking to the Carpenter's Shop" },
+                    { "Time": "11:50 AM", "Location": "Arrives inside the Carpenter's Shop" },
+                    { "Time": "4:00 PM", "Location": "Leaves to go home" },
+                    { "Time": "4:50 PM", "Location": "At the Manor in the kitchen" },
+                    { "Time": "9:00 PM", "Location": "At his desk in the Manor" },
+                    { "Time": "10:00 PM", "Location": "Goes to bed" }
+                ],
+                "Tuesday the 9th": [
+                    { "Time": "8:30 AM", "Location": "Stands in the dining room of the Manor" },
+                    { "Time": "10:30 AM", "Location": "Arrives at Marnie's house" },
+                    { "Time": "11:00 AM", "Location": "Leaves Marnie's house" },
+                    { "Time": "12:30 PM", "Location": "Enters Clinic." },
+                    { "Time": "4:00 PM", "Location": "Leaves Clinic." },
+                    { "Time": "5:30 PM", "Location": "Arrives at Marnie's house and stares at microwave (presumably cooking)" },
+                    { "Time": "9:20 PM", "Location": "Goes to Marnie's bed" }
+                ],
+                "Tuesday the 23rd": [
+                    { "Time": "11:30 AM", "Location": "Gardens outside of the Manor" },
+                    { "Time": "12:30 PM", "Location": "Arrives at Pierre's General Store" },
+                    { "Time": "4:00 PM", "Location": "Leaves Pierre's General Store" },
+                    { "Time": "4:40 PM", "Location": "Enters Manor" }
+                ],
+                "Wednesday the 3rd": [
+                    { "Time": "4:00 PM", "Location": "Leaves Marnie's house" },
+                    { "Time": "5:40 PM", "Location": "At the Manor in the kitchen" },
+                    { "Time": "9:10 PM", "Location": "At his desk at home" },
+                    { "Time": "10:00 PM", "Location": "Goes to bed" }
+                ],
+                "Wednesday the 24th": [
+                    { "Time": "11:30 AM", "Location": "Arrives at Marnie's house" },
+                    { "Time": "5:20 PM", "Location": "At the Manor" }
+                ],
+                "Wednesday": [
+                    { "Time": "8:30 AM", "Location": "At the Manor in the kitchen" },
+                    { "Time": "10:00 AM", "Location": "Gardening in front of the Manor" },
+                    { "Time": "11:40 AM", "Location": "Leaves Manor" },
+                    { "Time": "12:30 PM", "Location": "At the tree west of Harvey's Clinic" },
+                    { "Time": "1:50 PM", "Location": "Starts walking toward Pierre's General Store" },
+                    { "Time": "2:00 PM", "Location": "In front of Pierre's General Store" },
+                    { "Time": "4:00 PM", "Location": "Leaves Pierre's and heads home" },
+                    { "Time": "4:30 PM", "Location": "In the Manor in the kitchen" },
+                    { "Time": "8:00 PM", "Location": "At his desk at home" },
+                    { "Time": "10:00 PM", "Location": "Goes to bed" }
+                ],
+                "Thursday": [
+                    { "Time": "10:40 AM", "Location": "In front of Manor." },
+                    { "Time": "12:30 PM", "Location": "Outside of Harvey's Clinic." },
+                    { "Time": "2:00 PM", "Location": "In front of Pierre's." },
+                    { "Time": "4:00 PM", "Location": "Leaves to go home." },
+                    { "Time": "4:40 PM", "Location": "Arrives at the Manor." }
+                ],
+                "Friday": [
+                    { "Time": "12:30 PM", "Location": "Standing next to Harvey's Clinic" },
+                    { "Time": "2:30 PM", "Location": "Standing by water fountain" },
+                    { "Time": "5:00 PM", "Location": "Walks to the Stardrop Saloon" },
+                    { "Time": "5:50 PM", "Location": "Arrives at the Stardrop Saloon" },
+                    { "Time": "11:00 PM", "Location": "Walks to the Manor" },
+                    { "Time": "11:30 PM", "Location": "Arrives at the Manor" }
+                ],
+                "Saturday": [
+                    { "Time": "8:30 AM", "Location": "At home, in the kitchen" },
+                    { "Time": "10:00 AM", "Location": "Gardening in front of Mayor's Manor" },
+                    { "Time": "11:30 AM", "Location": "Leaves Manor" },
+                    { "Time": "12:30 PM", "Location": "At the tree west of Harvey's Clinic" },
+                    { "Time": "1:50 PM", "Location": "Starts walking toward Pierre's General Store" },
+                    { "Time": "2:00 PM", "Location": "In front of Pierre's General Store" },
+                    { "Time": "4:00 PM", "Location": "Leaves Pierre's and heads to the Manor" },
+                    { "Time": "4:30 PM", "Location": "At home, in the kitchen" },
+                    { "Time": "8:00 PM", "Location": "At his desk in the Manor" },
+                    { "Time": "10:00 PM", "Location": "Goes to bed" }
+                ],
+                "Sunday": [
+                    { "Time": "9:30 AM", "Location": "Gardens in front of the Manor." },
+                    { "Time": "11:00 AM", "Location": "Walks from the Manor to river near Leah's cabin." },
+                    { "Time": "1:30 PM", "Location": "Stands by river near Leah's cabin." },
+                    { "Time": "4:00 PM", "Location": "Walks from river to Mayor's Manor." },
+                    { "Time": "5:30 PM", "Location": "Inside the Manor." },
+                    { "Time": "10:00 PM", "Location": "Sleeps in Mayor's Manor bedroom." }
+                ]
+            },
+            "Winter": {
+                "Monday": [
+                    { "Time": "11:00 AM", "Location": "Arrives at the Fish Shop" },
+                    { "Time": "4:30 PM", "Location": "Leaves beach on way to the Manor" }
+                ],
+                "Tuesday": [
+                    { "Time": "8:30 AM", "Location": "Wakes up" },
+                    { "Time": "10:00 AM", "Location": "Stands in front of Manor" },
+                    { "Time": "10:40 AM", "Location": "Moves to front garden" },
+                    { "Time": "11:40 AM", "Location": "Starts walking towards Pierre's General Store" },
+                    { "Time": "12:20 PM", "Location": "Enters Pierre's General Store" },
+                    { "Time": "4:00 PM", "Location": "Begins walking towards Mayor's Manor" },
+                    { "Time": "4:40 PM", "Location": "Enters Mayor's Manor" }
+                ],
+                "Wednesday": [
+                    { "Time": "4:00 PM", "Location": "Leaves Marnie's Ranch" },
+                    { "Time": "4:30 PM", "Location": "Enters Mayor's Manor" }
+                ],
+                "Thursday": [
+                    { "Time": "10:00 AM", "Location": "Leaves Mayor's Manor and tends garden" },
+                    { "Time": "11:30 AM", "Location": "Moves to tree next to Harvey's Clinic" },
+                    { "Time": "12:30 PM", "Location": "Arrives at tree next to Harvey's Clinic" },
+                    { "Time": "2:00 PM", "Location": "Moves to in front of Pierre's General Store" },
+                    { "Time": "4:00 PM", "Location": "Moves to Mayor's Manor" },
+                    { "Time": "4:30 PM", "Location": "Enters Mayor's Manor" }
+                ],
+                "Friday": [
+                    { "Time": "8:30 AM", "Location": "Inside Mayor's Manor" },
+                    { "Time": "10:00 AM", "Location": "Leaves Mayor's Manor and tends garden" },
+                    { "Time": "11:30 AM", "Location": "Moves to tree next to Harvey's Clinic" },
+                    { "Time": "2:00 PM", "Location": "Moves to the fountain" },
+                    { "Time": "2:30 PM", "Location": "Arrives at the fountain" },
+                    { "Time": "5:00 PM", "Location": "Moves to the Stardrop Saloon" },
+                    { "Time": "5:50 PM", "Location": "Enters the Stardrop Saloon" },
+                    { "Time": "11:00 PM", "Location": "Leaves the Stardrop Saloon and goes to Mayor's Manor" },
+                    { "Time": "11:20 PM", "Location": "Enters Mayor's Manor" }
+                ],
+                "Saturday": [
+                    { "Time": "8:30 AM", "Location": "Inside Mayor's Manor" },
+                    { "Time": "10:00 AM", "Location": "Leaves Mayor's Manor and moves to Blacksmith" },
+                    { "Time": "10:50 AM", "Location": "Enters Blacksmith" },
+                    { "Time": "1:00 PM", "Location": "Leaves Blacksmith and moves to Museum" },
+                    { "Time": "4:00 PM", "Location": "Leaves Museum and returns to Mayor's Manor" },
+                    { "Time": "4:40 PM", "Location": "Enters Mayor's Manor" }
+                ],
+                "Sunday": [
+                    { "Time": "All Day", "Location": "Inside Mayor's Manor" }
+                ]
+            },
+            "Deviations": {
+                "Raining": [
+                    { "Time": "8:30 AM", "Location": "Mayor's Manor is unlocked. Lewis is in his kitchen." },
+                    { "Time": "2:00 PM", "Location": "Departs for the saloon." },
+                    { "Time": "2:30 PM", "Location": "Arrives at the saloon." },
+                    { "Time": "7:40 PM", "Location": "Departs for home." },
+                    { "Time": "8:10 PM", "Location": "Arrives home. Moves to his kitchen." },
+                    { "Time": "10:00 PM", "Location": "Leaves kitchen to go to bed. Mayor's Manor is locked." }
+                ],
+                "Birthday": [
+                    // ... (continue with the birthday schedule)
+                ],
+                "Birthday (Community Center Restored)": [
+                    { "Time": "12:20 PM", "Location": "Stands in the Vault Room in the Community Center" }
+                ],
+                "Monday, Wednesday, Thursday, Sunday (Community Center Restored)": [
+                    { "Time": "8:30 AM", "Location": "Mayor's Manor is unlocked. Lewis is in his kitchen." },
+                    { "Time": "9:00 AM", "Location": "Gardens in front of Manor. Moves to east side at 9:40 AM." },
+                    // ... (continue with the schedule)
+                ],
+                "Winter 16th": [
+                    { "Time": "8:30 AM", "Location": "Standing in kitchen." },
+                    { "Time": "10:00 AM", "Location": "Walks outside to stand in his garden." },
+                    { "Time": "11:40 AM", "Location": "Walks to town square." },
+                    { "Time": "12:30 PM", "Location": "Stands in front of tree beside Harvey's Clinic." },
+                    { "Time": "2:00 PM", "Location": "Stands in front of bulletin board at Pierre's." },
+                    { "Time": "4:20 PM", "Location": "Attends the Night Market." },
+                    { "Time": "11:00 PM", "Location": "Returns to the Manor." }
+                ]
+            }
+        },
+        "is datable": false,
+        "birthday": "Spring 7",
+        "events": {
+            "Anytime": "At any friendship level greater than zero friendship points, you may receive gold in the mail from Lewis. The chance of receiving gold in the mail increases as your friendship with Lewis increases.",
+            "Three hearts": "After reaching 3 hearts with Lewis, he will send you a recipe in the mail.",
+            "Six hearts": "On a sunny day, enter the town between 7pm and 11pm. Note: Only happens if Marnie is also at 6 hearts.",
+            "Seven hearts": "After reaching 7 hearts with Lewis, he will send you a recipe in the mail."
+        }
     }
 ]
