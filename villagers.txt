@@ -4122,5 +4122,476 @@
             "Six hearts": "On a sunny day, enter the town between 7pm and 11pm. Note: Only happens if Marnie is also at 6 hearts.",
             "Seven hearts": "After reaching 7 hearts with Lewis, he will send you a recipe in the mail."
         }
+    },
+
+    {
+        "name": "Linus",
+        "loves": ["All universal loves", "Blueberry tart", "Cactus fruit", "Coconut", "Dish O' The Sea", "Yam"],
+        "likes": ["All universal likes (except Foraged minerals and Gems other than Diamond and Prismatic Shard)", "All eggs (except Void egg)", "All milk", "All fruits (except Cactus fruit and Coconut)", "Chanterelle", "Common mushroom", "Daffodil", "Dandelion", "Ginger", "Hazelnut", "Holly", "Leek", "Magma cap", "Morel", "Purple mushroom", "Snow yam", "Spring onion", "Wild horseradish", "Winter root"],
+        "neutral": ["All universal neutrals", "All fish (except Carp and Snail)"],
+        "dislikes": ["All universal dislikes (except Fish and Spring onion)", "All Foraged minerals", "All gems (except Diamond and Prismatic Shard)"],
+        "hates": ["All universal hates"],
+        "schedule": {
+            "Raining": [
+                { "Time": "6:00 am", "Location": "Inside his tent" },
+                { "Time": "9:30 am", "Location": "Exits tent, stands behind bush west of his tent" },
+                { "Time": "10:10 am", "Location": "Returns to his tent" },
+                { "Time": "3:00 pm", "Location": "Exits tent, stands under tree west of his tent" },
+                { "Time": "7:00 pm", "Location": "Returns to his tent" },
+                { "Time": "11:30 pm", "Location": "Goes to bed" }
+            ],
+            "Winter 15": [
+                { "Time": "6:00 am", "Location": "Inside his tent" },
+                { "Time": "11:00 am", "Location": "Exits tent, stands to west of fireplace in front of tent" },
+                { "Time": "4:00 pm", "Location": "Walks to beach to attend Night Market" },
+                { "Time": "11:30 pm", "Location": "Returns to his tent for the night" }
+            ],
+            "Spring": [
+                { "Time": "6:00 am", "Location": "Inside his tent" },
+                { "Time": "6:30 am", "Location": "Exits tent, stands behind bush west of his tent" },
+                { "Time": "7:00 am", "Location": "Walks to west of fireplace in front of his tent" },
+                { "Time": "9:30 am", "Location": "Walks to west side of lake" },
+                { "Time": "2:00 pm", "Location": "Walks to west of fireplace in front of his tent" },
+                { "Time": "7:00 pm", "Location": "Returns to his tent" },
+                { "Time": "11:00 pm", "Location": "Goes to bed" }
+            ],
+            "Summer": [
+                { "Time": "6:00 am", "Location": "Inside his tent" },
+                { "Time": "6:30 am", "Location": "Walks to cliff overlooking lake, east of his tent" },
+                { "Time": "9:40 am", "Location": "Walks to south of fence, west of lake" },
+                { "Time": "1:00 pm", "Location": "Walks further south, west of lake" },
+                { "Time": "4:00 pm", "Location": "Walks to west of fireplace in front of his tent" },
+                { "Time": "8:00 pm", "Location": "Walks behind the bush to the west of his tent" },
+                { "Time": "8:20 pm", "Location": "Returns to his tent for the night" }
+            ],
+            "Fall": [
+                { "Time": "6:00 am", "Location": "Inside his tent" },
+                { "Time": "7:00 am", "Location": "Exits tent, stands behind bush west of his tent" },
+                { "Time": "7:40 am", "Location": "Walks to west of fireplace in front of his tent" },
+                { "Time": "9:00 am", "Location": "Walks to Spa, stands at east side of building" },
+                { "Time": "2:00 pm", "Location": "Walks to west side of lake" },
+                { "Time": "6:00 pm", "Location": "Returns to his tent for the night" }
+            ],
+            "Winter": [
+                { "Time": "6:00 am", "Location": "Inside his tent" },
+                { "Time": "11:00 am", "Location": "Exits tent, stands to west of fireplace in front of tent" },
+                { "Time": "2:00 pm", "Location": "Walks to Spa, stands inside entrance" },
+                { "Time": "6:00 pm", "Location": "Returns to his tent for the night" }
+            ]
+        },
+        "is datable": false,
+        "birthday": "Winter 3",
+        "events": {
+            "Anytime": "At any friendship level greater than zero friendship points, you may receive a gift in the mail from Linus. The chance of receiving a gift in the mail increases as your friendship with Linus increases.",
+            "Zero heart": "After you have 50 Friendship points with Linus, enter the town between 8pm - 12am on a day that's not raining. (This event cannot trigger before Spring 7, Year 1)",
+            "Three hearts": "After reaching 3 hearts with Linus he will send you a recipe in the mail.",
+            "Four hearts": "Enter the mountain area near his tent between 8pm - 12am on a day that's not raining.",
+            "Seven hearts": "After reaching seven hearts with Linus, he will send you a recipe in the mail.",
+            "Eight hearts": "Exit Robin's house on a day that's not raining between 9am and 5pm."
+        }
+    },
+
+    {
+        "name": "Marnie",
+        "loves": ["All universal loves", "Diamond", "Farmer's lunch", "Pink cake", "Pumkin pie"],
+        "likes": ["All universal likes", "All eggs (except Void egg)", "All milk", "Quartz"],
+        "neutral": ["All universal neutrals", "All fruits (except Fruit tree fuit and Salmonberry)", "Chanterelle", "Common mushroom", "Daffodil", "Dandelion", "Ginger", "Hazelnut", "Leek", "Magma cap", "Morel", "Purple mushroom", "Snow yam", "Winter root"],
+        "dislikes": ["All universal dislikes (except Clay)", "Salmonberry", "Seaweed", "Wild horseradish"],
+        "hates": ["All universal hates (except Seaweed)", "Clay", "Holly"],
+        "schedule": {
+            "Fall 18": [
+                { "Time": "6:00 AM", "Location": "At home in her room." },
+                { "Time": "10:30 AM", "Location": "Leaves her house and walks to Harvey's Clinic." },
+                { "Time": "12:00 PM", "Location": "Arrives at Harvey's Clinic, stands in the waiting room." },
+                { "Time": "1:30 PM", "Location": "Walks into the exam room at Harvey's Clinic." },
+                { "Time": "4:00 PM", "Location": "Leaves Harvey's Clinic and walks back to her house." },
+                { "Time": "5:30 PM", "Location": "Arrives home and stands in the kitchen." },
+                { "Time": "9:00 PM", "Location": "Walks to her room and goes to sleep." }
+            ],
+            "Winter 16": [
+                { "Time": "6:00 AM", "Location": "At home in her room." },
+                { "Time": "9:00 AM", "Location": "Stands behind the counter of her shop." },
+                { "Time": "4:00 PM", "Location": "Attends the Night Market." },
+                { "Time": "11:40 PM", "Location": "Walks back to her house to go to bed." }
+            ],
+            "Winter 18": [
+                { "Time": "9:00 AM", "Location": "At home in her room." },
+                { "Time": "11:00 AM", "Location": "Leaves her house to take Jas to Harvey's Clinic." },
+                { "Time": "12:00 PM", "Location": "Stands in clinic waiting room." },
+                { "Time": "1:40 PM", "Location": "Walks into clinic examination room." },
+                { "Time": "4:00 PM", "Location": "Leaves clinic and walks back to her house." },
+                { "Time": "6:00 PM", "Location": "Arrives at home and stands in the kitchen." },
+                { "Time": "9:00 PM", "Location": "Walks to her room and goes to bed." }
+            ],
+            "Raining / Thursday": [
+                { "Time": "6:00 AM", "Location": "At home in her room." },
+                { "Time": "9:00 AM", "Location": "Stands behind the counter of her shop." },
+                { "Time": "4:00 PM", "Location": "Closes her shop and walks to the kitchen." },
+                { "Time": "6:00 PM", "Location": "Leaves the kitchen and walks to her room. Stands in front of her dresser." },
+                { "Time": "9:00 PM", "Location": "Goes to bed." }
+            ],
+            "Monday": [
+                { "Time": "6:00 AM", "Location": "At home in her room." },
+                { "Time": "8:10 AM", "Location": "Leaves her house and walks to Pierre's General Store." },
+                { "Time": "12:00 PM", "Location": "Leaves Pierre's General Store and walks back to her house." },
+                { "Time": "1:30 PM", "Location": "Arrives at home and stands in the kitchen." },
+                { "Time": "9:00 PM", "Location": "Walks to her room and goes to bed." }
+            ],
+            "Tuesday": [
+                { "Time": "6:00 AM", "Location": "At home in her room." },
+                { "Time": "10:00 AM", "Location": "Leaves her house and walks to Pierre's General Store." },
+                { "Time": "12:00 PM", "Location": "Arrives at Pierre's General Store to exercise with Caroline, Jodi, Emily, and Robin." },
+                { "Time": "4:00 PM", "Location": "Chats with the other ladies after exercise class." },
+                { "Time": "6:10 PM", "Location": "Leaves Pierre's General Store and walks back to her house." },
+                { "Time": "8:00 PM", "Location": "Arrives home and stands in the kitchen." },
+                { "Time": "9:00 PM", "Location": "Walks to her room and goes to bed." }
+            ],
+            "Regular Schedule": [
+                { "Time": "6:00 AM", "Location": "At home in her room." },
+                { "Time": "9:00 AM", "Location": "Stands behind the counter of her shop." },
+                { "Time": "4:00 PM", "Location": "Closes her shop and walks to her room." },
+                { "Time": "5:00 PM", "Location": "Leaves her house and walks to The Stardrop Saloon." },
+                { "Time": "11:00 PM", "Location": "Leaves the Saloon and walks back to her house to go to bed." }
+            ]
+        },
+        "is datable": false,
+        "birthday": "Fall 18",
+        "events": {
+            "Anytime": "At any friendship level greater than zero friendship points, you may receive a gift in the mail from Marnie. The chance of receiving a gift in the mail increases as your friendship with Marnie increases.",
+            "Three hearts I": "Leave your farmhouse between 6:30am - 9:30am.",
+            "Three hearts II": "After reaching 3 hearts, Marnie sends you a recipe in the mail.",
+            "Six hearts": "On a sunny day, enter the town between 7pm and 11pm. Note: Only happens if Lewis is also at 6 hearts.",
+            "Seven hearts": "After reaching 7 hearts, Marnie sends you a recipe in the mail."
+        }
+    },
+
+    {
+        "name": "Pam",
+        "loves": ["All universal loves", "Beer", "Cactus fruit", "Glazed yams", "Mead", "Pale ale", "Parsnip", "Parsnip soup", "Pina Colada"],
+        "likes": ["All universal likes", "All fruits (except Cactus fruit)", "All milk", "Daffodil"],
+        "neutral": ["All universal neutrals", "All fish (except Carp, Octopus, Snail and Squid)", "Chanterelle", "Common mushroom", "Dandelion", "Ginger", "Hazelnut", "Leek", "Magma cap", "Morel", "Purple mushroom", "Snow yam", "Winter root"],
+        "dislikes": ["All universal dislikes (except Fish)", "All eggs", "Quartz", "Wild horseradish"],
+        "hates": ["All universal hates", "Holly", "Octopus", "Squid"],
+        "schedule": {
+            "Spring 25": [
+                { "Time": "8:00 AM", "Location": "Lounges on her couch in the trailer." },
+                { "Time": "11:30 AM", "Location": "Leaves her trailer and heads to the medical clinic for her annual checkup." },
+                { "Time": "1:30 PM", "Location": "Continues her checkup at the clinic." },
+                { "Time": "4:00 PM", "Location": "Leaves the clinic and heads to the saloon." },
+                { "Time": "12:00 AM", "Location": "Leaves the saloon and heads home for the night." }
+            ],
+            "Regular Schedule (No Bus Service)": [
+                { "Time": "8:00 AM", "Location": "Lounges on her couch in the trailer." },
+                { "Time": "12:00 PM", "Location": "Leaves the trailer and heads to JojaMart." },
+                { "Time": "4:00 PM", "Location": "Leaves JojaMart and heads to the saloon." },
+                { "Time": "12:00 AM", "Location": "Leaves the saloon and heads home." }
+            ],
+            "Regular Schedule (Bus Service Restored)": [
+                { "Time": "8:00 AM", "Location": "Lounges on her couch in the trailer." },
+                { "Time": "8:30 AM", "Location": "Leaves the trailer to head to the bus stop just east of the farm." },
+                { "Time": "10:00 AM", "Location": "Arrives at the bus stop for the afternoon." },
+                { "Time": "5:00 PM", "Location": "Leaves the bus stop and heads to the saloon." },
+                { "Time": "12:00 AM", "Location": "Leaves the saloon and back home for the night." }
+            ]
+        },
+        "is datable": false,
+        "birthday": "Spring 18",
+        "events": {
+            "Anytime": "At any friendship level greater than zero friendship points, you may receive a gift in the mail from Pam. The chance of receiving a gift in the mail increases as your friendship with Pam increases.",
+            "Three hearts": "After reaching 3 hearts with Pam, she will send you a recipe in the mail.",
+            "Seven hearts": "After reaching 7 hearts with Pam, she will send you a recipe in the mail.",
+            "Nine hearts": "Purchase the 'Community Upgrade' from the Carpenter's Shop. After earning 9 hearts of friendship with Pam, enter Pam's house at least 4 days after the Community Upgrade is completed."
+        }
+    },
+
+    {
+        "name": "Pierre",
+        "loves": ["All universal loves", "Fried calamari"],
+        "likes": ["All universal likes (except Corn, Garlic, Foraged minerals, Gems other than Diamond and Prismatic Shard, Parsnip soup and Tortilla)", "All eggs (except Void egg)", "Daffodil", "Dandelion"],
+        "neutral": ["All universal neutrals", "All fruits (except Fruit tree fruit and Salmonberry)"],
+        "dislikes": ["All universal dislikes (except Fish)", "All Foraged minerals", "All Gems (other than Diamond and Prismatic Shard)", "Chanterelle", "Common mushroom", "Ginger", "Hazelnut", "Holly", "Leek", "Magma cap", "Morel", "Salmonberry", "Purple mushroom", "Snow yam", "Wild horseradish", "Winter root"],
+        "hates": ["All universal hates", "All fish", "Corn", "Garlic", "Parsnip soup", "Tortilla"],
+        "schedule": {
+            "Regular Schedule": [
+                { "Time": "6:00 AM", "Location": "Stands behind the counter of the general store." },
+                { "Time": "7:00 AM", "Location": "In the aisles of the general store." },
+                { "Time": "8:30 AM", "Location": "Goes to stand behind the counter of the general store." },
+                { "Time": "5:00 PM", "Location": "Leaves the counter and stands in the aisles again." },
+                { "Time": "7:00 PM", "Location": "Goes to the kitchen in his house." },
+                { "Time": "9:00 PM", "Location": "Goes to his room and stands in front of the bookcase." },
+                { "Time": "11:00 PM", "Location": "Goes to sleep." }
+            ],
+            "Friday (not raining)": [
+                { "Time": "6:00 AM", "Location": "Stands behind the counter of the general store." },
+                { "Time": "7:00 AM", "Location": "In the aisles of the general store." },
+                { "Time": "8:30 AM", "Location": "Goes to stand behind the counter of the general store." },
+                { "Time": "5:00 PM", "Location": "Goes to The Stardrop Saloon and stands in front of the counter." },
+                { "Time": "10:50 PM", "Location": "Returns home to sleep." }
+            ]
+        },
+        "is datable": false,
+        "birthday": "Spring 26",
+        "events": {
+            "Anytime": "At any friendship level greater than zero friendship points, you may receive gold in the mail from Pierre. The chance of receiving gold in the mail increases as your friendship with Pierre increases.",
+            "Three hearts": "After reaching 3 hearts with Pierre, he will send you a recipe in the mail.",
+            "Six hearts": "Enter Pierre's Shop to activate the cut-scene."
+        }
+    },
+
+    {
+        "name": "Robin",
+        "loves": ["All universal loves", "Goat cheese", "Peach", "Spaghetti"],
+        "likes": ["All universal likes", "All milk", "All fruits (except Peach)", "Hardwood", "Quartz"],
+        "neutral": ["All universal neutrals", "All eggs (except Void egg)", "Chanterelle", "Common mushroom", "Daffodil", "Dandelion", "Ginger", "Hazelnut", "Leek", "Magma cap", "Morel", "Purple mushroom", "Snow yam", "Winter root"],
+        "dislikes": ["All universal dislikes (except Hardwood)", "Wild horseradish"],
+        "hates": ["All universal hates", "Holly"],
+        "schedule": {
+            "Summer 18": [
+                { "Time": "6:00 AM", "Location": "In her bedroom at home." },
+                { "Time": "7:00 AM", "Location": "Walks to the counter of her shop." },
+                { "Time": "8:00 AM", "Location": "Leaves home and walks to Harvey's Clinic." },
+                { "Time": "4:00 PM", "Location": "Leaves Harvey's Clinic and walks home." },
+                { "Time": "9:00 PM", "Location": "Goes to bed." }
+            ],
+            "Raining": [
+                { "Time": "6:00 AM", "Location": "In her bedroom at home." },
+                { "Time": "8:00 AM", "Location": "Walks to the counter of her shop." },
+                { "Time": "5:00 PM", "Location": "Leaves the counter of her shop and walks to the kitchen." },
+                { "Time": "7:30 PM", "Location": "Walks to her bedroom." },
+                { "Time": "9:00 PM", "Location": "Goes to bed." }
+            ],
+            "Monday, Community Center Restored": [
+                { "Time": "6:00 AM", "Location": "In her bedroom at home." },
+                { "Time": "8:00 AM", "Location": "Walks to the counter of her shop." },
+                { "Time": "5:00 PM", "Location": "Leaves her shop and walks to the Community Center." },
+                { "Time": "7:30 PM", "Location": "Leaves Community Center to return home." },
+                { "Time": "10:00 PM", "Location": "Goes to bed." }
+            ],
+            "Winter 16": [
+                { "Time": "6:00 AM", "Location": "In her bedroom at home." },
+                { "Time": "8:00 AM", "Location": "Walks to the counter of her shop." },
+                { "Time": "5:00 PM", "Location": "Leaves her shop to attend Night Market." },
+                { "Time": "11:30 PM", "Location": "Leaves Night Market to return home." }
+            ],
+            "Tuesday": [
+                { "Time": "6:00 AM", "Location": "In her bedroom at home." },
+                { "Time": "9:30 AM", "Location": "Walks towards Pierre's General Store." },
+                { "Time": "1:00 PM", "Location": "Starts to exercise." },
+                { "Time": "4:00 PM", "Location": "Finishes the exercise, talks with Jodi, Caroline, and Marnie." },
+                { "Time": "6:00 PM", "Location": "Leaves Pierre's General Store and walks back to her bedroom." },
+                { "Time": "9:00 PM", "Location": "Goes to bed." }
+            ],
+            "Friday": [
+                { "Time": "6:00 AM", "Location": "In her bedroom at home." },
+                { "Time": "8:00 AM", "Location": "Walks to the counter of her shop." },
+                { "Time": "4:00 PM", "Location": "Leaves her shop and walks to the Stardrop Saloon." },
+                { "Time": "7:20 PM", "Location": "At the Stardrop Saloon, dancing with Demetrius." },
+                { "Time": "9:00 PM", "Location": "Leaves the Stardrop Saloon and walks home to go to bed." }
+            ],
+            "Regular Schedule": [
+                { "Time": "6:00 AM", "Location": "In her bedroom at home." },
+                { "Time": "8:00 AM", "Location": "Walks to the counter of her shop." },
+                { "Time": "5:00 PM", "Location": "Leaves her shop and heads outside to the Mountain area." },
+                { "Time": "7:30 PM", "Location": "Leaves the Mountain and walks into her bedroom." },
+                { "Time": "9:00 PM", "Location": "Goes to bed." }
+            ]
+        },
+        "is datable": false,
+        "birthday": "Fall 21",
+        "events": {
+            "Anytime": "At any friendship level greater than zero friendship points, you may receive a gift in the mail from Robin. The chance of receiving a gift in the mail increases as your friendship with Robin increases.",
+            "Six hearts": "Enter Robin's house while she is home.",
+            "Seven hearts": "After reaching 7 hearts with Robin she will send you a recipe in the mail."
+        }
+    },
+
+    {
+        "name": "Sandy",
+        "loves": ["All universal loves": "Crocus", "Daffodil", "Mango sticky rice", "Sweet pea"],
+        "likes": ["All universal likes", "All fruits", "Goat milk", "Large goat milk", "Quartz", "Wool"],
+        "neutral": ["All universal neutrals (except Wool)", "All eggs (except Void egg)", "Chanterelle", "Common mushroom", "Dandelion", "Ginger", "Hazelnut", "Large milk", "Leek", "Magma cap", "Milk", "Morel", "Purple mushroom", "Snow yam", "Wild horseradish", "Winter root"]
+        "dislikes": ["All universal dislikes"],
+        "hates": ["All universal hates", "Holly"],
+        "schedule": {
+            "Fall 15, Bus Repaired": [
+                { "Time": "9:00 AM", "Location": "Stands behind the counter in the Oasis." },
+                { "Time": "12:00 PM", "Location": "Chats sideways with Emily behind the counter." },
+                { "Time": "1:00 PM", "Location": "Leaves the Oasis and stands next to the bench on the left." },
+                { "Time": "3:00 PM", "Location": "Goes to the pond in the northwest section." },
+                { "Time": "5:00 PM", "Location": "Leaves and then stands next to the Sand Dragon." },
+                { "Time": "6:00 PM", "Location": "Goes to the side of the bus." },
+                { "Time": "7:00 PM", "Location": "Moves to the front of the Desert Trader." },
+                { "Time": "8:00 PM", "Location": "Returns to the front of the Oasis." },
+                { "Time": "10:50 PM", "Location": "Leaves the front of the Oasis." },
+                { "Time": "11:30 PM", "Location": "Arrives by the bench next to the bus." },
+                { "Time": "12:00 AM", "Location": "Says goodbye to Emily." },
+                { "Time": "12:10 AM", "Location": "Goes back to the Oasis." }
+            ]
+        },
+        "is datable": false,
+        "birthday": "Fall 15",
+        "events": {
+            "Anytime": "At any friendship level greater than zero friendship points, you may receive a gift in the mail from Sandy. The chance of receiving a gift in the mail increases as your friendship with Sandy increases.",
+            "Seven hearts": "After reaching seven hearts with Sandy, she will send you a recipe in the mail."
+        }
+    },
+
+    {
+        "name": "Vincent",
+        "loves": ["All universal loves", "Cranberry candy", "Ginger ale", "Grape", "Pink cake", "Snail"],
+        "likes": ["All universal likes (except Triple shot espresso, Vegetables and Artisan Goods other than Honey, Jelly and Oil)", "Coconut", "Daffodil"],
+        "neutral": ["All universal neutrals", "All milk"],
+        "dislikes": ["All universal dislikes (except Clay)", "All eggs", "All fruits (except Coconut, Grape and Fruit tree fruit)", "All Vegetables (except Hops, Tea leaves and Wheat)", "Chanterelle", "Common mushroom", "Dandelion", "Ginger", "Hazelnut", "Holly", "Leek", "Magma cap", "Morel", "Purple mushroom", "Quartz", "Snow yam", "Winter root"],
+        "hates": ["All universal hates (except Snail)", "All Artisan Goods (except Honey, Jelly and Oil)", "Clay", "Pina Colada", "Triple shot espresso", "Wild horseradish"],
+        "schedule": {
+            "Tuesday the 9th & Tuesday the 23rd (if not at 6 hearts with both Penny and Sam)": [
+                { "Time": "9:00 AM", "Location": "Wakes up for the day." },
+                { "Time": "11:00 AM", "Location": "Plays inside his home." },
+                { "Time": "2:00 PM", "Location": "Leaves his home and heads outside to the town square." },
+                { "Time": "5:00 PM", "Location": "Leaves town and walks home." },
+                { "Time": "7:00 PM", "Location": "Plays inside his home." },
+                { "Time": "10:00 PM", "Location": "Goes to bed for the night." }
+            ],
+            "Spring 11": [
+                { "Time": "9:00 AM", "Location": "Wakes up, concerned about having to go to the doctor. '*sob*... I have to get my shots today.'" },
+                { "Time": "11:30 AM", "Location": "Leaves home to travel to the clinic for his annual checkup. '*gulp*... Mommy, don't make me do it.'" },
+                { "Time": "1:30 PM", "Location": "Continues checkup at the clinic. 'Do I get a lollipop for being so brave?'" },
+                { "Time": "4:00 PM", "Location": "Leaves the clinic to walk home, once there he plays inside." },
+                { "Time": "10:00 PM", "Location": "Goes to bed for the night." }
+            ],
+            "Winter 16": [
+                { "Time": "9:00 AM", "Location": "Wakes up for the day." },
+                { "Time": "11:00 AM", "Location": "Plays inside his home." },
+                { "Time": "2:00 PM", "Location": "Leaves his home and heads outside to the town square." },
+                { "Time": "4:30 PM", "Location": "Attends the Night Market." },
+                { "Time": "11:30 PM", "Location": "Goes to bed for the night." }
+            ],
+            "Raining": [
+                { "Time": "9:00 AM", "Location": "Wakes up for the day." },
+                { "Time": "11:00 AM", "Location": "Plays inside his home." },
+                { "Time": "2:00 PM", "Location": "Moves around inside his home." },
+                { "Time": "5:00 PM", "Location": "Moves around inside his home." },
+                { "Time": "7:00 PM", "Location": "Plays inside his home." },
+                { "Time": "10:00 PM", "Location": "Goes to bed for the night." }
+            ],
+            "Summer": [
+                { "Time": "9:00 AM", "Location": "Wakes up for the day." },
+                { "Time": "11:00 AM", "Location": "Plays inside his home." },
+                { "Time": "1:40 PM", "Location": "Leaves his home and heads to The Beach." },
+                { "Time": "7:00 PM", "Location": "Leaves The Beach and walks back home." },
+                { "Time": "11:00 PM", "Location": "Goes to bed for the night." }
+            ],
+            "Tuesday, Wednesday, Friday": [
+                { "Time": "9:00 AM", "Location": "Leaves his home and walks to the Museum to be tutored by Penny." },
+                { "Time": "2:00 PM", "Location": "Leaves the Museum, walks back to Pelican Town." },
+                { "Time": "4:20 PM", "Location": "Walks around Pelican Town." },
+                { "Time": "5:40 PM", "Location": "Leaves town to go home." },
+                { "Time": "10:00 PM", "Location": "Goes to bed for the night." }
+            ],
+            "Saturday": [
+                { "Time": "10:10 AM", "Location": "Leaves his home and heads outside to Pelican Town." },
+                { "Time": "12:00 PM", "Location": "Heads to the town square." },
+                { "Time": "5:00 PM", "Location": "Leaves the town square and walks around Pelican Town." },
+                { "Time": "10:00 PM", "Location": "Leaves town to go home to bed for the night." }
+            ],
+            "Regular Schedule": [
+                { "Time": "9:00 AM", "Location": "Wakes up for the day." },
+                { "Time": "11:00 AM", "Location": "Plays inside his home." },
+                { "Time": "2:00 PM", "Location": "Leaves his home and heads outside to the town square." },
+                { "Time": "5:00 PM", "Location": "Leaves town and walks home." },
+                { "Time": "7:00 PM", "Location": "Plays inside his home." },
+                { "Time": "10:00 PM", "Location": "Goes to bed for the night." }
+            ]
+        },
+        "is datable": false,
+        "birthday": "Spring 10",
+        "events": {
+            "Eight hearts": "After reaching 8 hearts with both Vincent and Jas, enter Cindersap Forest during Spring on a sunny day between 6am and 5pm."
+        }
+    },
+
+    {
+        "name": "Willy",
+        "loves": ["All universal loves", "Catfish", "Diamond", "Iridium Bar", "Mead", "Octopus", "Pumpkin", "Sea cucumber", "Sturgeon"],
+        "likes": ["All universal likes (except except Life Elixir and All Cooking except for the fish dishes he is neutral towards: Dish O' The Sea, Maki Roll, & Sashimi; and the fish dishes he likes, shown below.)", "Gold Bar", "Quartz", "Lingcod", "Tiger Trout", "Baked fish", "Carp surprise", "Chowder", "Crab cakes", "Crispy bass", "Fish stew", "Fish taco", "Fried calamari", "Fried eel", "Lobster bisque", "Salmon dinner", "Seafoam pudding", "Trout soup"],
+        "neutral": ["All universal neutrals", "All eggs (except Void egg)", "All fish (except Carp, Catfish, Lingcod, Octopus, Sea Cucumber, Snail, Sturgeon and Tiger Trout)", "All fruits (except Fruit tree fruit and Salmonberry)", "All milk", "Dish O' The Sea", "Maki roll", "Sashimi"],
+        "dislikes": ["All universal dislikes (except Fish, Gold Bar and Iron Bar)", "All cooking (except Baked Fish, Bread, Carp Surprise, Chowder, Crab Cakes, Crispy Bass, Dish O' The Sea, Fish Stew, Fish Taco, Fried Calamari, Fried Eel, Fried Egg, Lobster Bisque, Maki Roll, Salmon Dinner, Sashimi, Seafoam Pudding, Strange Bun and Trout Soup)", "Chanterelle", "Common mushroom", "Daffodil", "Dandelion", "Ginger", "Hazelnut", "Holly", "Leek", "Life Elixir", "Magma cap", "Morel", "Purple mushroom", "Snow yam", "Wild horseradish", "Winter root"],
+        "hates": ["All universal hates (except Seafoam pudding)"],
+        "schedule": {
+            "Spring 9": [
+                { "Time": "6:10 AM", "Location": "Wakes up for the day, goes fishing outside his fish shop." },
+                { "Time": "8:50 AM", "Location": "Goes back inside fish shop from the beach." },
+                { "Time": "9:00 AM", "Location": "Starts working at the counter in the fish shop, goods are available for sale.\n'I have a doctor's appointment today, so if you need to buy anything you'd better hurry.'" },
+                { "Time": "10:10 AM", "Location": "Leaves the fish shop, walks over to the Harvey's Clinic.\n'Eh, I got a fish hook stuck in my thumb... the Doctor's gonna cut it out.'" },
+                { "Time": "1:30 PM", "Location": "Continues checkup at the Harvey's Clinic.\n'Yowch! That hurt, Doc!'" },
+                { "Time": "5:00 PM", "Location": "Leaves the Harvey's Clinic, walks over to the saloon.\n'I need a little warm-me-up to be ready for another cold night on the ocean.'" },
+                { "Time": "11:20 PM", "Location": "Leaves the saloon to head home for the night." }
+            ],
+            "Winter 15, 16, and 17": [
+                { "Time": "4:30 PM", "Location": "At The Stardrop Saloon." },
+                { "Time": "12:20 AM", "Location": "Returns to the fish shop." }
+            ],
+            "Raining": [
+                { "Time": "6:10 AM", "Location": "Wakes up for the day, goes fishing outside his fish shop." },
+                { "Time": "8:50 AM", "Location": "Goes back inside fish shop from the beach." },
+                { "Time": "9:00 AM", "Location": "Starts working at the counter in the fish shop, goods are available for sale." },
+                { "Time": "5:00 PM", "Location": "Leaves the fish shop, walks over to the saloon.\n'I need a little warm-me-up to be ready for another cold night on the ocean.'" },
+                { "Time": "11:20 PM", "Location": "Leaves the saloon to head home for the night." }
+            ],
+            "Saturday (Day off)": [
+                { "Time": "6:10 AM", "Location": "Wakes up for the day, walks through town to go fishing at the river outside Leah's cottage." },
+                { "Time": "2:00 PM", "Location": "Leaves the river and heads into Pelican Town for more river fishing." },
+                { "Time": "7:00 PM", "Location": "Walks over to the saloon.\n'Ah... Nothing's better than kicking back with a cold one after a relaxing day fishing.'" },
+                { "Time": "11:00 PM", "Location": "Leaves the saloon to head home for the night." }
+            ],
+            "Winter": [
+                { "Time": "6:10 AM", "Location": "Wakes up for the day, goes fishing outside his fish shop." },
+                { "Time": "8:50 AM", "Location": "Goes back inside fish shop from the beach." },
+                { "Time": "9:00 AM", "Location": "Starts working at the counter in the fish shop, goods are available for sale." },
+                { "Time": "5:00 PM", "Location": "Leaves the fish shop, walks over to the saloon.\n'I need a little warm-me-up to be ready for another cold night on the ocean.'" },
+                { "Time": "11:20 PM", "Location": "Leaves the saloon to head home for the night." }
+            ],
+            "Friday": [
+                { "Time": "6:10 AM", "Location": "Wakes up for the day, goes fishing outside his fish shop." },
+                { "Time": "8:50 AM", "Location": "Goes back inside fish shop from the beach." },
+                { "Time": "9:00 AM", "Location": "Starts working at the counter in the fish shop, goods are available for sale." },
+                { "Time": "5:00 PM", "Location": "Leaves the fish shop, walks over to the saloon.\n'Handling salty fish all day makes me real thirsty.'" },
+                { "Time": "11:20 PM", "Location": "Leaves the saloon to head home for the night." }
+            ],
+            "Regular Schedule": [
+                { "Time": "6:10 AM", "Location": "Wakes up for the day, goes fishing outside his fish shop." },
+                { "Time": "8:50 AM", "Location": "Goes back inside fish shop from the beach." },
+                { "Time": "9:00 AM", "Location": "Starts working at the counter in the fish shop, goods are available for sale." },
+                { "Time": "5:00 PM", "Location": "Leaves the fish shop, goes out to fish on the beach." },
+                { "Time": "10:00 PM", "Location": "Leaves the beach to head home for the night." }
+            ]
+        },
+        "is datable": false,
+        "birthday": "Summer 24",
+        "events": {
+            "Three hearts": "After reaching three hearts with Willy he will send you a recipe in the mail.",
+            "Five hearts": "After reaching five hearts with Willy he will send you a recipe in the mail.",
+            "Six hearts": "Enter The Beach between 6am and 5:10pm.",
+            "Seven hearts": "After reaching seven hearts with Willy he will send you a recipe in the mail.", 
+            "Nine hearts": "After reaching nine hearts with Willy he will send you a recipe in the mail."
+        }
+    },
+
+    {
+        "name": "Wizard",
+        "loves": ["All universal loves", "Purple mushroom", "Solar Essence", "Super cucumber", "Void Essence"],
+        "likes": ["All universal likes", "All Geode Minerals", "Quartz"],
+        "neutral": ["All universal neutrals", "All fruits (except Fruit tree fruit and Salmonberry)"],
+        "dislikes": ["All universal dislikes (except Geode Minerals, Solar Essence, Void Essence and Super cucumber)", "All eggs", "All milk", "Chanterelle", "Common mushroom", "Daffodil", "Dandelion", "Ginger", "Hazelnut", "Holly", "Leek", "Magma cap", "Morel", "Salmonberry", "Slime", "Snow yam", "Wild horseradish", "Winter root"],
+        "hates": ["All universal hates (except Slime)"],
+        "schedule": {
+            "Anytime": "The Wizard does not leave the Wizard's Tower (except for certain Festival days), and can be found there when the tower is accessible (6am to 11pm). After the player has unlocked the Witch's Hut, he can be found in his tower after 11pm by using the warp spot in the Witch's Hut. The Wizard never visits the Beach Resort on Ginger Island."
+        },
+        "is datable": false,
+        "birthday": "Winter 17",
+        "events": {
+            'Anytime": "At any friendship level greater than zero friendship points, you may receive a gift in the mail from the Wizard. The chance of receiving a gift in the mail increases as your friendship with the Wizard increases.",
+            "Four hearts": "Players gain access to the basement of the Wizard's Tower, where they can change their character's appearance at The Shrine of Illusions for 500g."
+        }
     }
 ]
