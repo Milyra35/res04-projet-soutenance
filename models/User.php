@@ -5,16 +5,16 @@ class User {
     private string $username;
     private string $password;
     private string $email;
-    private DateTime $registration_date;
+    private ?string $registration_date;
     private Role $role;
 
-    public function __construct(string $username, string $password, string $email, Date $registration_date, Role $role)
+    public function __construct(string $username, string $password, string $email)
     {
         $this->id = null;
         $this->username = $username;
         $this->password = $password;
         $this->email = $email;
-        $this->registration_date = new DateTime();
+        $this->registration_date = null;
         $this->role = $role;
     }
 
@@ -55,11 +55,11 @@ class User {
         $this->email = $email;
     }
 
-    public function getRegistrationDate() : DateTime
+    public function getRegistrationDate() : ?string
     {
         return $this->registration_date;
     }
-    public function setRegistrationDate(DateTime $registration_date) : void
+    public function setRegistrationDate(?string $registration_date) : void
     {
         $this->registration_date = $registration_date;
     }
