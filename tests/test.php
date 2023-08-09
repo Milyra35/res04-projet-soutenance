@@ -1,18 +1,18 @@
 <?php
 
+$xml=simplexml_load_file("Marpau_269973769") or die("Error: Cannot create object");
 
+foreach($xml->player as $value)
+{
+    echo $value->getName() . ":". $value->name ."<br>";
+    echo $value->money . "<br>";
 
-$xmlparser = xml_parser_create();
-
-$fp = fopen("Marpau_269973769", "r");
-$xmldata = fread($fp, 600000);
-
-// Parse XML data into an array
-xml_parse_into_struct($xmlparser,$xmldata,$values);
-
-xml_parser_free($xmlparser);
-print_r($values);
-fclose($fp);
-
+    // foreach($value->professions->int as $level)
+    // {
+    //     echo $level->getname(). ":" . $level . "<br>";
+    // }
+    
+}
+print_r($xml);
 
 ?>

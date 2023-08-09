@@ -1,0 +1,65 @@
+<?php
+
+class SavedFile {
+    private ?int $id;
+    private User $user;
+    private string $name;
+    private string $url;
+    private DateTime $date;
+
+    public function __construct(User $user, string $name, string $url, DateTime $date)
+    {
+        $this->id = null;
+        $this->user = $user;
+        $this->name = $name;
+        $this->url = $url;
+        $this->date = new DateTime();
+    }
+ 
+    public function getId() : ?int
+    {
+        return $this->id;
+    }
+    public function setId(?int $id) : void
+    {
+        $this->id = $id;
+    }
+
+    public function getUser() : User
+    {
+        return $this->user;
+    }
+    public function setUser(user $user) : void
+    {
+        $this->user = $user;
+    }
+
+    public function getName() : string
+    {
+        return $this->name;
+    }
+    public function setName(string $name) : void
+    {
+        $this->name = $name;
+    }
+
+    public function getUrl() : string
+    {
+        return $this->url;
+    }
+    public function setUrl(string $url) : void
+    {
+        $this->url = $url;
+    }
+
+    public function getDate() : DateTime
+    {
+        return $this->date;
+    }
+    public function setDate(DateTime $date) : void
+    {
+        $this->date = $date;
+    }
+}
+
+?>
