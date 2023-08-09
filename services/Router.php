@@ -8,7 +8,8 @@ class Router {
     private MediaController $mc;
     private ItemController $ic;
     private FileController $fc;
-    private HomeController $hc;
+    private StaticPageController $spc;
+    private AdminController $ac;
 
     public function __construct()
     {
@@ -19,7 +20,8 @@ class Router {
         $this->mc = new MediaController();
         $this->ic = new ItemController();
         $this->fc = new FileController();
-        $this->hc = new HomeController();
+        $this->spc = new StaticPageController();
+        $this->ac = new AdminController();
     }
 
     // Create a method to check the routes
@@ -29,7 +31,7 @@ class Router {
         {
             if($_GET['route'] === "homepage")
             {
-                $this->hc->render("homepage/homepage.phtml", []);
+                $this->spc->render("staticpages/homepage.phtml", []);
             }
             else if($_GET['route'] === "login")
             {
@@ -41,19 +43,19 @@ class Router {
             }
             else if($_GET['route'] === "my-account" && isset($_SESSION['user']))
             {
-
+                $this->uc->account();
             }
-            else if($_GET['route'] === "edit" && isset($_SESSION['user']))
+            else if($_GET['route'] === "my-account/edit" && isset($_SESSION['user']))
             {
                 $this->uc->editUser();
             }
-            else if($_GET['route'] === "delete" && isset($_SESSION['user']))
+            else if($_GET['route'] === "my-account/delete" && isset($_SESSION['user']))
             {
                 $this->uc->deleteUser();
             }
             else if($_GET['route'] === "my-games" && isset($_SESSION['user']))
             {
-
+                $this->uc->indexGames();
             }
             else if($_GET['route'] === "log-out")
             {
@@ -71,24 +73,46 @@ class Router {
             }
             else if($_GET['route'] === "confidentiality")
             {
-
+                $this->spc->render("staticpages/confidentiality.phtml", []);
             }
             else if($_GET['route'] === "legal-notices")
             {
-
+                $this->spc->render("staticpages/legal-notices.phtml", []);
             }
             else if($_GET['route'] === "credits")
             {
-
+                $this->spc->render("staticpages/credits.phtml", []);
             }
             else if($_GET['route'] === "admin" && isset($_SESSION['role']) && $_SESSION['role'] === "admin")
             {
-                
+                $this->ac->index();
+
+                if($_GET['route'] === "admin/all-users")
+                {
+                    $this->ac->getAllUsers();
+                }
+                else if($_GET['route'] === "admin/all-saved-games")
+                {
+                    $this->ac->getAllGames();
+                }
+                else if($_GET['route'] === "admin/delete")
+                {
+                    $this->uc->deleteUser();
+                    //Delete the user without rendering the delete form for the front part
+                }
+                else if($_GET['route'] === "admin/statistics")
+                {
+                    $this->ac->displayStatistics();
+                }
+                else if($_GET['route'] === "admin/edit")
+                {
+                    $this->ac->edit();
+                }
             }
         }
         else
         {
-            $this->hc->render("homepage/homepage.phtml", []);
+            $this->spc->render("staticpages/homepage.phtml", []);
         }
     }
 }
