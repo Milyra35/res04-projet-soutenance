@@ -14,6 +14,14 @@ class NPCController extends AbstractController {
         $villagers=$this->vm->getAllVillagers();
         $this->render('villagers/index.phtml', $villagers);
     }
+
+    public function getVillagerById(int $id)
+    {
+        $villager=$this->vm->getVillagerById($id);
+        $_SESSION['villager'] = $villager;
+
+        return $villager;
+    }
 }
 
 ?>

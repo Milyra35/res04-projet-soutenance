@@ -57,7 +57,7 @@ class Router {
             {
                 $this->uc->indexGames();
             }
-            else if($_GET['route'] === "log-out")
+            else if($_GET['route'] === "logout")
             {
                 $this->uc->logoutUser();
             }

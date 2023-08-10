@@ -7,12 +7,23 @@
             <li><a href="index.php?route=register">Register</a></li>
             <li><a href="index.php?route=login">Login</a></li>
             <?php
+            // var_dump($_SESSION['user']);
             if(isset($_SESSION['user']))
             {
-                echo "<li><a href='index.php?route=my-account'></a></li>";
+                echo "<li><a href='index.php?route=my-account'>My account</a></li>";
             }
             ?>
             
         </ul>
     </nav>
+    <?php
+        if(isset($_SESSION['user']))
+        {
+    ?>
+    <form method="POST" action="index.php?route=logout">
+        <input type="submit" name="logout" id="logout" value="logout">
+    </form>
+    <?php
+        }
+    ?>
 </header>
