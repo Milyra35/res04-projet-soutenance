@@ -1,4 +1,6 @@
 <?php
-$xml=simplexml_load_file("note.xml") or die("Error: Cannot create object");
-print_r($xml);
+
+$txtContent = file_get_contents('../data/villagers.txt');
+$jsonContent = json_encode($txtContent, JSON_PRETTY_PRINT);
+var_dump($jsonContent);
 ?>

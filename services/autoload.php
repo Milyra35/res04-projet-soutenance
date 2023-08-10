@@ -21,6 +21,7 @@ require 'models/VillagerPlanning.php';
 // Require all the managers
 require 'managers/AbstractManager.php';
 require 'managers/UserManager.php';
+require 'managers/FileManager.php';
 
 // Require all the controllers
 require 'controllers/AbstractController.php';

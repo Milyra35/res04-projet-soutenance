@@ -1,26 +1,6 @@
 <?php
 
 class UserManager extends AbstractManager {
-    // Get all users
-    public function getAllUsers() : array
-    {
-        $query = $this->db->prepare('SELECT * FROM users');
-        $query->execute();
-        $data = $query->fetchAll(PDO::FETCH_ASSOC);
-
-        $users = [];
-
-        foreach($data as $user)
-        {
-            $newUser = new User($user['username'], $user['password'], $user['email']);
-            $newUser->setId($user['id']);
-            $newUser->setRole($user['role_id']);
-            $users[] = $newUser;
-        }
-
-        return $users;
-    }
-
     // Get a role by its ID
     public function getRoleById(int $id) : Role
     {
@@ -32,6 +12,25 @@ class UserManager extends AbstractManager {
         $role = new Role($id, $data["name"]);
 
         return $role;
+    }
+    
+    // Get all users (for the admin part)
+    public function getAllUsers() : array
+    {
+        $query = $this->db->prepare('SELECT * FROM users');
+        $query->execute();
+        $data = $query->fetchAll(PDO::FETCH_ASSOC);
+
+        $users = [];
+
+        foreach($data as $user)
+        {
+            $newUser = new User($user['username'], $user['password'], $user['email'], $this->getRoleById($data['role_id']));
+            $newUser->setId($user['id']);
+            $users[] = $newUser;
+        }
+
+        return $users;
     }
 
     // Get an user by its ID

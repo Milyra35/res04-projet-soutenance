@@ -5,15 +5,15 @@ class SavedFile {
     private User $user;
     private string $name;
     private string $url;
-    private DateTime $date;
+    private ?string $date;
 
-    public function __construct(User $user, string $name, string $url, DateTime $date)
+    public function __construct(User $user, string $name, string $url)
     {
         $this->id = null;
         $this->user = $user;
         $this->name = $name;
         $this->url = $url;
-        $this->date = new DateTime();
+        $this->date = null;
     }
  
     public function getId() : ?int
@@ -52,11 +52,11 @@ class SavedFile {
         $this->url = $url;
     }
 
-    public function getDate() : DateTime
+    public function getDate() : ?string
     {
         return $this->date;
     }
-    public function setDate(DateTime $date) : void
+    public function setDate(?string $date) : void
     {
         $this->date = $date;
     }
