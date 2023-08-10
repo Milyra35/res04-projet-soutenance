@@ -1,3 +1,23 @@
 <section>
     <h2>Tutorial</h2>
+
+    
+</section>
+<section>
+    <?php
+        if(isset($_SESSION['user']))
+        {
+    ?>
+
+    <h3>Add your file</h3>
+    <form enctype="multipart/form-data" method="POST" action="index.php?route=homepage">
+        <label for="saved-file">Upload your file</label>
+        <input type="hidden" name="MAX_FILE_SIZE" value="7000000">
+        <input type="file" name="saved-file" id="saved-file" value="Choose a file">
+        <input type="submit" name="upload-file" id="upload-file" value="Submit">
+    </form>
+
+    <?php
+        }
+    ?>
 </section>

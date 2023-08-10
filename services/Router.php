@@ -32,6 +32,7 @@ class Router {
             if($_GET['route'] === "homepage")
             {
                 $this->spc->render("staticpages/homepage.phtml", []);
+                $this->fc->uploadFile();
             }
             else if($_GET['route'] === "login")
             {
@@ -70,6 +71,7 @@ class Router {
                 list($route, $villager_id) = explode("=", $_GET['route']);
                 $_SESSION['villager_id'] = $villager_id;
                 $this->npc->getVillagerById($villager_id);
+                $this->npc->displayVillagerData($villager_id);
             }
             else if($_GET['route'] === "confidentiality")
             {

@@ -24,6 +24,7 @@ require 'managers/PictureManager.php';
 require 'managers/UserManager.php';
 require 'managers/FileManager.php';
 require 'managers/VillagerManager.php';
+require 'managers/ItemManager.php';
 
 // Require all the controllers
 require 'controllers/AbstractController.php';

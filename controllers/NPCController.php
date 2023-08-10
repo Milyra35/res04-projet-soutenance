@@ -22,6 +22,13 @@ class NPCController extends AbstractController {
 
         return $villager;
     }
+
+    // I want to display all the villager's data on one page
+    public function displayVillagerData(int $id)
+    {
+        $villager = $this->getVillagerById($id);
+        $this->render('villagers/villager.phtml', ['village' => $villager]);
+    }
 }
 
 ?>
