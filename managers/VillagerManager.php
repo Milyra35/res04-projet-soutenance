@@ -1,6 +1,20 @@
 <?php
 
 class VillagerManager extends AbstractManager {
+    // Get a picture by its ID
+    public function getPictureById(int $id) : Picture
+    {
+        $query=$this->db->prepare("SELECT * FROM pictures WHERE pictures.id = :id");
+        $parameters=['id' => $id];
+        $query->execute($parameters);
+
+        $data=$query->fetch(PDO::FETCH_ASSOC);
+        $picture = new Picture($data['name'], $data['url']);
+        $picture->setId($data['id']);
+
+        return $picture;
+    }
+
     // Get all the villagers
     public function getAllVillagers() : array
     {
@@ -54,6 +68,31 @@ class VillagerManager extends AbstractManager {
         $npc->setId($this->db->lastInsertId());
 
         return $npc;
+    }
+
+    // Get a villager by its ID
+    public function getVillagerById(int $id) : Villager
+    {
+        $query=$this->db->prepare("SELECT * FROM villagers WHERE villagers.id = :id");
+        $parameters=['id'=> $id];
+        $query->execute($parameters);
+
+        $data=$query->fetch(PDO::FETCH_ASSOC);
+        $villager = new Villager(
+            $data['name'],
+            $data['love'],
+            $data['like'],
+            $data['neutral'],
+            $data['dont_like'],
+            $data['hate'],
+            $data['is_datable'],
+            $data['birthday'],
+            $data['events'],
+            $this->getPictureById($data['picture_id'])
+        );
+        $villager->setId($data['id']);
+
+        return $villager;
     }
 }
 

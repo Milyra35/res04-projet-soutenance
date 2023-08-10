@@ -20,8 +20,10 @@ require 'models/VillagerPlanning.php';
 
 // Require all the managers
 require 'managers/AbstractManager.php';
+require 'managers/PictureManager.php';
 require 'managers/UserManager.php';
 require 'managers/FileManager.php';
+require 'managers/VillagerManager.php';
 
 // Require all the controllers
 require 'controllers/AbstractController.php';

@@ -2,11 +2,17 @@
     <h1>Farming Companion</h1>
     <nav>
         <ul>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
+            <li><a href="index.php?route=homepage">Homepage</a></li>
+            <li><a href="index.php?route=villagers">Villagers</a></li>
+            <li><a href="index.php?route=register">Register</a></li>
+            <li><a href="index.php?route=login">Login</a></li>
+            <?php
+            if(isset($_SESSION['user']))
+            {
+                echo "<li><a href='index.php?route=my-account'></a></li>";
+            }
+            ?>
+            
         </ul>
     </nav>
 </header>

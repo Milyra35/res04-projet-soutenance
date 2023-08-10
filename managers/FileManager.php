@@ -46,6 +46,23 @@ class FileManager extends AbstractManager {
         $parameters=['id' => $id];
         $query->execute($parameters);
     }
+
+    // Get all the games by user
+    public function getGamesByUser(int $id) : array
+    {
+        $query=$this->db->prepare("SELECT * FROM saved_files WHERE user_id = :id");
+        $parameters=['id' => $id];
+        $query->execute($parameters);
+
+        $files=$query->fetchAll(PDO:FETCH_ASSOC);
+
+        foreach($files as $file)
+        {
+            $file['user_id'] = $this->getUserById($file['user_id']);
+        }
+
+        return $files;
+    }
 }
 
 ?>

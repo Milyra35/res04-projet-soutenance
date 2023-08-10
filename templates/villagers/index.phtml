@@ -1,0 +1,19 @@
+<?php
+    $villagers = $data;
+?>
+
+<main>
+    <h2>All villagers</h2>
+    <ul>
+    <?php
+        foreach($villagers as $villager)
+        {
+    ?>
+
+    <li><a href="index.php?route=villager_id=<?= $villager['id'] ;?>"><?= $villager['name'] ;?></a></li>
+
+    <?php        
+        }
+    ?>
+    </ul>
+</main>
