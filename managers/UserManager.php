@@ -21,6 +21,19 @@ class UserManager extends AbstractManager {
         return $users;
     }
 
+    // Get a role by its ID
+    public function getRoleById(int $id) : Role
+    {
+        $query=$this->db->prepare("SELECT * FROM roles WHERE roles.id = :id");
+        $parameters=['id'=> $id];
+        $query->execute($parameters);
+
+        $data = $query->fetch(PDO::FETCH_ASSOC);
+        $role = new Role($id, $data["name"]);
+
+        return $role;
+    }
+
     // Get an user by its ID
     public function getUserById(int $id) : User
     {
@@ -29,11 +42,10 @@ class UserManager extends AbstractManager {
         $query->execute($parameters);
 
         $data = $query->fetch(PDO::FETCH_ASSOC);
-        $user = new User($data['username'], $data['password'], $data['email']);
+        $user = new User($data['username'], $data['password'], $data['email'], $this->getRoleById($data['role_id']));
 
         $user->setId($data['id']);
-        $user->setRole($data['role_id']);
-        //$user->setRegistrationDate($data['registration_date']);
+        $user->setRegistrationDate($data['registration_date']);
 
         return $user;
     }
@@ -47,10 +59,9 @@ class UserManager extends AbstractManager {
 
         $data = $query->fetch(PDO::FETCH_ASSOC);
 
-        $user = new User($data['username'], $data['password'], $data['email']);
+        $user = new User($data['username'], $data['password'], $data['email'], $this->getRoleById($data['role_id']));
 
         $user->setId($data['id']);
-        $user->setRole($data['role_id']);
         $user->setRegistrationDate($data['registration_date']);
 
         return $user;
@@ -60,7 +71,7 @@ class UserManager extends AbstractManager {
     public function createUser(User $user) : User
     {
         $query=$this->db->prepare("INSERT INTO users (username, password, email, registration_date, role_id)
-                                    VALUES (:username, :password, :email, :registrationDate, :roleId");
+                                    VALUES (:username, :password, :email, :registrationDate, :roleId)");
         $parameters= [
             'username' => $user->getUsername(),
             'password' => $user->getPassword(),

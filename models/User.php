@@ -64,11 +64,11 @@ class User {
         $this->registration_date = $registration_date;
     }
 
-    public function getRole() : int
+    public function getRole() : Role
     {
         return $this->role;
     }
-    public function setRole(int $role) : void
+    public function setRole(Role $role) : void
     {
         $this->role = $role;
     }

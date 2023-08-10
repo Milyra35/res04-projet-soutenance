@@ -1,12 +1,11 @@
 <?php
 
-class AbstractManager
+abstract class AbstractManager
 {
     protected $db;
 
     public function __construct()
     {
-
         $connexion = "mysql:host=db.3wa.io;port=3306;charset=utf8;dbname=marierichir_farming-companion";
         $this->db = new PDO(
             $connexion,

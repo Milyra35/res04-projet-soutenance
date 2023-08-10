@@ -89,7 +89,7 @@ class Router {
 
                 if($_GET['route'] === "admin/all-users")
                 {
-                    $this->ac->getAllUsers();
+                    $this->uc->getAllUsers();
                 }
                 else if($_GET['route'] === "admin/all-saved-games")
                 {
