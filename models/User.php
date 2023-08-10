@@ -8,7 +8,7 @@ class User {
     private ?string $registration_date;
     private Role $role;
 
-    public function __construct(string $username, string $password, string $email)
+    public function __construct(string $username, string $password, string $email, Role $role)
     {
         $this->id = null;
         $this->username = $username;

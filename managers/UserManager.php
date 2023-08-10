@@ -55,6 +55,46 @@ class UserManager extends AbstractManager {
 
         return $user;
     }
+
+    // Create a user
+    public function createUser(User $user) : User
+    {
+        $query=$this->db->prepare("INSERT INTO users (username, password, email, registration_date, role_id)
+                                    VALUES (:username, :password, :email, :registrationDate, :roleId");
+        $parameters= [
+            'username' => $user->getUsername(),
+            'password' => $user->getPassword(),
+            'email' => $user->getEmail(),
+            'registrationDate' => $user->getRegistrationDate(),
+            'roleId' => $user->getRole()->getId()
+        ];
+        $query->execute($parameters);
+
+        $data = $query->fetch(PDO::FETCH_ASSOC);
+        $user->setId($this->db->lastInsertId());
+
+        return $user;
+    }
+
+    // Edit a user
+    public function editUser(User $user) : void
+    {
+        $query=$this->db->prepare("UPDATE users SET username= :username, password= :password, email= :email");
+        $parameters= [
+            'username'=> $user->getUsername(),
+            'password'=> $user->getPassword(),
+            'email'=> $user->getEmail()
+        ];
+        $query->execute($parameters);
+    }
+
+    // Delete a user
+    public function deleteUser(int $id) : void
+    {
+        $query=$this->db->prepare("DELETE FROM users WHERE users.id= :id");
+        $parameters=['id'=> $id];
+        $query->execute($parameters);
+    }
 }
 
 ?>
