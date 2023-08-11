@@ -1,0 +1,13 @@
+<h3>All users</h3>
+<ul>
+    <?php
+    // var_dump($users);
+        $users = $data;
+        foreach($users as $user)
+        {
+    ?>
+    <li><?= $user->getName() ;?></li>
+    <?php
+        }
+    ?>
+</ul>

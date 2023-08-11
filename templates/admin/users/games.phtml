@@ -1,0 +1,12 @@
+<h3>All files</h3>
+<ul>
+    <?php
+        $files = $data;
+        foreach($files as $file)
+        {
+    ?>
+    <li><?= $file['name'] ;?></li>
+    <?php
+        }
+    ?>
+</ul>

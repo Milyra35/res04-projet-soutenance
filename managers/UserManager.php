@@ -25,7 +25,8 @@ class UserManager extends AbstractManager {
 
         foreach($data as $user)
         {
-            $newUser = new User($user['username'], $user['password'], $user['email'], $this->getRoleById($data['role_id']));
+            $id = $data['role_id'];
+            $newUser = new User($user['username'], $user['password'], $user['email'], $this->getRoleById($id));
             $newUser->setId($user['id']);
             $users[] = $newUser;
         }

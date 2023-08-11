@@ -88,10 +88,11 @@ class Router {
             else if($_GET['route'] === "admin" && isset($_SESSION['role']) && $_SESSION['role'] === "admin")
             {
                 $this->ac->index();
+                $this->ac->getAllUsers();
 
                 if($_GET['route'] === "admin/all-users")
                 {
-                    $this->uc->getAllUsers();
+                    $this->ac->getAllUsers();
                 }
                 else if($_GET['route'] === "admin/all-saved-games")
                 {

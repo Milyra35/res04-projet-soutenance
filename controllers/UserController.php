@@ -16,7 +16,7 @@ class UserController extends AbstractController {
 
     public function createUser()
     {
-        $this->render("users/create.phtml", []);
+        $this->render("user/create.phtml", []);
 
         if(isset($_POST['submit-new-user']))
         {
@@ -92,7 +92,7 @@ class UserController extends AbstractController {
         }
         else
         {
-            $this->render("users/login.phtml", []);
+            $this->render("user/login.phtml", []);
         }
     }
 
@@ -122,7 +122,7 @@ class UserController extends AbstractController {
             header("Location:index.php?route=my-account");
         }
 
-        $this->render("users/edit.phtml", []);
+        $this->render("user/edit.phtml", []);
     }
 
     public function deleteUser()
