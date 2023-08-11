@@ -22,7 +22,7 @@ class FileController extends AbstractController {
                 $fileName = $file['name'];
                 
                 // To move the file to the right path
-                $path = 'data/uploadedfiles/' . $fileName;
+                $path = 'data/uploadedfile/' . $fileName . '.xml';
                 move_uploaded_file($file['tmp_name'], $path);
 
                 $newFile = new SavedFile($_SESSION['user'], $fileName, $path);
@@ -33,7 +33,8 @@ class FileController extends AbstractController {
             }
             else
             {
-                var_dump($_FILES);
+                // var_dump($_FILES);
+                // Show the errors if one exists
                 if($_FILES['saved-file']['error'] === UPLOAD_ERR_FORM_SIZE)
                 {
                     echo "The file exceeds the maximum file size";
@@ -48,10 +49,17 @@ class FileController extends AbstractController {
                 }
             }
         }
-        else 
-        {
-            $this->render('staticpages/homepage.phtml', []);
-        }
+        // else 
+        // {
+        //     $this->render('staticpages/homepage.phtml', []);
+        // }
+    }
+
+    // We want the list of the games of a user
+    public function indexGames()
+    {
+        $gamesSaved = $this->fm->getGamesByUser($_SESSION['user_id']);
+        $this->render('users/games.phtml', $gamesSaved);
     }
 }
 

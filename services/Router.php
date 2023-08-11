@@ -56,7 +56,7 @@ class Router {
             }
             else if($_GET['route'] === "my-games" && isset($_SESSION['user']))
             {
-                $this->uc->indexGames();
+                $this->fc->indexGames();
             }
             else if($_GET['route'] === "logout")
             {

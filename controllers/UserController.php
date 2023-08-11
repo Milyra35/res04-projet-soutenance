@@ -73,6 +73,14 @@ class UserController extends AbstractController {
                 $_SESSION['user'] = $user;
 
                 header("Location:index.php?route=my-games");
+
+                if($user->getRole() === "admin")
+                {
+                    $_SESSION['role'] = "admin";
+                    $_SESSION['admin_id'] = $user->getId();
+                    $_SESSION['admin'] = $user;
+                    header("Location:index.php?route=admin");
+                }
             }
             else
             {
