@@ -30,8 +30,12 @@ class LocationManager extends AbstractManager {
 
         foreach($data as $location)
         {
-            $newLoc = new Location($this->)
+            $newLoc = new Location($this->getFileById($location['file_id']), $location['name'], $location['is_discovered']);
+            $newLoc->setId($location['id']);
+            $locations[] = $newLoc;
         }
+
+        return $locations;
     }
 }
 

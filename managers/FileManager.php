@@ -69,7 +69,14 @@ class FileManager extends AbstractManager {
         $query=$this->db->prepare("SELECT * FROM saved_files WHERE saved_files.id = :id");
         $parameters = ['id' => $id];
         $query->execute($parameters);
+
+        $data=$query->fetch(PDO::FETCH_ASSOC);
+        $file = new SavedFile($this->getUserById($data['user_id']), $data['name'], $data['url']);
+
+        $file->setId($data['id']);
+        $file->setDate($data['upload_date']);
         
+        return $file;
     }
 }
 

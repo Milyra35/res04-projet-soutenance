@@ -25,6 +25,9 @@ require 'managers/UserManager.php';
 require 'managers/FileManager.php';
 require 'managers/VillagerManager.php';
 require 'managers/ItemManager.php';
+require 'managers/BookManager.php';
+require 'managers/CommunityCenterManager.php';
+require 'managers/LocationManager.php';
 
 // Require all the controllers
 require 'controllers/AbstractController.php';
