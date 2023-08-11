@@ -67,24 +67,26 @@ class UserController extends AbstractController {
 
             $user = $this->um->getUserByUsername($username);
 
-            if(password_verify($password, $user->getPassword()))
+            if($user->getRole()->getName() === "user" && password_verify($password, $user->getPassword()))
             {
                 $_SESSION['user_id'] = $user->getId();
                 $_SESSION['user'] = $user;
+                $_SESSION['role'] = $user->getRole()->getName();
 
                 header("Location:index.php?route=my-games");
-
-                if($user->getRole() === "admin")
-                {
-                    $_SESSION['role'] = "admin";
-                    $_SESSION['admin_id'] = $user->getId();
-                    $_SESSION['admin'] = $user;
-                    header("Location:index.php?route=admin");
-                }
+            }
+            else if($user->getRole()->getName() === "admin" && password_verify($password, $user->getPassword()))
+            {
+                $_SESSION['admin_id'] = $user->getId();
+                $_SESSION['admin'] = $user;
+                $_SESSION['role'] = $user->getRole()->getName();
+                
+                header("Location:index.php?route=admin");
             }
             else
             {
                 echo "Wrong informations";
+                var_dump($_SESSION['role']);
             }
         }
         else

@@ -12,6 +12,10 @@
             {
                 echo "<li><a href='index.php?route=my-account'>My account</a></li>";
             }
+            else if(isset($_SESSION['admin']))
+            {
+                echo "<li><a href='index.php?route=admin'>Admin Dashboard</a></li>";
+            }
             ?>
             
         </ul>
