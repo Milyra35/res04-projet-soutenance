@@ -67,6 +67,7 @@ class UserController extends AbstractController {
 
             $user = $this->um->getUserByUsername($username);
 
+            // If a user logins 
             if($user->getRole()->getName() === "user" && password_verify($password, $user->getPassword()))
             {
                 $_SESSION['user_id'] = $user->getId();
@@ -75,6 +76,7 @@ class UserController extends AbstractController {
 
                 header("Location:index.php?route=my-games");
             }
+            // If an admin logins
             else if($user->getRole()->getName() === "admin" && password_verify($password, $user->getPassword()))
             {
                 $_SESSION['admin_id'] = $user->getId();
@@ -85,8 +87,7 @@ class UserController extends AbstractController {
             }
             else
             {
-                echo "Wrong informations";
-                var_dump($_SESSION['role']);
+                echo "Invalid username or password";
             }
         }
         else

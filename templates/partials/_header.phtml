@@ -21,7 +21,7 @@
         </ul>
     </nav>
     <?php
-        if(isset($_SESSION['user']))
+        if(isset($_SESSION['user']) || isset($_SESSION['admin']))
         {
     ?>
     <form method="POST" action="index.php?route=logout">
