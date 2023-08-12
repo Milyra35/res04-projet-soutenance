@@ -132,6 +132,11 @@ class UserController extends AbstractController {
             $this->um->deleteUser($_SESSION['user_id']);
             header("Location:index.php?route=homepage");
         }
+        else if(isset($_SESSION['role']) && $_SESSION['role'] === "admin" && isset($_POST["submit-delete-account-admin"]))
+        {
+            $this->um->deleteUser();
+            // Add a delete button next to the user in all of the users
+        }
     }
 
     public function logoutUser()
@@ -141,6 +146,12 @@ class UserController extends AbstractController {
             session_destroy();
             header("Location:index.php?route=homepage");
         }
+    }
+
+    // Add a method to render the informations of the account
+    public function account(int $id)
+    {
+        
     }
 }
 

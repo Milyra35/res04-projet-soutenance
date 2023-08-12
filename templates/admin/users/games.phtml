@@ -1,11 +1,11 @@
 <h3>All files</h3>
 <ul>
     <?php
-        $files = $data;
-        foreach($files as $file)
+        foreach($data as $file)
         {
     ?>
-    <li><?= $file['name'] ;?></li>
+    <li><?= $file->getName() ;?></li>
+    <li><?= $file->getUser()->getUsername() ;?></li>
     <?php
         }
     ?>

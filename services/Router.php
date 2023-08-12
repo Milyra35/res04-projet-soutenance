@@ -88,29 +88,27 @@ class Router {
             else if($_GET['route'] === "admin" && isset($_SESSION['role']) && $_SESSION['role'] === "admin")
             {
                 $this->ac->index();
+            }
+            else if($_GET['route'] === "admin/all-users" && isset($_SESSION['role']) && $_SESSION['role'] === "admin")
+            {
                 $this->ac->getAllUsers();
-
-                if($_GET['route'] === "admin/all-users")
-                {
-                    $this->ac->getAllUsers();
-                }
-                else if($_GET['route'] === "admin/all-saved-games")
-                {
-                    $this->ac->getAllGames();
-                }
-                else if($_GET['route'] === "admin/delete")
-                {
-                    $this->uc->deleteUser();
-                    //Delete the user without rendering the delete form for the front part
-                }
-                else if($_GET['route'] === "admin/statistics")
-                {
-                    $this->ac->displayStatistics();
-                }
-                else if($_GET['route'] === "admin/edit")
-                {
-                    $this->ac->edit();
-                }
+            }
+            else if($_GET['route'] === "admin/all-saved-games" && isset($_SESSION['role']) && $_SESSION['role'] === "admin")
+            {
+                $this->ac->getAllGames();
+            }
+            else if($_GET['route'] === "admin/delete" && isset($_SESSION['role']) && $_SESSION['role'] === "admin")
+            {
+                $this->uc->deleteUser();
+                //Delete the user without rendering the delete form for the front part
+            }
+            else if($_GET['route'] === "admin/statistics" && isset($_SESSION['role']) && $_SESSION['role'] === "admin")
+            {
+                $this->ac->displayStatistics();
+            }
+            else if($_GET['route'] === "admin/edit" && isset($_SESSION['role']) && $_SESSION['role'] === "admin")
+            {
+                $this->ac->edit();
             }
         }
         else

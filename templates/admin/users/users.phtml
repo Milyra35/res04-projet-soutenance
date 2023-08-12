@@ -1,12 +1,14 @@
 <h3>All users</h3>
 <ul>
     <?php
-    // var_dump($users);
-        $users = $data;
-        foreach($users as $user)
+    // var_dump($data);
+        // $users = $data;
+        foreach($data as $user)
         {
     ?>
-    <li><?= $user->getName() ;?></li>
+    <li><?= $user->getUsername() ;?></li>
+    <li><?= $user->getEmail() ;?></li>
+    <li><?= $user->getRole()->getName() ;?></li>
     <?php
         }
     ?>
