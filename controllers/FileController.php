@@ -8,6 +8,15 @@ class FileController extends AbstractController {
         $this->fm = new FileManager();
     }
 
+    // To get a file by its ID
+    public function getFileById(int $id)
+    {
+        $file = $this->fm->getFileById($id);
+        $_SESSION['file_slug'] = $file;
+
+        return $file;
+    }
+
     // To add the file with the form
     public function uploadFile()
     {
@@ -59,8 +68,10 @@ class FileController extends AbstractController {
     public function indexGames()
     {
         $gamesSaved = $this->fm->getGamesByUser($_SESSION['user_id']);
-        $this->render('users/games.phtml', $gamesSaved);
+        $this->render('user/games.phtml', $gamesSaved);
     }
+
+
 }
 
 ?>

@@ -27,7 +27,7 @@ class NPCController extends AbstractController {
     public function displayVillagerData(int $id)
     {
         $villager = $this->getVillagerById($id);
-        $this->render('villagers/villager.phtml', ['village' => $villager]);
+        $this->render('villagers/villager.phtml', ['villager' => $villager]);
     }
 }
 

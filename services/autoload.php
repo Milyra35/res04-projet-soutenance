@@ -28,6 +28,7 @@ require 'managers/ItemManager.php';
 require 'managers/BookManager.php';
 require 'managers/CommunityCenterManager.php';
 require 'managers/LocationManager.php';
+require 'managers/MuseumManager.php';
 
 // Require all the controllers
 require 'controllers/AbstractController.php';

@@ -58,6 +58,13 @@ class Router {
             {
                 $this->fc->indexGames();
             }
+            else if(str_contains($_GET['route'], "file_slug"))
+            {
+                list($route, $file_slug) = explode("=", $_GET['route']);
+                $_SESSION['file_slug'] = $file_slug;
+                $this->fc->getFileById($file_slug);
+                $this->pbc->readSavedFile($file_slug);
+            }
             else if($_GET['route'] === "logout")
             {
                 $this->uc->logoutUser();

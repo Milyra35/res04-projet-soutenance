@@ -1,12 +1,13 @@
 <h3>My games</h3>
 <ul>
 <?php
-    $gamesSaved = $data;
-    foreach($gamesSaved as $game)
+    foreach($data as $game)
     {
 ?>
 
-<li><?= $game['name'] ;?></li>
+<li>
+    <a href="index.php?route=file_slug=<?= $game['id'] ;?>"><?= $game['name'] ;?></a>
+</li>
 
 <?php
     }
