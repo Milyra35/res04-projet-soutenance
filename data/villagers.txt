@@ -1,9 +1,9 @@
 [
     {
         "name": "Alex",
-        "loves": ["Complete breakfast", "Salmon dinner", "all universal loves"],
+        "loves": ["Complete breakfast", "Salmon dinner", "All universal loves"],
         "likes": ["All universal likes", "all eggs (except Void egg)"],
-        "neutral": ["All universaire neutrals", "All fruits", "All milk", "Chanterelle", "Common mushroom", "Daffodil", "Dandelion", "Ginger", "Hazelnut", "Leek", "Magma cap", "Morel", "Purple mushroom", "Snow yam", "Winter root"],
+        "neutral": ["All universal neutrals", "All fruits", "All milk", "Chanterelle", "Common mushroom", "Daffodil", "Dandelion", "Ginger", "Hazelnut", "Leek", "Magma cap", "Morel", "Purple mushroom", "Snow yam", "Winter root"],
         "dislikes": ["All universal dislikes", "Salmonberry", "Wild horseradish"],
         "hates": ["All universal hates", "Holly", "Quartz"],
         "schedule": {

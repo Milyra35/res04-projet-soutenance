@@ -29,6 +29,12 @@ require 'managers/BookManager.php';
 require 'managers/CommunityCenterManager.php';
 require 'managers/LocationManager.php';
 require 'managers/MuseumManager.php';
+require 'managers/PlayerSkillManager.php';
+require 'managers/PlayerProgressManager.php';
+require 'managers/PossessedItemManager.php';
+require 'managers/RelationshipManager.php';
+require 'managers/StatisticManager.php';
+require 'managers/VillagerPlanningManager.php';
 
 // Require all the controllers
 require 'controllers/AbstractController.php';

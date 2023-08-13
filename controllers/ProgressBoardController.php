@@ -9,6 +9,10 @@ class ProgressBoardController extends AbstractController {
     private MuseumManager $mm;
     private UserManager $um;
     private PlayerProgressManager $pp;
+    private PlayerSkillManager $psm;
+    private PossessedItemManager $pim;
+    private RelationshipManager $rm;
+    private StatisticManager $sm;
 
     public function __construct()
     {
@@ -20,6 +24,10 @@ class ProgressBoardController extends AbstractController {
         $this->mm = new MuseumManager();
         $this->um = new UserManager();
         $this->pp = new PlayerProgressManager();
+        $this->psm = new PlayerSkillManager();
+        $this->pim = new PossessedItemManager();
+        $this->rm = new RelationShipManager();
+        $this->sm = new StatisticManager();
     }
 
     // Read the uploaded file to store the informations
