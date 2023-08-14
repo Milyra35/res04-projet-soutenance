@@ -4,12 +4,14 @@ class Picture {
     private ?int $id;
     private string $name;
     private string $url;
+    private string $alt;
 
-    public function __construct(string $name, string $url)
+    public function __construct(string $name, string $url, string $alt)
     {
         $this->id = null;
         $this->name = $name;
         $this->url = $url;
+        $this->alt = $alt;
     }
 
     public function getId() : ?int
@@ -37,6 +39,15 @@ class Picture {
     public function setUrl(string $url) : void
     {
         $this->url = $url;
+    }
+
+    public function getAlt() : string
+    {
+        return $this->alt;
+    }
+    public function setAlt(string $alt) : void
+    {
+        $this->alt = $alt;
     }
 }
 

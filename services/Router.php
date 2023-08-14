@@ -95,6 +95,7 @@ class Router {
             else if($_GET['route'] === "admin" && isset($_SESSION['role']) && $_SESSION['role'] === "admin")
             {
                 $this->ac->index();
+                $this->mc->addPicture();
             }
             else if($_GET['route'] === "admin/all-users" && isset($_SESSION['role']) && $_SESSION['role'] === "admin")
             {
