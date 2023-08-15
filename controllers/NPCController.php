@@ -36,11 +36,12 @@ class NPCController extends AbstractController {
 
     public function addVillagers()
     {
-        $txtContent = file_get_contents('../data/villagers.txt');
+        $txtContent = file_get_contents('data/villagers.txt');
         $json = $this->toJson($txtContent);
-        $data = json_decode($json);
+        $data = json_decode($json, true);
+        var_dump($data);
 
-        foreach($data as $villager)
+        foreach($txtContent as $villager)
         {
             $name = $villager['name'];
             $love = $villager['loves'];
@@ -51,7 +52,7 @@ class NPCController extends AbstractController {
             $birthday = $villager['birthday'];
             $events = $villager['events'];
             $isDatable = $villager['is_datable'];
-            $picture = $this->pm->getPictureById();
+            $picture = $this->pm->getPictureByName($name);
 
             $newVillager = new Villager($name, $love, $like, $neutral, $dislike, $hate, $isDatable, $birthday, $events, $picture);
             $this->vm->addVillager($newVillager);

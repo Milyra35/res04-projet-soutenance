@@ -62,12 +62,20 @@ class VillagerManager extends AbstractManager {
             'events'=> $npc->getEvents(),
             'picture_id'=> $npc->getPicture()->getId()
         ];
-        $query->execute($parameters);
-
-        $data=$query6>fetch(PDO::FETCH_ASSOC);
-        $npc->setId($this->db->lastInsertId());
-
-        return $npc;
+        
+        try 
+        {
+            $query->execute($parameters);
+            // Set the ID of the inserted row
+            $npc->setId($this->db->lastInsertId());
+    
+            return $npc;
+        } 
+        catch (PDOException $e) {
+            // Handle the exception, print or log the error message
+            echo "Error adding villager: " . $e->getMessage();
+            return null;
+        }
     }
 
     // Get a villager by its ID

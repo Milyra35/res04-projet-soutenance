@@ -1,0 +1,10 @@
+<section>
+    <h3>Add a picture of an item to the database</h3>
+
+    <form enctype="multipart/form-data" method="POST" action="index.php?route=admin">
+        <label class="hidden" for="add-item-picture">Upload your picture</label>
+        <input type="hidden" name="MAX_FILE_SIZE" value="7000000">
+        <input type="file" name="add-item-picture" id="add-item-picture" value="Choose a file" accept="image/*" multiple>
+        <input type="submit" name="upload-item-picture" id="upload-item-picture" value="Submit">
+    </form>
+</section>

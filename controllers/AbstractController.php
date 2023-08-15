@@ -9,9 +9,9 @@ abstract class AbstractController {
         require "./templates/$folder/layout.phtml";
     }
 
-    public function toJson(array $data)
+    public function toJson(string $data)
     {
-        echo json_encode($data);
+        return json_encode($data);
     }
 }
 

@@ -41,7 +41,7 @@ class PictureManager extends AbstractManager {
         $query->execute($parameters);
 
         $data=$query->fetch(PDO::FETCH_ASSOC);
-        $data->setId($this->db->lastInsertId());
+        $picture->setId($this->db->lastInsertId());
 
         return $picture;
     }

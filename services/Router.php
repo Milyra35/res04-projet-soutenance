@@ -96,6 +96,7 @@ class Router {
             {
                 $this->ac->index();
                 $this->mc->addPicture();
+                $this->npc->addVillagers();
             }
             else if($_GET['route'] === "admin/all-users" && isset($_SESSION['role']) && $_SESSION['role'] === "admin")
             {

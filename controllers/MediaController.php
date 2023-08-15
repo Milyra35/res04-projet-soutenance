@@ -20,7 +20,7 @@ class MediaController extends AbstractController {
                 $nameWithoutExtension = pathinfo($pictureName, PATHINFO_FILENAME);
 
                 $path = 'assets/images/villagers/' . $pictureName;
-                $alt = 'Drawing of the character' . ' ' . $nameWithoutExtension;
+                $alt = 'Drawing of' . ' ' . $nameWithoutExtension;
                 $newPicture = new Picture($nameWithoutExtension, $path, $alt);
 
                 $this->pm->addPicture($newPicture);
