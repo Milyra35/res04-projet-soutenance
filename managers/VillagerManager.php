@@ -27,15 +27,15 @@ class VillagerManager extends AbstractManager {
         foreach($data as $villager)
         {
             $newNPC = new Villager(
-                $villager['name'], 
-                $villager['love'], 
-                $villager['like'], 
-                $villager['neutral'], 
-                $villager['dont_like'], 
-                $villager['hate'], 
-                $villager['is_datable'], 
-                $villager['birthday'], 
-                $villager['events'], 
+                $villager['name'],
+                json_decode($villager['love']),
+                json_decode($villager['like']),
+                json_decode($villager['neutral']),
+                json_decode($villager['dont_like']),
+                json_decode($villager['hate']),
+                $villager['is_datable'],
+                $villager['birthday'],
+                json_decode($villager['events'], true),
                 $this->getPictureById($villager['picture_id'])
             );
             $newNPC->setId($villager['id']);
@@ -80,14 +80,14 @@ class VillagerManager extends AbstractManager {
         $data=$query->fetch(PDO::FETCH_ASSOC);
         $villager = new Villager(
             $data['name'],
-            $data['love'],
-            $data['like'],
-            $data['neutral'],
-            $data['dont_like'],
-            $data['hate'],
+            json_decode($data['love']),
+            json_decode($data['like']),
+            json_decode($data['neutral']),
+            json_decode($data['dont_like']),
+            json_decode($data['hate']),
             $data['is_datable'],
             $data['birthday'],
-            $data['events'],
+            json_decode($data['events'], true),
             $this->getPictureById($data['picture_id'])
         );
         $villager->setId($data['id']);

@@ -1,8 +1,75 @@
 <main>
+    <?php
+    $villager = $_SESSION['villager'];
+    // var_dump($_SESSION['villager']);
+    ?>
     <h2><?= $villager->getName() ;?></h2>
+    <img src="<?= $villager->getPicture()->getUrl() ;?>" alt="<?= $villager->getPicture()->getAlt() ;?>">
 
     <section>
         <p>Birthday : <?= $villager->getBirthday() ;?></p>
+        <p>Can you date them ? 
+            <?php 
+                if(intval($villager->getIsDatable()) === 1)
+                {
+                    echo "Yes";
+                }
+                else
+                {
+                    echo "No";
+                }
+            ?>
+        </p>
         <!-- Display all the informations of a villager -->
+    </section>
+    <section>
+        <h3>Events</h3>
+        <table>
+            <?php
+                // var_dump($villager->getEvents());
+                foreach($villager->getEvents() as $key => $event)
+                {
+                    echo "<tr><td>$key</td><td>$event</td></tr>";
+                }
+            ?>
+        </table>
+    </section>
+    <section>
+        <h3>Gifts</h3>
+        <table>
+            <tr>
+                <th>Loves</th>
+                <th>Likes</th>
+                <th>Neutral</th>
+                <th>Dislikes</th>
+                <th>Hates</th>
+            </tr>
+            <tr>
+                <td>
+                    <?php 
+                        foreach($villager->getLove() as $love)
+                        {
+                            echo $love . ', ';
+                        }
+                    ?>
+                </td>
+                <td>
+                    <?php 
+                        foreach($villager->getLike() as $like)
+                        {
+                            echo $like . ', ';
+                        }
+                    ?>
+                </td>
+                <td>
+                    <?php 
+                        foreach($villager->getNeutral() as $neutral)
+                        {
+                            echo $neutral . ', ';
+                        }
+                    ?>
+                </td>
+            </tr>
+        </table>
     </section>
 </main>

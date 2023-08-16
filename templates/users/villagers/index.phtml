@@ -11,8 +11,8 @@
     ?>
 
     <li>
-        <img src="<?= $villager->getPicture() ;?>" alt="Picture of <?= $villager['name'] ;?>">
-        <a href="index.php?route=villager_id=<?= $villager['id'] ;?>"><?= $villager['name'] ;?></a>
+        <img src="<?= $villager->getPicture()->getUrl() ;?>" alt="<?= $villager->getPicture()->getAlt() ;?>">
+        <a href="index.php?route=villager_id=<?= $villager->getId() ;?>"><?= $villager->getName() ;?></a>
     </li>
 
     <?php        

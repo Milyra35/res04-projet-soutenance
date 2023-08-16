@@ -19,11 +19,11 @@ class NPCController extends AbstractController {
         $this->render('villagers/index.phtml', $villagers);
     }
 
-    public function getVillagerById(int $id)
+    public function getVillagerById(int $id) : Villager
     {
         $villager=$this->vm->getVillagerById($id);
         $_SESSION['villager'] = $villager;
-
+        // $this->render('villagers/villager.phtml', [$villager]);
         return $villager;
     }
 
@@ -31,7 +31,7 @@ class NPCController extends AbstractController {
     public function displayVillagerData(int $id)
     {
         $villager = $this->getVillagerById($id);
-        $this->render('villagers/villager.phtml', ['villager' => $villager]);
+        $this->render('villagers/villager.phtml', [$villager]);
     }
 
     public function addVillagers()
