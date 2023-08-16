@@ -8,7 +8,7 @@ class VillagerPlanningManager extends AbstractManager {
                                 VALUES (:villager_id, :schedule)");
         $parameters=[
             'villager_id' => $planning->getVillager()->getId(),
-            'schedule' => $planning->getSchedule()
+            'schedule' => json_encode($planning->getSchedule())
         ];
         $query->execute($parameters);
 

@@ -17,15 +17,15 @@ class Villager {
     {
         $this->id = null;
         $this->name = $name;
-        $this->love = [];
-        $this->like = [];
-        $this->neutral = [];
-        $this->dislike = [];
-        $this->hate = [];
+        $this->love = $love;
+        $this->like = $like;
+        $this->neutral = $neutral;
+        $this->dislike = $dislike;
+        $this->hate = $hate;
         $this->isDatable = $isDatable;
         $this->birthday = $birthday;
-        $this->events = [];
-        $this->picture = new Picture();
+        $this->events = $events;
+        $this->picture = $picture;
     }
 
     public function getId() : ?int

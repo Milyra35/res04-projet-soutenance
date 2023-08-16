@@ -96,7 +96,8 @@ class Router {
             {
                 $this->ac->index();
                 $this->mc->addPicture();
-                $this->npc->addVillagers();
+                // $this->npc->addVillagers(); I only need it once to add all the villagers to the database
+                // $this->npc->addVillagerPlanning(); I only need it once to add the schedule of each villager
             }
             else if($_GET['route'] === "admin/all-users" && isset($_SESSION['role']) && $_SESSION['role'] === "admin")
             {

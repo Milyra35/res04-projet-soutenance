@@ -9,7 +9,7 @@ class VillagerPlanning {
     {
         $this->id = null;
         $this->villager = $villager;
-        $this->schedule = [];
+        $this->schedule = $schedule;
     }
 
     public function getId() : ?int
