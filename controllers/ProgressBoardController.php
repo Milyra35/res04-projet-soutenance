@@ -43,7 +43,8 @@ class ProgressBoardController extends AbstractController {
 
         // echo $xml->player->name;
         // echo $xml->player->songsHeard;
-        echo $xml->player->stats->combatLevel;
+        // echo $xml->player->money;
+        echo $xml->player->combatLevel;
 
         $this->render('user/game.phtml', [$xml]);
     }
