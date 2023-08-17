@@ -41,10 +41,10 @@ class ProgressBoardController extends AbstractController {
         // I need to retrieve the file from the user id
         $xml=simplexml_load_file('data/uploadedfile/'.$fileName) or die("Error: Cannot create object");
 
-        // echo $xml->player->name;
         // echo $xml->player->songsHeard;
         // echo $xml->player->money;
-        echo $xml->player->combatLevel;
+        $name = $xml->player->name;
+        $experience = $xml->player->
 
         $this->render('user/game.phtml', [$xml]);
     }
