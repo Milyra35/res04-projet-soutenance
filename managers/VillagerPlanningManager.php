@@ -1,6 +1,16 @@
 <?php
 
 class VillagerPlanningManager extends AbstractManager {
+    private PictureManager $pm;
+    private VillagerManager $vm;
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->pm = new PictureManager();
+        $this->vm = new VillagerManager();
+    }
+
     // Add a planning to the database
     public function addPlanning(VillagerPlanning $planning) : VillagerPlanning
     {
@@ -26,7 +36,7 @@ class VillagerPlanningManager extends AbstractManager {
         $query->execute($parameters);
 
         $data=$query->fetch(PDO::FETCH_ASSOC);
-        $planning = new VillagerPlanning($this->getVillagerById($data['villager_id']), $data['schedule']);
+        $planning = new VillagerPlanning($this->vm->getVillagerById($data['villager_id']), json_decode($data['schedule'], true));
         $planning->setId($data['id']);
 
         return $planning;

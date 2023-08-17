@@ -39,12 +39,6 @@
         <table>
             <tr>
                 <th>Loves</th>
-                <th>Likes</th>
-                <th>Neutral</th>
-                <th>Dislikes</th>
-                <th>Hates</th>
-            </tr>
-            <tr>
                 <td>
                     <?php 
                         foreach($villager->getLove() as $love)
@@ -53,6 +47,9 @@
                         }
                     ?>
                 </td>
+            </tr>
+            <tr>
+                <th>Likes</th>
                 <td>
                     <?php 
                         foreach($villager->getLike() as $like)
@@ -61,6 +58,9 @@
                         }
                     ?>
                 </td>
+            </tr>
+            <tr>
+                <th>Neutral</th>
                 <td>
                     <?php 
                         foreach($villager->getNeutral() as $neutral)
@@ -70,6 +70,51 @@
                     ?>
                 </td>
             </tr>
+            <tr>
+                <th>Dislikes</th>
+                <td>
+                    <?php 
+                        foreach($villager->getDislike() as $dislike)
+                        {
+                            echo $dislike . ', ';
+                        }
+                    ?>
+                </td>
+            </tr>
+            <tr>
+                <th>Hates</th>
+                <td>
+                    <?php 
+                        foreach($villager->getHate() as $hate)
+                        {
+                            echo $hate . ', ';
+                        }
+                    ?>
+                </td>
+            </tr>
         </table>
+    </section>
+    <section>
+        <h3>Schedule</h3>
+        <p>
+            <?php
+                foreach($_SESSION['planning']->getSchedule() as $key => $schedules)
+                {
+                    echo $key;
+                    foreach($schedules as $keys => $schedule)
+                    {
+                        echo $keys;
+                        foreach($schedule as $keyz => $planning)
+                        {
+                            // echo $keyz;
+                            foreach($planning as $key => $plan)
+                            {
+                                echo $key. ' ' .$plan;
+                            }
+                        }
+                    }
+                }
+            ?>
+        </p>
     </section>
 </main>
