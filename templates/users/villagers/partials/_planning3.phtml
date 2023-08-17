@@ -1,0 +1,22 @@
+<section>
+    <h3>Schedule</h3>
+    <table>
+        <?php
+            foreach($_SESSION['planning']->getSchedule() as $key => $schedules)
+            {
+                echo '<tr><th>'.$key.'</th></tr>';
+                foreach($schedules as $keys => $schedule)
+                {
+                    echo '<tr><td>'.$keys.'</td></tr>';
+                    foreach($schedule as $keyz => $planning)
+                    {
+                        foreach($planning as $key => $plan)
+                        {
+                            echo '<tr><td>'.$key. ': ' .$plan.'</td></tr>';
+                        }
+                    }
+                }
+            }
+        ?>
+    </table>
+</section>

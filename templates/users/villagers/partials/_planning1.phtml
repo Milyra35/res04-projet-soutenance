@@ -1,0 +1,11 @@
+<section>
+    <h3>Schedule</h3>
+    <p>
+        <?php
+            foreach($_SESSION['planning']->getSchedule() as $key => $schedules)
+            {
+                echo $key. ' ' .$schedules;
+            }
+        ?>
+    </p>
+</section>
