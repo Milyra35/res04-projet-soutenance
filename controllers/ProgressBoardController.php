@@ -13,6 +13,7 @@ class ProgressBoardController extends AbstractController {
     private PossessedItemManager $pim;
     private RelationshipManager $rm;
     private StatisticManager $sm;
+    private PictureManager $pm;
 
     public function __construct()
     {
@@ -28,13 +29,23 @@ class ProgressBoardController extends AbstractController {
         $this->pim = new PossessedItemManager();
         $this->rm = new RelationShipManager();
         $this->sm = new StatisticManager();
+        $this->pm = new PictureManager();
     }
 
     // Read the uploaded file to store the informations
-    public function readSavedFile()
+    public function readSavedFile($id)
     {
+        $file = $this->fm->getFileById($id);
+        $fileName = $file->getName();
+
         // I need to retrieve the file from the user id
-        $xml=simplexml_load_file("data/uploadedfile/") or die("Error: Cannot create object");
+        $xml=simplexml_load_file('data/uploadedfile/'.$fileName) or die("Error: Cannot create object");
+
+        // echo $xml->player->name;
+        // echo $xml->player->songsHeard;
+        echo $xml->player->stats->combatLevel;
+
+        $this->render('user/game.phtml', [$xml]);
     }
 }
 

@@ -1,19 +1,14 @@
 <?php
 
 class FileManager extends AbstractManager {
-    // Get a role by its ID
-    public function getRoleById(int $id) : Role
+    private UserManager $um;
+
+    public function __construct()
     {
-        $query=$this->db->prepare("SELECT * FROM roles WHERE roles.id = :id");
-        $parameters=['id'=> $id];
-        $query->execute($parameters);
-
-        $data = $query->fetch(PDO::FETCH_ASSOC);
-        $role = new Role($id, $data["name"]);
-
-        return $role;
+        parent::__construct();
+        $this->um = new UserManager();
     }
-    
+
     // Get a file by its ID
     public function getFileById(int $id) : SavedFile
     {
@@ -22,28 +17,12 @@ class FileManager extends AbstractManager {
         $query->execute($parameters);
 
         $data=$query->fetch(PDO::FETCH_ASSOC);
-        $file = new SavedFile($this->getUserById($data['user_id']), $data['name'], $data['url']);
+        $file = new SavedFile($this->um->getUserById($data['user_id']), $data['name'], $data['url']);
 
         $file->setId($data['id']);
         $file->setDate($data['upload_date']);
         
         return $file;
-    }
-
-    // Get an user by its ID
-    public function getUserById(int $id) : User
-    {
-        $query = $this->db->prepare("SELECT * FROM users WHERE users.id = :id");
-        $parameters = ['id' => $id];
-        $query->execute($parameters);
-
-        $data = $query->fetch(PDO::FETCH_ASSOC);
-        $user = new User($data['username'], $data['password'], $data['email'], $this->getRoleById($data['role_id']));
-
-        $user->setId($data['id']);
-        $user->setRegistrationDate($data['registration_date']);
-
-        return $user;
     }
 
     // Get all the files (for the admin part)
@@ -57,7 +36,7 @@ class FileManager extends AbstractManager {
 
         foreach($data as $file)
         { 
-            $newFile = new SavedFile($this->getUserById($file['user_id']), $file['name'], $file['url']);
+            $newFile = new SavedFile($this->um->getUserById($file['user_id']), $file['name'], $file['url']);
             $newFile->setId($file['id']);
             $files[] = $newFile;
         }
@@ -102,10 +81,25 @@ class FileManager extends AbstractManager {
 
         foreach($files as $file)
         {
-            $file['user_id'] = $this->getUserById($file['user_id']);
+            $file['user_id'] = $this->um->getUserById($file['user_id']);
         }
 
         return $files;
+    }
+
+    // Get a game by its name
+    public function getFileByName(string $name) : SavedFile
+    {
+        $query=$this->db->prepare("SELECT * FROM saved_files WHERE name = :name");
+        $parameters=['name' => $name];
+        $query->execute($parameters);
+
+        $data=$query->fetch(PDO::FETCH_ASSOC);
+        $file = new SavedFile($this->um->getUserById($data['user_id']), $data['name'], $data['url']);
+        $file->setId($data['id']);
+        $file->setDate($data['upload_date']);
+
+        return $file;
     }
 }
 
