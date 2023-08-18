@@ -51,24 +51,25 @@ class ProgressBoardController extends AbstractController {
 
         // Player skills
         $farmingLevel = intval($xml->player->farmingLevel);
-        $farming = new PlayerSkill($file, "Farming", $farmingLevel);
-        // $this->psm->addSkill($farming);
-
+        $farming = new PlayerSkill($file,"Farming", $farmingLevel);
+        
         $miningLevel = intval($xml->player->miningLevel);
         $mining = new PlayerSkill($file, "Mining", $miningLevel);
-        // $this->psm->addSkill($mining);
-
+        
         $combatLevel = intval($xml->player->combatLevel);
         $combat = new PlayerSkill($file, "Combat", $combatLevel);
-        // $this->psm->addSkill($combat);
-
+        
         $foragingLevel = intval($xml->player->foragingLevel);
         $foraging = new PlayerSkill($file, "Foraging", $foragingLevel);
-        // $this->psm->addSkill($foraging);
-
+        
         $fishingLevel = intval($xml->player->fishingLevel);
         $fishing = new PlayerSkill($file, "Fishing", $fishingLevel);
-        // $this->psm->addSkill($fishing);
+        
+        $this->psm->addSkill($farming);
+        $this->psm->addSkill($mining);
+        $this->psm->addSkill($combat);
+        $this->psm->addSkill($foraging);
+        $this->psm->addSkill($fishing);
 
         $this->render('user/game.phtml', []);
     }

@@ -49,6 +49,7 @@ class FileManager extends AbstractManager {
     {
         $exist = $this->db->prepare("SELECT * FROM saved_files WHERE name = :name");
         $parameters=['name' => $file->getName()];
+        $exist->execute($parameters);
         $existingFile = $exist->fetch(PDO::FETCH_ASSOC);
 
         if(!$existingFile)
@@ -68,7 +69,7 @@ class FileManager extends AbstractManager {
         }
         else
         {
-            
+            // Add DELETE and then re INSERT INTO it
         }
 
         return $file;
