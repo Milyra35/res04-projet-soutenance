@@ -42,20 +42,44 @@ class ProgressBoardController extends AbstractController {
         $xml=simplexml_load_file('data/uploadedfile/'.$fileName) or die("Error: Cannot create object");
 
         // Player Progress
-        $name = $xml->player->name;
-        $money = $xml->player->money;
-        $health = $xml->player->health;
-        $energy = $xml->player->maxStamina;
-        if($xml->player->catPerson === true)
+        $name = htmlspecialchars($xml->player->name);
+        $money = htmlspecialchars($xml->player->money);
+        $health = htmlspecialchars($xml->player->health);
+        $energy = htmlspecialchars($xml->player->maxStamina);
+        $cat = null;
+        $dog = null;
+        $isMarried = null;
+        $spouse = null;
+        
+        foreach($xml->player->friendshipData->item as $friend)
+        {
+            // var_dump($friend->value["Friendship"]);
+            // echo (string)$friend->value->Friendship;
+            if(!empty($friend->value->Friendship->WeddingDate))
+            {
+                $isMarried = true;
+                $spouse = $friend->key;
+                // Si spouse, alors isMarried = true
+            }
+            else
+            {
+                $isMarried = false;
+            }
+            // var_dump($friend->key);
+            // var_dump($isMarried);
+        }
+        
+        if($xml->player->catPerson == true)
         {
             $cat = true;
             $dog = false;
         }
-        if($xml->player->dogPerson === true)
+        if($xml->player->dogPerson == true)
         {
             $cat = false;
             $dog = true;
         }
+        var_dump($spouse, $isMarried);
 
         // Player skills
         $farmingLevel = intval($xml->player->farmingLevel);
