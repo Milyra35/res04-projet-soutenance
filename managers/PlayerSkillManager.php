@@ -12,47 +12,36 @@ class PlayerSkillManager extends AbstractManager {
     // Add the skills to the database
     public function addSkill(PlayerSkill $skill) : PlayerSkill
     {
-        // I check if the skill already exists
-        $exist = $this->db->prepare("SELECT * FROM player_skills WHERE file_id = :file_id AND `name` = :name");
-        $parameters=[
+        $query = $this->db->prepare("SELECT * FROM player_skills WHERE file_id = :file_id AND `name` = :name AND `level` = :level");
+        $parameters = [
             'file_id' => $skill->getFile()->getId(),
-            'name' => $skill->getName()
+            'name' => $skill->getName(),
+            'level' => $skill->getLevel()
         ];
-        $exist->execute($parameters);
-        $existingSkill = $exist->fetch(PDO::FETCH_ASSOC);
+        $query->execute($parameters);
+        $existingSkill = $query->fetch(PDO::FETCH_ASSOC);
 
-        if(!$existingSkill)
+        if (!$existingSkill) 
         {
-            $query=$this->db->prepare("INSERT INTO player_skills (file_id, `name`, `level`)
-                                    VALUES (:file_id, :name, :level)");
-            $parameter=[
+            // Skill doesn't exist, insert it
+            $insertQuery = $this->db->prepare("INSERT INTO player_skills (file_id, `name`, `level`)
+                                        VALUES (:file_id, :name, :level)");
+            $insertQuery->execute($parameters);
+            $skill->setId($this->db->lastInsertId());
+        } 
+        else 
+        {
+            // Skill exists, update its level
+            $updateQuery = $this->db->prepare("UPDATE player_skills SET `level` = :level WHERE file_id = :file_id AND `name` = :name");
+            $updateParameters = [
                 'file_id' => $skill->getFile()->getId(),
                 'name' => $skill->getName(),
                 'level' => $skill->getLevel()
             ];
-            $query->execute($parameter);
-
-            // $data=$query->fetch(PDO::FETCH_ASSOC);
-            $skill->setId($this->db->lastInsertId());
-
-            return $skill;
+            $updateQuery->execute($updateParameters);
         }
-        else
-        {
-            $query=$this->db->prepare("INSERT INTO player_skills (file_id, `name`, `level`)
-                                    VALUES (:file_id, :name, :level)
-                                    ON DUPLICATE KEY UPDATE `level` = VALUES(`level`)");
-            $parameter=[
-                'file_id' => $skill->getFile()->getId(),
-                'name' => $skill->getName(),
-                'level' => $skill->getLevel()
-            ];
-            $query->execute($parameter);
 
-            $skill->setId($this->db->lastInsertId());
-
-            return $skill;
-        }
+        return $skill;
     }
 
     // Get the player skills by its id
@@ -67,6 +56,26 @@ class PlayerSkillManager extends AbstractManager {
         $skill->setId($data['id']);
 
         return $skill;
+    }
+
+    // Get the skills of the same file
+    public function getSkillsByFile(int $id) : array
+    {
+        $query=$this->db->prepare("SELECT * FROM player_skills WHERE file_id = :file_id");
+        $parameters=['file_id' => $id];
+        $query->execute($parameters);
+        $data = $query->fetchAll(PDO::FETCH_ASSOC);
+
+        $skills = [];
+
+        foreach($data as $skill)
+        {
+            $newSkill = new PlayerSkill($this->fm->getFileById($skill['file_id']), $skill['name'], $skill['level']);
+            $newSkill->setId($skill['id']);
+            $skills[] = $newSkill;
+        }
+
+        return $skills;
     }
 }
 

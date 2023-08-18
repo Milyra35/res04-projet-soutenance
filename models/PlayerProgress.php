@@ -4,7 +4,7 @@ class PlayerProgress {
     private ?int $id;
     private SavedFile $file;
     private string $playerName;
-    private int $experienceLevel;
+    // private int $experienceLevel;
     private int $money;
     private int $health;
     private int $energy;
@@ -14,12 +14,12 @@ class PlayerProgress {
     private bool $isMarried;
     private bool $hasChildren;
 
-    public function __construct(SavedFile $file, string $playerName, int $experienceLevel, int $money,int $health, int $energy, bool $cat, bool $dog, string $petName, bool $isMarried, bool $hasChildren)
+    public function __construct(SavedFile $file, string $playerName, int $money,int $health, int $energy, bool $cat, bool $dog, string $petName, bool $isMarried, bool $hasChildren)
     {
         $this->id = null;
         $this->file = $file;
         $this->playerName = $playerName;
-        $this->experienceLevel = $experienceLevel;
+        // $this->experienceLevel = $experienceLevel;
         $this->money = $money;
         $this->health = $health;
         $this->energy = $energy;
@@ -60,15 +60,15 @@ class PlayerProgress {
 		$this->playerName = $playerName;
 	}
 
-	public function getExperienceLevel() : int
-	{
-		return $this->experienceLevel;
-	}
+	// public function getExperienceLevel() : int
+	// {
+	// 	return $this->experienceLevel;
+	// }
 
-	public function setExperienceLevel(int $experienceLevel) : void
-	{
-		$this->experienceLevel = $experienceLevel;
-	}
+	// public function setExperienceLevel(int $experienceLevel) : void
+	// {
+	// 	$this->experienceLevel = $experienceLevel;
+	// }
 
 	public function getMoney() : int
 	{

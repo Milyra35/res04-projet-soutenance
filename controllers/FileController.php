@@ -28,7 +28,7 @@ class FileController extends AbstractController {
                 $file = $_FILES['saved-file'];
 
                 // To get the file name
-                $fileName = $file['name'];
+                $fileName = htmlspecialchars($file['name']);
                 
                 // To move the file to the right path
                 $path = 'data/uploadedfile/' . $fileName . '.xml';

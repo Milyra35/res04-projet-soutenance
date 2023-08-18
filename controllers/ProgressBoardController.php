@@ -43,11 +43,19 @@ class ProgressBoardController extends AbstractController {
 
         // Player Progress
         $name = $xml->player->name;
-        //$experience = $xml->player->
         $money = $xml->player->money;
-        $energy = $xml->player->maxStamina;
         $health = $xml->player->health;
-
+        $energy = $xml->player->maxStamina;
+        if($xml->player->catPerson === true)
+        {
+            $cat = true;
+            $dog = false;
+        }
+        if($xml->player->dogPerson === true)
+        {
+            $cat = false;
+            $dog = true;
+        }
 
         // Player skills
         $farmingLevel = intval($xml->player->farmingLevel);
@@ -70,6 +78,28 @@ class ProgressBoardController extends AbstractController {
         $this->psm->addSkill($combat);
         $this->psm->addSkill($foraging);
         $this->psm->addSkill($fishing);
+    }
+
+    public function displayProgress(int $id)
+    {
+        // I retrieve the skills
+        $skills = $this->psm->getSkillsByFile($id);
+
+        // I retrieve the player progress
+
+        // I retrieve the bundles
+
+        // I retrieve the items of the museum
+
+        // I retrieve the statistics
+
+        // I retrieve the books
+
+        // I retrieve the locations
+
+        // I retrieve the possessed items
+
+        // I retrieve the relationships
 
         $this->render('user/game.phtml', []);
     }

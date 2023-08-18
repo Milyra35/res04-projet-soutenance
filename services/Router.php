@@ -64,6 +64,7 @@ class Router {
                 $_SESSION['file_slug'] = $file_slug;
                 $this->fc->getFileById($file_slug);
                 $this->pbc->readSavedFile($file_slug);
+                $this->pbc->displayProgress($file_slug);
             }
             else if($_GET['route'] === "logout")
             {

@@ -9,16 +9,16 @@ class PlayerProgressManager extends AbstractManager {
             'file_id' => $player->getFile()->getId(),
             'name' => $player->getPlayerName()
         ];
+        $exist->execute($parameters);
         $existingProgress = $exist->fetch(PDO::FETCH_ASSOC);
 
         if(!$existingProgress)
         {
-            $query=$this->db->prepare("INSERT INTO player_progress 
+            $insert=$this->db->prepare("INSERT INTO player_progress 
             (
                 file_id,
                 character_name,
-                experience_level,
-                money,
+                `money`,
                 health,
                 energy,
                 cat,
@@ -40,10 +40,9 @@ class PlayerProgressManager extends AbstractManager {
                 :is_married,
                 :has_children
             )");
-            $parameters = [
+            $insertParam = [
                 'file_id' => $player->getFile()->getId(),
                 'character_name' => $player->getPlayerName(),
-                'experience_level' => $player->getExperienceLevel(),
                 'money' => $player->getMoney(),
                 'health' => $player->getHealth(),
                 'energy' => $player->getEnergy(),
@@ -53,10 +52,37 @@ class PlayerProgressManager extends AbstractManager {
                 'is_married' => $player->getIsMarried(),
                 'has_children' => $player->getHasChildren()
             ];
-            $query->execute($parameters);
+            $insert->execute($insertParam);
 
-            $data=$query->fetch(PDO::FETCH_ASSOC);
             $player->setId($this->db->lastInsertId());
+        }
+        else
+        {
+            $update = $this->db->prepare("UPDATE player_progress SET
+                file_id = :file_id,
+                character_name = :name,
+                `money` = :money,
+                health = :health,
+                energy = :energy,
+                cat = :cat,
+                dog = :dog,
+                pet_name = :pet_name,
+                is_married = :is_married,
+                has_children = :has_children
+                WHERE file_id = :file_id AND character_name = :name");
+            $updateParam = [
+                'file_id' => $player->getFile()->getId(),
+                'name' => $player->getPlayerName(),
+                'money' => $player->getMoney(),
+                'health' => $player->getHealth(),
+                'energy' => $player->getEnergy(),
+                'cat' => $player->getCat(),
+                'dog' => $player->getDog(),
+                'pet_name' => $player->getPetName(),
+                'is_married' => $player->getIsMarried(),
+                'has_children' => $player->getHasChildren()
+            ];
+            $update->execute($parameters);
         }
         
         return $player;
@@ -73,7 +99,6 @@ class PlayerProgressManager extends AbstractManager {
         $progress = new PlayerProgress(
             $this->getFileById($data['file_id']),
             $data['character_name'],
-            $data['experience_level'],
             $data['money'],
             $data['health'],
             $data['energy'],
