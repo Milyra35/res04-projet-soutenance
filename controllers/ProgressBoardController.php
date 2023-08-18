@@ -32,7 +32,7 @@ class ProgressBoardController extends AbstractController {
         $this->pm = new PictureManager();
     }
 
-    // Read the uploaded file to store the informations
+    // Read the uploaded file to store the informations into the database
     public function readSavedFile($id)
     {
         $file = $this->fm->getFileById($id);
@@ -41,12 +41,36 @@ class ProgressBoardController extends AbstractController {
         // I need to retrieve the file from the user id
         $xml=simplexml_load_file('data/uploadedfile/'.$fileName) or die("Error: Cannot create object");
 
-        // echo $xml->player->songsHeard;
-        // echo $xml->player->money;
+        // Player Progress
         $name = $xml->player->name;
-        $experience = $xml->player->
+        //$experience = $xml->player->
+        $money = $xml->player->money;
+        $energy = $xml->player->maxStamina;
+        $health = $xml->player->health;
 
-        $this->render('user/game.phtml', [$xml]);
+
+        // Player skills
+        $farmingLevel = intval($xml->player->farmingLevel);
+        $farming = new PlayerSkill($file, "Farming", $farmingLevel);
+        // $this->psm->addSkill($farming);
+
+        $miningLevel = intval($xml->player->miningLevel);
+        $mining = new PlayerSkill($file, "Mining", $miningLevel);
+        // $this->psm->addSkill($mining);
+
+        $combatLevel = intval($xml->player->combatLevel);
+        $combat = new PlayerSkill($file, "Combat", $combatLevel);
+        // $this->psm->addSkill($combat);
+
+        $foragingLevel = intval($xml->player->foragingLevel);
+        $foraging = new PlayerSkill($file, "Foraging", $foragingLevel);
+        // $this->psm->addSkill($foraging);
+
+        $fishingLevel = intval($xml->player->fishingLevel);
+        $fishing = new PlayerSkill($file, "Fishing", $fishingLevel);
+        // $this->psm->addSkill($fishing);
+
+        $this->render('user/game.phtml', []);
     }
 }
 

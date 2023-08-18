@@ -4,51 +4,61 @@ class PlayerProgressManager extends AbstractManager {
     // Add the fie to the database
     public function addProgress(PlayerProgress $player) : PlayerProgress
     {
-        $query=$this->db->prepare("INSERT INTO player_progress 
-        (
-            file_id,
-            character_name,
-            experience_level,
-            money,
-            health,
-            energy,
-            cat,
-            dog,
-            pet_name,
-            is_married,
-            has_children
-        )
-        VALUES (
-            :file_id,
-            :character_name,
-            :experience_level;
-            :money,
-            :health,
-            :energy,
-            :cat,
-            :dog,
-            :pet_name,
-            :is_married,
-            :has_children
-        )");
-        $parameters = [
+        $exist = $this->db->prepare("SELECT * FROM player_progress WHERE file_id = :file_id AND character_name = :name");
+        $parameters=[
             'file_id' => $player->getFile()->getId(),
-            'character_name' => $player->getPlayerName(),
-            'experience_level' => $player->getExperienceLevel(),
-            'money' => $player->getMoney(),
-            'health' => $player->getHealth(),
-            'energy' => $player->getEnergy(),
-            'cat' => $player->getCat(),
-            'dog' => $player->getDog(),
-            'pet_name' => $player->getPetName(),
-            'is_married' => $player->getIsMarried(),
-            'has_children' => $player->getHasChildren()
+            'name' => $player->getPlayerName()
         ];
-        $query->execute($parameters);
+        $existingProgress = $exist->fetch(PDO::FETCH_ASSOC);
 
-        $data=$query->fetch(PDO::FETCH_ASSOC);
-        $player->setId($this->db->lastInsertId());
+        if(!$existingProgress)
+        {
+            $query=$this->db->prepare("INSERT INTO player_progress 
+            (
+                file_id,
+                character_name,
+                experience_level,
+                money,
+                health,
+                energy,
+                cat,
+                dog,
+                pet_name,
+                is_married,
+                has_children
+            )
+            VALUES (
+                :file_id,
+                :character_name,
+                :experience_level;
+                :money,
+                :health,
+                :energy,
+                :cat,
+                :dog,
+                :pet_name,
+                :is_married,
+                :has_children
+            )");
+            $parameters = [
+                'file_id' => $player->getFile()->getId(),
+                'character_name' => $player->getPlayerName(),
+                'experience_level' => $player->getExperienceLevel(),
+                'money' => $player->getMoney(),
+                'health' => $player->getHealth(),
+                'energy' => $player->getEnergy(),
+                'cat' => $player->getCat(),
+                'dog' => $player->getDog(),
+                'pet_name' => $player->getPetName(),
+                'is_married' => $player->getIsMarried(),
+                'has_children' => $player->getHasChildren()
+            ];
+            $query->execute($parameters);
 
+            $data=$query->fetch(PDO::FETCH_ASSOC);
+            $player->setId($this->db->lastInsertId());
+        }
+        
         return $player;
     }
 

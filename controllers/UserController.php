@@ -151,7 +151,7 @@ class UserController extends AbstractController {
     // Add a method to render the informations of the account
     public function account(int $id)
     {
-        
+        $this->render("user/my-account.phtml", []);
     }
 }
 

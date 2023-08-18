@@ -44,7 +44,7 @@ class Router {
             }
             else if($_GET['route'] === "my-account" && isset($_SESSION['user']))
             {
-                $this->uc->account();
+                $this->uc->account($_SESSION['user_id']);
             }
             else if($_GET['route'] === "my-account/edit" && isset($_SESSION['user']))
             {

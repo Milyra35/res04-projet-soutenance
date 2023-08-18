@@ -47,18 +47,29 @@ class FileManager extends AbstractManager {
     // Add the file to the database
     public function addFile(SavedFile $file) : SavedFile
     {
-        $query=$this->db->prepare("INSERT INTO saved_files (user_id, name, url, upload_date)
-                                    VALUES (:userId, :name, :url, :upload_date)");
-        $parameters= [
-            'userId'=> $file->getUser()->getId(),
-            'name'=> $file->getName(),
-            'url'=> $file->getUrl(),
-            'upload_date'=> $file->getDate()
-        ];
-        $query->execute($parameters);
+        $exist = $this->db->prepare("SELECT * FROM saved_files WHERE name = :name");
+        $parameters=['name' => $file->getName()];
+        $existingFile = $exist->fetch(PDO::FETCH_ASSOC);
 
-        $data = $query->fetch(PDO::FETCH_ASSOC);
-        $file->setId($this->db->lastInsertId());
+        if(!$existingFile)
+        {
+            $query=$this->db->prepare("INSERT INTO saved_files (user_id, name, url, upload_date)
+                                    VALUES (:userId, :name, :url, :upload_date)");
+            $parameters= [
+                'userId'=> $file->getUser()->getId(),
+                'name'=> $file->getName(),
+                'url'=> $file->getUrl(),
+                'upload_date'=> $file->getDate()
+            ];
+            $query->execute($parameters);
+
+            $data = $query->fetch(PDO::FETCH_ASSOC);
+            $file->setId($this->db->lastInsertId());
+        }
+        else
+        {
+            
+        }
 
         return $file;
     }
