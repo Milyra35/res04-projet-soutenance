@@ -48,25 +48,23 @@ class ProgressBoardController extends AbstractController {
         $energy = htmlspecialchars($xml->player->maxStamina);
         $cat = null;
         $dog = null;
-        $isMarried = null;
-        $spouse = null;
+        $isMarried = false;
+        $petName = '';
         
-        foreach($xml->player->friendshipData->item as $friend)
+        if($xml->player->spouse)
         {
-            // var_dump($friend->value["Friendship"]);
-            // echo (string)$friend->value->Friendship;
-            if(!empty($friend->value->Friendship->WeddingDate))
+            $isMarried = true;
+        }
+
+        // To see if the player has children in the game
+        $child = false;
+        
+        foreach($xml->locations->GameLocation->characters->NPC as $npc)
+        {
+            if(!empty($npc->idOfParent))
             {
-                $isMarried = true;
-                $spouse = $friend->key;
-                // Si spouse, alors isMarried = true
+                $child = true;
             }
-            else
-            {
-                $isMarried = false;
-            }
-            // var_dump($friend->key);
-            // var_dump($isMarried);
         }
         
         if($xml->player->catPerson == true)
@@ -74,12 +72,25 @@ class ProgressBoardController extends AbstractController {
             $cat = true;
             $dog = false;
         }
-        if($xml->player->dogPerson == true)
+        if($xml->player->catPerson == false)
         {
             $cat = false;
             $dog = true;
         }
-        var_dump($spouse, $isMarried);
+
+        foreach($xml->locations->GameLocation->characters as $pet)
+        {
+            // var_dump($pet->NPC);
+            if($pet->NPC->attributes() === "Cat")
+            {
+                $petName = $pet->name;
+            }
+        }
+        
+        var_dump($petName);
+        $newPlayer = new PlayerProgress($file, $name, $money, $health, $energy, $cat, $dog, $petName, $isMarried, $child);
+        // var_dump($newPlayer);
+
 
         // Player skills
         $farmingLevel = intval($xml->player->farmingLevel);

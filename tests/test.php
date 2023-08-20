@@ -2,17 +2,24 @@
 
 $xml=simplexml_load_file("Marpau_269973769") or die("Error: Cannot create object");
 
-foreach($xml->player as $value)
-{
-    echo $value->getName() . ":". $value->name ."<br>";
-    echo $value->money . "<br>";
+$isMarried = false;
+$spouse = null;
 
-    // foreach($value->professions->int as $level)
+foreach($xml->player->friendshipData->item as $friend)
+{
+    if(!empty($friend->value->Friendship->WeddingDate))
+    {
+        $spouse = $friend->key;
+        if($spouse)
+        {
+            $isMarried = true;
+        }
+    }
+    // else
     // {
-    //     echo $level->getname(). ":" . $level . "<br>";
+    //     $isMarried = false;
     // }
-    
 }
-print_r($xml);
+var_dump($isMarried);
 
 ?>
