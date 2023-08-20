@@ -4,20 +4,46 @@ class StatisticManager extends AbstractManager {
     // Add statistics to the database
     public function addStatistics(Statistic $stat) : Statistic
     {
-        $query=$this->db->prepare("INSERT INTO statistics (file_id, hours_played, days_spent, seasons_passed, fish_catched)
-                                VALUES (:file_id, :hours, :days, :seasons, :fish)");
-        $parameters=[
-            'file_id' => $stat->getFile()->getId(),
-            'hours' => $stat->getHoursPlayed(),
-            'days' => $stat->getDaysSpent(),
-            'seasons' => $stat->getSeasonsPassed(),
-            'fish' => $stat->getFishCatched()
+        $query=$this->db->prepare("SELECT * FROM statistics WHERE file_id = :file_id");
+        $parameters = [
+            'file_id' => $stat->getFile()->getId()
         ];
         $query->execute($parameters);
+        $existingStat = $query->fetch(PDO::FETCH_ASSOC);
 
-        $data=$query->fetch(PDO::FETCH_ASSOC);
-        $stat->setId($this->db->lastInsertId());
+        if(!$existingStat)
+        {
+            $insert=$this->db->prepare("INSERT INTO statistics (file_id, hours_played, days_spent, seasons_passed, fish_catched)
+                                VALUES (:file_id, :hours, :days, :seasons, :fish)");
+            $insertParam=[
+                'file_id' => $stat->getFile()->getId(),
+                'hours' => $stat->getHoursPlayed(),
+                'days' => $stat->getDaysSpent(),
+                'seasons' => $stat->getSeasonsPassed(),
+                'fish' => $stat->getFishCatched()
+            ];
+            $insert->execute($insertParam);
 
+            $stat->setId($this->db->lastInsertId());
+        }
+        else
+        {
+            $update = $this->db->prepare("UPDATE statistics SET 
+                file_id = :file_id,
+                hours_played = :hours,
+                days_spent = :days,
+                seasons_passed = :seasons,
+                fish_catched = :fish");
+            $updateParam= [
+                'file_id' => $stat->getFile()->getId(),
+                'hours' => $stat->getHoursPlayed(),
+                'days' => $stat->getDaysSpent(),
+                'seasons' => $stat->getSeasonsPassed(),
+                'fish' => $stat->getFishCatched()
+            ];
+            $update->execute($updateParam);
+        }
+        
         return $stat;
     }
 

@@ -78,18 +78,22 @@ class ProgressBoardController extends AbstractController {
             $dog = true;
         }
 
-        foreach($xml->locations->GameLocation->characters as $pet)
+        foreach($xml->locations->GameLocation as $location)
         {
-            // var_dump($pet->NPC);
-            if($pet->NPC->attributes() === "Cat")
+            foreach($location->characters->NPC as $pet)
             {
-                $petName = $pet->name;
+                // To access the value of the attribute xsi:type, i had to make sure the xmlns:xsi existed in the XML file
+                $type = $pet->attributes('xsi', true)->type;
+                if((string) $type === "Cat" || (string) $type === "Dog")
+                {
+                    $petName = htmlspecialchars($pet->name);
+                }
             }
         }
         
-        var_dump($petName);
+        // var_dump($petName);
         $newPlayer = new PlayerProgress($file, $name, $money, $health, $energy, $cat, $dog, $petName, $isMarried, $child);
-        // var_dump($newPlayer);
+        $this->pp->addProgress($newPlayer);
 
 
         // Player skills
@@ -113,6 +117,16 @@ class ProgressBoardController extends AbstractController {
         $this->psm->addSkill($combat);
         $this->psm->addSkill($foraging);
         $this->psm->addSkill($fishing);
+
+
+        // Statistics
+        $hoursPlayed = intval(intval($xml->player->millisecondsPlayed) / 3600000);
+        $daysSpent = intval($xml->player->stats->daysPlayed);
+        $seasonsPassed = intval(($daysSpent / 28) / 4);
+        $fishCaught = intval($xml->player->stats->fishCaught);
+
+        $newStat = new Statistic($file, $hoursPlayed, $daysSpent, $seasonsPassed, $fishCaught);
+        $this->sm->addStatistics($newStat);
     }
 
     public function displayProgress(int $id)

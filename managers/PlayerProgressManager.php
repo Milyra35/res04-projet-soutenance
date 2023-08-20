@@ -30,7 +30,6 @@ class PlayerProgressManager extends AbstractManager {
             VALUES (
                 :file_id,
                 :character_name,
-                :experience_level;
                 :money,
                 :health,
                 :energy,
@@ -46,8 +45,8 @@ class PlayerProgressManager extends AbstractManager {
                 'money' => $player->getMoney(),
                 'health' => $player->getHealth(),
                 'energy' => $player->getEnergy(),
-                'cat' => $player->getCat(),
-                'dog' => $player->getDog(),
+                'cat' => $player->getCat() ? 1 : 0,
+                'dog' => $player->getDog() ? 1 : 0,
                 'pet_name' => $player->getPetName(),
                 'is_married' => $player->getIsMarried(),
                 'has_children' => $player->getHasChildren()
@@ -76,13 +75,13 @@ class PlayerProgressManager extends AbstractManager {
                 'money' => $player->getMoney(),
                 'health' => $player->getHealth(),
                 'energy' => $player->getEnergy(),
-                'cat' => $player->getCat(),
-                'dog' => $player->getDog(),
+                'cat' => $player->getCat() ? 1 : 0,
+                'dog' => $player->getDog() ? 1 : 0,
                 'pet_name' => $player->getPetName(),
                 'is_married' => $player->getIsMarried(),
                 'has_children' => $player->getHasChildren()
             ];
-            $update->execute($parameters);
+            $update->execute($updateParam);
         }
         
         return $player;
