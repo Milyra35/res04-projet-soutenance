@@ -14,6 +14,7 @@ class ProgressBoardController extends AbstractController {
     private RelationshipManager $rm;
     private StatisticManager $sm;
     private PictureManager $pm;
+    private VillagerManager $vm;
 
     public function __construct()
     {
@@ -30,6 +31,7 @@ class ProgressBoardController extends AbstractController {
         $this->rm = new RelationShipManager();
         $this->sm = new StatisticManager();
         $this->pm = new PictureManager();
+        $this->vm = new VillagerManager();
     }
 
     // Read the uploaded file to store the informations into the database
@@ -127,6 +129,43 @@ class ProgressBoardController extends AbstractController {
 
         $newStat = new Statistic($file, $hoursPlayed, $daysSpent, $seasonsPassed, $fishCaught);
         $this->sm->addStatistics($newStat);
+
+
+        // Relationships
+        foreach($xml->player->friendshipData->item as $friend)
+        {
+            $name = htmlspecialchars($friend->key->string);
+            
+            if($name === "Alex" ||
+                $name === "Elliott" || $name === "Harvey" || $name === "Sam" ||
+                $name === "Sebastian" || $name === "Shane" || $name === "Abigail" ||
+                $name === "Emily" || $name === "Haley" || $name === "Leah" ||
+                $name === "Maru" || $name === "Penny" || $name === "Caroline" ||
+                $name === "Clint" || $name === "Demetrius" || $name === "Dwarf" ||
+                $name === "Evelyn" || $name === "George" || $name === "Gus" ||
+                $name === "Jas" || $name === "Jodi" || $name === "Kent" ||
+                $name === "Krobus" || $name === "Leo" || $name === "Lewis" ||
+                $name === "Linus" || $name === "Marnie" || $name === "Pam" ||
+                $name === "Pierre" || $name === "Robin" || $name === "Sandy" ||
+                $name === "Vincent" || $name === "Willy" || $name === "Wizard")
+            {
+                $villager = $this->vm->getVillagerByName($name);
+                $friendshipLevel = 0;
+
+                foreach($friend->value->Friendship as $level)
+                {
+                    $friendshipLevel = intval($level->Points);
+                }
+
+                $newRelationship = new Relationship($file, $villager, $friendshipLevel);
+                $this->rm->addRelationship($newRelationship);
+                // var_dump($newRelationship);
+            }
+            else
+            {
+                error_log("Villager does not exist in the database");
+            }
+        }
     }
 
     public function displayProgress(int $id)

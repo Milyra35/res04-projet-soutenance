@@ -33,7 +33,8 @@ class StatisticManager extends AbstractManager {
                 hours_played = :hours,
                 days_spent = :days,
                 seasons_passed = :seasons,
-                fish_catched = :fish");
+                fish_catched = :fish
+                WHERE file_id = :file_id");
             $updateParam= [
                 'file_id' => $stat->getFile()->getId(),
                 'hours' => $stat->getHoursPlayed(),
