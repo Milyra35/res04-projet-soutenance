@@ -15,6 +15,24 @@ class ItemManager extends AbstractManager {
         return $picture;
     }
 
+    // Add an item to the database
+    public function addItem(Item $item) : Item
+    {
+        $query=$this->db->prepare("INSERT INTO items (picture_id, type, name, description)
+                                    VALUES (:picture_id, :type, :name, :description)");
+        $parameters = [
+            'picture_id' => $item->getPicture->getId(),
+            'type' => $item->getType(),
+            'name' => $item->getName(),
+            'description' => $item->getDescription()
+        ];
+        $query->execute($parameters);
+
+        $item->setId($this->db->lastInsertId());
+
+        return $item;
+    }
+
     // Get all items
     public function getAllItems() : array
     {

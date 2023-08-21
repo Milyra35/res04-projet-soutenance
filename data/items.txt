@@ -1432,81 +1432,91 @@
  },
  {
    "Item Spawn Code": "[334]",
+   "Type": "Bar",
    "Item": "Copper Bar",
    "Item Description": "A bar of pure copper"
  },
  {
    "Item Spawn Code": "[335]",
+   "Type": "Bar",
    "Item": "Iron Bar",
    "Item Description": "A bar of pure iron"
  },
  {
    "Item Spawn Code": "[336]",
+   "Type": "Bar",
    "Item": "Gold Bar",
    "Item Description": "A bar of pure gold"
  },
  {
    "Item Spawn Code": "[337]",
+   "Type": "Bar",
    "Item": "Iridium Bar",
    "Item Description": "A bar of pure iridium"
  },
  {
    "Item Spawn Code": "[338]",
+   "Type": "Bar",
    "Item": "Refined Quartz",
    "Item Description": "A more pure form of quartz"
  },
  {
    "Item Spawn Code": "[340]",
+   "Type": "Artisan Good",
    "Item": "Honey",
    "Item Description": "It's a sweet syrup produced by bees"
  },
  {
-   "Item Spawn Code": "[341]",
-   "Item": "Tea Set",
-   "Item Description": "Fine porcelain"
- },
- {
    "Item Spawn Code": "[342]",
+   "Type": "Artisan Good",
    "Item": "Pickles",
    "Item Description": "A jar of your home-made pickles"
  },
  {
    "Item Spawn Code": "[343]",
+   "Type": "Misc",
    "Item": "Stone",
    "Item Description": "A common material with many uses in crafting and building"
  },
  {
    "Item Spawn Code": "[344]",
+   "Type": "Artisan Good",
    "Item": "Jelly",
    "Item Description": "Jelly/Gooey"
  },
  {
    "Item Spawn Code": "[346]",
+   "Type": "Cooking",
    "Item": "Beer",
    "Item Description": "Drink in moderation"
  },
  {
    "Item Spawn Code": "[347]",
+   "Type": "Seeds",
    "Item": "Rare Seed",
    "Item Description": "Sow in fall. Takes all season to grow"
  },
  {
    "Item Spawn Code": "[348]",
+   "Type": "Artisan Good",
    "Item": "Wine",
    "Item Description": "Drink in moderation"
  },
  {
    "Item Spawn Code": "[349]",
+   "Type": "Consumables",
    "Item": "Energy Tonic",
    "Item Description": "Restores a lot of energy"
  },
  {
    "Item Spawn Code": "[350]",
+   "Type": "Consumables",
    "Item": "Juice",
    "Item Description": "A sweet, nutritious beverage"
  },
  {
    "Item Spawn Code": "[351]",
+   "Type": "Consumables",
    "Item": "Muscle Remedy",
    "Item Description": "When you've pushed your body too hard, drink this to remove 'Exhaustion'"
  },
@@ -1542,6 +1552,7 @@
  },
  {
    "Item Spawn Code": "[373]",
+   "Type": "Misc",
    "Item": "Golden Pumpkin",
    "Item Description": "It's valuable but has no other purpose"
  },
@@ -1571,16 +1582,19 @@
  },
  {
    "Item Spawn Code": "[386]",
+   "Type": "Ore",
    "Item": "Iridium Ore",
    "Item Description": "An exotic ore with many curious properties. Can be smelted into bars"
  },
  {
    "Item Spawn Code": "[388]",
+   "Type": "Misc",
    "Item": "Wood",
    "Item Description": "A sturdy, yet flexible plant material with a wide variety of uses"
  },
  {
    "Item Spawn Code": "[390]",
+   "Type": "Misc",
    "Item": "Stone",
    "Item Description": "A common material with many uses in crafting and building"
  },
@@ -1634,6 +1648,7 @@
  },
  {
    "Item Spawn Code": "[400]",
+   "Type": "Crop",
    "Item": "Strawberry",
    "Item Description": "A sweet, juicy favorite with an appealing red color"
  },
@@ -1780,41 +1795,49 @@
  },
  {
    "Item Spawn Code": "[426]",
+   "Type": "Artisan Good",
    "Item": "Goat Cheese",
    "Item Description": "Soft cheese made from goat's milk"
  },
  {
    "Item Spawn Code": "[428]",
+   "Type": "Artisan Good",
    "Item": "Cloth",
    "Item Description": "A bolt of fine wool cloth"
  },
  {
    "Item Spawn Code": "[430]",
+   "Type": "Animal product",
    "Item": "Truffle",
    "Item Description": "A gourmet type of mushroom with a unique taste"
  },
  {
    "Item Spawn Code": "[432]",
+   "Type": "Artisan Good",
    "Item": "Truffle Oil",
    "Item Description": "[ ]"
  },
  {
    "Item Spawn Code": "[433]",
+   "Type": "Crop",
    "Item": "Coffee Bean",
    "Item Description": "Plant in spring or summer to grow a coffee plant. Place five beans in a keg to make coffee"
  },
  {
    "Item Spawn Code": "[434]",
+   "Type": "Crop",
    "Item": "Stardrop",
    "Item Description": "A mysterious fruit that empowers those who eat it. The flavor is like a dream... a powerful personal experience, yet difficult to describe to others"
  },
  {
    "Item Spawn Code": "[436]",
+   "Type": "Animal product",
    "Item": "Goat Milk",
    "Item Description": "The milk of a goat"
  },
  {
    "Item Spawn Code": "[437]",
+   "Type": "Animal product",
    "Item": "Red Slime Egg",
    "Item Description": "Can be hatched in a slime incubator"
  },
@@ -1826,6 +1849,7 @@
  },
  {
    "Item Spawn Code": "[439]",
+   "Type": "Animal product",
    "Item": "Purple Slime Egg",
    "Item Description": "Can be hatched in a slime incubator"
  },
@@ -1855,31 +1879,37 @@
  },
  {
    "Item Spawn Code": "[446]",
+   "Type": "Artisan Good",
    "Item": "Aged Roe",
    "Item Description": "Fish eggs aged in salt to bring out the flavor"
  },
  {
    "Item Spawn Code": "[447]",
+   "Type": "Animal product",
    "Item": "Rabbit's Foot",
    "Item Description": "Some say it's lucky"
  },
  {
    "Item Spawn Code": "[449]",
+   "Type": "Misc",
    "Item": "Stone Base",
    "Item Description": "A simple block of stone"
  },
  {
    "Item Spawn Code": "[450]",
+   "Type": "Misc",
    "Item": "Stone",
    "Item Description": "A common material with many uses in crafting and building"
  },
  {
    "Item Spawn Code": "[452]",
+   "Type": "Misc",
    "Item": "Weeds",
    "Item Description": "A cluster of dry old bushes"
  },
  {
    "Item Spawn Code": "[454]",
+   "Type": "Crop",
    "Item": "Ancient Fruit",
    "Item Description": "It's been dormant for eons"
  },
@@ -1897,38 +1927,21 @@
  },
  {
    "Item Spawn Code": "[458]",
+   "Type": "Special Item",
    "Item": "Bouquet",
    "Item Description": "A gift that shows your romantic interest"
  },
  {
    "Item Spawn Code": "[459]",
+   "Type": "Cooking",
    "Item": "Mead",
    "Item Description": "A fermented beverage made from honey. Drink in moderation"
  },
  {
    "Item Spawn Code": "[460]",
+   "Type": "Special Item",
    "Item": "Mermaid's Pendant",
    "Item Description": "Give this to the person you want to marry"
- },
- {
-   "Item Spawn Code": "[461]",
-   "Item": "Decorative Pot",
-   "Item Description": "A replica of an ancient pot"
- },
- {
-   "Item Spawn Code": "[462]",
-   "Item": "Glass Pane",
-   "Item Description": "Plays a drum sound when you walk past"
- },
- {
-   "Item Spawn Code": "[463]",
-   "Item": "Drum Block",
-   "Item Description": "Plays a drum sound when you walk past"
- },
- {
-   "Item Spawn Code": "[464]",
-   "Item": "Flute Block",
-   "Item Description": "Plays a flute sound when you walk past"
  },
  {
    "Item Spawn Code": "[465]",
@@ -1944,116 +1957,139 @@
  },
  {
    "Item Spawn Code": "[472]",
+   "Type": "Seeds",
    "Item": "Parsnip Seeds",
    "Item Description": "Plant these in the spring. Takes 4 days to mature"
  },
  {
    "Item Spawn Code": "[473]",
+   "Type": "Seeds",
    "Item": "Bean Starter",
    "Item Description": "Plant these in the spring. Takes 10 days to mature, but keeps producing after that. Grows on a trellis"
  },
  {
    "Item Spawn Code": "[474]",
+   "Type": "Seeds",
    "Item": "Cauliflower Seeds",
    "Item Description": "Plant these in the spring. Takes 12 days to produce a large cauliflower"
  },
  {
    "Item Spawn Code": "[475]",
+   "Type": "Seeds",
    "Item": "Potato Seeds",
    "Item Description": "Plant these in the spring. Takes 6 days to mature, and has a chance of yielding multiple potatoes at harvest"
  },
  {
    "Item Spawn Code": "[476]",
+   "Type": "Seeds",
    "Item": "Garlic Seeds",
    "Item Description": "Plant these in the spring. Takes 4 days to mature"
  },
  {
    "Item Spawn Code": "[477]",
+   "Type": "Seeds",
    "Item": "Kale Seeds",
    "Item Description": "Plant these in the spring. Takes 6 days to mature. Harvest with the scythe"
  },
  {
    "Item Spawn Code": "[478]",
+   "Type": "Seeds",
    "Item": "Rhubarb Seeds",
    "Item Description": "Plant these in the spring. Takes 13 days to mature"
  },
  {
    "Item Spawn Code": "[479]",
+   "Type": "Seeds",
    "Item": "Melon Seeds",
    "Item Description": "Plant these in the summer. Takes 12 days to mature"
  },
  {
    "Item Spawn Code": "[480]",
+   "Type": "Seeds",
    "Item": "Tomato Seeds",
    "Item Description": "Plant these in the summer. Takes 11 days to mature, and continues to produce after the first harvest"
  },
  {
    "Item Spawn Code": "[481]",
+   "Type": "Seeds",
    "Item": "Blueberry Seeds",
    "Item Description": "Plant these in the summer. Takes 13 days to mature, and continues to produce after the first harvest"
  },
  {
    "Item Spawn Code": "[482]",
+   "Type": "Seeds",
    "Item": "Pepper Seeds",
    "Item Description": "Plant these in the summer. Takes 5 days to mature, and continues to produce after the first harvest"
  },
  {
    "Item Spawn Code": "[483]",
+   "Type": "Seeds",
    "Item": "Wheat Seeds",
    "Item Description": "Plant these in the summer or fall. Takes 4 days to mature. Harvest with the scythe"
  },
  {
    "Item Spawn Code": "[484]",
+   "Type": "Seeds",
    "Item": "Radish Seeds",
    "Item Description": "Plant these in the summer. Takes 6 days to mature"
  },
  {
    "Item Spawn Code": "[485]",
+   "Type": "Seeds",
    "Item": "Red Cabbage Seeds",
    "Item Description": "Plant these in the summer. Takes 9 days to mature"
  },
  {
    "Item Spawn Code": "[486]",
+   "Type": "Seeds",
    "Item": "Starfruit Seeds",
    "Item Description": "Plant these in the summer. Takes 13 days to mature"
  },
  {
    "Item Spawn Code": "[487]",
+   "Type": "Seeds",
    "Item": "Corn Seeds",
    "Item Description": "Plant these in the summer or fall. Takes 14 days to mature, and continues to produce after the first harvest"
  },
  {
    "Item Spawn Code": "[488]",
+   "Type": "Seeds",
    "Item": "Eggplant Seeds",
    "Item Description": "Plant these in the fall. Takes 5 days to mature, and continues to produce after the first harvest"
  },
  {
    "Item Spawn Code": "[489]",
+   "Type": "Seeds",
    "Item": "Artichoke Seeds",
    "Item Description": "Plant these in the fall. Takes 8 days to mature"
  },
  {
    "Item Spawn Code": "[490]",
+   "Type": "Seeds",
    "Item": "Pumpkin Seeds",
    "Item Description": "Plant these in the fall. Takes 13 days to mature"
  },
  {
    "Item Spawn Code": "[491]",
+   "Type": "Seeds",
    "Item": "Bok Choy Seeds",
    "Item Description": "Plant these in the fall. Takes 4 days to mature"
  },
  {
    "Item Spawn Code": "[492]",
+   "Type": "Seeds",
    "Item": "Yam Seeds",
    "Item Description": "Plant these in the fall. Takes 10 days to mature"
  },
  {
    "Item Spawn Code": "[493]",
+   "Type": "Seeds",
    "Item": "Cranberry Seeds",
    "Item Description": "Plant these in the fall. Takes 7 days to mature, and continues to produce after the first harvest"
  },
  {
    "Item Spawn Code": "[494]",
+   "Type": "Seeds",
    "Item": "Beet Seeds",
    "Item Description": "Plant these in the fall. Takes 6 days to mature"
  },
@@ -2089,31 +2125,37 @@
  },
  {
    "Item Spawn Code": "[427]",
+   "Type": "Seeds",
    "Item": "Tulip Bulb",
    "Item Description": "Plant in spring. Takes 6 days to produce a colorful flower. Assorted colors"
  },
  {
    "Item Spawn Code": "[429]",
+   "Type": "Seeds",
    "Item": "Jazz Seeds",
    "Item Description": "Plant in spring. Takes 7 days to produce a blue puffball flower"
  },
  {
    "Item Spawn Code": "[453]",
+   "Type": "Seeds",
    "Item": "Poppy Seeds",
    "Item Description": "Plant in summer. Produces a bright red flower in 7 days"
  },
  {
    "Item Spawn Code": "[455]",
+   "Type": "Seeds",
    "Item": "Spangle Seeds",
    "Item Description": "Plant in summer. Takes 8 days to produce a vibrant tropical flower. Assorted colors"
  },
  {
    "Item Spawn Code": "[431]",
+   "Type": "Seeds",
    "Item": "Sunflower Seeds",
    "Item Description": "Plant in summer or fall. Takes 8 days to produce a large sunflower. Yields more seeds at harvest"
  },
  {
    "Item Spawn Code": "[425]",
+   "Type": "Seeds",
    "Item": "Fairy Seeds",
    "Item Description": "Plant in fall. Takes 12 days to produce a mysterious flower. Assorted Colors"
  },
@@ -2563,21 +2605,25 @@
  },
  {
    "Item Spawn Code": "[590]",
+   "Type": "Misc",
    "Item": "Artifact Spot",
    "Item Description": "Uh... how did you get this in your inventory? Ape made a booboo"
  },
  {
    "Item Spawn Code": "[591]",
+   "Type": "Crop",
    "Item": "Tulip",
    "Item Description": "The most popular spring flower. Has a very faint sweet smell"
  },
  {
    "Item Spawn Code": "[593]",
+   "Type": "Crop",
    "Item": "Summer Spangle",
    "Item Description": "A tropical bloom that thrives in the humid summer air. Has a sweet, tangy aroma"
  },
  {
    "Item Spawn Code": "[595]",
+   "Type": "Crop",
    "Item": "Fairy Rose",
    "Item Description": "An old folk legend suggests that the sweet smell of this flower attracts fairies"
  },
@@ -2661,6 +2707,7 @@
  },
  {
    "Item Spawn Code": "[614]",
+   "Type": "Crop",
    "Item": "Tea Leaves",
    "Item Description": "A pleasant, energizing beverage made from lightly processed tea leaves"
  },
@@ -2702,31 +2749,37 @@
  },
  {
    "Item Spawn Code": "[628]",
+   "Type": "Seeds",
    "Item": "Cherry Sapling",
    "Item Description": "Takes 28 days to produce a mature Cherry tree. Bears fruit in the spring. Only grows if the 8 surrounding tiles are empty"
  },
  {
    "Item Spawn Code": "[629]",
+   "Type": "Seeds",
    "Item": "Apricot Sapling",
    "Item Description": "Takes 28 days to produce a mature Apricot tree. Bears fruit in the spring. Only grows if the 8 surrounding tiles are empty"
  },
  {
    "Item Spawn Code": "[630]",
+   "Type": "Seeds",
    "Item": "Orange Sapling",
    "Item Description": "Takes 28 days to produce a mature Orange tree. Bears fruit in the summer. Only grows if the 8 surrounding tiles are empty"
  },
  {
    "Item Spawn Code": "[631]",
+   "Type": "Seeds",
    "Item": "Peach Sapling",
    "Item Description": "Takes 28 days to produce a mature Peach tree. Bears fruit in the summer. Only grows if the 8 surrounding tiles are empty"
  },
  {
    "Item Spawn Code": "[632]",
+   "Type": "Seeds",
    "Item": "Pomegranate Sapling",
    "Item Description": "Takes 28 days to produce a mature Pomegranate tree. Bears fruit in the fall. Only grows if the 8 surrounding tiles are empty"
  },
  {
    "Item Spawn Code": "[633]",
+   "Type": "Seeds",
    "Item": "Apple Sapling",
    "Item Description": "Takes 28 days to produce a mature Apple tree. Bears fruit in the fall. Only grows if the 8 surrounding tiles are empty"
  },
@@ -2738,66 +2791,79 @@
  },
  {
    "Item Spawn Code": "[635]",
+   "Type": "Crop",
    "Item": "Orange",
    "Item Description": "Juicy, tangy, and bursting with sweet summer aroma"
  },
  {
    "Item Spawn Code": "[636]",
+   "Type": "Crop",
    "Item": "Peach",
    "Item Description": "It's almost fuzzy to the touch"
  },
  {
    "Item Spawn Code": "[637]",
+   "Type": "Crop",
    "Item": "Pomegranate",
    "Item Description": "Within the fruit are clusters of juicy seeds"
  },
  {
    "Item Spawn Code": "[638]",
+   "Type": "Crop",
    "Item": "Cherry",
    "Item Description": "It's popular, and ripens sooner than most other fruits"
  },
  {
    "Item Spawn Code": "[668]",
+   "Type": "Misc",
    "Item": "Stone",
    "Item Description": "There's stone ore in this stone"
  },
  {
    "Item Spawn Code": "[670]",
+   "Type": "Misc",
    "Item": "Stone",
    "Item Description": "There's stone ore in this stone"
  },
  {
    "Item Spawn Code": "[674]",
+   "Type": "Misc",
    "Item": "Weeds",
    "Item Description": "Ugly weeds"
  },
  {
    "Item Spawn Code": "[675]",
+   "Type": "Misc",
    "Item": "Weeds",
    "Item Description": "Ugly weeds"
  },
  {
    "Item Spawn Code": "[676]",
+   "Type": "Misc",
    "Item": "Weeds",
    "Item Description": "Ugly weeds"
  },
  {
    "Item Spawn Code": "[677]",
+   "Type": "Misc",
    "Item": "Weeds",
    "Item Description": "Ugly weeds"
  },
  {
    "Item Spawn Code": "[678]",
+   "Type": "Misc",
    "Item": "Weeds",
    "Item Description": "Ugly weeds"
  },
  {
    "Item Spawn Code": "[679]",
+   "Type": "Misc",
    "Item": "Weeds",
    "Item Description": "Ugly weeds"
  },
  {
    "Item Spawn Code": "[680]",
+   "Type": "Animal product",
    "Item": "Green Slime Egg",
    "Item Description": "Can be hatched in a slime incubator"
  },
@@ -2815,6 +2881,7 @@
  },
  {
    "Item Spawn Code": "[684]",
+   "Type": "Animal product",
    "Item": "Bug Meat",
    "Item Description": "It's a juicy wad of bug flesh"
  },
@@ -2952,11 +3019,13 @@
  },
  {
    "Item Spawn Code": "[709]",
+   "Type": "Misc",
    "Item": "Hardwood",
    "Item Description": "A special kind of wood with superior strength and beauty"
  },
  {
    "Item Spawn Code": "[710]",
+   "Type": "Bait",
    "Item": "Crab Pot",
    "Item Description": "Place it in the water, load it with bait, and check the next day to see if you've caught anything. Works in streams, lakes, and the ocean"
  },
@@ -3108,61 +3177,73 @@
  },
  {
    "Item Spawn Code": "[750]",
+   "Type": "Misc",
    "Item": "Weeds",
    "Item Description": "Ugly weeds"
  },
  {
    "Item Spawn Code": "[751]",
+   "Type": "Misc",
    "Item": "Stone",
    "Item Description": "There's copper ore in this stone"
  },
  {
    "Item Spawn Code": "[760]",
+   "Type": "Misc",
    "Item": "Stone",
    "Item Description": "A common material with many uses in crafting and building"
  },
  {
    "Item Spawn Code": "[762]",
+   "Type": "Misc",
    "Item": "Stone",
    "Item Description": "A common material with many uses in crafting and building"
  },
  {
    "Item Spawn Code": "[764]",
+   "Type": "Misc",
    "Item": "Stone",
    "Item Description": "gold ore"
  },
  {
    "Item Spawn Code": "[765]",
+   "Type": "Misc",
    "Item": "Stone",
    "Item Description": "iridium ore"
  },
  {
    "Item Spawn Code": "[766]",
+   "Type": "Monster product",
    "Item": "Slime",
    "Item Description": "A shimmering, gelatinous glob with no smell"
  },
  {
    "Item Spawn Code": "[767]",
+   "Type": "Monster product",
    "Item": "Bat Wing",
    "Item Description": "The material is surprisingly delicate"
  },
  {
    "Item Spawn Code": "768",
+   "Type": "Monster product",
    "Item": "Solar Essence",
    "Item Description": "The glowing face is warm to the touch"
  },
  {
    "Item Spawn Code": "[769]",
+   "Type": "Monster product",
    "Item": "Void Essence",
    "Item Description": "It's quivering with dark energy"
  },
  {
    "Item Spawn Code": "[770]",
+   "Type": "Misc",
    "Item": "Mixed Seeds",
    "Item Description": "There's a little bit of everything here. Plant them and see what grows!"
  },
  {
    "Item Spawn Code": "[771]",
+   "Type": "Misc",
    "Item": "Fiber",
    "Item Description": "Raw material sourced from plants"
  },
@@ -3192,51 +3273,43 @@
  },
  {
    "Item Spawn Code": "[784]",
+   "Type": "Misc",
    "Item": "Weeds",
    "Item Description": "Ugly weeds"
  },
  {
    "Item Spawn Code": "[785]",
+   "Type": "Misc",
    "Item": "Weeds",
    "Item Description": "Ugly weeds"
  },
  {
    "Item Spawn Code": "[786]",
+   "Type": "Misc",
    "Item": "Weeds",
    "Item Description": "Ugly weeds"
  },
  {
    "Item Spawn Code": "[787]",
+   "Type": "Misc",
    "Item": "Battery Pack",
    "Item Description": "It's fully charged with precious energy"
  },
  {
-   "Item Spawn Code": "[788]",
-   "Item": "Lost Axe",
-   "Item Description": "Robin's been looking everywhere for it"
- },
- {
-   "Item Spawn Code": "[789]",
-   "Item": "Lucky Purple Shorts",
-   "Item Description": "Better not inspect these too closely"
- },
- {
-   "Item Spawn Code": "[790]",
-   "Item": "Berry Basket",
-   "Item Description": "The fibers are stained with berry juice"
- },
- {
    "Item Spawn Code": "[792]",
+   "Type": "Misc",
    "Item": "Weeds",
    "Item Description": "Ugly weed"
  },
  {
    "Item Spawn Code": "[793]",
+   "Type": "Misc",
    "Item": "Weeds",
    "Item Description": "Ugly weed"
  },
  {
    "Item Spawn Code": "[794]",
+   "Type": "Misc",
    "Item": "Weeds",
    "Item Description": "Ugly weed"
  },
@@ -3254,6 +3327,7 @@
  },
  {
    "Item Spawn Code": "[797]",
+   "Type": "Misc",
    "Item": "Pearl",
    "Item Description": "A rare treasure from the sea"
  },
@@ -3304,16 +3378,6 @@
    "Type": "Artisan Good",
    "Item": "Dinosaur Mayonnaise",
    "Item Description": "It's thick and creamy, with a vivid green hue. It smells like grass and leather"
- },
- {
-   "Item Spawn Code": "[808]",
-   "Item": "Void Ghost Pendant",
-   "Item Description": "It's symbolic to the shadow people. As a gift, it signifies the desire to move in together as friends"
- },
- {
-   "Item Spawn Code": "[809]",
-   "Item": "Movie Ticket",
-   "Item Description": "Admits one to the movie theater. Giving this to a friend invites them to the movies with you"
  },
  {
    "Item Spawn Code": "[810]",
@@ -3376,16 +3440,19 @@
  },
  {
    "Item Spawn Code": "[25]",
+   "Type": "Misc",
    "Item": "Stone",
    "Item Description": "There's mussels in this stone"
  },
  {
    "Item Spawn Code": "[73]",
+   "Type": "Misc",
    "Item": "Golden Walnut",
    "Item Description": "To the parrots of Ginger Island, this nut is the finest delicacy"
  },
  {
    "Item Spawn Code": "[69]",
+   "Type": "Seeds",
    "Item": "Banana Sapling",
    "Item Description": "Banana Sapling/Takes 28 days to produce a mature Banana tree. Bears fruit in the summer, or all year round when planted on Ginger Island"
  },
@@ -3403,66 +3470,79 @@
  },
  {
    "Item Spawn Code": "[816]",
+   "Type": "Misc",
    "Item": "Stone",
    "Item Description": "A common material with many uses in crafting and building"
  },
  {
    "Item Spawn Code": "[817]",
+   "Type": "Misc",
    "Item": "Stone",
    "Item Description": "A common material with many uses in crafting and building"
  },
  {
    "Item Spawn Code": "[818]",
+   "Type": "Misc",
    "Item": "Stone",
    "Item Description": "A common material with many uses in crafting and building"
  },
  {
    "Item Spawn Code": "[819]",
+   "Type": "Misc",
    "Item": "Stone",
    "Item Description": "A common material with many uses in crafting and building"
  },
  {
    "Item Spawn Code": "[820]",
+   "Type": "Misc",
    "Item": "Fossilized Skull",
    "Item Description": "It's a perfect specimen!"
  },
  {
    "Item Spawn Code": "[821]",
+   "Type": "Misc",
    "Item": "Fossilized Spine",
    "Item Description": "A column of interlocking vertebrae"
  },
  {
    "Item Spawn Code": "[822]",
+   "Type": "Misc",
    "Item": "Fossilized Spine",
    "Item Description": "This tail has a club-like feature at the tip"
  },
  {
    "Item Spawn Code": "[823]",
+   "Type": "Misc",
    "Item": "Fossilized Leg",
    "Item Description": "A thick and sturdy leg bone"
  },
  {
    "Item Spawn Code": "[824]",
+   "Type": "Misc",
    "Item": "Fossilized Ribs",
    "Item Description": "Long ago, these ribs protected the body of a large animal"
  },
  {
    "Item Spawn Code": "[825]",
+   "Type": "Misc",
    "Item": "Snake Skull",
    "Item Description": "A preserved skull that once belonged to a snake"
  },
  {
    "Item Spawn Code": "[826]",
+   "Type": "Misc",
    "Item": "Snake Vertebrae",
    "Item Description": "It appears this serpent may have been extremely flexible"
  },
  {
    "Item Spawn Code": "[827]",
+   "Type": "Misc",
    "Item": "Mummified Bat",
    "Item Description": "The delicate wings have been perfectly preserved"
  },
  {
    "Item Spawn Code": "[828]",
+   "Type": "Misc",
    "Item": "Mummified Frog",
    "Item Description": "This ancient frog may have lived in the jungle canopy"
  },
@@ -3480,6 +3560,7 @@
  },
  {
    "Item Spawn Code": "[831]",
+   "Type": "Seeds",
    "Item": "Taro Tuber",
    "Item Description": "Plant these in warm weather. Takes 10 days to mature. Grows faster if planted near a body of water"
  },
@@ -3491,6 +3572,7 @@
  },
  {
    "Item Spawn Code": "[833]",
+   "Type": "Seeds",
    "Item": "Pineapple Seeds",
    "Item Description": "Plant these in warm weather. Takes 14 days to mature, and keeps producing fruit after that"
  },
@@ -3502,6 +3584,7 @@
  },
  {
    "Item Spawn Code": "[835]",
+   "Type": "Seeds",
    "Item": "Mango Sapling",
    "Item Description": "Takes 28 days to produce a mature Mango tree. Bears fruit in the summer, or all year round when planted on Ginger Island"
  },
@@ -3542,47 +3625,50 @@
    "Item Description": "Place on the ground to create paths or to decorate your floors"
  },
  {
-   "Item Spawn Code": "[842]",
-   "Item": "Journal Scrap",
-   "Item Description": "A damp tattered page torn from an old journal..."
- },
- {
    "Item Spawn Code": "[843]",
+   "Type": "Misc",
    "Item": "Stone",
    "Item Description": "A common material with many uses in crafting and building"
  },
  {
    "Item Spawn Code": "[844]",
+   "Type": "Misc",
    "Item": "Stone",
    "Item Description": "A common material with many uses in crafting and building"
  },
  {
    "Item Spawn Code": "[845]",
+   "Type": "Misc",
    "Item": "Stone",
    "Item Description": "A common material with many uses in crafting and building"
  },
  {
    "Item Spawn Code": "[846]",
+   "Type": "Misc",
    "Item": "Stone",
    "Item Description": "A common material with many uses in crafting and building"
  },
  {
    "Item Spawn Code": "[847]",
+   "Type": "Misc",
    "Item": "Stone",
    "Item Description": "A common material with many uses in crafting and building"
  },
  {
    "Item Spawn Code": "[848]",
+   "Type": "Misc",
    "Item": "Cinder Shard",
    "Item Description": "You can feel a warm glow from within this stone"
  },
  {
    "Item Spawn Code": "[849]",
+   "Type": "Misc",
    "Item": "Stone",
    "Item Description": "A common material with many uses in crafting and building"
  },
  {
    "Item Spawn Code": "[850]",
+   "Type": "Misc",
    "Item": "Stone",
    "Item Description": "A common material with many uses in crafting and building"
  },
@@ -3594,6 +3680,7 @@
  },
  {
    "Item Spawn Code": "[852]",
+   "Type": "Special Item",
    "Item": "Dragon Tooth",
    "Item Description": "These are rumored to be the teeth of ancient serpents. The enamel is made of pure iridium!"
  },
@@ -3605,11 +3692,13 @@
  },
  {
    "Item Spawn Code": "[857]",
+   "Type": "Monster product",
    "Item": "Tiger Slime Egg",
    "Item Description": "Can be hatched in a slime incubator. Use with extreme caution!"
  },
  {
    "Item Spawn Code": "[858]",
+   "Type": "Special Item",
    "Item": "Qi Gem",
    "Item Description": "A special currency honored by Mr. Qi"
  },
@@ -3644,41 +3733,6 @@
    "Item Description": "Once a day, regain some health after being knocked out in combat"
  },
  {
-   "Item Spawn Code": "[864]",
-   "Item": "War Memento",
-   "Item Description": "It's a faded photograph of a soldier..."
- },
- {
-   "Item Spawn Code": "[865]",
-   "Item": "Gourmet Tomato Salt",
-   "Item Description": "A rare, delicious and savory salt"
- },
- {
-   "Item Spawn Code": "[866]",
-   "Item": "Stardew Valley Rose",
-   "Item Description": "A rose that reminds you of the valley. It smells heavenly"
- },
- {
-   "Item Spawn Code": "[867]",
-   "Item": "Advanced TV Remote",
-   "Item Description": "It has more buttons than a regular remote. Perfect for the avid TV watcher!\""
- },
- {
-   "Item Spawn Code": "[868]",
-   "Item": "Arctic Shard",
-   "Item Description": "This shard glows with an otherworldly blue light"
- },
- {
-   "Item Spawn Code": "[869]",
-   "Item": "Wriggling Worm",
-   "Item Description": "It's a wriggling, wet worm"
- },
- {
-   "Item Spawn Code": "[870]",
-   "Item": "Pirate's Locket",
-   "Item Description": "It's an old pirate's keepsake"
- },
- {
    "Item Spawn Code": "[872]",
    "Type": "Consumables",
    "Item": "Fairy Dust",
@@ -3686,6 +3740,7 @@
  },
  {
    "Item Spawn Code": "[873]",
+   "Type": "Cooking",
    "Item": "Piña Colada",
    "Item Description": "Drink in moderation"
  },
@@ -3697,13 +3752,9 @@
  },
  {
    "Item Spawn Code": "[875]",
+   "Type": "Misc",
    "Item": "Ectoplasm",
    "Item Description": "A thick, slimy goop that the Wizard wants for some reason"
- },
- {
-   "Item Spawn Code": "[876]",
-   "Item": "Prismatic Jelly",
-   "Item Description": "Harvested from the rare and elusive prismatic slime"
  },
  {
    "Item Spawn Code": "[877]",
@@ -3724,22 +3775,20 @@
    "Item Description": "NA"
  },
  {
-   "Item Spawn Code": "[881]",
-   "Item": "Bone Fragment",
-   "Item Description": "A small piece of bone"
- },
- {
    "Item Spawn Code": "[882]",
+   "Type": "Misc",
    "Item": "Weeds",
    "Item Description": "Ugly Weeds"
  },
  {
    "Item Spawn Code": "[883]",
+   "Type": "Misc",
    "Item": "Weeds",
    "Item Description": "Ugly Weeds"
  },
  {
    "Item Spawn Code": "[884]",
+   "Type": "Misc",
    "Item": "Weeds",
    "Item Description": "Ugly Weeds"
  },
@@ -3769,11 +3818,13 @@
  },
  {
    "Item Spawn Code": "[889]",
+   "Type": "Special Item",
    "Item": "Qi Fruit",
    "Item Description": "Qi has challenged you to ship 1000 of these strange melons"
  },
  {
    "Item Spawn Code": "[890]",
+   "Type": "Special Item",
    "Item": "Qi Bean",
    "Item Description": "Plant these in any season. Water every day to produce a Qi Fruit. Takes 4 days to mature"
  },
@@ -3790,29 +3841,10 @@
    "Item Description": "Warp to Qi's Arena. Be prepared for a challenge!"
  },
  {
-   "Item Spawn Code": "[893]",
-   "Item": "Fireworks (Red)",
-   "Item Description": "An old tradition for celebrations and festivities"
- },
- {
-   "Item Spawn Code": "[894]",
-   "Item": "Fireworks (Purple)",
-   "Item Description": "An old tradition for celebrations and festivities"
- },
- {
-   "Item Spawn Code": "[895]",
-   "Item": "Fireworks (Green)",
-   "Item Description": "An old tradition for celebrations and festivities"
- },
- {
    "Item Spawn Code": "[896]",
+   "Type": "Special Item",
    "Item": "Galaxy Soul",
    "Item Description": "Forge 3 of these into a Galaxy weapon to unleash its final form"
- },
- {
-   "Item Spawn Code": "[897]",
-   "Item": "Pierre's Missing Stocklist",
-   "Item Description": "Pierre might be interested in this"
  },
  {
    "Item Spawn Code": "[898]",
@@ -3906,11 +3938,6 @@
    "Item Description": "Place on a sprinkler to increase its watering range"
  },
  {
-   "Item Spawn Code": "[917]",
-   "Item": "Qi Seasoning",
-   "Item Description": "Just a dash will elevate any dish to extraordinary heights. Automatically applied when cooking"
- },
- {
    "Item Spawn Code": "[918]",
    "Type": "Fertilizer",
    "Item": "Hyper Speed-Gro",
@@ -3935,26 +3962,6 @@
    "Item Description": "Temporarily protects from debuffs"
  },
  {
-   "Item Spawn Code": "[922]",
-   "Item": "SupplyCrate",
-   "Item Description": "NA"
- },
- {
-   "Item Spawn Code": "[923]",
-   "Item": "SupplyCrate",
-   "Item Description": "NA"
- },
- {
-   "Item Spawn Code": "[924]",
-   "Item": "SupplyCrate",
-   "Item Description": "NA"
- },
- {
-   "Item Spawn Code": "[925]",
-   "Item": "Slime Crate",
-   "Item Description": "Use this to transport a domesticated slime to another location"
- },
- {
    "Item Spawn Code": "[926]",
    "Type": "Equipment",
    "Item": "Cookout Kit",
@@ -3969,10 +3976,5 @@
    "Item Spawn Code": "[928]",
    "Item": "Golden Egg",
    "Item Description": "A very rare and special egg with a solid gold shell"
- },
- {
-   "Item Spawn Code": "[929]",
-   "Item": "Hedge",
-   "Item Description": "A shaped bush that acts like a fence"
  }
 ]
