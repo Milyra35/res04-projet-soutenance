@@ -245,6 +245,8 @@ class ProgressBoardController extends AbstractController {
         $this->lm->addLocation($newSewer);
         $this->lm->addLocation($newGinger);
         $this->lm->addLocation($newSummit);
+
+        
     }
 
     public function displayProgress(int $id)

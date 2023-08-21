@@ -13,23 +13,35 @@ class MediaController extends AbstractController {
     {
         if(isset($_POST['upload-picture']))
         {
-            if(!empty($_FILES['add-picture']) && $_FILES['add-picture']['error'] === UPLOAD_ERR_OK)
+            if(!empty($_FILES['add-picture']))
             {
                 $picture = $_FILES['add-picture'];
-                $pictureName = $picture['name'];
-                $nameWithoutExtension = pathinfo($pictureName, PATHINFO_FILENAME);
 
-                $path = 'assets/images/villagers/' . $pictureName;
-                $alt = 'Drawing of' . ' ' . $nameWithoutExtension;
-                $newPicture = new Picture($nameWithoutExtension, $path, $alt);
+                foreach($picture['name'] as $key => $pictureName)
+                {
+                    if($picture['error'][$key] === UPLOAD_ERR_OK)
+                    {
+                        $nameWithoutExtension = pathinfo($pictureName, PATHINFO_FILENAME);
 
-                $this->pm->addPicture($newPicture);
+                        $path = 'assets/images/game_pictures/' . $pictureName;
+                        $alt = 'Drawing of' . ' ' . $nameWithoutExtension;
+                        $newPicture = new Picture($nameWithoutExtension, $path, $alt);
 
-                echo "<p>File uploaded with success</p>";
+                        $this->pm->addPicture($newPicture);
+
+                        echo "<p>File uploaded with success</p>";
+                    }
+                    else
+                    {
+                        echo "<p>Failed to upload the file</p>";
+                    }
+                }
+                // $pictureName = $picture['name'];
             }
             else
             {
-                echo "<p>Try later, there is an error</p>";
+                echo "<p>No files were uploaded.</p>";
+                var_dump($_FILES);
             }
         }
     }
