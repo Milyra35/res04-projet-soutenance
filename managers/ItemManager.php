@@ -21,7 +21,7 @@ class ItemManager extends AbstractManager {
         $query=$this->db->prepare("INSERT INTO items (picture_id, type, name, description)
                                     VALUES (:picture_id, :type, :name, :description)");
         $parameters = [
-            'picture_id' => $item->getPicture->getId(),
+            'picture_id' => $item->getPicture()->getId(),
             'type' => $item->getType(),
             'name' => $item->getName(),
             'description' => $item->getDescription()

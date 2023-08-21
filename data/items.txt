@@ -1,23 +1,5 @@
 [
  {
-   "Item Spawn Code": "[0]",
-   "Type": "Misc",
-   "Item": "Weeds",
-   "Item Description": "A bunch of obnoxious weeds"
- },
- {
-   "Item Spawn Code": "[2]",
-   "Type": "Misc",
-   "Item": "Stone",
-   "Item Description": "A common material with many uses in crafting and building"
- },
- {
-   "Item Spawn Code": "[4]",
-   "Type": "Misc",
-   "Item": "Stone",
-   "Item Description": "A common material with many uses in crafting and building"
- },
- {
    "Item Spawn Code": "[16]",
    "Type": "Foraged Item",
    "Item": "Wild Horseradish",
@@ -46,12 +28,6 @@
    "Type": "Crop",
    "Item": "Parsnip",
    "Item Description": "A spring tuber closely related to the carrot. It has an earthy taste and is full of nutrients"
- },
- {
-   "Item Spawn Code": "[30]",
-   "Type": "Misc",
-   "Item": "Lumber",
-   "Item Description": "A versatile resource used for building and fuel"
  },
  {
    "Item Spawn Code": "[60]",
@@ -100,24 +76,6 @@
    "Type": "Mineral",
    "Item": "Prismatic Shard",
    "Item Description": "A very rare and powerful substance with unknown origins"
- },
- {
-   "Item Spawn Code": "[75]",
-   "Type": "Misc",
-   "Item": "Stone",
-   "Item Description": "A common material with many uses in crafting and building"
- },
- {
-   "Item Spawn Code": "[76]",
-   "Type": "Misc",
-   "Item": "Stone",
-   "Item Description": "A common material with many uses in crafting and building"
- },
- {
-   "Item Spawn Code": "[77]",
-   "Type": "Misc",
-   "Item": "Stone",
-   "Item Description": "A common material with many uses in crafting and building"
  },
  {
    "Item Spawn Code": "[78]",
@@ -180,18 +138,6 @@
    "Item Description": "Provides a modest amount of light"
  },
  {
-   "Item Spawn Code": "[94]",
-   "Type": "Lighting",
-   "Item": "Spirit Torch",
-   "Item Description": "It's unclear where the blue color comes from..."
- },
- {
-   "Item Spawn Code": "[95]",
-   "Type": "Misc",
-   "Item": "Stone",
-   "Item Description": "Contains radioactive ore"
- },
- {
    "Item Spawn Code": "[96]",
    "Type": "Artifact",
    "Item": "Dwarf Scroll I",
@@ -226,12 +172,6 @@
    "Type": "Artifact",
    "Item": "Arrowhead",
    "Item Description": "A crudely fashioned point used for hunting"
- },
- {
-   "Item Spawn Code": "[102]",
-   "Type": "Book",
-   "Item": "Lost Book",
-   "Item Description": "Writings from a wide variety of time periods"
  },
  {
    "Item Spawn Code": "[103]",
@@ -374,13 +314,13 @@
  {
    "Item Spawn Code": "[126]",
    "Type": "Artifact",
-   "Item": "Strange Doll",
+   "Item": "Strange Doll (green)",
    "Item Description": "NA"
  },
  {
    "Item Spawn Code": "[127]",
    "Type": "Artifact",
-   "Item": "Strange Doll",
+   "Item": "Strange Doll (yellow)",
    "Item Description": "NA"
  },
  {
@@ -594,46 +534,10 @@
    "Item Description": "It's like a regular carp but with a sharp stinger"
  },
  {
-   "Item Spawn Code": "[166]",
-   "Type": "Misc",
-   "Item": "Treasure Chest",
-   "Item Description": "Wow, it's loaded with treasure! This is sure to fetch a good price"
- },
- {
    "Item Spawn Code": "[167]",
    "Type": "Consumables",
    "Item": "Joja Cola",
    "Item Description": "The flagship product of Joja corporation"
- },
- {
-   "Item Spawn Code": "[168]",
-   "Type": "Misc",
-   "Item": "Trash",
-   "Item Description": "It's junk"
- },
- {
-   "Item Spawn Code": "[169]",
-   "Type": "Misc",
-   "Item": "Driftwood",
-   "Item Description": "A piece of wood from the sea"
- },
- {
-   "Item Spawn Code": "[170]",
-   "Type": "Misc",
-   "Item": "Broken Glasses",
-   "Item Description": "It looks like someone lost their glasses"
- },
- {
-   "Item Spawn Code": "[171]",
-   "Type": "Misc",
-   "Item": "Broken CD",
-   "Item Description": "It's a JojaNet 2.0 trial CD. They must've made a billion of these things"
- },
- {
-   "Item Spawn Code": "[172]",
-   "Type": "Misc",
-   "Item": "Soggy Newspaper",
-   "Item Description": "This is trash"
  },
  {
    "Item Spawn Code": "[176]",
@@ -649,6 +553,7 @@
  },
  {
    "Item Spawn Code": "[178]",
+   "Type": "Artisan Good",
    "Item": "Hay",
    "Item Description": "Dried grass used as animal food"
  },
@@ -661,7 +566,7 @@
  {
    "Item Spawn Code": "[182]",
    "Type": "Animal product",
-   "Item": "Large Egg",
+   "Item": "Large Brown Egg",
    "Item Description": "It's an uncommonly large brown egg!"
  },
  {
@@ -1081,11 +986,12 @@
  {
    "Item Spawn Code": "[261]",
    "Type": "Consumables",
-   "Item": "Warp Totem: Desert",
+   "Item": "Warp Totem Desert",
    "Item Description": "Warp directly to Calico Desert. Consumed on use"
  },
  {
    "Item Spawn Code": "[262]",
+   "Type": "Artisan Good",
    "Item": "Wheat",
    "Item Description": "One of the most widely cultivated grains. Makes a great flour for breads and cakes"
  },
@@ -1103,6 +1009,7 @@
  },
  {
    "Item Spawn Code": "[268]",
+   "Type": "Crop",
    "Item": "Starfruit",
    "Item Description": "Starfruit/An extremely juicy fruit that grows in hot, humid weather. Slightly sweet with a sour undertone"
  },
@@ -1155,12 +1062,6 @@
    "Item Description": "The leafy greens and fibrous stalks are healthy and delicious"
  },
  {
-   "Item Spawn Code": "[279]",
-   "Type": "Cooking",
-   "Item": "Magic Rock Candy",
-   "Item Description": "A rare and powerful candy infused with the essence of the prismatic shard"
- },
- {
    "Item Spawn Code": "[280]",
    "Type": "Crop",
    "Item": "Yam",
@@ -1207,18 +1108,6 @@
    "Type": "Bomb",
    "Item": "Mega Bomb",
    "Item Description": "Generates a powerful explosion. Use with extreme caution"
- },
- {
-   "Item Spawn Code": "[290]",
-   "Type": "Misc",
-   "Item": "Stone",
-   "Item Description": "A common material with many uses in crafting and building"
- },
- {
-   "Item Spawn Code": "[293]",
-   "Type": "Decor",
-   "Item": "Brick Floor",
-   "Item Description": "Place on the ground to create paths or to decorate your floors"
  },
  {
    "Item Spawn Code": "[296]",
@@ -1317,60 +1206,6 @@
    "Item Description": "This can be planted to grow a pine tree"
  },
  {
-   "Item Spawn Code": "[313]",
-   "Type": "Misc",
-   "Item": "Weeds",
-   "Item Description": "A bunch of obnoxious weeds"
- },
- {
-   "Item Spawn Code": "[314]",
-   "Type": "Misc",
-   "Item": "Weeds",
-   "Item Description": "A bunch of obnoxious weeds"
- },
- {
-   "Item Spawn Code": "[315]",
-   "Type": "Misc",
-   "Item": "Weeds",
-   "Item Description": "A bunch of obnoxious weeds"
- },
- {
-   "Item Spawn Code": "[316]",
-   "Type": "Misc",
-   "Item": "Weeds",
-   "Item Description": "A bunch of obnoxious weeds"
- },
- {
-   "Item Spawn Code": "[317]",
-   "Type": "Misc",
-   "Item": "Weeds",
-   "Item Description": "A bunch of obnoxious weeds"
- },
- {
-   "Item Spawn Code": "[318]",
-   "Type": "Misc",
-   "Item": "Weeds",
-   "Item Description": "A bunch of obnoxious weeds"
- },
- {
-   "Item Spawn Code": "[319]",
-   "Type": "Misc",
-   "Item": "Weeds",
-   "Item Description": "A bunch of obnoxious weeds"
- },
- {
-   "Item Spawn Code": "[320]",
-   "Type": "Misc",
-   "Item": "Weeds",
-   "Item Description": "A bunch of obnoxious weeds"
- },
- {
-   "Item Spawn Code": "[321]",
-   "Type": "Misc",
-   "Item": "Weeds",
-   "Item Description": "A bunch of obnoxious weeds"
- },
- {
    "Item Spawn Code": "[322]",
    "Type": "Fence",
    "Item": "Wood Fence",
@@ -1393,42 +1228,6 @@
    "Type": "Fence",
    "Item": "Gate",
    "Item Description": "Allows you to pass through a fence"
- },
- {
-   "Item Spawn Code": "[326]",
-   "Type": "Special Item",
-   "Item": "Dwarvish Translation Guide",
-   "Item Description": "Teaches you dwarvish"
- },
- {
-   "Item Spawn Code": "[328]",
-   "Type": "Decor",
-   "Item": "Wood Floor",
-   "Item Description": "Place on the ground to create paths or to decorate your floors"
- },
- {
-   "Item Spawn Code": "[329]",
-   "Type": "Decor",
-   "Item": "Stone Floor",
-   "Item Description": "Place on the ground to create paths or to spruce up your floors"
- },
- {
-   "Item Spawn Code": "[330]",
-   "Type": "Misc",
-   "Item": "Clay",
-   "Item Description": "Used in crafting and construction"
- },
- {
-   "Item Spawn Code": "[331]",
-   "Type": "Decor",
-   "Item": "Weathered Floor",
-   "Item Description": "Place on the ground to create paths or to spruce up your floors"
- },
- {
-   "Item Spawn Code": "[333]",
-   "Type": "Decor",
-   "Item": "Crystal Floor",
-   "Item Description": "Place on the ground to create paths or to spruce up your floors"
  },
  {
    "Item Spawn Code": "[334]",
@@ -1471,12 +1270,6 @@
    "Type": "Artisan Good",
    "Item": "Pickles",
    "Item Description": "A jar of your home-made pickles"
- },
- {
-   "Item Spawn Code": "[343]",
-   "Type": "Misc",
-   "Item": "Stone",
-   "Item Description": "A common material with many uses in crafting and building"
  },
  {
    "Item Spawn Code": "[344]",
@@ -1549,12 +1342,6 @@
    "Type": "Foraged Item",
    "Item": "Clam",
    "Item Description": "Someone lived here once"
- },
- {
-   "Item Spawn Code": "[373]",
-   "Type": "Misc",
-   "Item": "Golden Pumpkin",
-   "Item Description": "It's valuable but has no other purpose"
  },
  {
    "Item Spawn Code": "[378]",
@@ -1653,12 +1440,6 @@
    "Item Description": "A sweet, juicy favorite with an appealing red color"
  },
  {
-   "Item Spawn Code": "[401]",
-   "Type": "Decor",
-   "Item": "Straw Floor",
-   "Item Description": "Place on the ground to create paths or to spruce up your floors"
- },
- {
    "Item Spawn Code": "[402]",
    "Type": "Foraged Item",
    "Item": "Sweet Pea",
@@ -1677,22 +1458,10 @@
    "Item Description": "Slightly nutty, with good texture"
  },
  {
-   "Item Spawn Code": "[405]",
-   "Type": "Decor",
-   "Item": "Wood Path",
-   "Item Description": "Place on the ground to create paths or to spruce up your floors"
- },
- {
    "Item Spawn Code": "[406]",
    "Type": "Foraged Item",
    "Item": "Wild Plum",
    "Item Description": "Tart and juicy with a pungent aroma"
- },
- {
-   "Item Spawn Code": "[407]",
-   "Type": "Decor",
-   "Item": "Gravel Path",
-   "Item Description": "Place on the ground to create paths or to spruce up your floors"
  },
  {
    "Item Spawn Code": "[408]",
@@ -1701,22 +1470,10 @@
    "Item Description": "That's one big hazelnut!"
  },
  {
-   "Item Spawn Code": "[409]",
-   "Type": "Decor",
-   "Item": "Crystal Path",
-   "Item Description": "Place on the ground to create paths or to spruce up your floors"
- },
- {
    "Item Spawn Code": "[410]",
    "Type": "Foraged Item",
    "Item": "Blackberry",
    "Item Description": "An early-fall treat"
- },
- {
-   "Item Spawn Code": "[411]",
-   "Type": "Decor",
-   "Item": "Cobblestone Path",
-   "Item Description": "Place on the ground to create paths or to spruce up your floors"
  },
  {
    "Item Spawn Code": "[412]",
@@ -1725,21 +1482,10 @@
    "Item Description": "/A starchy tuber"
  },
  {
-   "Item Spawn Code": "[413]",
-   "Item": "Blue Slime Egg",
-   "Item Description": "Can be hatched in a slime incubator"
- },
- {
    "Item Spawn Code": "[414]",
    "Type": "Foraged Item",
    "Item": "Crystal Fruit",
    "Item Description": "A delicate fruit that pops up from the snow"
- },
- {
-   "Item Spawn Code": "[415]",
-   "Type": "Decor",
-   "Item": "Stepping Stone Path",
-   "Item Description": "Place on the ground to create paths or to spruce up your floors"
  },
  {
    "Item Spawn Code": "[416]",
@@ -1749,6 +1495,7 @@
  },
  {
    "Item Spawn Code": "[417]",
+   "Type": "Crop",
    "Item": "Sweet Gem Berry",
    "Item Description": "It's by far the sweetest thing you've ever smelled"
  },
@@ -1772,6 +1519,7 @@
  },
  {
    "Item Spawn Code": "[421]",
+   "Type": "Crop",
    "Item": "Sunflower",
    "Item Description": "A common misconception is that the flower turns so it's always facing the sun"
  },
@@ -1836,22 +1584,10 @@
    "Item Description": "The milk of a goat"
  },
  {
-   "Item Spawn Code": "[437]",
-   "Type": "Animal product",
-   "Item": "Red Slime Egg",
-   "Item Description": "Can be hatched in a slime incubator"
- },
- {
    "Item Spawn Code": "[438]",
    "Type": "Animal product",
-   "Item": "L. Goat Milk",
+   "Item": "Large Goat Milk",
    "Item Description": "A gallon of creamy goat's milk"
- },
- {
-   "Item Spawn Code": "[439]",
-   "Type": "Animal product",
-   "Item": "Purple Slime Egg",
-   "Item Description": "Can be hatched in a slime incubator"
  },
  {
    "Item Spawn Code": "[440]",
@@ -1890,24 +1626,6 @@
    "Item Description": "Some say it's lucky"
  },
  {
-   "Item Spawn Code": "[449]",
-   "Type": "Misc",
-   "Item": "Stone Base",
-   "Item Description": "A simple block of stone"
- },
- {
-   "Item Spawn Code": "[450]",
-   "Type": "Misc",
-   "Item": "Stone",
-   "Item Description": "A common material with many uses in crafting and building"
- },
- {
-   "Item Spawn Code": "[452]",
-   "Type": "Misc",
-   "Item": "Weeds",
-   "Item Description": "A cluster of dry old bushes"
- },
- {
    "Item Spawn Code": "[454]",
    "Type": "Crop",
    "Item": "Ancient Fruit",
@@ -1926,22 +1644,10 @@
    "Item Description": "A delicate broth with a hint of sulfur"
  },
  {
-   "Item Spawn Code": "[458]",
-   "Type": "Special Item",
-   "Item": "Bouquet",
-   "Item Description": "A gift that shows your romantic interest"
- },
- {
    "Item Spawn Code": "[459]",
    "Type": "Cooking",
    "Item": "Mead",
    "Item Description": "A fermented beverage made from honey. Drink in moderation"
- },
- {
-   "Item Spawn Code": "[460]",
-   "Type": "Special Item",
-   "Item": "Mermaid's Pendant",
-   "Item Description": "Give this to the person you want to marry"
  },
  {
    "Item Spawn Code": "[465]",
@@ -2604,12 +2310,6 @@
    "Item Description": "A long extinct relative of the crab./Beach .03 Mountain"
  },
  {
-   "Item Spawn Code": "[590]",
-   "Type": "Misc",
-   "Item": "Artifact Spot",
-   "Item Description": "Uh... how did you get this in your inventory? Ape made a booboo"
- },
- {
    "Item Spawn Code": "[591]",
    "Type": "Crop",
    "Item": "Tulip",
@@ -2814,60 +2514,6 @@
    "Item Description": "It's popular, and ripens sooner than most other fruits"
  },
  {
-   "Item Spawn Code": "[668]",
-   "Type": "Misc",
-   "Item": "Stone",
-   "Item Description": "There's stone ore in this stone"
- },
- {
-   "Item Spawn Code": "[670]",
-   "Type": "Misc",
-   "Item": "Stone",
-   "Item Description": "There's stone ore in this stone"
- },
- {
-   "Item Spawn Code": "[674]",
-   "Type": "Misc",
-   "Item": "Weeds",
-   "Item Description": "Ugly weeds"
- },
- {
-   "Item Spawn Code": "[675]",
-   "Type": "Misc",
-   "Item": "Weeds",
-   "Item Description": "Ugly weeds"
- },
- {
-   "Item Spawn Code": "[676]",
-   "Type": "Misc",
-   "Item": "Weeds",
-   "Item Description": "Ugly weeds"
- },
- {
-   "Item Spawn Code": "[677]",
-   "Type": "Misc",
-   "Item": "Weeds",
-   "Item Description": "Ugly weeds"
- },
- {
-   "Item Spawn Code": "[678]",
-   "Type": "Misc",
-   "Item": "Weeds",
-   "Item Description": "Ugly weeds"
- },
- {
-   "Item Spawn Code": "[679]",
-   "Type": "Misc",
-   "Item": "Weeds",
-   "Item Description": "Ugly weeds"
- },
- {
-   "Item Spawn Code": "[680]",
-   "Type": "Animal product",
-   "Item": "Green Slime Egg",
-   "Item Description": "Can be hatched in a slime incubator"
- },
- {
    "Item Spawn Code": "[681]",
    "Type": "Consumables",
    "Item": "Rain Totem",
@@ -2906,19 +2552,19 @@
  {
    "Item Spawn Code": "[688]",
    "Type": "Consumables",
-   "Item": "Warp Totem: Farm",
+   "Item": "Warp Totem Farm",
    "Item Description": "Warp Totem: Farm/Warp directly to your house. Consumed on use"
  },
  {
    "Item Spawn Code": "[689]",
    "Type": "Consumables",
-   "Item": "Warp Totem: Mountains",
+   "Item": "Warp Totem Mountains",
    "Item Description": "Warp directly to the mountains. Consumed on use"
  },
  {
    "Item Spawn Code": "[690]",
    "Type": "Consumables",
-   "Item": "Warp Totem: Beach",
+   "Item": "Warp Totem Beach",
    "Item Description": "Warp directly to the beach. Consumed on use"
  },
  {
@@ -3121,6 +2767,7 @@
  },
  {
    "Item Spawn Code": "[729]",
+   "Type": "Fish",
    "Item": "Escargot",
    "Item Description": "Butter-soaked snails cooked to perfection"
  },
@@ -3150,6 +2797,7 @@
  },
  {
    "Item Spawn Code": "[745]",
+   "Type": "Seeds",
    "Item": "Strawberry Seeds",
    "Item Description": "Plant these in spring. Takes 8 days to mature, and keeps producing strawberries after that"
  },
@@ -3160,56 +2808,10 @@
    "Item Description": "A whimsical fall decoration"
  },
  {
-   "Item Spawn Code": "[747]",
-   "Item": "Rotten Plant",
-   "Item Description": "Decomposing organic material. It's slimy and unpleasant"
- },
- {
-   "Item Spawn Code": "[748]",
-   "Item": "Rotten Plant",
-   "Item Description": "Decomposing organic material. It's slimy and unpleasant"
- },
- {
    "Item Spawn Code": "[749]",
    "Type": "Mineral",
    "Item": "Omni Geode",
    "Item Description": "A blacksmith can break this open for you. These geodes contain a wide variety of Minerals"
- },
- {
-   "Item Spawn Code": "[750]",
-   "Type": "Misc",
-   "Item": "Weeds",
-   "Item Description": "Ugly weeds"
- },
- {
-   "Item Spawn Code": "[751]",
-   "Type": "Misc",
-   "Item": "Stone",
-   "Item Description": "There's copper ore in this stone"
- },
- {
-   "Item Spawn Code": "[760]",
-   "Type": "Misc",
-   "Item": "Stone",
-   "Item Description": "A common material with many uses in crafting and building"
- },
- {
-   "Item Spawn Code": "[762]",
-   "Type": "Misc",
-   "Item": "Stone",
-   "Item Description": "A common material with many uses in crafting and building"
- },
- {
-   "Item Spawn Code": "[764]",
-   "Type": "Misc",
-   "Item": "Stone",
-   "Item Description": "gold ore"
- },
- {
-   "Item Spawn Code": "[765]",
-   "Type": "Misc",
-   "Item": "Stone",
-   "Item Description": "iridium ore"
  },
  {
    "Item Spawn Code": "[766]",
@@ -3234,12 +2836,6 @@
    "Type": "Monster product",
    "Item": "Void Essence",
    "Item Description": "It's quivering with dark energy"
- },
- {
-   "Item Spawn Code": "[770]",
-   "Type": "Misc",
-   "Item": "Mixed Seeds",
-   "Item Description": "There's a little bit of everything here. Plant them and see what grows!"
  },
  {
    "Item Spawn Code": "[771]",
@@ -3272,46 +2868,10 @@
    "Item Description": "Builds a nest on the underside of glaciers"
  },
  {
-   "Item Spawn Code": "[784]",
-   "Type": "Misc",
-   "Item": "Weeds",
-   "Item Description": "Ugly weeds"
- },
- {
-   "Item Spawn Code": "[785]",
-   "Type": "Misc",
-   "Item": "Weeds",
-   "Item Description": "Ugly weeds"
- },
- {
-   "Item Spawn Code": "[786]",
-   "Type": "Misc",
-   "Item": "Weeds",
-   "Item Description": "Ugly weeds"
- },
- {
    "Item Spawn Code": "[787]",
    "Type": "Misc",
    "Item": "Battery Pack",
    "Item Description": "It's fully charged with precious energy"
- },
- {
-   "Item Spawn Code": "[792]",
-   "Type": "Misc",
-   "Item": "Weeds",
-   "Item Description": "Ugly weed"
- },
- {
-   "Item Spawn Code": "[793]",
-   "Type": "Misc",
-   "Item": "Weeds",
-   "Item Description": "Ugly weed"
- },
- {
-   "Item Spawn Code": "[794]",
-   "Type": "Misc",
-   "Item": "Weeds",
-   "Item Description": "Ugly weed"
  },
  {
    "Item Spawn Code": "[795]",
@@ -3362,12 +2922,6 @@
    "Item Description": "Can only be grown indoors. Takes 12 days to mature, and then produces fruit every 3 days"
  },
  {
-   "Item Spawn Code": "[803]",
-   "Type": "Animal product",
-   "Item": "Iridium Milk",
-   "Item Description": "A powerful 'milk' of unknown origin..."
- },
- {
    "Item Spawn Code": "[805]",
    "Type": "Fertilizer",
    "Item": "Tree Fertilizer",
@@ -3405,6 +2959,7 @@
  },
  {
    "Item Spawn Code": "[815]",
+   "Type": "Crop",
    "Item": "Tea Leaves",
    "Item Description": "The young leaves of the tea plant. Can be brewed into the popular, energizing beverage"
  },
@@ -3439,18 +2994,6 @@
    "Item Description": "It may be the world's largest egg"
  },
  {
-   "Item Spawn Code": "[25]",
-   "Type": "Misc",
-   "Item": "Stone",
-   "Item Description": "There's mussels in this stone"
- },
- {
-   "Item Spawn Code": "[73]",
-   "Type": "Misc",
-   "Item": "Golden Walnut",
-   "Item Description": "To the parrots of Ginger Island, this nut is the finest delicacy"
- },
- {
    "Item Spawn Code": "[69]",
    "Type": "Seeds",
    "Item": "Banana Sapling",
@@ -3467,84 +3010,6 @@
    "Type": "Geode",
    "Item": "Golden Coconut",
    "Item Description": "This is one tough nut to crack, but a professional might be able to break it open"
- },
- {
-   "Item Spawn Code": "[816]",
-   "Type": "Misc",
-   "Item": "Stone",
-   "Item Description": "A common material with many uses in crafting and building"
- },
- {
-   "Item Spawn Code": "[817]",
-   "Type": "Misc",
-   "Item": "Stone",
-   "Item Description": "A common material with many uses in crafting and building"
- },
- {
-   "Item Spawn Code": "[818]",
-   "Type": "Misc",
-   "Item": "Stone",
-   "Item Description": "A common material with many uses in crafting and building"
- },
- {
-   "Item Spawn Code": "[819]",
-   "Type": "Misc",
-   "Item": "Stone",
-   "Item Description": "A common material with many uses in crafting and building"
- },
- {
-   "Item Spawn Code": "[820]",
-   "Type": "Misc",
-   "Item": "Fossilized Skull",
-   "Item Description": "It's a perfect specimen!"
- },
- {
-   "Item Spawn Code": "[821]",
-   "Type": "Misc",
-   "Item": "Fossilized Spine",
-   "Item Description": "A column of interlocking vertebrae"
- },
- {
-   "Item Spawn Code": "[822]",
-   "Type": "Misc",
-   "Item": "Fossilized Spine",
-   "Item Description": "This tail has a club-like feature at the tip"
- },
- {
-   "Item Spawn Code": "[823]",
-   "Type": "Misc",
-   "Item": "Fossilized Leg",
-   "Item Description": "A thick and sturdy leg bone"
- },
- {
-   "Item Spawn Code": "[824]",
-   "Type": "Misc",
-   "Item": "Fossilized Ribs",
-   "Item Description": "Long ago, these ribs protected the body of a large animal"
- },
- {
-   "Item Spawn Code": "[825]",
-   "Type": "Misc",
-   "Item": "Snake Skull",
-   "Item Description": "A preserved skull that once belonged to a snake"
- },
- {
-   "Item Spawn Code": "[826]",
-   "Type": "Misc",
-   "Item": "Snake Vertebrae",
-   "Item Description": "It appears this serpent may have been extremely flexible"
- },
- {
-   "Item Spawn Code": "[827]",
-   "Type": "Misc",
-   "Item": "Mummified Bat",
-   "Item Description": "The delicate wings have been perfectly preserved"
- },
- {
-   "Item Spawn Code": "[828]",
-   "Type": "Misc",
-   "Item": "Mummified Frog",
-   "Item Description": "This ancient frog may have lived in the jungle canopy"
  },
  {
    "Item Spawn Code": "[829]",
@@ -3613,66 +3078,6 @@
    "Item Description": "When enemies damage you, they will take damage themselves"
  },
  {
-   "Item Spawn Code": "[840]",
-   "Type": "Decor",
-   "Item": "Rustic Plank Floor",
-   "Item Description": "Place on the ground to create paths or to decorate your floors"
- },
- {
-   "Item Spawn Code": "[841]",
-   "Type": "Decor",
-   "Item": "Stone Walkway Floor",
-   "Item Description": "Place on the ground to create paths or to decorate your floors"
- },
- {
-   "Item Spawn Code": "[843]",
-   "Type": "Misc",
-   "Item": "Stone",
-   "Item Description": "A common material with many uses in crafting and building"
- },
- {
-   "Item Spawn Code": "[844]",
-   "Type": "Misc",
-   "Item": "Stone",
-   "Item Description": "A common material with many uses in crafting and building"
- },
- {
-   "Item Spawn Code": "[845]",
-   "Type": "Misc",
-   "Item": "Stone",
-   "Item Description": "A common material with many uses in crafting and building"
- },
- {
-   "Item Spawn Code": "[846]",
-   "Type": "Misc",
-   "Item": "Stone",
-   "Item Description": "A common material with many uses in crafting and building"
- },
- {
-   "Item Spawn Code": "[847]",
-   "Type": "Misc",
-   "Item": "Stone",
-   "Item Description": "A common material with many uses in crafting and building"
- },
- {
-   "Item Spawn Code": "[848]",
-   "Type": "Misc",
-   "Item": "Cinder Shard",
-   "Item Description": "You can feel a warm glow from within this stone"
- },
- {
-   "Item Spawn Code": "[849]",
-   "Type": "Misc",
-   "Item": "Stone",
-   "Item Description": "A common material with many uses in crafting and building"
- },
- {
-   "Item Spawn Code": "[850]",
-   "Type": "Misc",
-   "Item": "Stone",
-   "Item Description": "A common material with many uses in crafting and building"
- },
- {
    "Item Spawn Code": "[851]",
    "Type": "Foraged Item",
    "Item": "Magma Cap",
@@ -3689,18 +3094,6 @@
    "Type": "Tackle",
    "Item": "Curiosity Lure",
    "Item Description": "Increases your chance to catch rare fish"
- },
- {
-   "Item Spawn Code": "[857]",
-   "Type": "Monster product",
-   "Item": "Tiger Slime Egg",
-   "Item Description": "Can be hatched in a slime incubator. Use with extreme caution!"
- },
- {
-   "Item Spawn Code": "[858]",
-   "Type": "Special Item",
-   "Item": "Qi Gem",
-   "Item Description": "A special currency honored by Mr. Qi"
  },
  {
    "Item Spawn Code": "[859]",
@@ -3751,12 +3144,6 @@
    "Item Description": "The last resort of the hungry cave diver"
  },
  {
-   "Item Spawn Code": "[875]",
-   "Type": "Misc",
-   "Item": "Ectoplasm",
-   "Item Description": "A thick, slimy goop that the Wizard wants for some reason"
- },
- {
    "Item Spawn Code": "[877]",
    "Type": "Tackle",
    "Item": "Quality Bobber",
@@ -3769,30 +3156,6 @@
    "Item Description": "Spray this on to draw more monsters out of hiding"
  },
  {
-   "Item Spawn Code": "[880]",
-   "Type": "Ring",
-   "Item": "Combined Ring",
-   "Item Description": "NA"
- },
- {
-   "Item Spawn Code": "[882]",
-   "Type": "Misc",
-   "Item": "Weeds",
-   "Item Description": "Ugly Weeds"
- },
- {
-   "Item Spawn Code": "[883]",
-   "Type": "Misc",
-   "Item": "Weeds",
-   "Item Description": "Ugly Weeds"
- },
- {
-   "Item Spawn Code": "[884]",
-   "Type": "Misc",
-   "Item": "Weeds",
-   "Item Description": "Ugly Weeds"
- },
- {
    "Item Spawn Code": "[885]",
    "Type": "Seeds",
    "Item": "Fiber Seeds",
@@ -3801,7 +3164,7 @@
  {
    "Item Spawn Code": "[886]",
    "Type": "Consumables",
-   "Item": "Warp Totem: Island",
+   "Item": "Warp Totem Island",
    "Item Description": "Warp directly to Ginger Island. Consumed on use"
  },
  {
@@ -3817,28 +3180,10 @@
    "Item Description": "Emits a constant light, and also increases your radius for collecting items"
  },
  {
-   "Item Spawn Code": "[889]",
-   "Type": "Special Item",
-   "Item": "Qi Fruit",
-   "Item Description": "Qi has challenged you to ship 1000 of these strange melons"
- },
- {
-   "Item Spawn Code": "[890]",
-   "Type": "Special Item",
-   "Item": "Qi Bean",
-   "Item Description": "Plant these in any season. Water every day to produce a Qi Fruit. Takes 4 days to mature"
- },
- {
    "Item Spawn Code": "[891]",
    "Type": "Seeds",
    "Item": "Mushroom Tree Seed",
    "Item Description": "Place this on your farm to plant a mushroom tree"
- },
- {
-   "Item Spawn Code": "[892]",
-   "Type": "Consumables",
-   "Item": "Warp Totem: Qi's Arena",
-   "Item Description": "Warp to Qi's Arena. Be prepared for a challenge!"
  },
  {
    "Item Spawn Code": "[896]",
@@ -3914,28 +3259,15 @@
  },
  {
    "Item Spawn Code": "[909]",
+   "Type": "Mineral",
    "Item": "Radioactive Ore",
    "Item Description": "It's glowing with dangerous energy... Can be smelted into bars"
  },
  {
    "Item Spawn Code": "[910]",
+   "Type": "Bar",
    "Item": "Radioactive Bar",
    "Item Description": "Known by the Zuzu City Safety Commission to cause irreversible bodily harm"
- },
- {
-   "Item Spawn Code": "[911]",
-   "Item": "Horse Flute",
-   "Item Description": "Playing this flute will summon your horse. Only works outdoors"
- },
- {
-   "Item Spawn Code": "[913]",
-   "Item": "Enricher",
-   "Item Description": "Place on a sprinkler and load with fertilizer to automatically apply it when planting seeds nearby"
- },
- {
-   "Item Spawn Code": "[915]",
-   "Item": "Pressure Nozzle",
-   "Item Description": "Place on a sprinkler to increase its watering range"
  },
  {
    "Item Spawn Code": "[918]",
@@ -3960,21 +3292,5 @@
    "Type": "Cooking",
    "Item": "Squid Ink Ravioli",
    "Item Description": "Temporarily protects from debuffs"
- },
- {
-   "Item Spawn Code": "[926]",
-   "Type": "Equipment",
-   "Item": "Cookout Kit",
-   "Item Description": "Use this to create a cooking campfire, allowing you to cook on-the-go!"
- },
- {
-   "Item Spawn Code": "[927]",
-   "Item": "Camping Stove",
-   "Item Description": "This allows you to cook anywhere, and is not consumed on use"
- },
- {
-   "Item Spawn Code": "[928]",
-   "Item": "Golden Egg",
-   "Item Description": "A very rare and special egg with a solid gold shell"
  }
 ]

@@ -22,10 +22,11 @@ class MediaController extends AbstractController {
                     if($picture['error'][$key] === UPLOAD_ERR_OK)
                     {
                         $nameWithoutExtension = pathinfo($pictureName, PATHINFO_FILENAME);
+                        $name = str_replace('_', ' ', $nameWithoutExtension);
 
                         $path = 'assets/images/game_pictures/' . $pictureName;
                         $alt = 'Drawing of' . ' ' . $nameWithoutExtension;
-                        $newPicture = new Picture($nameWithoutExtension, $path, $alt);
+                        $newPicture = new Picture($name, $path, $alt);
 
                         $this->pm->addPicture($newPicture);
 
