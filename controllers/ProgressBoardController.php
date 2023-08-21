@@ -182,10 +182,69 @@ class ProgressBoardController extends AbstractController {
 
 
         // Locations
-        foreach($xml->locations->GameLocation as $location)
+        $isMine = false;
+        $isRailroad = false;
+        $isQuarry = false;
+        $isSkull = false;
+        $isSewer = false;
+        $isGinger = false;
+        $isSummit = false;
+
+        $mine = "Mine";
+        $railroad = "Railroad";
+        $quarry = "Quarry Mine";
+        $skull = "Desert";
+        $sewer = "The Sewers";
+        $ginger = "Ginger Island";
+        $summit = "Summit";
+
+        foreach($xml->player->mailReceived->string as $location)
         {
-            
+            if((string) $location === "checkedMonsterBoard")
+            {
+                $isMine = true;
+            }
+            else if((string) $location === "TH_Railroad")
+            {
+                $isRailroad = true;
+            }
+            else if((string) $location === "VisitedQuarryMine")
+            {
+                $isQuarry = true;
+            }
+            else if((string) $location === "skullCave")
+            {
+                $isSkull = true;
+            }
+            else if((string) $location === "OpenedSewer")
+            {
+                $isSewer = true;
+            }
+            else if((string) $location === "Visited_Island")
+            {
+                $isGinger = true;
+            }
+            else if((string) $location === "Summit_event")
+            {
+                $isSummit = true;
+            }
         }
+
+        $newMine = new Location($file, $mine, $isMine);
+        $newRailroad = new Location($file, $railroad, $isRailroad);
+        $newQuarry = new Location($file, $quarry, $isQuarry);
+        $newSkull = new Location($file, $skull, $isSkull);
+        $newSewer = new Location($file, $sewer, $isSewer);
+        $newGinger = new Location($file, $ginger, $isGinger);
+        $newSummit = new Location($file, $summit, $isSummit);
+
+        $this->lm->addLocation($newMine);
+        $this->lm->addLocation($newRailroad);
+        $this->lm->addLocation($newQuarry);
+        $this->lm->addLocation($newSkull);
+        $this->lm->addLocation($newSewer);
+        $this->lm->addLocation($newGinger);
+        $this->lm->addLocation($newSummit);
     }
 
     public function displayProgress(int $id)

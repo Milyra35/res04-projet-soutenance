@@ -1,25 +1,45 @@
 <?php
 
-$xml=simplexml_load_file("Marpau_269973769") or die("Error: Cannot create object");
+$xml=simplexml_load_file("Greenfields_351114297") or die("Error: Cannot create object");
 
-$isMarried = false;
-$spouse = null;
+$isMine = false;
+$isRailroad = false;
+$isQuarry = false;
+$isSkull = false;
+$isSewer = false;
 
-foreach($xml->player->friendshipData->item as $friend)
+$mine = "Mine";
+$railroad = "Railroad";
+$quarry = "Quarry Mine";
+$skull = "Desert";
+$sewer = "The Sewers";
+
+foreach($xml->player->mailReceived->string as $location)
 {
-    if(!empty($friend->value->Friendship->WeddingDate))
+    if((string) $location === "checkedMonsterBoard")
     {
-        $spouse = $friend->key;
-        if($spouse)
-        {
-            $isMarried = true;
-        }
+        $isMine = true;
     }
-    // else
-    // {
-    //     $isMarried = false;
-    // }
+    else if((string) $location === "TH_Railroad")
+    {
+        $isRailroad = true;
+    }
+    else if((string) $location === "VisitedQuarryMine")
+    {
+        $isQuarry = true;
+    }
+    else if((string) $location === "skullCave")
+    {
+        
+        $isSkull = true;
+    }
+    else if((string) $location === "OpenedSewer")
+    {
+        $isSewer = true;
+    }
 }
-var_dump($isMarried);
+var_dump($isMine, $isRailroad, $isQuarry, $isSkull, $isSewer);
+
+
 
 ?>

@@ -1,6 +1,14 @@
 <?php
 
 class LocationManager extends AbstractManager {
+    private FileManager $fm;
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->fm = new FileManager();
+    }
+    
     // Add a location to the database
     public function addLocation(Location $location) : Location
     {
@@ -55,7 +63,7 @@ class LocationManager extends AbstractManager {
 
         foreach($data as $location)
         {
-            $newLoc = new Location($this->getFileById($location['file_id']), $location['name'], $location['is_discovered']);
+            $newLoc = new Location($this->fm->getFileById($location['file_id']), $location['name'], $location['is_discovered']);
             $newLoc->setId($location['id']);
             $locations[] = $newLoc;
         }
