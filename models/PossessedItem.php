@@ -6,7 +6,7 @@ class PossessedItem {
     private string $name;
     private int $amount;
 
-    public function __construct(SavedFile $file, stirng $name, int $amount)
+    public function __construct(SavedFile $file, string $name, int $amount)
     {
         $this->id = null;
         $this->file = $file;

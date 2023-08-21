@@ -166,6 +166,26 @@ class ProgressBoardController extends AbstractController {
                 error_log("Villager does not exist in the database");
             }
         }
+
+
+        // Possessed Items
+        foreach($xml->player->items->Item as $item)
+        {
+            if($item)
+            {
+                $name = htmlspecialchars($item->Name);
+                $amount = intval($item->Stack);
+                $newItem = new PossessedItem($file, $name, $amount);
+                $this->pim->addPossessedItem($newItem);
+            }
+        }
+
+
+        // Locations
+        foreach($xml->locations->GameLocation as $location)
+        {
+            
+        }
     }
 
     public function displayProgress(int $id)
