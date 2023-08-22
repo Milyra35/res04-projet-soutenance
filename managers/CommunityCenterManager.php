@@ -1,6 +1,14 @@
 <?php
 
 class CommunityCenterManager extends AbstractManager {
+    private FileManager $fm;
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->fm = new FileManager();
+    }
+
     // Add a bundle to the database
     public function addBundle(CommunityCenter $bundle) : CommunityCenter
     {
@@ -14,12 +22,12 @@ class CommunityCenterManager extends AbstractManager {
 
         if(!$existingBundle)
         {
-            $insert=$this->db->prepare("INSERT INTO community_center (file_id, bundle_name, items)
-                                    VALUES (:file_id, :bundle_name, :items)");
+            $insert=$this->db->prepare("INSERT INTO community_center (file_id, bundle_name, complete)
+                                    VALUES (:file_id, :bundle_name, :complete)");
             $insertParam = [
                 'file_id' => $bundle->getFile()->getId(),
                 'bundle_name' => $bundle->getBundleName(),
-                'items' => $bundle->getItems()
+                'complete' => $bundle->getComplete() ? 1 : 0
             ];
             $insert->execute($insertParam);
 
@@ -30,12 +38,12 @@ class CommunityCenterManager extends AbstractManager {
             $update = $this->db->prepare("UPDATE community_center SET
                 file_id = :file_id,
                 bundle_name = :name,
-                items = :items
+                complete = :complete
                 WHERE file_id = :file_id AND bundle_name = :name");
             $updateParam = [
                 'file_id' => $bundle->getFile()->getId(),
                 'name' => $bundle->getBundleName(),
-                'items' => $bundle->getItems()
+                'complete' => $bundle->getComplete() ? 1 : 0
             ];
             $update->execute($updateParam);
         }

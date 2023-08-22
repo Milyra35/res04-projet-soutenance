@@ -1038,10 +1038,386 @@ class ProgressBoardController extends AbstractController {
                             }
                         }
                     }
+
+                    if((int) $item->key->int === 5)
+                    {
+                        foreach($item->value->ArrayOfBoolean->boolean as $bool)
+                        {
+                            if((string) $bool !== 'true')
+                            {
+                                $isArtisan = false;
+                                break;
+                            }
+                        }
+                    }
+
+                    if((int) $item->key->int === 13)
+                    {
+                        foreach($item->value->ArrayOfBoolean->boolean as $bool)
+                        {
+                            if((string) $bool !== 'true')
+                            {
+                                $isSpringForaging = false;
+                                break;
+                            }
+                        }
+                    }
+
+                    if((int) $item->key->int === 14)
+                    {
+                        foreach($item->value->ArrayOfBoolean->boolean as $bool)
+                        {
+                            if((string) $bool !== 'true')
+                            {
+                                $isSummerForaging = false;
+                                break;
+                            }
+                        }
+                    }
+
+                    if((int) $item->key->int === 15)
+                    {
+                        foreach($item->value->ArrayOfBoolean->boolean as $bool)
+                        {
+                            if((string) $bool !== 'true')
+                            {
+                                $isFallForaging = false;
+                                break;
+                            }
+                        }
+                    }
+
+                    if((int) $item->key->int === 16)
+                    {
+                        foreach($item->value->ArrayOfBoolean->boolean as $bool)
+                        {
+                            if((string) $bool !== 'true')
+                            {
+                                $isWinterForaging = false;
+                                break;
+                            }
+                        }
+                    }
+
+                    if((int) $item->key->int === 17)
+                    {
+                        foreach($item->value->ArrayOfBoolean->boolean as $bool)
+                        {
+                            if((string) $bool !== 'true')
+                            {
+                                $isConstruction = false;
+                                break;
+                            }
+                        }
+                    }
+
+                    if((int) $item->key->int === 19)
+                    {
+                        foreach($item->value->ArrayOfBoolean->boolean as $bool)
+                        {
+                            if((string) $bool !== 'true')
+                            {
+                                $isExoticForaging = false;
+                                break;
+                            }
+                        }
+                    }
+
+                    if((int) $item->key->int === 6)
+                    {
+                        foreach($item->value->ArrayOfBoolean->boolean as $bool)
+                        {
+                            if((string) $bool !== 'true')
+                            {
+                                $isRiverFish = false;
+                                break;
+                            }
+                        }
+                    }
+
+                    if((int) $item->key->int === 7)
+                    {
+                        foreach($item->value->ArrayOfBoolean->boolean as $bool)
+                        {
+                            if((string) $bool !== 'true')
+                            {
+                                $isLakeFish = false;
+                                break;
+                            }
+                        }
+                    }
+
+                    if((int) $item->key->int === 8)
+                    {
+                        foreach($item->value->ArrayOfBoolean->boolean as $bool)
+                        {
+                            if((string) $bool !== 'true')
+                            {
+                                $isOceanFish = false;
+                                break;
+                            }
+                        }
+                    }
+
+                    if((int) $item->key->int === 9)
+                    {
+                        foreach($item->value->ArrayOfBoolean->boolean as $bool)
+                        {
+                            if((string) $bool !== 'true')
+                            {
+                                $isNightFishing = false;
+                                break;
+                            }
+                        }
+                    }
+
+                    if((int) $item->key->int === 10)
+                    {
+                        foreach($item->value->ArrayOfBoolean->boolean as $bool)
+                        {
+                            if((string) $bool !== 'true')
+                            {
+                                $isSpecialtyFish = false;
+                                break;
+                            }
+                        }
+                    }
+
+                    if((int) $item->key->int === 11)
+                    {
+                        foreach($item->value->ArrayOfBoolean->boolean as $bool)
+                        {
+                            if((string) $bool !== 'true')
+                            {
+                                $isCrabPot = false;
+                                break;
+                            }
+                        }
+                    }
+
+                    if((int) $item->key->int === 20)
+                    {
+                        foreach($item->value->ArrayOfBoolean->boolean as $bool)
+                        {
+                            if((string) $bool !== 'true')
+                            {
+                                $isBlacksmith = false;
+                                break;
+                            }
+                        }
+                    }
+
+                    if((int) $item->key->int === 21)
+                    {
+                        foreach($item->value->ArrayOfBoolean->boolean as $bool)
+                        {
+                            if((string) $bool !== 'true')
+                            {
+                                $isGeologist = false;
+                                break;
+                            }
+                        }
+                    }
+
+                    if((int) $item->key->int === 22)
+                    {
+                        foreach($item->value->ArrayOfBoolean->boolean as $bool)
+                        {
+                            if((string) $bool !== 'true')
+                            {
+                                $isAdventurer = false;
+                                break;
+                            }
+                        }
+                    }
+
+                    if((int) $item->key->int === 23)
+                    {
+                        foreach($item->value->ArrayOfBoolean->boolean as $bool)
+                        {
+                            if((string) $bool !== 'true')
+                            {
+                                $is2500 = false;
+                                break;
+                            }
+                        }
+                    }
+
+                    if((int) $item->key->int === 24)
+                    {
+                        foreach($item->value->ArrayOfBoolean->boolean as $bool)
+                        {
+                            if((string) $bool !== 'true')
+                            {
+                                $is5000 = false;
+                                break;
+                            }
+                        }
+                    }
+
+                    if((int) $item->key->int === 25)
+                    {
+                        foreach($item->value->ArrayOfBoolean->boolean as $bool)
+                        {
+                            if((string) $bool !== 'true')
+                            {
+                                $is10000 = false;
+                                break;
+                            }
+                        }
+                    }
+
+                    if((int) $item->key->int === 26)
+                    {
+                        foreach($item->value->ArrayOfBoolean->boolean as $bool)
+                        {
+                            if((string) $bool !== 'true')
+                            {
+                                $is25000 = false;
+                                break;
+                            }
+                        }
+                    }
+
+                    if((int) $item->key->int === 31)
+                    {
+                        foreach($item->value->ArrayOfBoolean->boolean as $bool)
+                        {
+                            if((string) $bool !== 'true')
+                            {
+                                $isChef = false;
+                                break;
+                            }
+                        }
+                    }
+
+                    if((int) $item->key->int === 32)
+                    {
+                        foreach($item->value->ArrayOfBoolean->boolean as $bool)
+                        {
+                            if((string) $bool !== 'true')
+                            {
+                                $isFieldResearch = false;
+                                break;
+                            }
+                        }
+                    }
+
+                    if((int) $item->key->int === 33)
+                    {
+                        foreach($item->value->ArrayOfBoolean->boolean as $bool)
+                        {
+                            if((string) $bool !== 'true')
+                            {
+                                $isEnchanter = false;
+                                break;
+                            }
+                        }
+                    }
+
+                    if((int) $item->key->int === 34)
+                    {
+                        foreach($item->value->ArrayOfBoolean->boolean as $bool)
+                        {
+                            if((string) $bool !== 'true')
+                            {
+                                $isDye = false;
+                                break;
+                            }
+                        }
+                    }
+
+                    if((int) $item->key->int === 35)
+                    {
+                        foreach($item->value->ArrayOfBoolean->boolean as $bool)
+                        {
+                            if((string) $bool !== 'true')
+                            {
+                                $isFodder = false;
+                                break;
+                            }
+                        }
+                    }
+
+                    if((int) $item->key->int === 36)
+                    {
+                        foreach($item->value->ArrayOfBoolean->boolean as $bool)
+                        {
+                            if((string) $bool !== 'true')
+                            {
+                                $isTheMissing = false;
+                                break;
+                            }
+                        }
+                    }
                 }
             }
         }
-        var_dump($isSpringCrops, $isSummerCrops, $isFallCrops);
+        // var_dump($isTheMissing);
+
+        $springCrops = new CommunityCenter($file, "Spring Crops", $isSpringCrops);
+        $summerCrops = new CommunityCenter($file, "Summer Crops", $isSummerCrops);
+        $fallCrops = new CommunityCenter($file, "Fall Crops", $isFallCrops);
+        $qualityCrops = new CommunityCenter($file, "Quality Crops", $isQualityCrops);
+        $animal = new CommunityCenter($file, "Animal", $isAnimal);
+        $artisan = new CommunityCenter($file, "Artisan", $isArtisan);
+        $springForaging = new CommunityCenter($file, "Spring Foraging", $isSpringForaging);
+        $summerForaging = new CommunityCenter($file, "Summer Foraging", $isSummerForaging);
+        $fallForaging = new CommunityCenter($file, "Fall Foraging", $isFallForaging);
+        $winterForaging = new CommunityCenter($file, "Winter Foraging", $isWinterForaging);
+        $construction = new CommunityCenter($file, "Construction", $isConstruction);
+        $exoticForaging = new CommunityCenter($file, "Exotic Foraging", $isExoticForaging);
+        $riverFish = new CommunityCenter($file, "River Fish", $isRiverFish);
+        $lakeFish = new CommunityCenter($file, "Lake Fish", $isLakeFish);
+        $oceanFish = new CommunityCenter($file, "Ocean Fish", $isOceanFish);
+        $nightFishing = new CommunityCenter($file, "Night Fishing", $isNightFishing);
+        $specialtyFish = new CommunityCenter($file, "Specialty Fish", $isSpecialtyFish);
+        $carbPot = new CommunityCenter($file, "Carb Pot", $isCarbPot);
+        $blacksmith = new CommunityCenter($file, "Blacksmith", $isBlacksmith);
+        $geologist = new CommunityCenter($file, "Geologist", $isGeologist);
+        $adventurer = new CommunityCenter($file, "Adventurer", $isAdventurer);
+        $bundle2500 = new CommunityCenter($file, "2500", $is2500);
+        $bundle5000 = new CommunityCenter($file, "5000", $is5000);
+        $bundle10000 = new CommunityCenter($file, "10000", $is10000);
+        $bundle25000 = new CommunityCenter($file, "25000", $is25000);
+        $chef = new CommunityCenter($file, "Chef", $isChef);
+        $fieldResearch = new CommunityCenter($file, "Field Research", $isFieldResearch);
+        $enchanter = new CommunityCenter($file, "Enchanter", $isEnchanter);
+        $dye = new CommunityCenter($file, "Dye", $isDye);
+        $fodder = new CommunityCenter($file, "Fodder", $isFodder);
+        $theMissing = new CommunityCenter($file, "The Missing", $isTheMissing);
+
+        $this->ccm->addBundle($springCrops);
+        $this->ccm->addBundle($summerCrops);
+        $this->ccm->addBundle($fallCrops);
+        $this->ccm->addBundle($qualityCrops);
+        $this->ccm->addBundle($animal);
+        $this->ccm->addBundle($artisan);
+        $this->ccm->addBundle($springForaging);
+        $this->ccm->addBundle($summerForaging);
+        $this->ccm->addBundle($fallForaging);
+        $this->ccm->addBundle($winterForaging);
+        $this->ccm->addBundle($construction);
+        $this->ccm->addBundle($exoticForaging);
+        $this->ccm->addBundle($riverFish);
+        $this->ccm->addBundle($lakeFish);
+        $this->ccm->addBundle($oceanFish);
+        $this->ccm->addBundle($nightFishing);
+        $this->ccm->addBundle($specialtyFish);
+        $this->ccm->addBundle($carbPot);
+        $this->ccm->addBundle($blacksmith);
+        $this->ccm->addBundle($geologist);
+        $this->ccm->addBundle($adventurer);
+        $this->ccm->addBundle($bundle2500);
+        $this->ccm->addBundle($bundle5000);
+        $this->ccm->addBundle($bundle10000);
+        $this->ccm->addBundle($bundle25000);
+        $this->ccm->addBundle($chef);
+        $this->ccm->addBundle($fieldResearch);
+        $this->ccm->addBundle($enchanter);
+        $this->ccm->addBundle($dye);
+        $this->ccm->addBundle($fodder);
+        $this->ccm->addBundle($theMissing);
     }
 
     public function displayProgress(int $id)
@@ -1052,7 +1428,8 @@ class ProgressBoardController extends AbstractController {
         // I retrieve the player progress
 
         // I retrieve the bundles
-
+        $bundles = $this->ccm->getBundlesByFile($id);
+        
         // I retrieve the items of the museum
 
         // I retrieve the statistics

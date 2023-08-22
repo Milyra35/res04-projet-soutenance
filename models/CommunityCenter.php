@@ -4,14 +4,14 @@ class CommunityCenter {
     private ?int $id;
     private SavedFile $file;
     private string $bundleName;
-    private array $items;
+    private bool $complete;
 
-    public function __construct(SavedFile $file, string $bundleName, array $items)
+    public function __construct(SavedFile $file, string $bundleName, bool $complete)
     {
         $this->id = null;
         $this->file = $file;
         $this->bundleName = $bundleName;
-        $this->items = [];
+		$this->complete = $complete;
     }
     
 
@@ -42,13 +42,13 @@ class CommunityCenter {
 		$this->bundleName = $bundleName;
 	}
 
-	public function getItems() : array
+	public function getComplete() : bool
 	{
-		return $this->items;
+		return $this->complete;
 	}
-	public function setItems(array $items) : void
+	public function setComplete(bool $complete) : void
 	{
-		$this->items = $items;
+		$this->complete = $complete;
 	}
 }
 
