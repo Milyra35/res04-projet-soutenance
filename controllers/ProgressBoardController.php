@@ -247,6 +247,13 @@ class ProgressBoardController extends AbstractController {
         $this->lm->addLocation($newSummit);
 
         
+        // Books, i had to change the database for the books because i only had the number of books i obtained in a game
+        $amountOfBooks = intval($xml->lostBooksFound);
+        $newBook = new Book($file, $amountOfBooks);
+        $this->bm->addBook($newBook);
+
+        // Museum
+        
     }
 
     public function displayProgress(int $id)

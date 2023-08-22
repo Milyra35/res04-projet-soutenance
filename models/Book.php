@@ -3,15 +3,13 @@
 class Book {
     private ?int $id;
     private SavedFile $file;
-    private string $name;
-    private bool $has;
+    private int $amount;
 
-    public function __construct(SavedFile $file, string $name, bool $has)
+    public function __construct(SavedFile $file, int $amount)
     {
         $this->id = null;
         $this->file = $file;
-        $this->name = $name;
-        $this->has = $has;
+        $this->amount = $amount;
     }
 
     public function getId() : ?int
@@ -32,22 +30,13 @@ class Book {
         $this->file = $file;
     }
 
-    public function getName() : string
+    public function getAmount() : int
     {
-        return $this->name;
+        return $this->amount;
     }
-    public function setName($name) : void
+    public function setAmount(int $amount) : void
     {
-        $this->name = $name;
-    }
-
-    public function getHas() : bool
-    {
-        return $this->has;
-    }
-    public function setHas(bool $has) : void
-    {
-        $this->has = $has;
+        $this->amount = $amount;
     }
 }
 
