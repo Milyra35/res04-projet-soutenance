@@ -1,6 +1,14 @@
 <?php
 
 class PlayerProgressManager extends AbstractManager {
+    private FileManager $fm;
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->fm = new FileManager();
+    }
+    
     // Add the fie to the database
     public function addProgress(PlayerProgress $player) : PlayerProgress
     {
@@ -90,13 +98,13 @@ class PlayerProgressManager extends AbstractManager {
     // Get the progress by its ID
     public function getProgressById(int $id) : PlayerProgress
     {
-        $query=$this->db->prepare("SELECT * FROM player_progress WHERE player_progress.id = :id");
+        $query=$this->db->prepare("SELECT * FROM player_progress WHERE player_progress.file_id = :id");
         $parameters=['id' => $id];
         $query->execute($parameters);
 
         $data=$query->fetch(PDO::FETCH_ASSOC);
         $progress = new PlayerProgress(
-            $this->getFileById($data['file_id']),
+            $this->fm->getFileById($data['file_id']),
             $data['character_name'],
             $data['money'],
             $data['health'],

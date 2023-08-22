@@ -63,7 +63,7 @@ class CommunityCenterManager extends AbstractManager {
 
         foreach($data as $bundle)
         {
-            $newBundle = new CommunityCenter($this->fm->getFileById($bundle['file_id']), $bundle['bundle_name'], $bundle['items']);
+            $newBundle = new CommunityCenter($this->fm->getFileById($bundle['file_id']), $bundle['bundle_name'], $bundle['complete']);
             $newBundle->setId($bundle['id']);
             $bundles[] = $newBundle;
         }

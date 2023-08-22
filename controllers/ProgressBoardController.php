@@ -1426,23 +1426,31 @@ class ProgressBoardController extends AbstractController {
         $skills = $this->psm->getSkillsByFile($id);
 
         // I retrieve the player progress
+        $player = $this->pp->getProgressById($id);
 
         // I retrieve the bundles
         $bundles = $this->ccm->getBundlesByFile($id);
         
         // I retrieve the items of the museum
+        $items = $this->mm->getMuseumItemsByFile($id);
 
         // I retrieve the statistics
-
+        $stats = $this->sm->getStatByFile($id);
+        
         // I retrieve the books
+        $books = $this->bm->getBookByFile($id);
 
         // I retrieve the locations
+        $locations = $this->lm->getAllLocationsByFile($id);
 
         // I retrieve the possessed items
+        $possessedItems = $this->pim->getItemsFromFile($id);
 
         // I retrieve the relationships
+        $relationships = $this->rm->getRelationshipsByFile($id);
 
-        $this->render('user/game.phtml', []);
+        // var_dump($relationships);
+        $this->render('user/game.phtml', [$skills, "player" => $player, $bundles, $items, "stats" => $stats, "books" => $books, $locations, $possessedItems, $relationships]);
     }
 }
 

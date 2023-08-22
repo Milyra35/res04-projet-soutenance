@@ -1,6 +1,14 @@
 <?php
 
 class PossessedItemManager extends AbstractManager {
+    private FileManager $fm;
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->fm = new FileManager();
+    }
+    
     // Add an item to the database
     public function addPossessedItem(PossessedItem $item) : PossessedItem
     {
@@ -42,20 +50,6 @@ class PossessedItemManager extends AbstractManager {
         
         return $item;
     }
-
-    // Get the item by ID
-    // public function getPossessedItemById(innt $id) : PossessedItem
-    // {
-    //     $query=$this->db->prepare("SELECT * FROM possessed_items WHERE id = :id");
-    //     $parameters=['id' => $id];
-    //     $query->execute($parameters);
-        
-    //     $data=$query->fetch(PDO::FETCH_ASSOC);
-    //     $item = new PossessedItem($this->getFileById($data['id']), $data['name'], $data['amount']);
-    //     $item->setId($data['id']);
-
-    //     return $item;
-    // }
 
     // Get the items from a file
     public function getItemsFromFile(int $id) : array

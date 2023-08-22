@@ -27,6 +27,9 @@ class Router {
     // Create a method to check the routes
     public function checkRoute()
     {
+        // $fileName = $_SESSION['file_slug']->getName();
+        // $fileId = $_SESSION['file_id'];
+
         if(isset($_GET['route']))
         {
             if($_GET['route'] === "homepage")
@@ -59,6 +62,7 @@ class Router {
                 $this->fc->indexGames();
             }
             else if(str_contains($_GET['route'], "file_slug"))
+            // else if($_GET['route'] === "file_slug=$fileName" && isset($_SESSION['user']))
             {
                 list($route, $file_slug) = explode("=", $_GET['route']);
                 $_SESSION['file_slug'] = $file_slug;

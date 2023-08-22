@@ -1,6 +1,14 @@
 <?php
 
 class BookManager extends AbstractManager {
+    private FileManager $fm;
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->fm = new FileManager();
+    }
+
     // Add a book to the database
     public function addBook(Book $book) : Book
     {
@@ -35,6 +43,20 @@ class BookManager extends AbstractManager {
         }
         
         return $book;
+    }
+
+    // Get the number of books by its file ID
+    public function getBookByFile(int $id) : Book
+    {
+        $query=$this->db->prepare("SELECT * FROM books WHERE file_id = :file_id");
+        $parameters=['file_id' => $id];
+        $query->execute($parameters);
+        $data = $query->fetch(PDO::FETCH_ASSOC);
+
+        $newBook = new Book($this->fm->getFileById($data['file_id']), $data['amount']);
+        $newBook->setId($data['id']);
+
+        return $newBook;
     }
 }
 

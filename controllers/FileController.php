@@ -12,7 +12,7 @@ class FileController extends AbstractController {
     public function getFileById(int $id)
     {
         $file = $this->fm->getFileById($id);
-        $_SESSION['file_slug'] = $file;
+        $_SESSION['file_slug'] = $file->getName();
 
         return $file;
     }
@@ -35,6 +35,7 @@ class FileController extends AbstractController {
                 move_uploaded_file($file['tmp_name'], $path);
 
                 $newFile = new SavedFile($_SESSION['user'], $fileName, $path);
+                $_SESSION['file_id'] = $newFile->getId();
 
                 $this->fm->addFile($newFile);
 

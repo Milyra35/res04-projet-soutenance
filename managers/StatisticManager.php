@@ -1,6 +1,14 @@
 <?php
 
 class StatisticManager extends AbstractManager {
+    private FileManager $fm;
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->fm = new FileManager();
+    }
+
     // Add statistics to the database
     public function addStatistics(Statistic $stat) : Statistic
     {
@@ -48,18 +56,24 @@ class StatisticManager extends AbstractManager {
         return $stat;
     }
 
-    // Get the stats by their ID
-    public function getStatById(int $id) : Statistic
+    // Get the stats by their file
+    public function getStatByFile(int $id) : array
     {
-        $query=$this->db->prepare("SELECT * FROM statistics WHERE id = :id");
+        $query=$this->db->prepare("SELECT * FROM statistics WHERE file_id = :id");
         $parameters=['id' => $id];
         $query->execute($parameters);
+        $data=$query->fetchAll(PDO::FETCH_ASSOC);
 
-        $data=$query->fetch(PDO::FETCH_ASSOC);
-        $stat = new Statistic($this->getFileById($data['file_id']), $data['hours_played'], $data['days_spent'], $data['seasons_passed'], $data['fish_catched']);
-        $stat->setId($data['id']);
+        $stats = [];
 
-        return $stat;
+        foreach($data as $stat)
+        {
+            $newStat = new Statistic($this->fm->getFileById($stat['file_id']), $stat['hours_played'], $stat['days_spent'], $stat['seasons_passed'], $stat['fish_catched']);
+            $newStat->setId($stat['id']);
+            $stats[] = $newStat;
+        }
+
+        return $stats;
     }
 
     // Get all the stats to display in the back-office
@@ -73,7 +87,7 @@ class StatisticManager extends AbstractManager {
 
         foreach($data as $stat)
         {
-            $newStat = new Statistic($this->getFileById($stat['file_id']), $stat['hours_played'], $stat['days_spent'], $stat['seasons_passed'], $stat['fish_catched']);
+            $newStat = new Statistic($this->fm->getFileById($stat['file_id']), $stat['hours_played'], $stat['days_spent'], $stat['seasons_passed'], $stat['fish_catched']);
             $newStat->setId($stat['id']);
             $stats[] = $newStat;
         }

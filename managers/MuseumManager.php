@@ -53,9 +53,9 @@ class MuseumManager extends AbstractManager {
     // Get all the objects by File
     public function getMuseumItemsByFile(int $id) : array
     {
-        $queyry=$this->db->prepare("SELECT * FROM museum WHERE file_id = :file_id");
+        $query=$this->db->prepare("SELECT * FROM museum WHERE file_id = :file_id");
         $parameters=['file_id' => $id];
-        $query->execute($aprameters);
+        $query->execute($parameters);
         $data = $query->fetchAll(PDO::FETCH_ASSOC);
 
         $items = [];

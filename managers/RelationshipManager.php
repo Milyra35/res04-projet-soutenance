@@ -79,7 +79,7 @@ class RelationshipManager extends AbstractManager {
 
         foreach($data as $relation)
         {
-            $newRelationship = new Relationship($this->fm->getFileById($relation['file_id']), $this->vm->getVillagerById($relation['villager_id']), $relation['frienship_level']);
+            $newRelationship = new Relationship($this->fm->getFileById($relation['file_id']), $this->vm->getVillagerById($relation['villager_id']), $relation['friendship_level']);
             $newRelationship->setId($relation['id']);
             $relationships[] = $newRelationship;
         }
