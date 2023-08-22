@@ -1,6 +1,13 @@
 <?php
 
 class MuseumManager extends AbstractManager {
+    private FileManager $fm;
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->fm = new FileManager();
+    }
     // Add an item to the museum
     public function addItem(Museum $item) : Museum
     {
@@ -28,9 +35,10 @@ class MuseumManager extends AbstractManager {
         else
         {
             $update = $this->db->prepare("UPDATE museum SET 
+                file_id = :file_id,
                 name = :name,
                 has = :has
-                WHERE file_id = :file_id");
+                WHERE file_id = :file_id AND name = :name");
             $updateParam = [
                 'file_id' => $item->getFile()->getId(),
                 'name' => $item->getName(),
@@ -40,6 +48,26 @@ class MuseumManager extends AbstractManager {
         }
 
         return $item;
+    }
+
+    // Get all the objects by File
+    public function getMuseumItemsByFile(int $id) : array
+    {
+        $queyry=$this->db->prepare("SELECT * FROM museum WHERE file_id = :file_id");
+        $parameters=['file_id' => $id];
+        $query->execute($aprameters);
+        $data = $query->fetchAll(PDO::FETCH_ASSOC);
+
+        $items = [];
+
+        foreach($data as $item)
+        {
+            $newItem = new Museum($this->fm->getFileById($item['file_id']), $item['name'], $item['has']);
+            $newItem->setId($item['id']);
+            $items[] = $newItem;
+        }
+
+        return $items;
     }
 }
 
