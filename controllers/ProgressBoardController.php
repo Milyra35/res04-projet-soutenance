@@ -939,7 +939,109 @@ class ProgressBoardController extends AbstractController {
 
 
         // Community Center
-        
+        // I initialize them as true and verify if the bundle is complete. If it is, it stays true, otherwise, it's false at the first encounter of a false
+        $isSpringCrops = true;
+        $isSummerCrops = true;
+        $isFallCrops = true;
+        $isQualityCrops = true;
+        $isAnimal = true;
+        $isArtisan = true;
+        $isSpringForaging = true;
+        $isSummerForaging = true;
+        $isFallForaging = true;
+        $isWinterForaging = true;
+        $isConstruction = true;
+        $isExoticForaging = true;
+        $isRiverFish = true;
+        $isLakeFish = true;
+        $isOceanFish = true;
+        $isNightFishing = true;
+        $isSpecialtyFish = true;
+        $isCarbPot = true;
+        $isBlacksmith = true;
+        $isGeologist = true;
+        $isAdventurer = true;
+        $is2500 = true;
+        $is5000 = true;
+        $is10000 = true;
+        $is25000 = true;
+        $isChef = true;
+        $isFieldResearch = true;
+        $isEnchanter = true;
+        $isDye = true;
+        $isFodder = true;
+        $isTheMissing = true;
+
+        foreach($xml->locations->GameLocation as $location)
+        {
+            $type = $location->attributes('xsi', true)->type;
+            if((string) $type === "CommunityCenter")
+            {
+                foreach($location->bundles->item as $item)
+                {
+                    if((int) $item->key->int === 0)
+                    {
+                        foreach ($item->value->ArrayOfBoolean->boolean as $bool)
+                        {
+                            if((string) $bool !== 'true')
+                            {
+                                $isSpringCrops = false;
+                                break;
+                            }
+                        }
+                    }
+
+                    if((int) $item->key->int === 1)
+                    {
+                        foreach ($item->value->ArrayOfBoolean->boolean as $bool)
+                        {
+                            if((string) $bool !== 'true')
+                            {
+                                $isSummerCrops = false;
+                                break;
+                            }
+                        }
+                    }
+
+                    if((int) $item->key->int === 2)
+                    {
+                        foreach($item->value->ArrayOfBoolean->boolean as $bool)
+                        {
+                            if((string) $bool !== 'true')
+                            {
+                                $isFallCrops = false;
+                                break;
+                            }
+                        }
+                    }
+
+                    if((int) $item->key->int === 3)
+                    {
+                        foreach($item->value->ArrayOfBoolean->boolean as $bool)
+                        {
+                            if((string) $bool !== 'true')
+                            {
+                                $isQualityCrops = false;
+                                break;
+                            }
+                        }
+                    }
+
+                    if((int) $item->key->int === 4)
+                    {
+                        foreach($item->value->ArrayOfBoolean->boolean as $bool)
+                        {
+                            if((string) $bool !== 'true')
+                            {
+                                $isAnimal = false;
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        var_dump($isSpringCrops, $isSummerCrops, $isFallCrops);
     }
 
     public function displayProgress(int $id)
