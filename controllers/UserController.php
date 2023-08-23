@@ -47,7 +47,7 @@ class UserController extends AbstractController {
             // We add it to the database
             $this->um->createUser($user);
 
-            header("Location:index.php?route=login");
+            header("Location:/res04-projet-soutenance/login");
         }
     }
 
@@ -74,7 +74,7 @@ class UserController extends AbstractController {
                 $_SESSION['user'] = $user;
                 $_SESSION['role'] = $user->getRole()->getName();
 
-                header("Location:index.php?route=my-games");
+                header("Location:/res04-projet-soutenance/my-games");
             }
             // If an admin logins
             else if($user->getRole()->getName() === "admin" && password_verify($password, $user->getPassword()))
@@ -83,7 +83,7 @@ class UserController extends AbstractController {
                 $_SESSION['admin'] = $user;
                 $_SESSION['role'] = $user->getRole()->getName();
                 
-                header("Location:index.php?route=admin");
+                header("Location:/res04-projet-soutenance/admin");
             }
             else
             {
@@ -119,7 +119,7 @@ class UserController extends AbstractController {
             $user = $_SESSION['user'];
             $this->um->editUser($user);
 
-            header("Location:index.php?route=my-account");
+            header("Location:/res04-projet-soutenance/my-account");
         }
 
         $this->render("user/edit.phtml", []);
@@ -130,7 +130,7 @@ class UserController extends AbstractController {
         if(isset($_POST["submit-delete-account"]))
         {
             $this->um->deleteUser($_SESSION['user_id']);
-            header("Location:index.php?route=homepage");
+            header("Location:/res04-projet-soutenance/");
         }
         else if(isset($_SESSION['role']) && $_SESSION['role'] === "admin" && isset($_POST["submit-delete-account-admin"]))
         {
@@ -144,14 +144,15 @@ class UserController extends AbstractController {
         if(isset($_POST['logout']))
         {
             session_destroy();
-            header("Location:index.php?route=homepage");
+            header("Location:/res04-projet-soutenance/");
         }
     }
 
     // Add a method to render the informations of the account
     public function account(int $id)
     {
-        $this->render("user/my-account.phtml", []);
+        $user = $this->um->getUserById($id);
+        $this->render("user/my-account.phtml", [$user]);
     }
 }
 

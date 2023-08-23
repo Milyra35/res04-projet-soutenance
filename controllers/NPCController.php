@@ -19,9 +19,9 @@ class NPCController extends AbstractController {
         $this->render('villagers/index.phtml', $villagers);
     }
 
-    public function getVillagerById(int $id) : Villager
+    public function getVillagerByName(string $name) : Villager
     {
-        $villager=$this->vm->getVillagerById($id);
+        $villager=$this->vm->getVillagerByName($name);
         $_SESSION['villager'] = $villager;
         return $villager;
     }
@@ -29,7 +29,7 @@ class NPCController extends AbstractController {
     // I want to display all the villager's data on one page
     public function displayVillagerData(int $id)
     {
-        $villager = $this->getVillagerById($id);
+        $villager = $this->vm->getVillagerById($id);
         $planning = $this->vpm->getPlanningById($id);
         $_SESSION['planning'] = $planning;
         $this->render('villagers/villager.phtml', [$villager]);

@@ -2,21 +2,19 @@
     $villagers = $data;
 ?>
 
-<main>
-    <h2>All villagers</h2>
-    <ul>
-    <?php
-        foreach($villagers as $villager)
-        {
-    ?>
+<h2>All villagers</h2>
+<ul>
+<?php
+    foreach($villagers as $villager)
+    {
+?>
 
-    <li>
-        <img src="<?= $villager->getPicture()->getUrl() ;?>" alt="<?= $villager->getPicture()->getAlt() ;?>">
-        <a href="index.php?route=villager_id=<?= $villager->getId() ;?>"><?= $villager->getName() ;?></a>
-    </li>
+<li>
+    <img src="<?= $villager->getPicture()->getUrl() ;?>" alt="<?= $villager->getPicture()->getAlt();?>">
+    <a href="/res04-projet-soutenance/villagers/<?= $villager->getId();?>"><?= $villager->getName();?></a>
+</li>
 
-    <?php        
-        }
-    ?>
-    </ul>
-</main>
+<?php        
+    }
+?>
+</ul>

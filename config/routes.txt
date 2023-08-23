@@ -15,6 +15,6 @@
 /admin
 /admin/all-users
 /admin/all-saved-games
-/admin/delete
+/admin/delete (à voir pour celle là)
 /admin/statistics
 /admin/edit

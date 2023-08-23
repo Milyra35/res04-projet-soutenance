@@ -1,7 +1,7 @@
 <main>
     <?php
     $villager = $_SESSION['villager'];
-    // var_dump($_SESSION['villager']);
+    var_dump($_SESSION['villager']);
     ?>
     <h2><?= $villager->getName() ;?></h2>
     <img src="<?= $villager->getPicture()->getUrl() ;?>" alt="<?= $villager->getPicture()->getAlt() ;?>">
