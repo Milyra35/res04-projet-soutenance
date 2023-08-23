@@ -1449,8 +1449,19 @@ class ProgressBoardController extends AbstractController {
         // I retrieve the relationships
         $relationships = $this->rm->getRelationshipsByFile($id);
 
+        // I retrieve the items to display them with their pictures if needed
+        $itemsPictures;
+
         // var_dump($relationships);
-        $this->render('user/game.phtml', [$skills, "player" => $player, $bundles, $items, "stats" => $stats, "books" => $books, $locations, $possessedItems, $relationships]);
+        $this->render('user/game.phtml', ["skills" => $skills, 
+            "player" => $player, 
+            "bundles" => $bundles, 
+            "items" => $items, 
+            "stats" => $stats, 
+            "books" => $books, 
+            "locations" => $locations, 
+            "possessedItems" => $possessedItems, 
+            "relationships" => $relationships]);
     }
 }
 

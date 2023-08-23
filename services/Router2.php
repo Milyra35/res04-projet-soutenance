@@ -27,15 +27,16 @@ class Router {
     // Create a method to check the routes
     public function checkRoute()
     {
-        // $fileName = $_SESSION['file_slug']->getName();
-        // $fileId = $_SESSION['file_id'];
-
         if(isset($_GET['route']))
         {
+            $fileId = $_SESSION['file_id'];
+            $fileName = $_SESSION['file_slug'];
+
             if($_GET['route'] === "homepage")
             {
                 $this->spc->render("staticpages/homepage.phtml", []);
                 $this->fc->uploadFile();
+                $this->pbc->readSavedFile($fileId);
             }
             else if($_GET['route'] === "login")
             {
@@ -61,14 +62,10 @@ class Router {
             {
                 $this->fc->indexGames();
             }
-            else if(str_contains($_GET['route'], "file_slug") && isset($_SESSION['user']))
-            // else if($_GET['route'] === "file_slug=$fileName" && isset($_SESSION['user']))
+            else if($_GET['route'] === "my-games/$fileName" && isset($_SESSION['user']))
             {
-                list($route, $file_slug) = explode("=", $_GET['route']);
-                $_SESSION['file_slug'] = $file_slug;
-                $this->fc->getFileById($file_slug);
-                $this->pbc->readSavedFile($file_slug);
-                $this->pbc->displayProgress($file_slug);
+                $this->fc->getFileById($fileId);
+                $this->pbc->displayProgress($fileId);
             }
             else if($_GET['route'] === "logout")
             {

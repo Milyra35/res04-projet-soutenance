@@ -1,14 +1,17 @@
 <h2>Put the name of the farm here</h2>
 
 <?php
-    foreach($data as $player)
+    foreach($data as $key => $player)
     {
-        // var_dump($player);
+        var_dump($key);
+        if($key === "player")
+        {
 ?>
 <section>
-    <h2></h2>
+    <h3><?=$player->getPlayerName();?></h3>
 </section>
 
 <?php
+        }
     }
 ?>

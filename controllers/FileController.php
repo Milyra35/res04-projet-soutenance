@@ -36,6 +36,7 @@ class FileController extends AbstractController {
 
                 $newFile = new SavedFile($_SESSION['user'], $fileName, $path);
                 $_SESSION['file_id'] = $newFile->getId();
+                $_SESSION['file_slug'] = $newFile->getName();
 
                 $this->fm->addFile($newFile);
 
