@@ -24,7 +24,7 @@ class MediaController extends AbstractController {
                         $nameWithoutExtension = pathinfo($pictureName, PATHINFO_FILENAME);
                         $name = str_replace('_', ' ', $nameWithoutExtension);
 
-                        $path = 'assets/images/game_pictures/' . $pictureName;
+                        $path = '/res04-projet-soutenance/assets/images/game_pictures/' . $pictureName;
                         $alt = 'Drawing of' . ' ' . $nameWithoutExtension;
                         $newPicture = new Picture($name, $path, $alt);
 

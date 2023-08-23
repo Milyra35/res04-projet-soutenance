@@ -24,113 +24,197 @@ class Router {
         $this->ac = new AdminController();
     }
 
-    // Create a method to check the routes
-    public function checkRoute()
+    // To create a nice URL
+    private function splitRouteAndParameters(string $route) : array
     {
-        // $fileName = $_SESSION['file_slug']->getName();
-        // $fileId = $_SESSION['file_id'];
+        $routeAndParams = [];
+        $routeAndParams['route'] = null;
+        $routeAndParams['villagerSlug'] = null;
+        $routeAndParams['fileSlug'] = null;
+        $routeAndParams['user'] = null;
+        $routeAndParams['admin'] = null;
 
-        if(isset($_GET['route']))
+
+        if(strlen($route) > 0) // If not empty
         {
-            if($_GET['route'] === "homepage")
+            $tab = explode("/", $route);
+            
+            if($tab[0] === "villagers") // If route begins by villagers
             {
-                $this->spc->render("staticpages/homepage.phtml", []);
-                $this->fc->uploadFile();
+                $routeAndParams['route'] = "villagers"; // I save the value in the array
+                if(isset($tab[1]))
+                {
+                    $routeAndParams['villagerSlug'] = $tab[1];
+                }
             }
-            else if($_GET['route'] === "login")
+            else if($tab[0] === "my-games") // If route begins by my-games
             {
-                $this->uc->loadUser();
+                $routeAndParams['route'] = "my-games"; // I save the value in the array
+                if(isset($tab[1]))
+                {
+                    $routeAndParams['fileSlug'] = $tab[1];
+                }
             }
-            else if($_GET['route'] === "register")
+            else if($tab[0] === "my-account")
             {
-                $this->uc->createUser();
+                $routeAndParams['route'] = "my-account";
+                if(isset($tab[1]) && $tab[1] === "edit")
+                {
+                    $routeAndParams['user'] = $tab[1];
+                }
+                else if(isset($tab[1]) && $tab[1] === "delete")
+                {
+                    $routeAndParams['user'] = $tab[1];
+                }
             }
-            else if($_GET['route'] === "my-account" && isset($_SESSION['user']))
+            else if($tab[0] === "admin")
             {
-                $this->uc->account($_SESSION['user_id']);
+                $routeAndParams['route'] = "admin";
+                if(isset($tab[1]) && $tab[1] === "all-users")
+                {
+                    $routeAndParams['admin'] = $tab[1];
+                }
+                else if(isset($tab[1]) && $tab[1] === "all-saved-games")
+                {
+                    $routeAndParams['admin'] = $tab[1];
+                }
+                else if(isset($tab[1]) && $tab[1] === "statistics")
+                {
+                    $routeAndParams['admin'] = $tab[1];
+                }
+                else if(isset($tab[1]) && $tab[1] === "edit")
+                {
+                    $routeAndParams['admin'] = $tab[1];
+                }
             }
-            else if($_GET['route'] === "my-account/edit" && isset($_SESSION['user']))
+            else if($tab[0] === "login")
             {
-                $this->uc->editUser();
+                $routeAndParams['route'] = "login";
             }
-            else if($_GET['route'] === "my-account/delete" && isset($_SESSION['user']))
+            else if($tab[0] === "register")
             {
-                $this->uc->deleteUser();
+                $routeAndParams['route'] = "register";
             }
-            else if($_GET['route'] === "my-games" && isset($_SESSION['user']))
+            else if($tab[0] === "logout")
             {
-                $this->fc->indexGames();
+                $routeAndParams['route'] = "logout";
             }
-            else if(str_contains($_GET['route'], "file_slug") && isset($_SESSION['user']))
-            // else if($_GET['route'] === "file_slug=$fileName" && isset($_SESSION['user']))
+            else if($tab[0] === "confidentiality")
             {
-                list($route, $file_slug) = explode("=", $_GET['route']);
-                $_SESSION['file_slug'] = $file_slug;
-                $this->fc->getFileById($file_slug);
-                $this->pbc->readSavedFile($file_slug);
-                $this->pbc->displayProgress($file_slug);
+                $routeAndParams['route'] = "confidentiality";
             }
-            else if($_GET['route'] === "logout")
+            else if($tab[0] === "legal-notices")
             {
-                $this->uc->logoutUser();
+                $routeAndParams['route'] = "legal-notices";
             }
-            else if($_GET['route'] === "villagers")
+            else if($tab[0] === "credits")
             {
-                $this->npc->index();
-            }
-            else if(str_contains($_GET['route'], "villager_id"))
-            {
-                list($route, $villager_id) = explode("=", $_GET['route']);
-                $_SESSION['villager_id'] = $villager_id;
-                $this->npc->getVillagerById($villager_id);
-                $this->npc->displayVillagerData($villager_id);
-            }
-            else if($_GET['route'] === "confidentiality")
-            {
-                $this->spc->render("staticpages/confidentiality.phtml", []);
-            }
-            else if($_GET['route'] === "legal-notices")
-            {
-                $this->spc->render("staticpages/legal-notices.phtml", []);
-            }
-            else if($_GET['route'] === "credits")
-            {
-                $this->spc->render("staticpages/credits.phtml", []);
-            }
-            else if($_GET['route'] === "admin" && isset($_SESSION['role']) && $_SESSION['role'] === "admin")
-            {
-                $this->ac->index();
-                $this->mc->addPicture();
-                // $this->npc->addVillagers(); I only need it once to add all the villagers to the database
-                // $this->npc->addVillagerPlanning(); I only need it once to add the schedule of each villager
-                // $this->ic->addItems(); I only need it once to add the items to the database
-            }
-            else if($_GET['route'] === "admin/all-users" && isset($_SESSION['role']) && $_SESSION['role'] === "admin")
-            {
-                $this->ac->getAllUsers();
-            }
-            else if($_GET['route'] === "admin/all-saved-games" && isset($_SESSION['role']) && $_SESSION['role'] === "admin")
-            {
-                $this->ac->getAllGames();
-            }
-            else if($_GET['route'] === "admin/delete" && isset($_SESSION['role']) && $_SESSION['role'] === "admin")
-            {
-                $this->uc->deleteUser();
-                //Delete the user without rendering the delete form for the front part
-            }
-            else if($_GET['route'] === "admin/statistics" && isset($_SESSION['role']) && $_SESSION['role'] === "admin")
-            {
-                $this->ac->displayStatistics();
-            }
-            else if($_GET['route'] === "admin/edit" && isset($_SESSION['role']) && $_SESSION['role'] === "admin")
-            {
-                $this->ac->edit();
+                $routeAndParams['route'] = "credits";
             }
         }
         else
         {
+            $routeAndParams['route'] = "";
+        }
+
+        return $routeAndParams;
+    }
+
+    // Create a method to check the routes
+    public function checkRoute(string $route) : void
+    {
+        $routeTab = $this->splitRouteAndParameters($route);
+        
+        if($routeTab['route'] === "")
+        {
             $this->spc->render("staticpages/homepage.phtml", []);
         }
+        else if($routeTab['route'] === "login")
+        {
+            $this->uc->loadUser();
+        }
+        else if($routeTab['route'] === "register")
+        {
+            $this->uc->createUser();
+        }
+        else if($routeTab['route'] === "my-account" && isset($_SESSION['user']))
+        {
+            $this->uc->account($_SESSION['user_id']);
+        }
+        else if($routeTab['route'] === "my-account" && $routeTab['user'] === "edit" && isset($_SESSION['user']))
+        {
+            $this->uc->editUser();
+        }
+        else if($routeTab['route'] === "my-account" && $routeTab['user'] === "delete" && isset($_SESSION['user']))
+        {
+            $this->uc->deleteUser();
+        }
+        else if($routeTab['route'] === "my-games" && isset($_SESSION['user']) && $routeTab['fileSlug'] === null)
+        {
+            $this->fc->indexGames();
+            $this->fc->uploadFile();
+        }
+        else if($routeTab['route'] === "my-games" && $routeTab['fileSlug'] !== null && isset($_SESSION['user']))
+        {
+            $this->fc->getFileById(intval($routeTab['fileSlug']));
+            $this->pbc->displayProgress(intval($routeTab['fileSlug']));
+        }
+        else if($routeTab['route'] === "logout")
+        {
+            $this->uc->logoutUser();
+        }
+        else if($routeTab['route'] === "villagers" && $routeTab['villagerSlug'] === null)
+        {
+            $this->npc->index();
+        }
+        else if($routeTab['route'] === "villagers" && $routeTab['villagerSlug'] !== null)
+        {
+            // $this->npc->getVillagerById(intval($routeTab['villagerSlug']));
+            $this->npc->displayVillagerData(intval($routeTab['villagerSlug']));
+        }
+        else if($routeTab['route'] === "confidentiality")
+        {
+            $this->spc->render("staticpages/confidentiality.phtml", []); // Change to put a method called index instead
+        }
+        else if($routeTab['route'] === "legal-notices")
+        {
+            $this->spc->render("staticpages/legal-notices.phtml", []); // Change to put a method called index instead
+        }
+        else if($routeTab['route'] === "credits")
+        {
+            $this->spc->render("staticpages/credits.phtml", []); // Change to put a method called index instead
+        }
+        else if($routeTab['route'] === "admin" && isset($_SESSION['role']) && $_SESSION['role'] === "admin")
+        {
+            $this->ac->index();
+            $this->mc->addPicture();
+            // $this->npc->addVillagers(); I only need it once to add all the villagers to the database
+            // $this->npc->addVillagerPlanning(); I only need it once to add the schedule of each villager
+            // $this->ic->addItems(); I only need it once to add the items to the database
+
+            if($routeTab['admin'] === "all-users")
+            {
+                $this->ac->getAllUsers();
+            }
+            else if($routeTab['admin'] === "all-saved-games")
+            {
+                $this->ac->getAllGames();
+            }
+            else if($routeTab['admin'] === "delete")
+            {
+                $this->uc->deleteUser();
+                //Delete the user without rendering the delete form for the front part
+            }
+            else if($routeTab['admin'] === "statistics")
+            {
+                $this->ac->displayStatistics();
+            }
+            else if($routeTab['admin'] === "edit")
+            {
+                $this->ac->edit();
+            }
+        }
+        
     }
 }
 

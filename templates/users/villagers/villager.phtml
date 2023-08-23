@@ -1,10 +1,10 @@
 <main>
     <?php
-    $villager = $_SESSION['villager'];
-    var_dump($_SESSION['villager']);
+    // var_dump($data);
+        $villager = $data[0];
     ?>
     <h2><?= $villager->getName() ;?></h2>
-    <img src="<?= $villager->getPicture()->getUrl() ;?>" alt="<?= $villager->getPicture()->getAlt() ;?>">
+    <img src="/res04-projet-soutenance/<?= $villager->getPicture()->getUrl() ;?>" alt="<?= $villager->getPicture()->getAlt() ;?>">
 
     <section>
         <p>Birthday : <?= $villager->getBirthday() ;?></p>
@@ -20,7 +20,6 @@
                 }
             ?>
         </p>
-        <!-- Display all the informations of a villager -->
     </section>
     <section>
         <h3>Events</h3>

@@ -48,6 +48,6 @@ require 'controllers/ProgressBoardController.php';
 require 'controllers/StaticPageController.php';
 
 // Require the router
-require 'services/Router2.php';
+require 'services/Router.php';
 
 ?>

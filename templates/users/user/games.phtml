@@ -1,15 +1,27 @@
-<h3>My games</h3>
-<ul>
-<?php
-    foreach($data as $game)
-    {
-?>
+<section>
+    <h3>Add your file</h3>
+    <form enctype="multipart/form-data" method="POST" action="/res04-projet-soutenance/my-games">
+        <label class="hidden" for="saved-file">Upload your file</label> <!-- Hide it in css -->
+        <input type="hidden" name="MAX_FILE_SIZE" value="7000000">
+        <input type="file" name="saved-file" id="saved-file" value="Choose a file">
+        <input type="submit" name="upload-file" id="upload-file" value="Submit">
+    </form>
+</section>
 
-<li>
-    <a href="/res04-projet-soutenance/my-games/<?= $game['id'] ;?>"><?= htmlspecialchars($game['name']) ;?></a>
-</li>
+<section>
+    <h3>My games</h3>
+    <ul>
+    <?php
+        foreach($data as $game)
+        {
+    ?>
 
-<?php
-    }
-?>
-</ul>
+    <li>
+        <a href="/res04-projet-soutenance/my-games/<?= $game['id'] ;?>"><?= htmlspecialchars($game['name']) ;?></a>
+    </li>
+
+    <?php
+        }
+    ?>
+    </ul>
+</section>
