@@ -17,13 +17,13 @@ class FileController extends AbstractController {
     }
 
     // Read the uploaded file to store the informations into the database
-    private function readSavedFile($id)
+    public function readSavedFile(int $id)
     {
-        $file = $this->fm->getFileById($id);
+        $file = $this->getFileById($id);
         $fileName = $file->getName();
 
         // I need to retrieve the file from the user id
-        $xml=simplexml_load_file('data/uploadedfile/'.$fileName) or die("Error: Cannot create object");
+        $xml=simplexml_load_file('/res04-projet-soutenance/data/uploadedfile/'.$fileName) or die("Error: Cannot create object");
 
         // Player Progress
         $name = htmlspecialchars($xml->player->name);
@@ -1412,6 +1412,9 @@ class FileController extends AbstractController {
             {
                 $file = $_FILES['saved-file'];
 
+                date_default_timezone_set("Europe/Paris");
+                $uploadDate = date("Y-m-d H:i:s");
+
                 // To get the file name
                 $fileName = htmlspecialchars($file['name']);
                 
@@ -1420,12 +1423,14 @@ class FileController extends AbstractController {
                 move_uploaded_file($file['tmp_name'], $path);
 
                 $newFile = new SavedFile($_SESSION['user'], $fileName, $path);
+                $newFile->setDate($uploadDate);
                 
                 $this->fm->addFile($newFile);
-                $_SESSION['file_id'] = $newFile->getId();
+                $fileId = $newFile->getId();
+                $_SESSION['file_id'] = $fileId;
                 
                 $this->readSavedFile($_SESSION['file_id']);
-
+                
                 echo "File uploaded with success";
             }
             else
@@ -1442,15 +1447,11 @@ class FileController extends AbstractController {
                 }
                 else
                 {
-                    var_dump($_FILES['saved-file']['error']);
+                    // var_dump($_FILES['saved-file']['error']);
                     echo "Try again later";
                 }
             }
         }
-        // else 
-        // {
-        //     $this->render('staticpages/homepage.phtml', []);
-        // }
     }
 
     // We want the list of the games of a user

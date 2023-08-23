@@ -47,13 +47,13 @@ class FileManager extends AbstractManager {
     // Add the file to the database
     public function addFile(SavedFile $file) : SavedFile
     {
-        $exist = $this->db->prepare("SELECT * FROM saved_files WHERE user_id = :user_id AND name = :name");
+        $query = $this->db->prepare("SELECT * FROM saved_files WHERE user_id = :user_id AND name = :name");
         $parameters=[
             'name' => $file->getName(),
             'user_id' => $file->getUser()->getId()
         ];
-        $exist->execute($parameters);
-        $existingFile = $exist->fetch(PDO::FETCH_ASSOC);
+        $query->execute($parameters);
+        $existingFile = $query->fetch(PDO::FETCH_ASSOC);
 
         if(!$existingFile)
         {
@@ -71,8 +71,17 @@ class FileManager extends AbstractManager {
         }
         else
         {
-            // Add DELETE and then re INSERT INTO it
-            // $update = $this->db->prepare("UPDATE saved_files SET ")
+            $update = $this->db->prepare("UPDATE saved_files SET 
+                url = :url,
+                upload_date = :upload_date
+                WHERE user_id = :user_id AND name = :name");
+            $updateParams = [
+                'user_id'=> $file->getUser()->getId(),
+                'name'=> $file->getName(),
+                'url'=> $file->getUrl(),
+                'upload_date'=> $file->getDate()
+            ];
+            $update->execute($updateParams);
         }
 
         return $file;
