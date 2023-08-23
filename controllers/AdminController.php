@@ -3,11 +3,13 @@
 class AdminController extends AbstractController {
     private UserManager $um;
     private FileManager $fm;
+    private StatisticManager $sm;
 
     public function __construct()
     {
         $this->um = new UserManager();
         $this->fm = new FileManager();
+        $this->sm = new StatisticManager();
     }
 
     public function index()
@@ -27,6 +29,13 @@ class AdminController extends AbstractController {
     {
         $users = $this->um->getAllUsers();
         $this->render('users/users.phtml', $users, "admin");
+    }
+
+    // To display all statistics
+    public function displayStatistics()
+    {
+        $stats = $this->sm->getAllStats();
+        $this->render('users/statistics.phtml', $stats, "admin");
     }
 }
 
