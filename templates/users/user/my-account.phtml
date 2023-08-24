@@ -1,1 +1,18 @@
-<h2>Hello <?= htmlspecialchars($_SESSION['user']->getUsername()) ;?></h2>
+<h2>Hello <?=$_SESSION['user']->getUsername();?></h2>
+
+<section>
+    <h3>My informations</h3>
+    <dl>
+        <dt>My username</dt>
+        <dd><?=$_SESSION['user']->getUsername();?></dd>
+
+        <dt>My email</dt>
+        <dd><?=$_SESSION['user']->getEmail();?></dd>
+
+        <dt>My registration date</dt>
+        <dd><?=$_SESSION['user']->getRegistrationDate();?></dd>
+    </dl>
+
+    <a href="/res04-projet-soutenance/my-account/edit">Edit my informations</a>
+    <a href="/res04-projet-soutenance/my-account/delete">Delete my account</a>
+</section>

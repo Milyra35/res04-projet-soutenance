@@ -127,7 +127,7 @@ class Router {
         
         if($routeTab['route'] === "")
         {
-            $this->spc->render("staticpages/homepage.phtml", []);
+            $this->spc->renderHomepage();
         }
         else if($routeTab['route'] === "login")
         {
@@ -184,15 +184,15 @@ class Router {
         }
         else if($routeTab['route'] === "confidentiality")
         {
-            $this->spc->render("staticpages/confidentiality.phtml", []); // Change to put a method called index instead
+            $this->spc->renderConfidentiality();
         }
         else if($routeTab['route'] === "legal-notices")
         {
-            $this->spc->render("staticpages/legal-notices.phtml", []); // Change to put a method called index instead
+            $this->spc->renderLegalNotices();
         }
         else if($routeTab['route'] === "credits")
         {
-            $this->spc->render("staticpages/credits.phtml", []); // Change to put a method called index instead
+            $this->spc->renderCredits();
         }
         else if($routeTab['route'] === "admin" && isset($_SESSION['role']) && $_SESSION['role'] === "admin")
         {
@@ -224,7 +224,6 @@ class Router {
                 $this->ac->edit();
             }
         }
-        
     }
 }
 
