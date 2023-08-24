@@ -67,15 +67,16 @@ class ProgressBoardController extends AbstractController {
         $itemsPictures = $this->im->getAllItems();
 
         // var_dump($relationships);
-        $this->render('user/game.phtml', ["skills" => $skills, 
-            "player" => $player, 
+        $this->render('user/game.phtml', [ 
+            "player" => $player,
+            "skills" => $skills, 
             "bundles" => $bundles, 
             "items" => $items, 
-            "stats" => $stats, 
             "books" => $books, 
-            "locations" => $locations, 
-            "possessedItems" => $possessedItems, 
             "relationships" => $relationships,
+            "locations" => $locations,
+            "possessedItems" => $possessedItems,
+            "stats" => $stats,
             "itemsPictures" => $itemsPictures]);
     }
 }
