@@ -47,6 +47,8 @@ class FileController extends AbstractController {
     {
         $file = $this->getFileById($id);
         $fileName = $file->getName();
+        $_SESSION['user_id'] = $file->getUser()->getId();
+        var_dump($_SESSION['user_id']);
         $filePath = "data/uploadedfile/".$fileName.".xml";
         
         if(file_exists($filePath))
@@ -144,7 +146,7 @@ class FileController extends AbstractController {
         // Statistics
         $hoursPlayed = intval(intval($xml->player->millisecondsPlayed) / 3600000);
         $daysSpent = intval($xml->player->stats->daysPlayed);
-        $seasonsPassed = intval(($daysSpent / 28) / 4);
+        $seasonsPassed = intval($daysSpent / 28);
         $fishCaught = intval($xml->player->stats->fishCaught);
 
         $newStat = new Statistic($file, $hoursPlayed, $daysSpent, $seasonsPassed, $fishCaught);
@@ -220,7 +222,7 @@ class FileController extends AbstractController {
 
         foreach($xml->player->mailReceived->string as $location)
         {
-            if((string) $location === "checkedMonsterBoard")
+            if((string) $location === "guildQuest")
             {
                 $isMine = true;
             }
@@ -977,7 +979,7 @@ class FileController extends AbstractController {
         $isOceanFish = true;
         $isNightFishing = true;
         $isSpecialtyFish = true;
-        $isCarbPot = true;
+        $isCrabPot = true;
         $isBlacksmith = true;
         $isGeologist = true;
         $isAdventurer = true;
@@ -1253,49 +1255,41 @@ class FileController extends AbstractController {
 
                     if((int) $item->key->int === 23)
                     {
-                        foreach($item->value->ArrayOfBoolean->boolean as $bool)
+                        if((string) $item->value->ArrayOfBoolean->boolean[0] !== 'true')
                         {
-                            if((string) $bool !== 'true')
-                            {
-                                $is2500 = false;
-                                break;
-                            }
+                            $is2500 = false;
                         }
+                        // foreach($item->value->ArrayOfBoolean->boolean as $bool)
+                        // {
+                        //     if((string) $bool !== 'true')
+                        //     {
+                        //         $is2500 = false;
+                        //         break;
+                        //     }
+                        // }
                     }
 
                     if((int) $item->key->int === 24)
                     {
-                        foreach($item->value->ArrayOfBoolean->boolean as $bool)
+                        if((string) $item->value->ArrayOfBoolean->boolean[0] !== 'true')
                         {
-                            if((string) $bool !== 'true')
-                            {
-                                $is5000 = false;
-                                break;
-                            }
+                            $is5000 = false;
                         }
                     }
 
                     if((int) $item->key->int === 25)
                     {
-                        foreach($item->value->ArrayOfBoolean->boolean as $bool)
+                        if((string) $item->value->ArrayOfBoolean->boolean[0] !== 'true')
                         {
-                            if((string) $bool !== 'true')
-                            {
-                                $is10000 = false;
-                                break;
-                            }
+                            $is10000 = false;
                         }
                     }
 
                     if((int) $item->key->int === 26)
                     {
-                        foreach($item->value->ArrayOfBoolean->boolean as $bool)
+                        if((string) $item->value->ArrayOfBoolean->boolean[0] !== 'true')
                         {
-                            if((string) $bool !== 'true')
-                            {
-                                $is25000 = false;
-                                break;
-                            }
+                            $is25000 = false;
                         }
                     }
 

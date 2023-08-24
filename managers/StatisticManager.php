@@ -57,23 +57,17 @@ class StatisticManager extends AbstractManager {
     }
 
     // Get the stats by their file
-    public function getStatByFile(int $id) : array
+    public function getStatByFile(int $id) : Statistic
     {
         $query=$this->db->prepare("SELECT * FROM statistics WHERE file_id = :id");
         $parameters=['id' => $id];
         $query->execute($parameters);
-        $data=$query->fetchAll(PDO::FETCH_ASSOC);
+        $data=$query->fetch(PDO::FETCH_ASSOC);
 
-        $stats = [];
+        $newStat = new Statistic($this->fm->getFileById($data['file_id']), $data['hours_played'], $data['days_spent'], $data['seasons_passed'], $data['fish_catched']);
+        $newStat->setId($data['id']);
 
-        foreach($data as $stat)
-        {
-            $newStat = new Statistic($this->fm->getFileById($stat['file_id']), $stat['hours_played'], $stat['days_spent'], $stat['seasons_passed'], $stat['fish_catched']);
-            $newStat->setId($stat['id']);
-            $stats[] = $newStat;
-        }
-
-        return $stats;
+        return $newStat;
     }
 
     // Get all the stats to display in the back-office

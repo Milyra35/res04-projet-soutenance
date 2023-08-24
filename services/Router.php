@@ -156,7 +156,7 @@ class Router {
         }
         else if($routeTab['route'] === "my-games" && $routeTab['fileSlug'] !== null && isset($_SESSION['user']))
         {
-            $this->fc->getFileById(intval($routeTab['fileSlug']));
+            // $this->fc->getFileById(intval($routeTab['fileSlug']));
             $this->fc->readSavedFile(intval($routeTab['fileSlug']));
             $this->pbc->displayProgress(intval($routeTab['fileSlug']));
         }
