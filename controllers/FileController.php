@@ -48,7 +48,7 @@ class FileController extends AbstractController {
         $file = $this->getFileById($id);
         $fileName = $file->getName();
         $_SESSION['user_id'] = $file->getUser()->getId();
-        var_dump($_SESSION['user_id']);
+        
         $filePath = "data/uploadedfile/".$fileName.".xml";
         
         if(file_exists($filePath))
