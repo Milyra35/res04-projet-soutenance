@@ -1,17 +1,66 @@
-<h2>Put the name of the farm here</h2>
-
 <?php
     foreach($data as $key => $player)
     {
-        var_dump($key);
+        // var_dump($key);
         if($key === "player")
         {
 ?>
+<h2><?=$player->getPlayerName();?>'s Farm</h2>
+
 <section>
     <h3><?=$player->getPlayerName();?></h3>
+    <p>You have a 
+        <?php
+            if($player->getCat() === true)
+            {
+                echo "cat named ". $player->getPetName();
+            }
+            else
+            {
+                echo "dog named ". $player->getPetName();
+            }
+        ?>
+    </p>
+    <p>You currently have <?=$player->getMoney();?> gold.</p>
+    <p>Your maximum health : <?=$player->getHealth();?></p>
+    <p>Your maximum energy : <?=$player->getEnergy();?></p>
+    <p>You are
+        <?php
+            if($player->getIsMarried() === true)
+            {
+                echo "married ";
+                if($player->getHasChildren() === true)
+                {
+                    echo "and you have children";
+                }
+            }
+            else
+            {
+                echo "not married and you don't have children";
+            }
+        }
+        ?>
+    </p>
+</section>
+
+<section>
+    <h3>Your skills</h3>
+    <ul>
+    <?php
+        if($key === "skills")
+        {
+            foreach($player as $skill)
+            {
+    ?>
+        <li><?=$skill->getName();?>:  <?=$skill->getLevel();?>/10</li>
+    <?php
+            }
+        }
+    ?>
+    </ul>
 </section>
 
 <?php
-        }
     }
 ?>
+

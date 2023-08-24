@@ -2,10 +2,36 @@
 
 class FileController extends AbstractController {
     private FileManager $fm;
+    private BookManager $bm;
+    private CommunityCenterManager $ccm;
+    private ItemManager $im;
+    private LocationManager $lm;
+    private MuseumManager $mm;
+    private UserManager $um;
+    private PlayerProgressManager $pp;
+    private PlayerSkillManager $psm;
+    private PossessedItemManager $pim;
+    private RelationshipManager $rm;
+    private StatisticManager $sm;
+    private PictureManager $pm;
+    private VillagerManager $vm;
 
     public function __construct()
     {
         $this->fm = new FileManager();
+        $this->bm = new BookManager();
+        $this->ccm = new CommunityCenterManager();
+        $this->im = new ItemManager();
+        $this->lm = new LocationManager();
+        $this->mm = new MuseumManager();
+        $this->um = new UserManager();
+        $this->pp = new PlayerProgressManager();
+        $this->psm = new PlayerSkillManager();
+        $this->pim = new PossessedItemManager();
+        $this->rm = new RelationShipManager();
+        $this->sm = new StatisticManager();
+        $this->pm = new PictureManager();
+        $this->vm = new VillagerManager();
     }
 
     // To get a file by its ID
@@ -21,17 +47,28 @@ class FileController extends AbstractController {
     {
         $file = $this->getFileById($id);
         $fileName = $file->getName();
-
-        // I need to retrieve the file from the user id
-        $xml=simplexml_load_file('/res04-projet-soutenance/data/uploadedfile/'.$fileName) or die("Error: Cannot create object");
+        $filePath = "data/uploadedfile/".$fileName.".xml";
+        
+        if(file_exists($filePath))
+        {
+            $xml = simplexml_load_file($filePath);
+            if($xml === false)
+            {
+                die("Error: Cannot create object");
+            }
+        }
+        else
+        {
+            die("Error: File does not exist");
+        }
 
         // Player Progress
         $name = htmlspecialchars($xml->player->name);
         $money = htmlspecialchars($xml->player->money);
         $health = htmlspecialchars($xml->player->health);
         $energy = htmlspecialchars($xml->player->maxStamina);
-        $cat = null;
-        $dog = null;
+        $cat = false;
+        $dog = false;
         $isMarried = false;
         $petName = '';
         
@@ -51,16 +88,17 @@ class FileController extends AbstractController {
             }
         }
         
-        if($xml->player->catPerson == true)
+        if((string) $xml->player->catPerson === "true")
         {
             $cat = true;
             $dog = false;
         }
-        if($xml->player->catPerson == false)
+        else if((string) $xml->player->catPerson === "false")
         {
             $cat = false;
             $dog = true;
         }
+        // var_dump($cat);
 
         foreach($xml->locations->GameLocation as $location)
         {
@@ -769,7 +807,7 @@ class FileController extends AbstractController {
         $newAnchor = new Museum($file, "Anchor", $isAnchor);
         $newDiamond = new Museum($file, "Diamond", $isDiamond);
         $newChickenStatue = new Museum($file, "Chicken Statue", $isChickenStatue);
-        $newProhistoricScapula = new Museum($file, "Prohistoric Scapula", $isProhistoricScapula);
+        $newPrehistoricScapula = new Museum($file, "Prehistoric Scapula", $isPrehistoricScapula);
         $newPrehistoricHandaxe = new Museum($file, "Prehistoric Handaxe", $isPrehistoricHandaxe);
         $newSkeletalHand = new Museum($file, "Skeletal Hand", $isSkeletalHand);
         $newChippedAmphora = new Museum($file, "Chipped Amphora", $isChippedAmphora);
@@ -865,7 +903,7 @@ class FileController extends AbstractController {
         $this->mm->addItem($newAnchor);
         $this->mm->addItem($newDiamond);
         $this->mm->addItem($newChickenStatue);
-        $this->mm->addItem($newProhistoricScapula);
+        $this->mm->addItem($newPrehistoricScapula);
         $this->mm->addItem($newPrehistoricHandaxe);
         $this->mm->addItem($newSkeletalHand);
         $this->mm->addItem($newChippedAmphora);
@@ -1354,7 +1392,7 @@ class FileController extends AbstractController {
         $oceanFish = new CommunityCenter($file, "Ocean Fish", $isOceanFish);
         $nightFishing = new CommunityCenter($file, "Night Fishing", $isNightFishing);
         $specialtyFish = new CommunityCenter($file, "Specialty Fish", $isSpecialtyFish);
-        $carbPot = new CommunityCenter($file, "Carb Pot", $isCarbPot);
+        $crabPot = new CommunityCenter($file, "Crab Pot", $isCrabPot);
         $blacksmith = new CommunityCenter($file, "Blacksmith", $isBlacksmith);
         $geologist = new CommunityCenter($file, "Geologist", $isGeologist);
         $adventurer = new CommunityCenter($file, "Adventurer", $isAdventurer);
@@ -1386,7 +1424,7 @@ class FileController extends AbstractController {
         $this->ccm->addBundle($oceanFish);
         $this->ccm->addBundle($nightFishing);
         $this->ccm->addBundle($specialtyFish);
-        $this->ccm->addBundle($carbPot);
+        $this->ccm->addBundle($crabPot);
         $this->ccm->addBundle($blacksmith);
         $this->ccm->addBundle($geologist);
         $this->ccm->addBundle($adventurer);
@@ -1420,16 +1458,17 @@ class FileController extends AbstractController {
                 
                 // To move the file to the right path
                 $path = 'data/uploadedfile/' . $fileName . '.xml';
+                $filePath = "/".$path;
                 move_uploaded_file($file['tmp_name'], $path);
 
-                $newFile = new SavedFile($_SESSION['user'], $fileName, $path);
+                $newFile = new SavedFile($_SESSION['user'], $fileName, $filePath);
                 $newFile->setDate($uploadDate);
                 
                 $this->fm->addFile($newFile);
-                $fileId = $newFile->getId();
-                $_SESSION['file_id'] = $fileId;
+                // $fileId = $newFile->getId();
+                // $_SESSION['file_id'] = $fileId;
                 
-                $this->readSavedFile($_SESSION['file_id']);
+                // $this->readSavedFile($_SESSION['file_id']);
                 
                 echo "File uploaded with success";
             }

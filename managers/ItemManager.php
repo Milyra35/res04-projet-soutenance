@@ -1,6 +1,13 @@
 <?php
 
 class ItemManager extends AbstractManager {
+    private PictureManager $pm;
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->pm = new PictureManager();
+    }
     // Get a picture by its ID
     public function getPictureById(int $id) : Picture
     {
@@ -44,8 +51,8 @@ class ItemManager extends AbstractManager {
 
         foreach($data as $item)
         {
-            $newItem = new Item($this->getPictureById($data['picture_id']), $data['type'], $data['name'], $data['description']);
-            $newItem->setId($data['id']);
+            $newItem = new Item($this->pm->getPictureById($item['picture_id']), $item['type'], $item['name'], $item['description']);
+            $newItem->setId($item['id']);
             $items[] = $newItem;
         }
 
