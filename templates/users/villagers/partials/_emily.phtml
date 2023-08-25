@@ -11,14 +11,18 @@
                     // echo $key;
                     foreach($days as $clef => $time)
                     {
-                        echo $clef.' '.$time;
+                        echo $clef;
+                        foreach($time as $keys => $hours)
+                        {
+                            echo $key.' '.$hours;
+                        }
                     }
                 }
                 else
                 {
                     foreach($days as $clef => $time)
                     {
-                        
+                        echo $clef.' '.$time;
                     }
                 }
             }
