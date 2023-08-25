@@ -137,36 +137,42 @@ class Router {
         {
             $this->uc->createUser();
         }
-        else if($routeTab['route'] === "my-account" && isset($_SESSION['user']) && $routeTab['user'] === null)
+        else if($routeTab['route'] === "my-account" && isset($_SESSION['user']))
         {
-            $this->uc->account($_SESSION['user_id']);
-        }
-        else if($routeTab['route'] === "my-account" && $routeTab['user'] === "edit" && isset($_SESSION['user']))
-        {
-            $this->uc->editUser();
-        }
-        else if($routeTab['route'] === "my-account" && $routeTab['user'] === "delete" && isset($_SESSION['user']))
-        {
-            $this->uc->deleteUser();
-        }
-        else if($routeTab['route'] === "my-games" && isset($_SESSION['user']) && $routeTab['fileSlug'] === null)
-        {
-            $this->fc->indexGames();
-            $this->fc->uploadFile();
-        }
-        else if($routeTab['route'] === "my-games" && $routeTab['fileSlug'] !== null && isset($_SESSION['user']))
-        {
-            $file = $this->fc->getFileById(intval($routeTab['fileSlug']));
-            $fileUser = $file->getUser()->getId();
-
-            if($fileUser === $_SESSION['user_id'])
+            if($routeTab['user'] === null)
             {
-                $this->fc->readSavedFile(intval($routeTab['fileSlug']));
-                $this->pbc->displayProgress(intval($routeTab['fileSlug']));
+                $this->uc->account($_SESSION['user_id']);
             }
-            else
+            else if($routeTab['route'] === "my-account" && $routeTab['user'] === "edit")
             {
-                header("Location:/res04-projet-soutenance/my-games");
+                $this->uc->editUser();
+            }
+            else if($routeTab['route'] === "my-account" && $routeTab['user'] === "delete")
+            {
+                $this->uc->deleteUser();
+            }
+        }
+        else if($routeTab['route'] === "my-games" && isset($_SESSION['user']))
+        {
+            if($routeTab['fileSlug'] === null)
+            {
+                $this->fc->indexGames();
+                $this->fc->uploadFile();
+            }
+            else if($routeTab['route'] === "my-games")
+            {
+                $file = $this->fc->getFileById(intval($routeTab['fileSlug']));
+                $fileUser = $file->getUser()->getId();
+
+                if($fileUser === $_SESSION['user_id'])
+                {
+                    $this->fc->readSavedFile(intval($routeTab['fileSlug']));
+                    $this->pbc->displayProgress(intval($routeTab['fileSlug']));
+                }
+                else
+                {
+                    header("Location:/res04-projet-soutenance/my-games");
+                }
             }
         }
         else if($routeTab['route'] === "logout")
