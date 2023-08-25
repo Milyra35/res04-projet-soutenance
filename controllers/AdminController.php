@@ -35,7 +35,33 @@ class AdminController extends AbstractController {
     public function displayStatistics()
     {
         $stats = $this->sm->getAllStats();
-        $this->render('users/statistics.phtml', $stats, "admin");
+
+        $total = [];
+        $totalHours = 0;
+        $totalDays = 0;
+        $totalSeasons = 0;
+        $totalFishes = 0;
+
+        foreach($stats as $stat)
+        {
+            $totalHours += $stat->getHoursPlayed();
+            $totalDays += $stat->getDaysSpent();
+            $totalSeasons += $stat->getSeasonsPassed();
+            $totalFishes += $stat->getFishCatched();
+        }
+
+        $averageHours = intval($totalHours / count($stats));
+        $averageDays = intval($totalDays / count($stats));
+        $averageSeasons = intval($totalSeasons / count($stats));
+        $averageFishes = intval($totalFishes / count($stats));
+
+        $total[] = $averageHours;
+        $total[] = $averageDays;
+        $total[] = $averageSeasons;
+        $total[] = $averageFishes;
+        // var_dump($total);
+
+        $this->render('users/statistics.phtml', ['stats' => $stats, 'total' => $total], "admin");
     }
 }
 
