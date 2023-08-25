@@ -70,6 +70,14 @@ class CommunityCenterManager extends AbstractManager {
 
         return $bundles;
     }
+
+    // Delete bundles by its file ID
+    public function deleteBundlesByFile(int $id) 
+    {
+        $query=$this->db->prepare("DELETE FROM community_center WHERE file_id = :file_id");
+        $parameters=['file_id' => $id];
+        $query->execute($parameters);
+    }
 }
 
 ?>

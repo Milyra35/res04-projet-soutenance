@@ -1,15 +1,32 @@
 <h3>All users</h3>
-<ul>
-    <?php
-    // var_dump($data);
-        // $users = $data;
-        foreach($data as $user)
-        {
-    ?>
-    <li><?= $user->getUsername() ;?></li>
-    <li><?= $user->getEmail() ;?></li>
-    <li><?= $user->getRole()->getName() ;?></li>
-    <?php
-        }
-    ?>
-</ul>
+<table>
+    <thead>
+        <tr>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Role</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php
+            foreach($data as $user)
+            {
+                echo 
+                    "<tr>
+                        <td>".$user->getUsername()."</td>
+                        <td>".$user->getEmail()."</td>
+                        <td>".$user->getRole()->getName()."</td>
+                    </tr>";
+            }
+        ?>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td rowspan=3>
+                <?php
+                    echo "Total users : ".count($data);
+                ?>
+            </td>
+        </tr>
+    </tfoot>
+</table>

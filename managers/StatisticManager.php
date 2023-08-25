@@ -88,6 +88,14 @@ class StatisticManager extends AbstractManager {
 
         return $stats;
     }
+
+    // Delete statistics by file id
+    public function deleteStatsByFile(int $id)
+    {
+        $query=$this->db->prepare("DELETE FROM statistics WHERE file_id = :file_id");
+        $parameters=['file_id' => $id];
+        $query->execute($parameters);
+    }
 }
 
 ?>

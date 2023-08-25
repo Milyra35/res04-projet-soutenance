@@ -1,12 +1,30 @@
 <h3>All files</h3>
-<ul>
-    <?php
-        foreach($data as $file)
-        {
-    ?>
-    <li><?= $file->getName() ;?></li>
-    <li><?= $file->getUser()->getUsername() ;?></li>
-    <?php
-        }
-    ?>
-</ul>
+<table>
+    <thead>
+        <tr>
+            <th>Username</th>
+            <th>Name of the file</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php
+            foreach($data as $file)
+            {
+                echo 
+                    "<tr>
+                        <td>".$file->getUser()->getUsername()."</td>
+                        <td>".$file->getName()."</td>
+                    </tr>";
+            }
+        ?>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td rowspan=2>
+                <?php
+                    echo "Total games : ".count($data);
+                ?>
+            </td>
+        </tr>
+    </tfoot>
+</table>

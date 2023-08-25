@@ -58,6 +58,14 @@ class BookManager extends AbstractManager {
 
         return $newBook;
     }
+
+    // Delete a book by its file ID
+    public function deleteBookByFile(int $id)
+    {
+        $query=$this->db->prepare("DELETE FROM books WHERE books.file_id = :file_id");
+        $parameters=['file_id' => $id];
+        $query->execute($parameters);
+    }
 }
 
 ?>

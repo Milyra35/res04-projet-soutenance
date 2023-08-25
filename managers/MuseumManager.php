@@ -69,6 +69,14 @@ class MuseumManager extends AbstractManager {
 
         return $items;
     }
+
+    // Delete museum items by file id
+    public function deleteMuseumItemsByFile(int $id)
+    {
+        $query=$this->db->prepare("DELETE FROM museum WHERE file_id = :file_id");
+        $parameters=['file_id' => $id];
+        $query->execute($parameters);
+    }
 }
 
 ?>

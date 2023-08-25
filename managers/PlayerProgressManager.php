@@ -119,6 +119,14 @@ class PlayerProgressManager extends AbstractManager {
 
         return $progress;
     }
+
+    // Delete a progress player by file id
+    public function deletePlayerByFile(int $id)
+    {
+        $query=$this->db->prepare("DELETE FROM player_progress WHERE file_id = :file_id");
+        $parameters=['file_id' => $id];
+        $query->execute($parameters);
+    }
 }
 
 ?>

@@ -70,6 +70,14 @@ class PossessedItemManager extends AbstractManager {
 
         return $items;
     }
+
+    // Delete items by file id
+    public function deleteItemsByFile(int $id)
+    {
+        $query=$this->db->prepare("DELETE FROM possessed_items WHERE file_id = :file_id");
+        $parameters=['file_id' => $id];
+        $query->execute($parameters);
+    }
 }
 
 ?>

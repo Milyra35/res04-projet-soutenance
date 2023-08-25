@@ -70,6 +70,14 @@ class LocationManager extends AbstractManager {
 
         return $locations;
     }
+
+    // Delete locations by its file id
+    public function deleteLocationsByFile(int $id)
+    {
+        $query=$this->db->prepare("DELETE FROM locations WHERE file_id = :file_id");
+        $parameters=['file_id' => $id];
+        $query->execute($parameters);
+    }
 }
 
 ?>

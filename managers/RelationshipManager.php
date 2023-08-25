@@ -54,18 +54,18 @@ class RelationshipManager extends AbstractManager {
     }
 
     // Get a relationship by its ID
-    public function getRelationshipById(int $id) : Relationship
-    {
-        $query=$this->db->prepare("SELECT * FROM relationships WHERE relationships.id = :id");
-        $parameters=['id' => $id];
-        $query->execute($parameters);
+    // public function getRelationshipById(int $id) : Relationship
+    // {
+    //     $query=$this->db->prepare("SELECT * FROM relationships WHERE relationships.id = :id");
+    //     $parameters=['id' => $id];
+    //     $query->execute($parameters);
 
-        $data=$query->fetch(PDO::FETCH_ASSOC);
-        $relationship = new Relationship($this->getFileById($data['file_id']), $this->getVillagerById($data['villager_id']), $data['friendship_level']);
-        $relationship->setId($data['id']);
+    //     $data=$query->fetch(PDO::FETCH_ASSOC);
+    //     $relationship = new Relationship($this->getFileById($data['file_id']), $this->getVillagerById($data['villager_id']), $data['friendship_level']);
+    //     $relationship->setId($data['id']);
 
-        return $relationship;
-    }
+    //     return $relationship;
+    // }
 
     // Get the relationships by file
     public function getRelationshipsByFile(int $id) : array
@@ -85,6 +85,14 @@ class RelationshipManager extends AbstractManager {
         }
 
         return $relationships;
+    }
+
+    // Delete relationships by file id
+    public function deleteRelationshipByFile(int $id)
+    {
+        $query=$this->db->prepare("DELETE FROM relationships WHERE file_id = :file_id");
+        $parameters=['file_id' => $id];
+        $query->execute($parameters);
     }
 }
 
