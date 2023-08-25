@@ -1494,7 +1494,11 @@ class FileController extends AbstractController {
         $this->render('user/games.phtml', $gamesSaved);
     }
 
-
+    // When a user is deleted, their file and the data stored in the database is also deleted
+    public function deleteData()
+    {
+        
+    }
 }
 
 ?>
