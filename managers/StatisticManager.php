@@ -75,7 +75,7 @@ class StatisticManager extends AbstractManager {
     {
         $query=$this->db->prepare("SELECT * FROM statistics");
         $query->execute();
-        $data=$query->fetch(PDO::FETCH_ASSOC);
+        $data=$query->fetchAll(PDO::FETCH_ASSOC);
 
         $stats = [];
 

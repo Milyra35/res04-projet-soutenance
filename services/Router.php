@@ -137,7 +137,7 @@ class Router {
         {
             $this->uc->createUser();
         }
-        else if($routeTab['route'] === "my-account" && isset($_SESSION['user']))
+        else if($routeTab['route'] === "my-account" && isset($_SESSION['user']) && $routeTab['user'] === null)
         {
             $this->uc->account($_SESSION['user_id']);
         }
@@ -196,13 +196,15 @@ class Router {
         }
         else if($routeTab['route'] === "admin" && isset($_SESSION['role']) && $_SESSION['role'] === "admin")
         {
-            $this->ac->index();
-            $this->mc->addPicture();
-            // $this->npc->addVillagers(); I only need it once to add all the villagers to the database
-            // $this->npc->addVillagerPlanning(); I only need it once to add the schedule of each villager
-            // $this->ic->addItems(); I only need it once to add the items to the database
-
-            if($routeTab['admin'] === "all-users")
+            if($routeTab['admin'] === null)
+            {
+                $this->ac->index();
+                $this->mc->addPicture();
+                // $this->npc->addVillagers(); I only need it once to add all the villagers to the database
+                // $this->npc->addVillagerPlanning(); I only need it once to add the schedule of each villager
+                // $this->ic->addItems(); I only need it once to add the items to the database
+            }
+            else if($routeTab['admin'] === "all-users")
             {
                 $this->ac->getAllUsers();
             }

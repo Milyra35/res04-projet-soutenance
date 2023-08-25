@@ -16,10 +16,11 @@ class UserController extends AbstractController {
 
     public function createUser()
     {
-        $this->render("user/create.phtml", []);
-
         if(isset($_POST['submit-new-user']))
         {
+            // $usernameExist = $this->um->getUserByUsername(htmlspecialchars($_POST['username']));
+            // $emailExist = $this->um->getUserByEmail(htmlspecialchars($_POST['email']));
+
             if(!empty($_POST['username']))
             {
                 $username = htmlspecialchars($_POST['username']);
@@ -48,6 +49,10 @@ class UserController extends AbstractController {
             $this->um->createUser($user);
 
             header("Location:/res04-projet-soutenance/login");
+        }
+        else
+        {
+            $this->render("user/create.phtml", []);
         }
     }
 
@@ -87,7 +92,7 @@ class UserController extends AbstractController {
             }
             else
             {
-                echo "Invalid username or password";
+                $this->render("user/login.phtml", ['message' => "Invalid username or password"]);
             }
         }
         else
@@ -110,13 +115,14 @@ class UserController extends AbstractController {
             {
                 $newEmail = htmlspecialchars($_POST['new-email']);
             }
-            if(!empty($_POST['new-password']))
+            if(!empty($_POST['new-password']) && $_POST['new-password'] === $_POST['confirm-new-password'])
             {
                 $newPassword = password_hash($_POST['new-password'], PASSWORD_DEFAULT);
             }
 
-            // We get the user logged in
-            $user = $_SESSION['user'];
+            $role = new Role(2, "user");
+            $user = new User($newUsername, $newPassword, $newEmail, $role);
+            $user->setId($_SESSION['user_id']);
             $this->um->editUser($user);
 
             header("Location:/res04-projet-soutenance/my-account");
@@ -137,6 +143,10 @@ class UserController extends AbstractController {
             $this->um->deleteUser();
             // Add a delete button next to the user in all of the users
         }
+        else
+        {
+            $this->render("user/delete.phtml", []);
+        }
     }
 
     public function logoutUser()
@@ -152,7 +162,7 @@ class UserController extends AbstractController {
     public function account(int $id)
     {
         $user = $this->um->getUserById($id);
-        $this->render("user/my-account.phtml", [$user]);
+        $this->render("user/my-account.phtml", ["user" => $user]);
     }
 }
 
