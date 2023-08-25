@@ -221,7 +221,6 @@ class Router {
             else if($routeTab['admin'] === "delete")
             {
                 $this->uc->deleteUser();
-                //Delete the user without rendering the delete form for the front part
             }
             else if($routeTab['admin'] === "statistics")
             {
@@ -231,6 +230,10 @@ class Router {
             {
                 $this->ac->edit();
             }
+        }
+        else
+        {
+            $this->spc->renderHomepage();
         }
     }
 }

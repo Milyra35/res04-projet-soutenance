@@ -2,15 +2,23 @@
     <h3>Schedule</h3>
     <p>
         <?php
-            foreach($_SESSION['planning']->getSchedule() as $key => $schedules)
+            foreach($_SESSION['planning']->getSchedule() as $key => $days)
             {
+                // put condition if marriage, make another loop
                 echo $key;
-                foreach($schedules as $clé => $schedule)
+                if($key !== "Marriage")
                 {
-                    // echo $keys;
-                    foreach($schedule as $keyz => $planning)
+                    // echo $key;
+                    foreach($days as $clef => $time)
                     {
-                        echo $keyz. ' ' .$planning;
+                        echo $clef.' '.$time;
+                    }
+                }
+                else
+                {
+                    foreach($days as $clef => $time)
+                    {
+                        
                     }
                 }
             }

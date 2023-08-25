@@ -35,6 +35,10 @@ class UserController extends AbstractController {
                 {
                     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
                 }
+                else
+                {
+                    $this->render("user/create.phtml", ['message' => "Both passwords aren't the same"]);
+                }
 
                 // We have to set a registration date for the database
                 date_default_timezone_set("Europe/Paris");
@@ -124,29 +128,37 @@ class UserController extends AbstractController {
     {
         if(isset($_POST['submit-edit-user']))
         {
-            // We get the new informations
-            if(!empty($_POST['new-username']))
-            {
-                $newUsername = htmlspecialchars($_POST['new-username']);
-            }
-            if(!empty($_POST['new-email']))
-            {
-                $newEmail = htmlspecialchars($_POST['new-email']);
-            }
-            if(!empty($_POST['new-password']) && $_POST['new-password'] === $_POST['confirm-new-password'])
-            {
-                $newPassword = password_hash($_POST['new-password'], PASSWORD_DEFAULT);
-            }
+            $existingUser = $this->um->verifyUsername(htmlspecialchars($_POST['username']));
 
-            $role = new Role(2, "user");
-            $user = new User($newUsername, $newPassword, $newEmail, $role);
-            $user->setId($_SESSION['user_id']);
-            $this->um->editUser($user);
+            // Checking if the username already exists
+            if(!$existingUser)
+            {
+                // We get the new informations
+                if(!empty($_POST['new-username']))
+                {
+                    $newUsername = htmlspecialchars($_POST['new-username']);
+                }
+                if(!empty($_POST['new-email']))
+                {
+                    $newEmail = htmlspecialchars($_POST['new-email']);
+                }
+                if(!empty($_POST['new-password']) && $_POST['new-password'] === $_POST['confirm-new-password'])
+                {
+                    $newPassword = password_hash($_POST['new-password'], PASSWORD_DEFAULT);
+                }
 
-            header("Location:/res04-projet-soutenance/my-account");
+                $role = new Role(2, "user");
+                $user = new User($newUsername, $newPassword, $newEmail, $role);
+                $user->setId($_SESSION['user_id']);
+                $this->um->editUser($user);
+
+                header("Location:/res04-projet-soutenance/my-account");
+            }
         }
-
-        $this->render("user/edit.phtml", []);
+        else
+        {
+            $this->render("user/edit.phtml", []);
+        }
     }
 
     public function logoutUser()
