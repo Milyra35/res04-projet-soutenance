@@ -131,7 +131,7 @@ class Router {
         }
         else if($routeTab['route'] === "login")
         {
-            $this->uc->loadUser();
+            $this->uc->login();
         }
         else if($routeTab['route'] === "register")
         {

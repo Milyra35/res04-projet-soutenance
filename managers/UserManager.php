@@ -68,6 +68,25 @@ class UserManager extends AbstractManager {
         return $user;
     }
 
+    // Verify if the username exists
+    public function verifyUsername(string $username) : bool
+    {
+        $query=$this->db->prepare("SELECT * FROM users WHERE username = :username");
+        $parameters = ['username' => $username];
+        $query->execute($parameters);
+
+        $existingUsername = $query->fetch(PDO::FETCH_ASSOC);
+
+        if($existingUsername)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
     // Get an user by its email
     public function getUserByEmail(string $email) : User
     {
