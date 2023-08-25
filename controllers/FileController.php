@@ -1495,9 +1495,60 @@ class FileController extends AbstractController {
     }
 
     // When a user is deleted, their file and the data stored in the database is also deleted
-    public function deleteData()
+    private function deleteData(int $id)
     {
+        $userFiles = $this->fm->getGamesByUser($id);
+        $fileId = $userFiles->getId();
+
+        // I delete the books
+        $this->bm->deleteBookByFile($fileId);
+
+        // I delete the bundles
+        $this->ccm->deleteBundlesByFile($fileId);
         
+        // I delete the locations
+        $this->lm->deleteLocationsByFile($fileId);
+
+        // I delete the museum items
+        $this->mm->deleteMuseumItemsByFile($fileId);
+
+        // I delete the player progress
+        $this->pp->deletePlayerByFile($fileId);
+
+        // I delete the skills
+        $this->psm->deleteSkillsByFile($fileId);
+
+        // I delete the possessed items 
+        $this->pim->deleteItemsByFile($fileId);
+
+        // I delete the relationships
+        $this->rm->deleteRelationshipByFile($fileId);
+
+        // I delete the statistics
+        $this->sm->deleteStatsByFile($fileId);
+
+        // And then i delete the file
+        $this->fm->deleteFile($fileId);
+    }
+
+    public function deleteUserAndData()
+    {
+        if(isset($_POST["submit-delete-account"]))
+        {
+            $this->deleteData($_SESSION['user_id']);
+            $this->um->deleteUser($_SESSION['user_id']);
+            session_destroy();
+            header("Location:/res04-projet-soutenance/");
+        }
+        else if(isset($_SESSION['role']) && $_SESSION['role'] === "admin" && isset($_POST["submit-delete-account-admin"]))
+        {
+            $this->um->deleteUser();
+            // Add a delete button next to the user in all of the users
+        }
+        else
+        {
+            $this->render("user/delete.phtml", []);
+        }
     }
 }
 
