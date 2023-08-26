@@ -1,9 +1,9 @@
 <h2>Your farm</h2>
 
 <?php
+    // var_dump($data['itemsPictures']);
     foreach($data as $key => $player)
     {
-        // var_dump($key);
 ?>
 
 <section>
@@ -81,11 +81,11 @@
             <?php 
                 if($bundle->getComplete() === true)
                 {
-                    echo "Completed";
+                    echo " Completed";
                 }
                 else
                 {
-                    echo "Not completed";
+                    echo " Not completed";
                 }
             ?>
         </li>
@@ -109,7 +109,20 @@
             {
                 if($museum->getHas() ===  true)
                 {
-                    echo "<li>".$museum->getName()."</li>";
+        ?>
+                    <?php
+                    foreach($data['itemsPictures'] as $item)
+                    {
+                        if($item->getName() === $museum->getName())
+                        {
+                    ?>
+                    <li>
+                        <img src="/res04-projet-soutenance/<?=$item->getPicture()->getUrl();?>" alt="<?=$item->getPicture()->getAlt();?>">
+                        <p><?=$museum->getName();?></p>
+                    </li>
+                        <?php
+                        }
+                    }
                 }
             }
         ?>
@@ -121,7 +134,20 @@
             {
                 if($museum->getHas() ===  false)
                 {
-                    echo "<li>".$museum->getName()."</li>";
+                    ?>
+                    <?php
+                    foreach($data['itemsPictures'] as $item)
+                    {
+                        if($item->getName() === $museum->getName())
+                        {
+                    ?>
+                    <li>
+                        <img src="/res04-projet-soutenance/<?=$item->getPicture()->getUrl();?>" alt="<?=$item->getPicture()->getAlt();?>">
+                        <p><?=$museum->getName();?></p>
+                    </li>
+                        <?php
+                        }
+                    }
                 }
             }
         }

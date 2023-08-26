@@ -28,7 +28,7 @@
                 // var_dump($villager->getEvents());
                 foreach($villager->getEvents() as $key => $event)
                 {
-                    echo "<tr><td>$key</td><td>$event</td></tr>";
+                    echo "<tr><th>$key</th><td>$event</td></tr>";
                 }
             ?>
         </table>
@@ -94,6 +94,7 @@
         </table>
     </section>
     <?php
+        // I had to make a condition because everyone's planning didn't match for the loops
         if($villager->getName() === "Caroline" ||
             $villager->getName() === "Clint" ||
             $villager->getName() === "Evelyn" ||
