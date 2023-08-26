@@ -1,20 +1,19 @@
 <section>
     <h3>Schedule</h3>
-    <p>
+    <table>
         <?php
             foreach($_SESSION['planning']->getSchedule() as $key => $days)
             {
                 // put condition if marriage, make another loop
-                echo $key;
+                echo '<tr><th>'.$key.'</th></tr>';
                 if($key !== "Marriage")
                 {
-                    // echo $key;
+                    // echo '<tr><td>'.$key.'</td></tr>';
                     foreach($days as $clef => $time)
                     {
-                        echo $clef;
                         foreach($time as $keys => $hours)
                         {
-                            echo $key.' '.$hours;
+                            echo '<tr><td>'.$keys.': '.$hours.'</td></tr>';
                         }
                     }
                 }
@@ -22,10 +21,17 @@
                 {
                     foreach($days as $clef => $time)
                     {
-                        echo $clef.' '.$time;
+                        echo '<tr><td>'.$clef.'</td></tr>';
+                        foreach($time as $clefs => $location)
+                        {
+                            foreach($location as $name => $do)
+                            {
+                                echo '<tr><td>'.$name.' '.$do.'</td></tr>';
+                            }
+                        }
                     }
                 }
             }
         ?>
-    </p>
+    </table>
 </section>
