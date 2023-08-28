@@ -2,6 +2,7 @@ function collapseData()
 {
     let title = document.getElementById('villager-events');
     let events = document.getElementById('events');
+    events.style.display = 'none';
 
     title.addEventListener("click",function() {
         let isHidden = events.style.display === 'none';

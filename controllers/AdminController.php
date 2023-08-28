@@ -63,6 +63,25 @@ class AdminController extends AbstractController {
 
         $this->render('users/statistics.phtml', ['stats' => $stats, 'total' => $total], "admin");
     }
+
+    // To delete a User in the list of all users
+    public function deleteUser()
+    {
+        // I need to retrieve the id of the user selected
+        $userId = $_POST['user_id'];
+
+        if(isset($_POST['submit-delete-account-admin']))
+        {
+            var_dump($userId);
+            die;
+            if($userId)
+            {
+                
+                $this->um->deleteUser($userId);
+                header("Location:/res04-projet-soutenance/admin/all-users");
+            }
+        }
+    }
 }
 
 ?>

@@ -220,7 +220,7 @@ class Router {
             }
             else if($routeTab['admin'] === "delete")
             {
-                $this->uc->deleteUser();
+                $this->ac->deleteUser();
             }
             else if($routeTab['admin'] === "statistics")
             {

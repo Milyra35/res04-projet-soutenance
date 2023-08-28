@@ -5,6 +5,7 @@
             <th>Username</th>
             <th>Email</th>
             <th>Role</th>
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
@@ -15,14 +16,24 @@
                     "<tr>
                         <td>".$user->getUsername()."</td>
                         <td>".$user->getEmail()."</td>
-                        <td>".$user->getRole()->getName()."</td>
-                    </tr>";
+                        <td>".$user->getRole()->getName()."</td>";
+                        if($user->getRole()->getName() === 'user')
+                        {
+                        echo "<td>
+                                <form action='/res04-projet-soutenance/admin/delete' method='POST'>
+                                    <input type='hidden' name='user_id' id='user_id' value='".$user->getId()."'>
+                                    <input type='submit' name='submit-delete-account-admin' id='submit-delete-account-admin' value='Delete'>
+                                </form>
+                            </td>";
+                            var_dump($user->getId());
+                        }
+                    "</tr>";
             }
         ?>
     </tbody>
     <tfoot>
         <tr>
-            <td rowspan=3>
+            <td rowspan=4>
                 <?php
                     echo "Total users : ".count($data);
                 ?>
