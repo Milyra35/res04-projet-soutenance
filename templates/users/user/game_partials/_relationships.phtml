@@ -1,0 +1,18 @@
+<?php
+    if($key === "relationships")
+    {
+?>
+<h3>Relationships</h3>
+<dl>
+    <?php
+        foreach($player as $relationship)
+        {
+            echo 
+            "<dt>".$relationship->getVillager()->getName()."</dt>
+                <dd>".intval($relationship->getLevel() / 250). " hearts out of 10.</dd>";
+        }
+    ?>
+</dl>
+<?php
+    }
+?>

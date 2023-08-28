@@ -1,0 +1,27 @@
+<?php
+    if($key === "bundles")
+    {
+?>
+<h3>Bundles of the Community Center</h3>
+<ul>
+    <?php
+        foreach($player as $bundle)
+        {
+    ?>
+    <li><?=$bundle->getBundleName();?>: 
+        <?php 
+            if($bundle->getComplete() === true)
+            {
+                echo " Completed";
+            }
+            else
+            {
+                echo " Not completed";
+            }
+        ?>
+    </li>
+    <?php
+        }
+    }
+    ?>
+</ul>

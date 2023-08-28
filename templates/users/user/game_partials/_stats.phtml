@@ -1,0 +1,12 @@
+<?php
+    if($key === "stats")
+    {
+?>
+<h3>General statistics</h3>
+<p>You have played <?=$player->getHoursPlayed();?> hours.</p>
+<p>You have spent <?=$player->getDaysSpent();?> days in game.</p>
+<p><?=$player->getSeasonsPassed();?> seasons have passed.</p>
+<p>You have successfully caught <?=$player->getFishCatched();?> fishes.</p>
+<?php
+    }
+?>

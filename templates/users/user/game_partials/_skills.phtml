@@ -1,0 +1,16 @@
+<?php
+    if($key === "skills")
+    {
+?>
+<h3>Your skills</h3>
+<ul>
+    <?php
+        foreach($player as $skill)
+        {
+    ?>
+        <li><?=$skill->getName();?>:  <?=$skill->getLevel();?>/10</li>
+    <?php
+        }
+    }
+    ?>
+</ul>

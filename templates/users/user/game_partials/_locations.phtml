@@ -1,0 +1,25 @@
+<?php
+    if($key === "locations")
+    {
+?>
+<h3>Locations discovered</h3>
+<dl>
+    <?php
+        foreach($player as $locations)
+        {
+            if($locations->getIsDiscovered() ===  true)
+            {
+                echo "<dt>".$locations->getName()."</dt>
+                <dd> has been discovered.</dd>";
+            }
+            else
+            {
+                echo "<dt>".$locations->getName()."</dt>
+                <dd> has not been discovered yet.</dd>";
+            }
+        }
+    ?>
+</dl>
+<?php
+    }
+?>

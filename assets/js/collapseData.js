@@ -1,20 +1,20 @@
-function dropDown() 
+function collapseData() 
 {
     let title = document.getElementById('villager-events');
     let events = document.getElementById('events');
 
     title.addEventListener("click",function() {
-        let isVisible = events.style.display !== 'none';
+        let isHidden = events.style.display === 'none';
 
-        if(isVisible)
+        if(isHidden)
         {
-            events.style.display = 'none';
+            events.style.display = 'table';
         }
         else
         {
-            events.style.display = 'table';
+            events.style.display = 'none';
         }
     });
 }
 
-export { dropDown };
+export { collapseData };
