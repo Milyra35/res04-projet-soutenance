@@ -13,6 +13,7 @@ class PlayerProgress {
     private string $petName;
     private bool $isMarried;
     private bool $hasChildren;
+	private ?string $spouse;
 
     public function __construct(SavedFile $file, string $playerName, int $money,int $health, int $energy, bool $cat, bool $dog, string $petName, bool $isMarried, bool $hasChildren)
     {
@@ -28,6 +29,7 @@ class PlayerProgress {
         $this->petName = $petName;
         $this->isMarried = $isMarried;
         $this->hasChildren = $hasChildren;
+		$this->spouse = null;
     }
 
 	public function getId() : ?int
@@ -145,6 +147,15 @@ class PlayerProgress {
 	public function setHasChildren(bool $hasChildren) : void
 	{
 		$this->hasChildren = $hasChildren;
+	}
+
+	public function getSpouse() : ?string
+	{
+		return $this->spouse;
+	}
+	public function setSpouse(string $spouse) : void
+	{
+		$this->spouse = $spouse;
 	}
 }
 

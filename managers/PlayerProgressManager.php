@@ -33,7 +33,8 @@ class PlayerProgressManager extends AbstractManager {
                 dog,
                 pet_name,
                 is_married,
-                has_children
+                has_children,
+                spouse
             )
             VALUES (
                 :file_id,
@@ -45,7 +46,8 @@ class PlayerProgressManager extends AbstractManager {
                 :dog,
                 :pet_name,
                 :is_married,
-                :has_children
+                :has_children,
+                :spouse
             )");
             $insertParam = [
                 'file_id' => $player->getFile()->getId(),
@@ -57,7 +59,8 @@ class PlayerProgressManager extends AbstractManager {
                 'dog' => $player->getDog() ? 1 : 0,
                 'pet_name' => $player->getPetName(),
                 'is_married' => $player->getIsMarried(),
-                'has_children' => $player->getHasChildren()
+                'has_children' => $player->getHasChildren(),
+                'spouse' => $player->getSpouse()
             ];
             $insert->execute($insertParam);
 
@@ -75,7 +78,8 @@ class PlayerProgressManager extends AbstractManager {
                 dog = :dog,
                 pet_name = :pet_name,
                 is_married = :is_married,
-                has_children = :has_children
+                has_children = :has_children,
+                spouse = :spouse
                 WHERE file_id = :file_id AND character_name = :name");
             $updateParam = [
                 'file_id' => $player->getFile()->getId(),
@@ -87,7 +91,8 @@ class PlayerProgressManager extends AbstractManager {
                 'dog' => $player->getDog() ? 1 : 0,
                 'pet_name' => $player->getPetName(),
                 'is_married' => $player->getIsMarried(),
-                'has_children' => $player->getHasChildren()
+                'has_children' => $player->getHasChildren(),
+                'spouse' => $player->getSpouse()
             ];
             $update->execute($updateParam);
         }
@@ -95,7 +100,7 @@ class PlayerProgressManager extends AbstractManager {
         return $player;
     }
 
-    // Get the progress by its ID
+    // Get the progress by its file ID
     public function getProgressById(int $id) : PlayerProgress
     {
         $query=$this->db->prepare("SELECT * FROM player_progress WHERE player_progress.file_id = :id");
@@ -115,6 +120,7 @@ class PlayerProgressManager extends AbstractManager {
             $data['is_married'],
             $data['has_children']
         );
+        $progress->setSpouse($data['spouse']);
         $progress->setId($data['id']);
 
         return $progress;

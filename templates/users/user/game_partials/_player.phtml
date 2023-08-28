@@ -23,10 +23,10 @@
     <?php
         if($player->getIsMarried() === true)
         {
-            echo "married ";
+            echo "married to ".$player->getSpouse();
             if($player->getHasChildren() === true)
             {
-                echo "and you have children";
+                echo " and you have children";
             }
         }
         else

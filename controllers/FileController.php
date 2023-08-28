@@ -69,6 +69,7 @@ class FileController extends AbstractController {
         $money = htmlspecialchars($xml->player->money);
         $health = htmlspecialchars($xml->player->health);
         $energy = htmlspecialchars($xml->player->maxStamina);
+        $spouse = htmlspecialchars($xml->player->spouse);
         $cat = false;
         $dog = false;
         $isMarried = false;
@@ -117,6 +118,7 @@ class FileController extends AbstractController {
         
         // var_dump($petName);
         $newPlayer = new PlayerProgress($file, $name, $money, $health, $energy, $cat, $dog, $petName, $isMarried, $child);
+        $newPlayer->setSpouse($spouse);
         $this->pp->addProgress($newPlayer);
 
 
