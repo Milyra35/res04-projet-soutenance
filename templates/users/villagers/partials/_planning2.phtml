@@ -1,19 +1,17 @@
-<section>
-    <h3>Schedule</h3>
-    <p>
-        <?php
-            foreach($_SESSION['planning']->getSchedule() as $key => $schedules)
+<h3 class="title"><button>Schedule</button></h3>
+<p class="events">
+    <?php
+        foreach($_SESSION['planning']->getSchedule() as $key => $schedules)
+        {
+            echo $key;
+            foreach($schedules as $clé => $schedule)
             {
-                echo $key;
-                foreach($schedules as $clé => $schedule)
+                // echo $keys;
+                foreach($schedule as $keyz => $planning)
                 {
-                    // echo $keys;
-                    foreach($schedule as $keyz => $planning)
-                    {
-                        echo $keyz. ' ' .$planning;
-                    }
+                    echo $keyz. ' ' .$planning;
                 }
             }
-        ?>
-    </p>
-</section>
+        }
+    ?>
+</p>

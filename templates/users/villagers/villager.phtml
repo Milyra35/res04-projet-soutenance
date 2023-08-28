@@ -96,38 +96,40 @@
     </table>
 </section>
 
-<?php
-    // I had to make a condition because everyone's planning didn't match for the loops
-    if($villager->getName() === "Caroline" ||
-        $villager->getName() === "Clint" ||
-        $villager->getName() === "Evelyn" ||
-        $villager->getName() === "George" ||
-        $villager->getName() === "Gus" ||
-        $villager->getName() === "Jas" ||
-        $villager->getName() === "Kent" ||
-        $villager->getName() === "Linus" ||
-        $villager->getName() === "Marnie" ||
-        $villager->getName() === "Pam" ||
-        $villager->getName() === "Pierre" ||
-        $villager->getName() === "Robin" ||
-        $villager->getName() === "Sandy" ||
-        $villager->getName() === "Vincent" ||
-        $villager->getName() === "Willy")
-    {
-        require 'partials/_planning2.phtml';
-    }
-    else if($villager->getName() === "Dwarf" ||
-            $villager->getName() === "Krobus" ||
-            $villager->getName() === "Wizard")
-    {
-        require 'partials/_planning1.phtml';
-    }
-    else if($villager->getName() === "Emily")
-    {
-        require 'partials/_emily.phtml';
-    }
-    else
-    {
-        require 'partials/_planning3.phtml';
-    }
-?>
+<section id="planning">
+    <?php
+        // I had to make a condition because everyone's planning didn't match for the loops
+        if($villager->getName() === "Caroline" ||
+            $villager->getName() === "Clint" ||
+            $villager->getName() === "Evelyn" ||
+            $villager->getName() === "George" ||
+            $villager->getName() === "Gus" ||
+            $villager->getName() === "Jas" ||
+            $villager->getName() === "Kent" ||
+            $villager->getName() === "Linus" ||
+            $villager->getName() === "Marnie" ||
+            $villager->getName() === "Pam" ||
+            $villager->getName() === "Pierre" ||
+            $villager->getName() === "Robin" ||
+            $villager->getName() === "Sandy" ||
+            $villager->getName() === "Vincent" ||
+            $villager->getName() === "Willy")
+        {
+            require 'partials/_planning2.phtml';
+        }
+        else if($villager->getName() === "Dwarf" ||
+                $villager->getName() === "Krobus" ||
+                $villager->getName() === "Wizard")
+        {
+            require 'partials/_planning1.phtml';
+        }
+        else if($villager->getName() === "Emily")
+        {
+            require 'partials/_emily.phtml';
+        }
+        else
+        {
+            require 'partials/_planning3.phtml';
+        }
+    ?>
+</section>

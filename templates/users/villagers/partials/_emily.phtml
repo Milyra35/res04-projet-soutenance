@@ -1,37 +1,35 @@
-<section>
-    <h3>Schedule</h3>
-    <table>
-        <?php
-            foreach($_SESSION['planning']->getSchedule() as $key => $days)
+<h3 class="title"><button>Schedule</button></h3>
+<table class="events">
+    <?php
+        foreach($_SESSION['planning']->getSchedule() as $key => $days)
+        {
+            // put condition if marriage, make another loop
+            echo '<tr><th>'.$key.'</th></tr>';
+            if($key !== "Marriage")
             {
-                // put condition if marriage, make another loop
-                echo '<tr><th>'.$key.'</th></tr>';
-                if($key !== "Marriage")
+                // echo '<tr><td>'.$key.'</td></tr>';
+                foreach($days as $clef => $time)
                 {
-                    // echo '<tr><td>'.$key.'</td></tr>';
-                    foreach($days as $clef => $time)
+                    foreach($time as $keys => $hours)
                     {
-                        foreach($time as $keys => $hours)
-                        {
-                            echo '<tr><td>'.$keys.': '.$hours.'</td></tr>';
-                        }
+                        echo '<tr><td>'.$keys.': '.$hours.'</td></tr>';
                     }
                 }
-                else
+            }
+            else
+            {
+                foreach($days as $clef => $time)
                 {
-                    foreach($days as $clef => $time)
+                    echo '<tr><td>'.$clef.'</td></tr>';
+                    foreach($time as $clefs => $location)
                     {
-                        echo '<tr><td>'.$clef.'</td></tr>';
-                        foreach($time as $clefs => $location)
+                        foreach($location as $name => $do)
                         {
-                            foreach($location as $name => $do)
-                            {
-                                echo '<tr><td>'.$name.' '.$do.'</td></tr>';
-                            }
+                            echo '<tr><td>'.$name.' '.$do.'</td></tr>';
                         }
                     }
                 }
             }
-        ?>
-    </table>
-</section>
+        }
+    ?>
+</table>

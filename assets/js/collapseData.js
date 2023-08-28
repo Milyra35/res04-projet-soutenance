@@ -5,6 +5,8 @@ function collapseData()
 
     for(let i=0; i<title.length; i++)
     {
+        events[i].style.display = 'none';
+        
         title[i].addEventListener("click", function() {
 
             if(events[i].style.display === 'none' || events[i].style.display === '')
