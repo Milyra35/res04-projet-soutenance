@@ -4,10 +4,10 @@ import { validateLoginForm } from './validateLoginForm.js';
 import { filter } from './filter.js';
 
 window.addEventListener("DOMContentLoaded", function() {
-    
+    // console.log('hello');
     let defaultPath = "/res04-projet-soutenance/";
 
-    if(window.location.pathname.includes(defaultPath + "villagers/"))
+    if(window.location.pathname.includes(defaultPath + "villagers/") || this.window.location.pathname.includes(defaultPath + "my-games/"))
     {
         collapseData();
     }
