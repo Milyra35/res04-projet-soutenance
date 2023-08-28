@@ -1,9 +1,11 @@
 <h3>All files</h3>
+
 <table>
     <thead>
         <tr>
             <th>Username</th>
             <th>Name of the file</th>
+            <th>Date of upload</th>
         </tr>
     </thead>
     <tbody>
@@ -14,6 +16,7 @@
                     "<tr>
                         <td>".$file->getUser()->getUsername()."</td>
                         <td>".$file->getName()."</td>
+                        <td>".$file->getDate()."</td>
                     </tr>";
             }
         ?>

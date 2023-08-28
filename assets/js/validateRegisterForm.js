@@ -17,7 +17,6 @@ function validateRegisterForm()
         if(user.validate())
         {
             user.validate();
-            console.log('hello');
         }
         else
         {

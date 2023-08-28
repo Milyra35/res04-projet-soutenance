@@ -38,6 +38,7 @@ class FileManager extends AbstractManager {
         { 
             $newFile = new SavedFile($this->um->getUserById($file['user_id']), $file['name'], $file['url']);
             $newFile->setId($file['id']);
+            $newFile->setDate($file['upload_date']);
             $files[] = $newFile;
         }
 

@@ -1,4 +1,8 @@
 <h3>All users</h3>
+
+<input type="search" id="search" name="search" placeholder="Search for a user">
+<button id="search-box">Search</button>
+
 <table>
     <thead>
         <tr>
@@ -13,8 +17,8 @@
             foreach($data as $user)
             {
                 echo 
-                    "<tr>
-                        <td>".$user->getUsername()."</td>
+                    "<tr class='data-row'>
+                        <td class='data'>".$user->getUsername()."</td>
                         <td>".$user->getEmail()."</td>
                         <td>".$user->getRole()->getName()."</td>";
                         if($user->getRole()->getName() === 'user')
