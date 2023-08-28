@@ -6,7 +6,7 @@
 <h2><?= $villager->getName() ;?></h2>
 <img src="/res04-projet-soutenance/<?= $villager->getPicture()->getUrl() ;?>" alt="<?= $villager->getPicture()->getAlt() ;?>">
 
-<section>
+<section id="general">
     <p>Birthday : <?= $villager->getBirthday() ;?></p>
     <p>Can you date them ? 
         <?php 
@@ -21,9 +21,10 @@
         ?>
     </p>
 </section>
-<section>
-    <h3 id="villager-events"><button>Events</button></h3>
-    <table id="events">
+
+<section id="events">
+    <h3 class="title"><button>Events</button></h3>
+    <table class="events">
         <?php
             // var_dump($villager->getEvents());
             foreach($villager->getEvents() as $key => $event)
@@ -33,9 +34,10 @@
         ?>
     </table>
 </section>
-<section>
-    <h3>Gifts</h3>
-    <table>
+
+<section id="gifts">
+    <h3 class="title"><button>Gifts</button></h3>
+    <table class="events">
         <tr>
             <th>Loves</th>
             <td>
@@ -93,6 +95,7 @@
         </tr>
     </table>
 </section>
+
 <?php
     // I had to make a condition because everyone's planning didn't match for the loops
     if($villager->getName() === "Caroline" ||
