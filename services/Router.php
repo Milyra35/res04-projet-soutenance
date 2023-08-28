@@ -213,14 +213,11 @@ class Router {
             else if($routeTab['admin'] === "all-users")
             {
                 $this->ac->getAllUsers();
+                $this->ac->deleteUserFromAdmin();
             }
             else if($routeTab['admin'] === "all-saved-games")
             {
                 $this->ac->getAllGames();
-            }
-            else if($routeTab['admin'] === "delete")
-            {
-                $this->ac->deleteUser();
             }
             else if($routeTab['admin'] === "statistics")
             {

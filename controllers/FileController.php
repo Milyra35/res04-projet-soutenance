@@ -1540,11 +1540,6 @@ class FileController extends AbstractController {
             session_destroy();
             header("Location:/res04-projet-soutenance/");
         }
-        else if(isset($_SESSION['role']) && $_SESSION['role'] === "admin" && isset($_POST["submit-delete-account-admin"]))
-        {
-            $this->um->deleteUser();
-            // Add a delete button next to the user in all of the users
-        }
         else
         {
             $this->render("user/delete.phtml", []);

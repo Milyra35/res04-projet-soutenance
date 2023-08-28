@@ -65,21 +65,12 @@ class AdminController extends AbstractController {
     }
 
     // To delete a User in the list of all users
-    public function deleteUser()
+    public function deleteUserFromAdmin()
     {
-        // I need to retrieve the id of the user selected
-        $userId = $_POST['user_id'];
-
         if(isset($_POST['submit-delete-account-admin']))
         {
-            var_dump($userId);
-            die;
-            if($userId)
-            {
-                
-                $this->um->deleteUser($userId);
-                header("Location:/res04-projet-soutenance/admin/all-users");
-            }
+            $this->um->deleteUser($_POST['user_id']);
+            header("Location:/res04-projet-soutenance/admin/all-users");
         }
     }
 }

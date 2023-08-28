@@ -19,13 +19,13 @@
                         <td>".$user->getRole()->getName()."</td>";
                         if($user->getRole()->getName() === 'user')
                         {
-                        echo "<td>
-                                <form action='/res04-projet-soutenance/admin/delete' method='POST'>
+                        echo 
+                            "<td>
+                                <form action='/res04-projet-soutenance/admin/all-users' method='POST'>
                                     <input type='hidden' name='user_id' id='user_id' value='".$user->getId()."'>
                                     <input type='submit' name='submit-delete-account-admin' id='submit-delete-account-admin' value='Delete'>
                                 </form>
                             </td>";
-                            var_dump($user->getId());
                         }
                     "</tr>";
             }
