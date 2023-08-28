@@ -1,54 +1,7 @@
-$green : #1E6B64;
-$background : #D1D1D1;
-$purple : #B981AE;
-$yellow : #E1BA1E;
-$font-size-default : 1em;
+@use 'vars';
+@use 'header';
+@use 'footer';
 
 html {
     font-size:62.5%;
-
-    body {
-        padding:0;
-        margin:0;
-        box-sizing:border-box;
-        font-size:$font-size-default;
-        font-family:sans-serif;
-        background-color: $background;
-
-        header {
-            display:flex;
-            flex-direction:column;
-            background-color: $green;
-
-            h1 {
-                padding:0;
-                margin:0;
-                font-size:4rem;
-                color:$yellow;
-            }
-
-            nav {
-
-                ul {
-                    list-style:none;
-                    display:flex;
-                    justify-content:center;
-
-                    li {
-
-                        a {
-                            text-decoration:none;
-                            color:$yellow;
-                            font-size:1.8rem;
-                            padding:1rem;
-                        }
-                        a:hover {
-                            background-color: $yellow;
-                            color:$green;
-                        }
-                    }
-                }
-            }
-        }
-    }
 }
