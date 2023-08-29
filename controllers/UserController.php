@@ -128,7 +128,7 @@ class UserController extends AbstractController {
     {
         if(isset($_POST['submit-edit-user']))
         {
-            $existingUser = $this->um->verifyUsername(htmlspecialchars($_POST['username']));
+            $existingUser = $this->um->verifyUsername(htmlspecialchars($_POST['new-username']));
 
             // Checking if the username already exists
             if(!$existingUser)

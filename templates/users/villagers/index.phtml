@@ -3,13 +3,16 @@
 ?>
 
 <h2>All villagers</h2>
+
+<input type="search" id="search" name="search" placeholder="Search for a villager">
+
 <ul>
 <?php
     foreach($villagers as $villager)
     {
 ?>
 
-<li>
+<li class="data-row">
     <img src="<?= $villager->getPicture()->getUrl() ;?>" alt="<?= $villager->getPicture()->getAlt();?>">
     <a href="/res04-projet-soutenance/villagers/<?= $villager->getId();?>"><?= $villager->getName();?></a>
 </li>

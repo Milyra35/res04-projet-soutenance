@@ -13,13 +13,13 @@ window.addEventListener("DOMContentLoaded", function() {
     }
     if(window.location.pathname === defaultPath + "register")
     {
-        // validateRegisterForm();
+        validateRegisterForm();
     }
     if(window.location.pathname === defaultPath + "login")
     {
         // validateLoginForm();  
     }
-    if(window.location.pathname === defaultPath + "admin/all-users")
+    if(window.location.pathname === defaultPath + "admin/all-users" || window.location.pathname === defaultPath + "villagers")
     {
         filter();
     }

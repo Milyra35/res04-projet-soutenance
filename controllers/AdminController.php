@@ -12,9 +12,10 @@ class AdminController extends AbstractController {
         $this->sm = new StatisticManager();
     }
 
-    public function index()
+    public function index(int $id)
     {
-        $this->render("dashboard/dashboard.phtml", [], "admin");
+        $admin = $this->um->getUserById($id);
+        $this->render("dashboard/dashboard.phtml", ["admin" => $admin], "admin");
     }
 
     // To display all the files uploaded by the users
@@ -71,6 +72,37 @@ class AdminController extends AbstractController {
         {
             $this->um->deleteUser($_POST['user_id']);
             header("Location:/res04-projet-soutenance/admin/all-users");
+        }
+    }
+
+    public function editAdmin()
+    {
+        if(isset($_POST['submit-edit-admin']))
+        {
+            $existingUser = $this->um->verifyUsername(htmlspecialchars($_POST['new-username']));
+
+            // Checking if the username already exists
+            if(!$existingUser)
+            {
+                if(!empty($_POST['new-username']) && !empty($_POST['new-email']) &&
+                    !empty($_POST['new-password']) && $_POST['new-password'] === $_POST['confirm-new-password'])
+                {
+                    $newUsername = htmlspecialchars($_POST['new-username']);
+                    $newEmail = htmlspecialchars($_POST['new-email']);
+                    $newPassword = password_hash($_POST['new-password'], PASSWORD_DEFAULT);
+                }
+
+                $role = new Role(1, "admin");
+                $admin = new User($newUsername, $newPassword, $newEmail, $role);
+                $admin->setId($_SESSION['admin_id']);
+                $this->um->editUser($admin);
+
+                header("Location:/res04-projet-soutenance/admin");
+            }
+        }
+        else
+        {
+            $this->render("admin/edit.phtml", [], "admin");
         }
     }
 }

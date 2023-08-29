@@ -19,20 +19,6 @@ function collapseData()
             }
         })
     }
-    // events.style.display = 'none';
-
-    // title.addEventListener("click",function() {
-    //     let isHidden = events.style.display === 'none';
-
-    //     if(isHidden)
-    //     {
-    //         events.style.display = 'table';
-    //     }
-    //     else
-    //     {
-    //         events.style.display = 'none';
-    //     }
-    // });
 }
 
 export { collapseData };

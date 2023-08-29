@@ -2,10 +2,10 @@ import { User } from './classe/User.js';
 
 function validateLoginForm() 
 {
-    let submitLoginForm = document.getElementById('login');
+    let loginForm = document.getElementById('login-form');
 
-    submitLoginForm.addEventListener("click", function(event) {
-        event.preventDefault();
+    loginForm.addEventListener("submit", function(event) {
+        // event.preventDefault();
 
         let username = document.getElementById('username').value;
         let password = document.getElementById('password').value;
@@ -15,6 +15,7 @@ function validateLoginForm()
         {
             let error = document.getElementById('error');
             error.innerHTML = "Invalid informations";
+            event.preventDefault();
         }
         else
         {

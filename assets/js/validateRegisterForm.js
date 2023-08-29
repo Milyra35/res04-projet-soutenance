@@ -2,9 +2,9 @@ import { User } from './classe/User.js';
 
 function validateRegisterForm()
 {
-    let submitRegisterForm = document.getElementById('submit-new-user');
+    let registerForm = document.getElementById('register-form');
 
-    submitRegisterForm.addEventListener("click", function(event) {
+    registerForm.addEventListener("submit", function(event) {
         // event.preventDefault();
 
         let username = document.getElementById('username').value;
@@ -13,16 +13,17 @@ function validateRegisterForm()
         let confirmPassword = document.getElementById('confirm-password').value;
 
         let user = new User(username, email, password, confirmPassword);
+        // console.log(user);
+        let validate = user.validate();
 
-        if(user.validate())
+        if(validate)
         {
-            user.validate();
+            user.validate()
         }
         else
         {
             event.preventDefault();
         }
-        // user.validate();
     })
 }
 

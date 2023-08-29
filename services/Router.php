@@ -204,7 +204,7 @@ class Router {
         {
             if($routeTab['admin'] === null)
             {
-                $this->ac->index();
+                $this->ac->index($_SESSION['admin_id']);
                 $this->mc->addPicture();
                 // $this->npc->addVillagers(); I only need it once to add all the villagers to the database
                 // $this->npc->addVillagerPlanning(); I only need it once to add the schedule of each villager
@@ -225,7 +225,7 @@ class Router {
             }
             else if($routeTab['admin'] === "edit")
             {
-                $this->ac->edit();
+                $this->ac->editAdmin();
             }
         }
         else
