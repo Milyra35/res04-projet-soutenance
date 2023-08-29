@@ -126,6 +126,25 @@ class FileManager extends AbstractManager {
 
         return $file;
     }
+
+    // Get everything in the database to make a backup
+    // public function getAllDatas() : array
+    // {
+    //     $query=$this->db->prepare("SELECT * FROM books, community_center, 
+    //                                             items, locations, museum, 
+    //                                             pictures, player_progress, 
+    //                                             player_skills, possessed_items, 
+    //                                             relationships, roles, saved_files, 
+    //                                             statistics, users, villagers, 
+    //                                             villagers_planning");
+    //     $query->execute();
+    //     $data = $query->fetchAll(PDO::FETCH_ASSOC);
+    //     $datas = array('data' => $data);
+
+    //     echo json_encode($datas);
+
+    //     return $datas;
+    // }
 }
 
 ?>

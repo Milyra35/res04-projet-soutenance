@@ -15,6 +15,7 @@ class AdminController extends AbstractController {
     public function index(int $id)
     {
         $admin = $this->um->getUserById($id);
+        // $datas = $this->fm->getAllDatas();
         $this->render("dashboard/dashboard.phtml", ["admin" => $admin], "admin");
     }
 
