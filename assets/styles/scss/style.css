@@ -1,0 +1,42 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+header h1 {
+  padding: 0;
+  margin: 0;
+}
+header nav {
+  display: flex;
+  align-items: center;
+}
+header nav ul {
+  display: flex;
+}
+header nav ul li {
+  margin: 0 2rem;
+}
+header nav ul li a {
+  background-color: #4361EE;
+  color: #FAFAFA;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+html {
+  font-size: 62.5%;
+}
+html body {
+  font-family: "Inconsolata", sans-serif;
+  font-size: 1.6em;
+  background-color: #FAFAFA;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html body ul {
+  list-style: none;
+  padding: 0;
+}/*# sourceMappingURL=style.css.map */

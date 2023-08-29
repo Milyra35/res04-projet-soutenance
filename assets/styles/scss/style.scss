@@ -1,7 +1,22 @@
-@use 'vars';
-@use 'header';
-@use 'footer';
+@import 'vars';
+@import 'partials/header';
+@import 'partials/footer';
+
 
 html {
     font-size:62.5%;
+
+    body {
+        font-family : $text-font;
+        font-size : $font-size-default;
+        background-color: $background;
+        padding: 0;
+        margin : 0;
+        box-sizing: border-box;
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+    }
 }
