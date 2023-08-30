@@ -42,4 +42,7 @@ html body {
 html body ul {
   list-style: none;
   padding: 0;
+}
+html body h1, html body h2, html body h3, html body h4 {
+  font-family: "Chakra Petch", sans-serif;
 }/*# sourceMappingURL=style.css.map */
