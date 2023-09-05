@@ -2,22 +2,24 @@
     $villagers = $data;
 ?>
 
-<h2>All villagers</h2>
+<h2>Villagers</h2>
 
-<input type="search" id="search" name="search" placeholder="Search for a villager">
+<input type="search" id="search" name="search" placeholder="Search for a villager" class="search">
 
-<ul>
-<?php
-    foreach($villagers as $villager)
-    {
-?>
+<article class="villagers">
+    <ul>
+    <?php
+        foreach($villagers as $villager)
+        {
+    ?>
 
-<li class="data-row">
-    <img src="<?= $villager->getPicture()->getUrl() ;?>" alt="<?= $villager->getPicture()->getAlt();?>">
-    <a href="/res04-projet-soutenance/villagers/<?= $villager->getId();?>"><?= $villager->getName();?></a>
-</li>
+    <li class="data-row">
+        <img src="<?= $villager->getPicture()->getUrl() ;?>" alt="<?= $villager->getPicture()->getAlt();?>">
+        <a href="/res04-projet-soutenance/villagers/<?= $villager->getId();?>"><?= $villager->getName();?></a>
+    </li>
 
-<?php        
-    }
-?>
-</ul>
+    <?php        
+        }
+    ?>
+    </ul>
+</article>
