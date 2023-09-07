@@ -1,7 +1,8 @@
 @import 'vars';
 @import 'partials/header';
 @import 'partials/footer';
-@import 'partials/villagers';
+@import 'villagers';
+@import 'villager';
 
 
 html {
@@ -30,7 +31,7 @@ html {
         }
 
         h2 {
-            font-size: 1.8rem;
+            font-size: 2rem;
             text-align: center;
         }
     }

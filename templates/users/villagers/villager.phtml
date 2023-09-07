@@ -4,132 +4,135 @@
     $villager = $data[0];
 ?>
 <h2><?= $villager->getName() ;?></h2>
-<img src="/res04-projet-soutenance/<?= $villager->getPicture()->getUrl() ;?>" alt="<?= $villager->getPicture()->getAlt() ;?>">
 
-<section id="general">
-    <p>Birthday : <?= $villager->getBirthday() ;?></p>
-    <p>Can you date them ? 
-        <?php 
-            if(intval($villager->getIsDatable()) === 1)
+<article>
+    <img src="/res04-projet-soutenance/<?= $villager->getPicture()->getUrl() ;?>" alt="<?= $villager->getPicture()->getAlt() ;?>" class="villager-picture">
+
+    <section id="general" class="villager-general">
+        <p>Birthday : <?= $villager->getBirthday() ;?></p>
+        <p>Can you date them ? 
+            <?php 
+                if(intval($villager->getIsDatable()) === 1)
+                {
+                    echo "Yes";
+                }
+                else
+                {
+                    echo "No";
+                }
+            ?>
+        </p>
+    </section>
+
+    <section id="events" class="villager-events">
+        <h3 class="title"><button>Events</button></h3>
+        <table class="events">
+            <?php
+                // var_dump($villager->getEvents());
+                foreach($villager->getEvents() as $key => $event)
+                {
+                    echo "<tr><th>$key</th><td>$event</td></tr>";
+                }
+            ?>
+        </table>
+    </section>
+
+    <section id="gifts" class="gifts">
+        <h3 class="title"><button>Gifts</button></h3>
+        <table class="events">
+            <tr>
+                <th>Loves</th>
+                <td>
+                    <?php 
+                        foreach($villager->getLove() as $love)
+                        {
+                            echo $love . ', ';
+                        }
+                    ?>
+                </td>
+            </tr>
+            <tr>
+                <th>Likes</th>
+                <td>
+                    <?php 
+                        foreach($villager->getLike() as $like)
+                        {
+                            echo $like . ', ';
+                        }
+                    ?>
+                </td>
+            </tr>
+            <tr>
+                <th>Neutral</th>
+                <td>
+                    <?php 
+                        foreach($villager->getNeutral() as $neutral)
+                        {
+                            echo $neutral . ', ';
+                        }
+                    ?>
+                </td>
+            </tr>
+            <tr>
+                <th>Dislikes</th>
+                <td>
+                    <?php 
+                        foreach($villager->getDislike() as $dislike)
+                        {
+                            echo $dislike . ', ';
+                        }
+                    ?>
+                </td>
+            </tr>
+            <tr>
+                <th>Hates</th>
+                <td>
+                    <?php 
+                        foreach($villager->getHate() as $hate)
+                        {
+                            echo $hate . ', ';
+                        }
+                    ?>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="planning" class="planning">
+        <?php
+            // I had to make a condition because everyone's planning didn't match for the loops
+            if($villager->getName() === "Caroline" ||
+                $villager->getName() === "Clint" ||
+                $villager->getName() === "Evelyn" ||
+                $villager->getName() === "George" ||
+                $villager->getName() === "Gus" ||
+                $villager->getName() === "Jas" ||
+                $villager->getName() === "Kent" ||
+                $villager->getName() === "Linus" ||
+                $villager->getName() === "Marnie" ||
+                $villager->getName() === "Pam" ||
+                $villager->getName() === "Pierre" ||
+                $villager->getName() === "Robin" ||
+                $villager->getName() === "Sandy" ||
+                $villager->getName() === "Vincent" ||
+                $villager->getName() === "Willy")
             {
-                echo "Yes";
+                require 'partials/_planning2.phtml';
+            }
+            else if($villager->getName() === "Dwarf" ||
+                    $villager->getName() === "Krobus" ||
+                    $villager->getName() === "Wizard")
+            {
+                require 'partials/_planning1.phtml';
+            }
+            else if($villager->getName() === "Emily")
+            {
+                require 'partials/_emily.phtml';
             }
             else
             {
-                echo "No";
+                require 'partials/_planning3.phtml';
             }
         ?>
-    </p>
-</section>
-
-<section id="events">
-    <h3 class="title"><button>Events</button></h3>
-    <table class="events">
-        <?php
-            // var_dump($villager->getEvents());
-            foreach($villager->getEvents() as $key => $event)
-            {
-                echo "<tr><th>$key</th><td>$event</td></tr>";
-            }
-        ?>
-    </table>
-</section>
-
-<section id="gifts">
-    <h3 class="title"><button>Gifts</button></h3>
-    <table class="events">
-        <tr>
-            <th>Loves</th>
-            <td>
-                <?php 
-                    foreach($villager->getLove() as $love)
-                    {
-                        echo $love . ', ';
-                    }
-                ?>
-            </td>
-        </tr>
-        <tr>
-            <th>Likes</th>
-            <td>
-                <?php 
-                    foreach($villager->getLike() as $like)
-                    {
-                        echo $like . ', ';
-                    }
-                ?>
-            </td>
-        </tr>
-        <tr>
-            <th>Neutral</th>
-            <td>
-                <?php 
-                    foreach($villager->getNeutral() as $neutral)
-                    {
-                        echo $neutral . ', ';
-                    }
-                ?>
-            </td>
-        </tr>
-        <tr>
-            <th>Dislikes</th>
-            <td>
-                <?php 
-                    foreach($villager->getDislike() as $dislike)
-                    {
-                        echo $dislike . ', ';
-                    }
-                ?>
-            </td>
-        </tr>
-        <tr>
-            <th>Hates</th>
-            <td>
-                <?php 
-                    foreach($villager->getHate() as $hate)
-                    {
-                        echo $hate . ', ';
-                    }
-                ?>
-            </td>
-        </tr>
-    </table>
-</section>
-
-<section id="planning">
-    <?php
-        // I had to make a condition because everyone's planning didn't match for the loops
-        if($villager->getName() === "Caroline" ||
-            $villager->getName() === "Clint" ||
-            $villager->getName() === "Evelyn" ||
-            $villager->getName() === "George" ||
-            $villager->getName() === "Gus" ||
-            $villager->getName() === "Jas" ||
-            $villager->getName() === "Kent" ||
-            $villager->getName() === "Linus" ||
-            $villager->getName() === "Marnie" ||
-            $villager->getName() === "Pam" ||
-            $villager->getName() === "Pierre" ||
-            $villager->getName() === "Robin" ||
-            $villager->getName() === "Sandy" ||
-            $villager->getName() === "Vincent" ||
-            $villager->getName() === "Willy")
-        {
-            require 'partials/_planning2.phtml';
-        }
-        else if($villager->getName() === "Dwarf" ||
-                $villager->getName() === "Krobus" ||
-                $villager->getName() === "Wizard")
-        {
-            require 'partials/_planning1.phtml';
-        }
-        else if($villager->getName() === "Emily")
-        {
-            require 'partials/_emily.phtml';
-        }
-        else
-        {
-            require 'partials/_planning3.phtml';
-        }
-    ?>
-</section>
+    </section>
+</article>
