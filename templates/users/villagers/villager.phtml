@@ -5,7 +5,7 @@
 ?>
 <h2><?= $villager->getName() ;?></h2>
 
-<article>
+<article class="single-villager">
     <img src="/res04-projet-soutenance/<?= $villager->getPicture()->getUrl() ;?>" alt="<?= $villager->getPicture()->getAlt() ;?>" class="villager-picture">
 
     <section id="general" class="villager-general">
@@ -31,7 +31,10 @@
                 // var_dump($villager->getEvents());
                 foreach($villager->getEvents() as $key => $event)
                 {
-                    echo "<tr><th>$key</th><td>$event</td></tr>";
+                    echo "<tr>
+                            <th>$key</th>
+                            <td>$event</td>
+                        </tr>";
                 }
             ?>
         </table>
