@@ -1,6 +1,6 @@
-<h3>All users</h3>
+<h2>All users</h2>
 
-<input type="search" id="search" name="search" placeholder="Search for a user">
+<input type="search" id="search" name="search" placeholder="Search for a user" class="search-user">
 
 <table>
     <thead>
@@ -36,7 +36,7 @@
     </tbody>
     <tfoot>
         <tr>
-            <td rowspan=4>
+            <td colspan=4>
                 <?php
                     echo "Total users : ".count($data);
                 ?>

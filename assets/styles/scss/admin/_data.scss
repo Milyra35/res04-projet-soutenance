@@ -1,0 +1,63 @@
+.admin-layout {
+
+    .search-user {
+        margin: 1rem auto;
+        border: 1px solid $pink;
+        padding: .5rem 1rem;
+        background-color: rgba(214, 30, 146, 0.2);
+
+        &::placeholder {
+            font-family: $text-font;
+            color: $text-color;
+        }
+    }
+
+    table {
+        width: 100%;
+        margin-top: 2rem;
+        border-collapse: collapse;
+
+        thead {
+            border-bottom: 1px solid rgba(0, 0, 0, .4);
+            margin: 2rem 0;
+
+            th {
+                text-align:start;
+                font-size: 1.2rem;
+                padding: .8rem 0;
+            }
+        }
+
+        tbody {
+
+            tr {
+                border-bottom: 1px solid rgba(0, 0, 0, .2);
+            }
+
+            td {
+                padding: .5rem 0;
+
+                input[type=submit] {
+                    border: 1px solid $green;
+                    background-color: $green;
+                    font-family: $text-font;
+                    font-size: $font-size-default;
+                    padding: .3rem .5rem;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: $background;
+                    }
+                }
+            }
+        }
+
+        tfoot {
+
+            td {
+                padding: .8rem 0;
+                font-weight: bolder;
+            }
+        }
+    }
+}

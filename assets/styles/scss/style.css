@@ -218,6 +218,56 @@ header nav ul li a {
   font-weight: bolder;
 }
 
+.admin-layout .search-user {
+  margin: 1rem auto;
+  border: 1px solid #D61E92;
+  padding: 0.5rem 1rem;
+  background-color: rgba(214, 30, 146, 0.2);
+}
+.admin-layout .search-user::-moz-placeholder {
+  font-family: "Inconsolata", sans-serif;
+  color: #0C092B;
+}
+.admin-layout .search-user::placeholder {
+  font-family: "Inconsolata", sans-serif;
+  color: #0C092B;
+}
+.admin-layout table {
+  width: 100%;
+  margin-top: 2rem;
+  border-collapse: collapse;
+}
+.admin-layout table thead {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  margin: 2rem 0;
+}
+.admin-layout table thead th {
+  text-align: start;
+  font-size: 1.2rem;
+  padding: 0.8rem 0;
+}
+.admin-layout table tbody tr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.admin-layout table tbody td {
+  padding: 0.5rem 0;
+}
+.admin-layout table tbody td input[type=submit] {
+  border: 1px solid #0CC09E;
+  background-color: #0CC09E;
+  font-family: "Inconsolata", sans-serif;
+  font-size: 1rem;
+  padding: 0.3rem 0.5rem;
+  cursor: pointer;
+}
+.admin-layout table tbody td input[type=submit]:hover {
+  background-color: #FAFAFA;
+}
+.admin-layout table tfoot td {
+  padding: 0.8rem 0;
+  font-weight: bolder;
+}
+
 html {
   font-size: 16px;
 }
