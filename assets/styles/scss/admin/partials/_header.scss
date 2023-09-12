@@ -2,15 +2,23 @@
     display:grid;
     grid-template-columns: repeat(2, auto);
     grid-template-rows: 20% 80%;
-    grid-column-gap: 2rem;
+    grid-column-gap: 1.5rem;
     background-color: $blue;
     width: 100%;
+    -webkit-box-shadow: .3rem 0px 0px 0px rgba(67,97,238,0.6), 
+                        .6rem 0px 0px 0px rgba(67,97,238,0.4), 
+                        .9rem 0px 0px 0px rgba(67,97,238,0.2);
+    box-shadow: .3rem 0px 0px 0px rgba(67,97,238,0.6), 
+                .6rem 0px 0px 0px rgba(67,97,238,0.4), 
+                .9rem 0px 0px 0px rgba(67,97,238,0.2);
+
 
     h1 {
         grid-area: 1/1/2/2;
         padding: 2rem 1rem;
         align-self: center;
         text-align: center;
+        color: $background;
     }
 
     form {
@@ -21,7 +29,12 @@
         padding: 0 1rem;
 
         input {
-            
+            border:none;
+            background-color: $background;
+            clip-path:polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 
+                            100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+            color: $blue;
+            padding: .5rem 1rem;
         }
     }
 

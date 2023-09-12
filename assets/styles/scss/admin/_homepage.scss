@@ -9,5 +9,43 @@
 
     main {
         grid-column: 2/3;
+        width: 100%;
+
+        h2 {
+            padding: 2rem 0;
+        }
+
+        .add-picture {
+
+            h3 {
+                margin: 2rem 0;
+                font-size: 1.4rem;
+            }
+
+            form {
+                display:flex;
+
+                label {
+                    cursor: pointer;
+                    border: 1px solid $pink;
+                    padding: .5rem 1rem;
+                    background-color: rgba(214, 30, 146, 0.2);
+                }
+
+                input[type=file] {
+                    display: none;
+                }
+
+                input[type=submit] {
+                    border: 1px solid $green;
+                    cursor: pointer;
+                    padding: .5rem 1rem;
+                    font-family: $text-font;
+                    font-size: $font-size-default;
+                    background-color: $green;
+                    font-weight: bolder;
+                }
+            }
+        }
     }
 }
