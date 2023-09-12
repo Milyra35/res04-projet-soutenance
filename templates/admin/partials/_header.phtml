@@ -1,5 +1,17 @@
-<header>
+<header class="admin-header">
     <h1>Admin Dashboard</h1>
+
+    <?php
+        if(isset($_SESSION['admin']))
+        {
+    ?>
+    <form method="POST" action="/res04-projet-soutenance/logout">
+        <input type="submit" name="logout" id="logout" value="Logout">
+    </form>
+    <?php
+        }
+    ?>
+    
     <nav>
         <ul>
             <li><a href="/res04-projet-soutenance/">Back to the farming</a></li>
@@ -10,14 +22,4 @@
             <li><a href="/res04-projet-soutenance/admin/edit">Edit admin account</a></li>
         </ul>
     </nav>
-    <?php
-        if(isset($_SESSION['admin']))
-        {
-    ?>
-    <form method="POST" action="/res04-projet-soutenance/logout">
-        <input type="submit" name="logout" id="logout" value="logout">
-    </form>
-    <?php
-        }
-    ?>
 </header>

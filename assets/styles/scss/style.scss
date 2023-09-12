@@ -1,8 +1,10 @@
 @import 'vars';
-@import 'partials/header';
-@import 'partials/footer';
-@import 'villagers';
-@import 'villager';
+@import 'users/partials/header';
+@import 'users/partials/footer';
+@import 'users/villagers';
+@import 'users/villager';
+@import 'admin/partials/header';
+@import 'admin/homepage';
 
 
 html {
@@ -28,6 +30,7 @@ html {
 
         h1, h2, h3, h4 {
             font-family: $title-font;
+            margin: 0;
         }
 
         h2 {

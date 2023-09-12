@@ -1,0 +1,13 @@
+.admin-layout {
+    display:grid;
+    grid-template-columns: 20vw 80vw;
+    height:100vh;
+
+    .admin-header {
+        grid-column: 1/2;
+    }
+
+    main {
+        grid-column: 2/3;
+    }
+}

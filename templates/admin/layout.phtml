@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farming Companion</title>
-</head>
-<body>
-    <?php 
-        require 'partials/_header.phtml';
-        require $template;
-    ?>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="title" content="Farming Companion">
+        <meta name="description" content="A tracker to a Stardew Valley game">
+        <meta name="author" content="Marie">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600&family=Inconsolata&display=swap" rel="stylesheet">
+        <link href="/res04-projet-soutenance/assets/styles/scss/style.css" rel="stylesheet">
+        <title>Farming Companion</title>
+    </head>
+    <body class="admin-layout">
+        <?php 
+            require 'partials/_header.phtml';
+        ?>
 
-    <script type="module" src="/res04-projet-soutenance/assets/js/index.js"></script>
-</body>
+        <main>
+            <?php require $template; ?>
+        </main>
+
+        <script type="module" src="/res04-projet-soutenance/assets/js/index.js"></script>
+    </body>
 </html>
