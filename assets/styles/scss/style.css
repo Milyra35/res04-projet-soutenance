@@ -3,10 +3,16 @@ header {
   justify-content: space-between;
   max-width: 100vw;
   margin: 0 auto;
+  background-color: #0CC09E;
+  box-shadow: 0px 0.3rem 0px 0px rgba(12, 192, 158, 0.6), 0 0.6rem 0px 0px rgba(12, 192, 158, 0.4), 0 0.9rem 0px 0px rgba(12, 192, 158, 0.2);
 }
 header h1 {
   padding: 0;
   margin: 0;
+}
+header img {
+  width: 20%;
+  padding: 1rem;
 }
 header nav {
   display: flex;
@@ -26,6 +32,32 @@ header nav ul li a {
   padding: 0.8rem 1.2rem;
   -webkit-clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
           clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+}
+
+.presentation {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(3, auto);
+  padding: 2rem 0;
+}
+.presentation h2 {
+  grid-area: 1/1/2/3;
+  margin-bottom: 1rem;
+}
+.presentation img {
+  grid-area: 2/2/4/3;
+  width: 90%;
+  margin: 1rem 0;
+  justify-self: right;
+}
+.presentation p:first-of-type {
+  grid-area: 2/1/3/2;
+  text-align: justify;
+  margin: 1rem 0;
+}
+.presentation p:last-of-type {
+  grid-area: 3/1/4/2;
+  text-align: justify;
 }
 
 /**** CSS of index Villagers ****/
@@ -278,10 +310,17 @@ html body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  line-height: 1.4rem;
+}
+html body .hidden {
+  display: none;
 }
 html body main {
   max-width: 70vw;
   margin: 0 auto;
+}
+html body p {
+  margin: 0;
 }
 html body ul {
   list-style: none;

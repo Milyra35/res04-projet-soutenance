@@ -1,6 +1,7 @@
 @import 'vars';
 @import 'users/partials/header';
 @import 'users/partials/footer';
+@import 'users/homepage';
 @import 'users/villagers';
 @import 'users/villager';
 @import 'admin/partials/header';
@@ -18,10 +19,19 @@ html {
         padding: 0;
         margin : 0;
         box-sizing: border-box;
+        line-height: 1.4rem;
+
+        .hidden {
+            display: none;
+        }
 
         main {
             max-width: 70vw;
             margin: 0 auto;
+        }
+
+        p {
+            margin:0;
         }
 
         ul {

@@ -1,14 +1,23 @@
 <header>
-    <h1><img src="/res04-projet-soutenance/assets/images/logo.png" alt="Logo of Farming Companion"></h1>
+    <h1 class="hidden">Farming Companion</h1>
+    <img src="/res04-projet-soutenance/assets/images/logo-fc.png" alt="Logo of Farming Companion">
     <nav>
         <ul>
             <li><a href="/res04-projet-soutenance/">Homepage</a></li>
             <li><a href="/res04-projet-soutenance/villagers">Villagers</a></li>
-            <li><a href="/res04-projet-soutenance/register">Register</a></li>
-            <li><a href="/res04-projet-soutenance/login">Login</a></li>
+
+            <?php
+            if(!isset($_SESSION['user']) || !isset($_SESSION['admin']))
+            {
+                echo '
+                <li><a href="/res04-projet-soutenance/register">Register</a></li>
+                <li><a href="/res04-projet-soutenance/login">Login</a></li>';
+            }
+            ?>
+            
             <?php
             // var_dump($_SESSION['user']);
-            if(isset($_SESSION['user']))
+            if(isset($_SESSION['user']) || isset($_SESSION['admin']))
             {
                 echo "<li><a href='/res04-projet-soutenance/my-account'>My account</a></li>
                       <li><a href='/res04-projet-soutenance/my-games'>My games</a></li>";
