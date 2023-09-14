@@ -7,7 +7,7 @@
             <li><a href="/res04-projet-soutenance/villagers">Villagers</a></li>
 
             <?php
-            if(!isset($_SESSION['user']) || !isset($_SESSION['admin']))
+            if(!isset($_SESSION['user']) && !isset($_SESSION['admin']))
             {
                 echo '
                 <li><a href="/res04-projet-soutenance/register">Register</a></li>
@@ -20,7 +20,7 @@
             if(isset($_SESSION['user']) || isset($_SESSION['admin']))
             {
                 echo "<li><a href='/res04-projet-soutenance/my-account'>My account</a></li>
-                      <li><a href='/res04-projet-soutenance/my-games'>My games</a></li>";
+                    <li><a href='/res04-projet-soutenance/my-games'>My games</a></li>";
             }
             else if(isset($_SESSION['admin']))
             {
@@ -28,16 +28,18 @@
             }
             ?>
             
+            <?php
+            if(isset($_SESSION['user']) || isset($_SESSION['admin']))
+            {
+            ?>
+            <li>
+                <form method="POST" action="/res04-projet-soutenance/logout">
+                    <input type="submit" name="logout" id="logout" value="">
+                </form>
+            </li>
+            <?php
+                }
+            ?>
         </ul>
     </nav>
-    <?php
-        if(isset($_SESSION['user']) || isset($_SESSION['admin']))
-        {
-    ?>
-    <form method="POST" action="/res04-projet-soutenance/logout">
-        <input type="submit" name="logout" id="logout" value="Logout">
-    </form>
-    <?php
-        }
-    ?>
 </header>

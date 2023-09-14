@@ -2,20 +2,20 @@
 
 .search {
     display: block;
-    margin: .8rem auto;
-    border: none;
+    margin: 2rem auto;
+    border: 1px solid $pink;
     padding: 0.5rem .4rem;
-    background-color: $blue;
+    background-color: rgba(214, 30, 146, 0.2);
 
     &::placeholder {
-        color : $background;
+        color : $text-color;
         font-family: $text-font;
     }
 
     &:focus {
         outline: none;
         font-family: $text-color;
-        color: $background;
+        color: $text-color;
     }
 }
 
