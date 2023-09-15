@@ -166,7 +166,8 @@ header nav form input:hover {
   margin: 1rem 0;
 }
 .single-villager .villager-events .events tr th {
-  width: 8rem;
+  width: 9rem;
+  text-align: left;
 }
 .single-villager .gifts {
   grid-area: 3/1/4/3;
