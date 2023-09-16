@@ -124,28 +124,36 @@ header nav form input:hover {
 }
 
 /**** CSS of a single villager ****/
-.single-villager {
+.villager .single-villager {
   margin: 2rem 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 10rem repeat(3, auto);
+  grid-template-rows: 12rem repeat(3, auto);
+  grid-row-gap: 2.5rem;
 }
-.single-villager .villager-picture {
+.villager .single-villager .villager-picture {
   grid-area: 1/2/2/3;
   justify-self: self-end;
   align-self: center;
-  width: 10rem;
+  width: 12rem;
   padding-top: 0.6rem;
   padding: 0 0.6rem;
   background-color: #0CC09E;
   -webkit-clip-path: polygon(20% 0, 20% 10%, 10% 10%, 10% 20%, 0 20%, 0 80%, 10% 80%, 10% 90%, 20% 90%, 20% 100%, 80% 100%, 80% 90%, 90% 90%, 90% 80%, 100% 80%, 100% 20%, 90% 20%, 90% 10%, 80% 10%, 80% 0);
           clip-path: polygon(20% 0, 20% 10%, 10% 10%, 10% 20%, 0 20%, 0 80%, 10% 80%, 10% 90%, 20% 90%, 20% 100%, 80% 100%, 80% 90%, 90% 90%, 90% 80%, 100% 80%, 100% 20%, 90% 20%, 90% 10%, 80% 10%, 80% 0);
 }
-.single-villager .villager-general {
+.villager .single-villager .villager-general {
   grid-area: 1/1/2/2;
   align-self: center;
+  justify-self: center;
+  padding: 1rem 2rem;
+  background-color: #0CC09E;
+  box-shadow: 0px 0px 0px 0.3rem rgba(12, 192, 158, 0.6), 0px 0px 0px 0.6rem rgba(12, 192, 158, 0.4), 0px 0px 0px 0.9rem rgba(12, 192, 158, 0.2);
 }
-.single-villager .title button {
+.villager .single-villager .title {
+  justify-self: center;
+}
+.villager .single-villager .title button {
   border: none;
   background-color: #4361EE;
   padding: 0.6rem 0.8rem;
@@ -156,26 +164,23 @@ header nav form input:hover {
           clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
   cursor: pointer;
 }
-.single-villager .title button.button-focus {
+.villager .single-villager .title button.button-focus {
   font-weight: bolder;
   -webkit-clip-path: polygon(20% 0, 20% 10%, 10% 10%, 10% 20%, 0 20%, 0 80%, 10% 80%, 10% 90%, 20% 90%, 20% 100%, 80% 100%, 80% 90%, 90% 90%, 90% 80%, 100% 80%, 100% 20%, 90% 20%, 90% 10%, 80% 10%, 80% 0);
           clip-path: polygon(20% 0, 20% 10%, 10% 10%, 10% 20%, 0 20%, 0 80%, 10% 80%, 10% 90%, 20% 90%, 20% 100%, 80% 100%, 80% 90%, 90% 90%, 90% 80%, 100% 80%, 100% 20%, 90% 20%, 90% 10%, 80% 10%, 80% 0);
 }
-.single-villager .villager-events {
-  grid-area: 2/1/3/3;
-  margin: 1rem 0;
+.villager .single-villager .villager-events {
+  grid-area: 2/1/3/2;
 }
-.single-villager .villager-events .events tr th {
+.villager .single-villager .villager-events .events tr th {
   width: 9rem;
   text-align: left;
 }
-.single-villager .gifts {
-  grid-area: 3/1/4/3;
-  margin: 1rem 0;
+.villager .single-villager .gifts {
+  grid-area: 2/2/3/3;
 }
-.single-villager .planning {
-  grid-area: 4/1/5/3;
-  margin: 1rem 0;
+.villager .single-villager .planning {
+  grid-area: 3/1/4/3;
 }
 
 .admin-header {
@@ -351,7 +356,7 @@ html body h1, html body h2, html body h3, html body h4 {
 html body h2 {
   font-size: 2rem;
   text-align: center;
-  margin-top: 3rem;
+  margin: 3rem 0;
 }
 html body h3 {
   margin-bottom: 1.5rem;
