@@ -1,19 +1,20 @@
 /**** CSS of a single villager ****/
 
 .villager {
-
+    background-color: $background-main;
+    padding: 1.5rem;
+    
     .single-villager {
-        margin: 2rem 0;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 12rem repeat(3, auto);
-        grid-row-gap: 2.5rem;
+        grid-template-rows: 18rem repeat(2, auto);
+        grid-row-gap: 1rem;
+        grid-column-gap: 2rem;
     
         .villager-picture {
-            grid-area: 1/2/2/3;
-            justify-self: self-end;
-            align-self: center;
-            width: 12rem;
+            grid-area: 1/1/2/2;
+            justify-self: center;
+            width: 14rem;
             padding-top: .6rem;
             padding: 0 .6rem;
             background-color: $green;
@@ -21,14 +22,10 @@
         }
     
         .villager-general {
-            grid-area: 1/1/2/2;
-            align-self: center;
+            grid-area: 2/1/3/2;
             justify-self: center;
             padding: 1rem 2rem;
-            background-color: $green;
-            box-shadow: 0px 0px 0px .3rem rgba(12,192,158,0.6), 
-                        0px 0px 0px .6rem rgba(12,192,158,0.4), 
-                        0px 0px 0px .9rem rgba(12,192,158,0.2);
+            text-align:center;
         }
     
         .title {
@@ -39,7 +36,7 @@
                 background-color: $blue;
                 padding: 0.6rem .8rem;
                 font-family: $text-font;
-                color: $background;
+                color: $background-main;
                 font-size:1.05rem;
                 clip-path:polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 
                                         100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
@@ -54,7 +51,9 @@
         }
     
         .villager-events {
-            grid-area: 2/1/3/2;
+            grid-area: 3/1/4/2;
+            border: 2px dashed $pink;
+            padding: 1rem;
     
             .events {
                 tr {
@@ -67,11 +66,28 @@
         }
         
         .gifts {
-            grid-area: 2/2/3/3;
+            grid-area: 1/2/3/3;
+            border: 2px dashed $pink;
+            padding: 1rem;
+
+            h3 {
+
+                button {
+                    border: none;
+                    background-color: $blue;
+                    padding: 0.6rem .8rem;
+                    font-family: $text-font;
+                    color: $background-main;
+                    font-size:1.05rem;
+                    clip-path: polygon(20% 0, 20% 10%, 10% 10%, 10% 20%, 0 20%, 0 80%, 10% 80%, 10% 90%, 20% 90%, 20% 100%, 80% 100%, 80% 90%, 90% 90%, 90% 80%, 100% 80%, 100% 20%, 90% 20%, 90% 10%, 80% 10%, 80% 0);
+                }
+            }
         }
     
         .planning {
-            grid-area: 3/1/4/3;
+            grid-area: 3/2/4/3;
+            border: 2px dashed $pink;
+            padding: 1rem;
         }
     }
 }

@@ -3,15 +3,16 @@
     <?php
         foreach($_SESSION['planning']->getSchedule() as $key => $schedules)
         {
+            // var_dump($key);
             echo '<tr><th>'.$key.'</th></tr>';
             foreach($schedules as $keys => $schedule)
             {
                 echo '<tr><td>'.$keys.'</td></tr>';
                 foreach($schedule as $keyz => $planning)
                 {
-                    foreach($planning as $key => $plan)
+                    foreach($planning as $cle => $plan)
                     {
-                        echo '<tr><td>'.$key. ': ' .$plan.'</td></tr>';
+                        echo '<tr><td>'.$cle. ': ' .$plan.'</td></tr>';
                     }
                 }
             }

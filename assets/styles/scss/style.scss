@@ -15,7 +15,7 @@ html {
     body {
         font-family : $text-font;
         font-size : $font-size-default;
-        background-color: $background;
+        background-color: $background-body;
         padding: 0;
         margin : 0;
         box-sizing: border-box;
@@ -28,6 +28,10 @@ html {
         main {
             max-width: 65vw;
             margin: 0 auto;
+            box-shadow: inset .3rem 0px 0px 0px rgba(217,217,217,0.6),
+                        inset -.3rem 0px 0px 0px rgba(217,217,217,0.6),
+                        inset .6rem 0px 0px 0px rgba(217,217,217,0.4),
+                        inset -.6rem 0px 0px 0px rgba(217,217,217,0.4);
         }
 
         p {
@@ -47,7 +51,7 @@ html {
         h2 {
             font-size: 2rem;
             text-align: center;
-            margin: 3rem 0;
+            padding: 2.5rem 0;
         }
 
         h3 {
