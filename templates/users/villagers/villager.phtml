@@ -76,9 +76,18 @@
                 <tr>
                     <td>
                         <?php 
-                            foreach($villager->getLike() as $like)
+                            $likes = count($villager->getLike());
+                            foreach($villager->getLike() as $key => $like)
                             {
-                                echo $like . ', ';
+                                echo $like;
+                                if($key < $likes - 1)
+                                {
+                                    echo ', ';
+                                }
+                                else
+                                {
+                                    echo '.';
+                                }
                             }
                         ?>
                     </td>
@@ -90,9 +99,18 @@
                 <tr>
                     <td>
                         <?php 
-                            foreach($villager->getNeutral() as $neutral)
+                            $neutrals = count($villager->getNeutral());
+                            foreach($villager->getNeutral() as $key => $neutral)
                             {
-                                echo $neutral . ', ';
+                                echo $neutral;
+                                if($key < $neutrals - 1)
+                                {
+                                    echo ', ';
+                                }
+                                else
+                                {
+                                    echo '.';
+                                }
                             }
                         ?>
                     </td>
@@ -104,9 +122,18 @@
                 <tr>
                     <td>
                         <?php 
-                            foreach($villager->getDislike() as $dislike)
+                            $dislikes = count($villager->getDislike());
+                            foreach($villager->getDislike() as $key => $dislike)
                             {
-                                echo $dislike . ', ';
+                                echo $dislike;
+                                if($key < $dislikes - 1)
+                                {
+                                    echo ', ';
+                                }
+                                else
+                                {
+                                    echo '.';
+                                }
                             }
                         ?>
                     </td>
@@ -118,9 +145,18 @@
                 <tr>
                     <td>
                         <?php 
-                            foreach($villager->getHate() as $hate)
+                            $hates = count($villager->getHate());
+                            foreach($villager->getHate() as $key => $hate)
                             {
-                                echo $hate . ', ';
+                                echo $hate;
+                                if($key < $hates - 1)
+                                {
+                                    echo ', ';
+                                }
+                                else
+                                {
+                                    echo '.';
+                                }
                             }
                         ?>
                     </td>

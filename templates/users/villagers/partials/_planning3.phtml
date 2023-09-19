@@ -1,21 +1,31 @@
 <h3 class="title"><button>Schedule</button></h3>
-<table class="events">
+<article class="events">
     <?php
         foreach($_SESSION['planning']->getSchedule() as $key => $schedules)
         {
-            // var_dump($key);
-            echo '<tr><th>'.$key.'</th></tr>';
+            echo '<table>
+                    <thead>
+                        <tr>
+                            <th class="title" colspan=2>'.$key.'</th>
+                        </tr>
+                    </thead>
+                    <tbody class="events">';
             foreach($schedules as $keys => $schedule)
             {
-                echo '<tr><td>'.$keys.'</td></tr>';
+                echo '<tr>
+                        <td colspan=2>'.$keys.'</td>
+                    </tr>';
                 foreach($schedule as $keyz => $planning)
                 {
+                    echo '<tr>';
                     foreach($planning as $cle => $plan)
                     {
-                        echo '<tr><td>'.$cle. ': ' .$plan.'</td></tr>';
+                        echo "<td>".$cle.": ".$plan."</td>";
                     }
+                    echo '</tr>';
                 }
             }
+            echo '</tbody></table>';
         }
     ?>
-</table>
+</article>
