@@ -27,14 +27,16 @@
         </section>
 
         <section id="events" class="villager-events">
-            <h3 class="title"><button>Events</button></h3>
-            <table class="events">
+            <h3><button>Events</button></h3>
+            <table>
                 <?php
                     // var_dump($villager->getEvents());
                     foreach($villager->getEvents() as $key => $event)
                     {
                         echo "<tr>
                                 <th>$key</th>
+                            </tr>
+                            <tr>
                                 <td>$event</td>
                             </tr>";
                     }
@@ -47,17 +49,31 @@
             <table>
                 <tr>
                     <th>Loves</th>
+                </tr>
+                <tr>
                     <td>
                         <?php 
-                            foreach($villager->getLove() as $love)
+                            $loves = count($villager->getLove());
+                            foreach($villager->getLove() as $key => $love)
                             {
-                                echo $love . ', ';
+                                echo $love;
+                                if($key < $loves - 1)
+                                {
+                                    echo ', ';
+                                }
+                                else
+                                {
+                                    echo '.'; // For the last one, i wanted a dot instead of a comma
+                                }
                             }
                         ?>
                     </td>
                 </tr>
+
                 <tr>
                     <th>Likes</th>
+                </tr>
+                <tr>
                     <td>
                         <?php 
                             foreach($villager->getLike() as $like)
@@ -67,8 +83,11 @@
                         ?>
                     </td>
                 </tr>
+
                 <tr>
                     <th>Neutral</th>
+                </tr>
+                <tr>
                     <td>
                         <?php 
                             foreach($villager->getNeutral() as $neutral)
@@ -78,8 +97,11 @@
                         ?>
                     </td>
                 </tr>
+
                 <tr>
                     <th>Dislikes</th>
+                </tr>
+                <tr>
                     <td>
                         <?php 
                             foreach($villager->getDislike() as $dislike)
@@ -89,8 +111,11 @@
                         ?>
                     </td>
                 </tr>
+
                 <tr>
                     <th>Hates</th>
+                </tr>
+                <tr>
                     <td>
                         <?php 
                             foreach($villager->getHate() as $hate)
