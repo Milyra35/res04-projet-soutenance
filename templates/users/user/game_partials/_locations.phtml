@@ -1,25 +1,23 @@
-<?php
-    if($key === "locations")
-    {
-?>
-<h3 class="title"><button>Locations discovered</button></h3>
-<dl class="events">
+<article class="locations">
     <?php
-        foreach($player as $locations)
-        {
-            if($locations->getIsDiscovered() ===  true)
-            {
-                echo "<dt>".$locations->getName()."</dt>
-                <dd> has been discovered.</dd>";
-            }
-            else
-            {
-                echo "<dt>".$locations->getName()."</dt>
-                <dd> has not been discovered yet.</dd>";
-            }
-        }
+        $player = $data['locations'];
     ?>
-</dl>
-<?php
-    }
-?>
+    <h3 class="title">Locations discovered</h3>
+    <dl class="events">
+        <?php
+            foreach($player as $locations)
+            {
+                if($locations->getIsDiscovered() ===  true)
+                {
+                    echo "<dt>".$locations->getName()."</dt>
+                    <dd> has been discovered.</dd>";
+                }
+                else
+                {
+                    echo "<dt>".$locations->getName()."</dt>
+                    <dd> has not been discovered yet.</dd>";
+                }
+            }
+        ?>
+    </dl>
+</article>

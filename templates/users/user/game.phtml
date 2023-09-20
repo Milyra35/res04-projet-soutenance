@@ -1,12 +1,6 @@
-<h2>Your farm</h2>
-
-<?php
-    foreach($data as $key => $player)
-    {
-?>
-
-<section>
-    <?php 
+<main class="player-progress">
+    <h2>Your farm</h2>
+    <?php
         require 'game_partials/_player.phtml'; 
         require 'game_partials/_skills.phtml'; 
         require 'game_partials/_bundles.phtml'; 
@@ -16,10 +10,6 @@
         require 'game_partials/_locations.phtml';
         require 'game_partials/_possessedItems.phtml';
         require 'game_partials/_stats.phtml'; 
-    ?>  
-</section>
-        
-<?php
-    }
-?>
+    ?>
+</main>
 

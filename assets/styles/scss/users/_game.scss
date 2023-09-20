@@ -1,0 +1,65 @@
+.player-progress {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(7, auto);
+    grid-gap: 1rem;
+
+    h2 {
+        grid-area: 1/1/2/4;
+    }
+
+    article {
+        border: 2px dashed $pink;
+        padding: 1rem;
+
+        h3 {
+            width: fit-content;
+            text-align: center;
+            border: none;
+            background-color: $blue;
+            padding: 0.6rem .8rem;
+            font-family: $text-font;
+            color: $background-main;
+            font-size:1.2rem;
+            clip-path:polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 
+                                    100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+        }
+
+        &.player {
+            grid-area:2/1/3/3;
+        }
+    
+        &.skill {
+            grid-area: 2/3/3/4;
+        }
+    
+        &.possessed-items {
+            grid-area: 3/1/4/2;
+        }
+    
+        &.books {
+            grid-area: 3/2/4/3;
+        }
+    
+        &.stats {
+            grid-area: 3/3/4/4;
+        }
+    
+        &.bundles {
+            grid-area: 4/1/5/4;
+        }
+    
+        &.artifacts {
+            grid-area: 5/1/6/4;
+        }
+    
+        &.relationships {
+            grid-area: 6/1/7/4;
+        }
+    
+        &.locations {
+            grid-area: 7/1/8/4;
+        }
+    }
+    
+}

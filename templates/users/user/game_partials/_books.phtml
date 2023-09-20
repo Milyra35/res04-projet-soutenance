@@ -1,9 +1,7 @@
-<?php
-    if($key === "books")
-    {
-?>
-<h3>Lost books</h3>
-<p>You have found <?=$player->getAmount();?> out of 21 books.</p>
-<?php
-    }
-?>
+<article class="books">
+    <?php
+        $player = $data['books'];
+    ?>
+    <h3>Lost books</h3>
+    <p>You have found <?=$player->getAmount();?> out of 21 books.</p>
+</article>

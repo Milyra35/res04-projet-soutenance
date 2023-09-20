@@ -1,22 +1,20 @@
-<?php
-    if($key === "relationships")
-    {
-?>
-<h3 class="title"><button>Relationships</button></h3>
-<dl class="events">
+<article class="relationships">
     <?php
-        foreach($player as $relationship)
-        {
+        $player = $data['relationships'];
     ?>
-            <dt>
-                <img src="/res04-projet-soutenance/<?=$relationship->getVillager()->getPicture()->getUrl();?>" alt="<?=$relationship->getVillager()->getPicture()->getAlt();?>">
-                <a href='/res04-projet-soutenance/villagers/<?= $relationship->getVillager()->getId();?>'><?=$relationship->getVillager()->getName();?></a>
-            </dt>
-            <dd><?=intval($relationship->getLevel() / 250);?> hearts out of 10.</dd>
-    <?php
-        }
-    ?>
-</dl>
-<?php
-    }
-?>
+    <h3 class="title">Relationships</h3>
+    <dl class="events">
+        <?php
+            foreach($player as $relationship)
+            {
+        ?>
+                <dt>
+                    <img src="/res04-projet-soutenance/<?=$relationship->getVillager()->getPicture()->getUrl();?>" alt="<?=$relationship->getVillager()->getPicture()->getAlt();?>">
+                    <a href='/res04-projet-soutenance/villagers/<?= $relationship->getVillager()->getId();?>'><?=$relationship->getVillager()->getName();?></a>
+                </dt>
+                <dd><?=intval($relationship->getLevel() / 250);?> hearts out of 10.</dd>
+        <?php
+            }
+        ?>
+    </dl>
+</article>

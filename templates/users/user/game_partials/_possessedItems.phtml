@@ -1,15 +1,15 @@
-<?php
-    if($key === "possessedItems")
-    {
-?>
-<h3>Equipment</h3>
-<p>You possess :</p>
-<ul>
+<article class="possessed-items">
     <?php
-        foreach($player as $items)
-        {
-            echo "<li>".$items->getAmount().' '.$items->getName()."</li>";
-        }
-    }
+        $player = $data['possessedItems'];
     ?>
-</ul>
+    <h3>Equipment</h3>
+    <p>You possess :</p>
+    <ul>
+        <?php
+            foreach($player as $items)
+            {
+                echo "<li>".$items->getAmount().' '.$items->getName()."</li>";
+            }
+        ?>
+    </ul>
+</article>

@@ -1,27 +1,27 @@
-<?php
-    if($key === "bundles")
-    {
-?>
-<h3 class="title"><button>Bundles of the Community Center</button></h3>
-<ul class="events">
+<article class="bundles">
     <?php
-        foreach($player as $bundle)
-        {
+        $player = $data['bundles'];
     ?>
-    <li><?=$bundle->getBundleName();?>: 
-        <?php 
-            if($bundle->getComplete() === true)
+    <h3 class="title">Bundles</h3>
+    <ul class="events">
+        <?php
+            foreach($player as $bundle)
             {
-                echo " Completed";
-            }
-            else
-            {
-                echo " Not completed";
+        ?>
+        <li><?=$bundle->getBundleName();?>: 
+            <?php 
+                if($bundle->getComplete() === true)
+                {
+                    echo " Completed";
+                }
+                else
+                {
+                    echo " Not completed";
+                }
+            ?>
+        </li>
+        <?php
             }
         ?>
-    </li>
-    <?php
-        }
-    }
-    ?>
-</ul>
+    </ul>
+</article>

@@ -1,38 +1,38 @@
-<?php
-    if($key === "player")
-    {
-?>
-<h3><?=$player->getPlayerName();?></h3>
-<p>You have a 
+<article class="player">
     <?php
-    
-        if($player->getCat() === true)
-        {
-            echo "cat named ". $player->getPetName();
-        }
-        else
-        {
-            echo "dog named ". $player->getPetName();
-        }
+        $player = $data['player'];
     ?>
-</p>
-<p>You currently have <?=$player->getMoney();?> gold.</p>
-<p>Your maximum health : <?=$player->getHealth();?></p>
-<p>Your maximum energy : <?=$player->getEnergy();?></p>
-<p>You are
-    <?php
-        if($player->getIsMarried() === true)
-        {
-            echo "married to ".$player->getSpouse();
-            if($player->getHasChildren() === true)
+    <h3><?=$player->getPlayerName();?></h3>
+    <p>You have a 
+        <?php
+        
+            if($player->getCat() === true)
             {
-                echo " and you have children";
+                echo "cat named ". $player->getPetName();
             }
-        }
-        else
-        {
-            echo "not married and you don't have children";
-        }
-    }
-    ?>
-</p>
+            else
+            {
+                echo "dog named ". $player->getPetName();
+            }
+        ?>
+    </p>
+    <p>You currently have <?=$player->getMoney();?> gold.</p>
+    <p>Your maximum health : <?=$player->getHealth();?></p>
+    <p>Your maximum energy : <?=$player->getEnergy();?></p>
+    <p>You are
+        <?php
+            if($player->getIsMarried() === true)
+            {
+                echo "married to ".$player->getSpouse();
+                if($player->getHasChildren() === true)
+                {
+                    echo " and you have children";
+                }
+            }
+            else
+            {
+                echo "not married and you don't have children";
+            }
+        ?>
+    </p>
+</article>
