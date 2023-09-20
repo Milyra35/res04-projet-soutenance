@@ -5,7 +5,6 @@ function validateRegisterForm()
     let registerForm = document.getElementById('register-form');
 
     registerForm.addEventListener("submit", function(event) {
-        // event.preventDefault();
 
         let username = document.getElementById('username').value;
         let email = document.getElementById('email').value;
@@ -14,14 +13,12 @@ function validateRegisterForm()
 
         let user = new User(username, email, password, confirmPassword);
         // console.log(user);
+
         let validate = user.validate();
 
-        if(validate)
+        if(!validate)
         {
-            user.validate()
-        }
-        else
-        {
+            // If the informations are not correct, the form is not submitted
             event.preventDefault();
         }
     })

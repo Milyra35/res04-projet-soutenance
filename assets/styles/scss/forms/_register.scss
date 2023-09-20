@@ -1,0 +1,28 @@
+form {
+    &.register-login {
+        border: 2px dashed $pink;
+        width: 40rem;
+        margin: 0 auto;
+
+        fieldset {
+            display:grid;
+            grid-template-columns: repeat(2, auto);
+            grid-template-rows: repeat(2, auto);
+            grid-column-gap: 1.5rem;
+
+            label {
+                grid-area: 1/1/2/2;
+            }
+
+            input {
+                grid-area: 1/2/2/3;
+                justify-self: self-end;
+                width: 100%;
+            }
+
+            p {
+                grid-area: 2/1/3/3;
+            }
+        }
+    }
+}

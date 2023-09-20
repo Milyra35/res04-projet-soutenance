@@ -59,20 +59,13 @@ export class User {
         this.#errors = errors;
     }
 
-    validateUsername(nameList)
+    validateUsername()
     {
         if(this.username.length >= 4 && this.username.length <= 64)
         {
             let username = document.getElementById('errorUsername');
             username.innerHTML = "";
             return true;
-        }
-        else if(nameList.includes(this.username))
-        {
-            let username = document.getElementById('errorUsername');
-            username.innerHTML = "This username already exists";
-            this.addError("username", "This username already exists");
-            return false;
         }
         else
         {

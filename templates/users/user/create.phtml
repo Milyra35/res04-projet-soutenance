@@ -1,24 +1,26 @@
-<form method="POST" action="/res04-projet-soutenance/register" id="register-form">
-    <fieldset>
-        <label for="username">Username</label>
-        <input type="text" name="username" id="username">
-        <p id="errorUsername"></p>
-    </fieldset>
-    <fieldset>
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email">
-        <p id="errorEmail"></p>
-    </fieldset>
-    <fieldset>
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password">
-        <p id="errorPassword"></p>
-    </fieldset>
-    <fieldset>
-        <label for="confirm-password">Confirm the password</label>
-        <input type="password" name="confirm-password" id="confirm-password">
-        <p id="errorConfirmPassword"></p>
-    </fieldset>
+<main>
+    <form method="POST" action="/res04-projet-soutenance/register" id="register-form" class="register-login">
+        <fieldset>
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username">
+            <p id="errorUsername"></p>
+        </fieldset>
+        <fieldset>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+            <p id="errorEmail"></p>
+        </fieldset>
+        <fieldset>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password">
+            <p id="errorPassword"></p>
+        </fieldset>
+        <fieldset>
+            <label for="confirm-password">Confirm the password</label>
+            <input type="password" name="confirm-password" id="confirm-password">
+            <p id="errorConfirmPassword"></p>
+        </fieldset>
 
-    <input type="submit" name="submit-new-user" id="submit-new-user" value="Register">
-</form>
+        <input type="submit" name="submit-new-user" id="submit-new-user" value="Register">
+    </form>
+</main>

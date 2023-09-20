@@ -4,6 +4,7 @@
 @import 'users/homepage';
 @import 'users/villagers';
 @import 'users/villager';
+@import 'forms/register';
 @import 'admin/partials/header';
 @import 'admin/homepage';
 @import 'admin/data';
@@ -27,8 +28,10 @@ html {
 
         main {
             max-width: 65vw;
+            min-height:73vh;
             margin: 0 auto;
             padding: 2rem;
+            background-color: $background-main;
             box-shadow: inset .3rem 0px 0px 0px rgba(217,217,217,0.6),
                         inset -.3rem 0px 0px 0px rgba(217,217,217,0.6),
                         inset .6rem 0px 0px 0px rgba(217,217,217,0.4),
