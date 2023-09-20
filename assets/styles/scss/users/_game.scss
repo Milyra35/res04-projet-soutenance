@@ -14,7 +14,6 @@
 
         h3 {
             width: fit-content;
-            text-align: center;
             border: none;
             background-color: $blue;
             padding: 0.6rem .8rem;
@@ -51,6 +50,38 @@
     
         &.artifacts {
             grid-area: 5/1/6/4;
+            display: grid;
+            grid-template-rows: repeat(4, auto);
+
+            h4 {
+                font-size: 1.1rem;
+                text-align:center;
+
+                &:first-of-type {
+                    grid-row: 1/2;
+                }
+            }
+
+            ul {
+                display:flex;
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+
+                &:first-of-type {
+                    grid-row: 2/3;
+                }
+
+                li {
+                    margin: .8rem;
+                    padding: .5rem;
+                    display:flex;
+                    flex-direction: column;
+                    align-items: center;
+                    background-color: $green;
+                    clip-path:polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 
+                                    100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+                }
+            }
         }
     
         &.relationships {
