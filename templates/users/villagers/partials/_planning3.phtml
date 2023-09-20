@@ -1,4 +1,4 @@
-<h3 class="title"><button>Schedule</button></h3>
+<h3 class="title">Schedule</h3>
 <article class="events">
     <?php
         foreach($_SESSION['planning']->getSchedule() as $key => $schedules)
@@ -6,14 +6,14 @@
             echo '<table>
                     <thead>
                         <tr>
-                            <th class="title" colspan=2>'.$key.'</th>
+                            <th colspan=2><button class="title">'.$key.'</button></th>
                         </tr>
                     </thead>
                     <tbody class="events">';
             foreach($schedules as $keys => $schedule)
             {
                 echo '<tr>
-                        <td colspan=2>'.$keys.'</td>
+                        <td class="day" colspan=2>'.$keys.'</td>
                     </tr>';
                 foreach($schedule as $keyz => $planning)
                 {

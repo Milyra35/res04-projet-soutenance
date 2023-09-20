@@ -1,35 +1,47 @@
-<h3 class="title"><button>Schedule</button></h3>
-<table class="events">
+<h3 class="title">Schedule</h3>
+<article class="events">
     <?php
         foreach($_SESSION['planning']->getSchedule() as $key => $days)
         {
             // put condition if marriage, make another loop
-            echo '<tr><th>'.$key.'</th></tr>';
+            echo '<table>
+                    <thead>
+                        <tr>
+                            <th colspan=2><button class="title">'.$key.'</button></th>
+                        </tr>
+                    </thead>
+                    <tbody class="events">';
             if($key !== "Marriage")
             {
-                // echo '<tr><td>'.$key.'</td></tr>';
                 foreach($days as $clef => $time)
                 {
+                    echo '<tr>';
                     foreach($time as $keys => $hours)
                     {
-                        echo '<tr><td>'.$keys.': '.$hours.'</td></tr>';
+                        echo '<td>'.$keys.': '.$hours.'</td>';
                     }
+                    echo '</tr>';
                 }
             }
             else
             {
                 foreach($days as $clef => $time)
                 {
-                    echo '<tr><td>'.$clef.'</td></tr>';
+                    echo '<tr>
+                            <td class="day" colspan=2>'.$clef.'</td>
+                        </tr>';
                     foreach($time as $clefs => $location)
                     {
+                        echo '<tr>';
                         foreach($location as $name => $do)
                         {
-                            echo '<tr><td>'.$name.' '.$do.'</td></tr>';
+                            echo '<td>'.$name.': '.$do.'</td>';
                         }
+                        echo '</tr>';
                     }
                 }
             }
+            echo '</tbody></table>';
         }
     ?>
-</table>
+</article>
