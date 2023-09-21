@@ -1,27 +1,31 @@
-<section>
-    <h3>Add your file</h3>
-    <form enctype="multipart/form-data" method="POST" action="/res04-projet-soutenance/my-games">
-        <label class="hidden" for="saved-file">Upload your file</label> <!-- Hide it in css -->
-        <input type="hidden" name="MAX_FILE_SIZE" value="10000000">
-        <input type="file" name="saved-file" id="saved-file" value="Choose a file">
-        <input type="submit" name="upload-file" id="upload-file" value="Submit">
-    </form>
-</section>
+<main class="games">
+    <h2>My games</h2>
+    <section>
+        <h3>Add your file</h3>
+        <p>If you don't know which file to upload, go to the homepage, a tutorial is provided !</p>
+        <form enctype="multipart/form-data" method="POST" action="/res04-projet-soutenance/my-games">
+            <label for="saved-file">Upload your file</label> <!-- Hide it in css -->
+            <input type="hidden" name="MAX_FILE_SIZE" value="10000000">
+            <input type="file" name="saved-file" id="saved-file" value="Choose a file">
+            <input type="submit" name="upload-file" id="upload-file" value="Submit">
+        </form>
+    </section>
 
-<section>
-    <h3>My games</h3>
-    <ul>
-    <?php
-        foreach($data as $game)
-        {
-    ?>
+    <section>
+        <h3>My games</h3>
+        <ul>
+        <?php
+            foreach($data as $game)
+            {
+        ?>
 
-    <li>
-        <a href="/res04-projet-soutenance/my-games/<?= $game['id'] ;?>"><?= htmlspecialchars($game['name']) ;?></a>
-    </li>
+        <li>
+            <a href="/res04-projet-soutenance/my-games/<?= $game['id'] ;?>"><?= htmlspecialchars($game['name']) ;?></a>
+        </li>
 
-    <?php
-        }
-    ?>
-    </ul>
-</section>
+        <?php
+            }
+        ?>
+        </ul>
+    </section>
+</main>

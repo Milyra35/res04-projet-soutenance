@@ -34,11 +34,14 @@ header nav form {
 header nav form input {
   width: 3rem;
   height: 3rem;
+  padding: 0.8rem 1.2rem;
   border: none;
   background-image: url("/res04-projet-soutenance/assets/images/logout-icon.png");
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: transparent;
+  background-color: #FAFAFA;
+  -webkit-clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+          clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
   cursor: pointer;
 }
 header nav form input:hover {
@@ -323,6 +326,46 @@ footer nav ul li a {
   grid-area: 7/1/8/4;
 }
 
+.games h3 {
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+}
+.games section:first-of-type form {
+  display: flex;
+  margin-top: 0.4rem;
+}
+.games section:first-of-type form label {
+  cursor: pointer;
+  border: 1px solid #D61E92;
+  padding: 0.5rem 1rem;
+  background-color: rgba(214, 30, 146, 0.2);
+}
+.games section:first-of-type form input[type=file] {
+  display: none;
+}
+.games section:first-of-type form input[type=submit] {
+  border: 1px solid #0CC09E;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  font-family: "Inconsolata", sans-serif;
+  font-size: 1rem;
+  background-color: #0CC09E;
+  font-weight: bolder;
+}
+.games section:first-of-type form input[type=submit]:hover {
+  background-color: #FAFAFA;
+}
+.games section:last-of-type ul {
+  list-style: square;
+  margin-left: 1rem;
+}
+.games section:last-of-type ul li a {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+  text-decoration-color: #0CC09E;
+  color: #0C092B;
+}
+
 form.register-login {
   display: grid;
   border: 2px dashed #D61E92;
@@ -586,6 +629,7 @@ html body h2 {
 }
 html body h3 {
   margin-bottom: 1.5rem;
+  font-size: 1.4rem;
 }
 html body table {
   border-collapse: collapse;

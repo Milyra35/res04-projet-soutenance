@@ -5,6 +5,7 @@
 @import 'users/villagers';
 @import 'users/villager';
 @import 'users/game';
+@import 'users/my-games';
 @import 'forms/register';
 @import 'admin/partials/header';
 @import 'admin/homepage';
@@ -81,6 +82,7 @@ html {
 
         h3 {
             margin-bottom: 1.5rem;
+            font-size: 1.4rem;
         }
 
         table {
