@@ -125,13 +125,15 @@
             grid-area: 7/1/8/4;
 
             .events {
-                display: flex;
-                justify-content: space-between;
-
                 ul {
                     li {
+                        display:flex;
+                        align-items:center;
+                        margin: .6rem 0;
+
                         img {
                             width: 8rem;
+                            margin-right: .6rem;
                         }
                     }
                 }

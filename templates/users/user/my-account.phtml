@@ -1,22 +1,24 @@
-<?php
-    $user = $data["user"];
-?>
+<main>
+    <?php
+        $user = $data["user"];
+    ?>
 
-<h2>Hello <?=$user->getUsername();?></h2>
+    <h2>Hello <?=$user->getUsername();?></h2>
 
-<section>
-    <h3>My informations</h3>
-    <dl>
-        <dt>My username</dt>
-        <dd><?=$user->getUsername();?></dd>
+    <section>
+        <h3>My informations</h3>
+        <dl>
+            <dt>My username</dt>
+            <dd><?=$user->getUsername();?></dd>
 
-        <dt>My email</dt>
-        <dd><?=$user->getEmail();?></dd>
+            <dt>My email</dt>
+            <dd><?=$user->getEmail();?></dd>
 
-        <dt>My registration date</dt>
-        <dd><?=$user->getRegistrationDate();?></dd>
-    </dl>
+            <dt>My registration date</dt>
+            <dd><?=$user->getRegistrationDate();?></dd>
+        </dl>
 
-    <a href="/res04-projet-soutenance/my-account/edit">Edit my informations</a>
-    <a href="/res04-projet-soutenance/my-account/delete">Delete my account</a>
-</section>
+        <a href="/res04-projet-soutenance/my-account/edit">Edit my informations</a>
+        <a href="/res04-projet-soutenance/my-account/delete">Delete my account</a>
+    </section>
+</main>

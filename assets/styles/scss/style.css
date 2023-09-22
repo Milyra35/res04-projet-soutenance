@@ -349,12 +349,14 @@ footer nav ul li a {
 .player-progress article.locations {
   grid-area: 7/1/8/4;
 }
-.player-progress article.locations .events {
+.player-progress article.locations .events ul li {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  margin: 0.6rem 0;
 }
 .player-progress article.locations .events ul li img {
   width: 8rem;
+  margin-right: 0.6rem;
 }
 
 .games h3 {
@@ -400,14 +402,14 @@ footer nav ul li a {
   color: #0C092B;
 }
 
-form.register-login {
+form.register-login-edit {
   display: grid;
   border: 2px dashed #D61E92;
   width: 40rem;
   margin: 0 auto;
   padding: 1rem;
 }
-form.register-login fieldset {
+form.register-login-edit fieldset {
   display: grid;
   grid-template-columns: auto 20rem;
   grid-template-rows: repeat(2, auto);
@@ -416,12 +418,12 @@ form.register-login fieldset {
   margin: 1rem 0;
   padding: 0;
 }
-form.register-login fieldset label {
+form.register-login-edit fieldset label {
   grid-area: 1/1/2/2;
   font-size: 1.2rem;
   align-self: center;
 }
-form.register-login fieldset input {
+form.register-login-edit fieldset input {
   grid-area: 1/2/2/3;
   justify-self: self-end;
   width: 100%;
@@ -429,25 +431,25 @@ form.register-login fieldset input {
   border: 1px solid #0CC09E;
   background-color: rgba(12, 192, 158, 0.4);
 }
-form.register-login fieldset input::-moz-placeholder {
+form.register-login-edit fieldset input::-moz-placeholder {
   color: #0C092B;
   font-family: "Inconsolata", sans-serif;
 }
-form.register-login fieldset input::placeholder {
+form.register-login-edit fieldset input::placeholder {
   color: #0C092B;
   font-family: "Inconsolata", sans-serif;
 }
-form.register-login fieldset input:focus {
+form.register-login-edit fieldset input:focus {
   outline: none;
   font-family: "Inconsolata", sans-serif;
   color: #0C092B;
 }
-form.register-login fieldset p {
+form.register-login-edit fieldset p {
   grid-area: 2/1/3/3;
   font-size: 0.8rem;
   color: #D61E92;
 }
-form.register-login input[type=submit] {
+form.register-login-edit input[type=submit] {
   justify-self: center;
   margin-top: 1rem;
   border: none;
@@ -459,7 +461,7 @@ form.register-login input[type=submit] {
           clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
   cursor: pointer;
 }
-form.register-login input[type=submit]:hover {
+form.register-login-edit input[type=submit]:hover {
   background-color: #D61E92;
 }
 
