@@ -8,7 +8,7 @@
     section:first-of-type {
         form {
             display:flex;
-            margin-top: .4rem;
+            margin-top: .8rem;
 
             label {
                 cursor: pointer;
@@ -38,6 +38,8 @@
     }
 
     section:last-of-type {
+        margin-top: 1.6rem;
+
         ul {
             list-style: square;
             margin-left: 1rem;

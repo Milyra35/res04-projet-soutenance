@@ -3,21 +3,27 @@
         $player = $data['locations'];
     ?>
     <h3 class="title">Locations discovered</h3>
-    <dl class="events">
-        <?php
-            foreach($player as $locations)
-            {
-                if($locations->getIsDiscovered() ===  true)
+    <section class="events">
+        <ul>
+            <?php
+                foreach($player as $locations)
                 {
-                    echo "<dt>".$locations->getName()."</dt>
-                    <dd> has been discovered.</dd>";
+                    if($locations->getIsDiscovered() ===  true)
+                    {
+                        echo "<li>
+                                <img src='/res04-projet-soutenance/assets/images/".$locations->getName().".png' alt='Picture in game of ".$locations->getName()."' />
+                                <p>".$locations->getName()." has been discovered.</p>
+                            </li>";
+                    }
+                    else
+                    {
+                        echo "<li>
+                                <img src='/res04-projet-soutenance/assets/images/".$locations->getName().".png' alt='Picture in game of ".$locations->getName()."' />
+                                <p>".$locations->getName()." has not been discovered yet.</p>
+                            </li>";
+                    }
                 }
-                else
-                {
-                    echo "<dt>".$locations->getName()."</dt>
-                    <dd> has not been discovered yet.</dd>";
-                }
-            }
-        ?>
-    </dl>
+            ?>
+        </ul>
+    </section>
 </article>
