@@ -46,6 +46,23 @@
     
         &.bundles {
             grid-area: 4/1/5/4;
+
+            ul {
+                column-count: 2;
+                column-gap: 12rem;
+
+                li {
+                    display: flex;
+
+                    img {
+                        width: 2rem;
+                    }
+
+                    p {
+                        margin-left: .6rem;
+                    }
+                }
+            }
         }
     
         &.artifacts {

@@ -154,6 +154,10 @@ class UserController extends AbstractController {
 
                 header("Location:/res04-projet-soutenance/my-account");
             }
+            else 
+            {
+                $this->render("user/edit.phtml", ['message' => 'This username already exists']);
+            }
         }
         else
         {

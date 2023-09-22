@@ -289,6 +289,21 @@ footer nav ul li a {
 .player-progress article.bundles {
   grid-area: 4/1/5/4;
 }
+.player-progress article.bundles ul {
+  -moz-column-count: 2;
+       column-count: 2;
+  -moz-column-gap: 12rem;
+       column-gap: 12rem;
+}
+.player-progress article.bundles ul li {
+  display: flex;
+}
+.player-progress article.bundles ul li img {
+  width: 2rem;
+}
+.player-progress article.bundles ul li p {
+  margin-left: 0.6rem;
+}
 .player-progress article.artifacts {
   grid-area: 5/1/6/4;
   display: grid;

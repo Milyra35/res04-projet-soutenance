@@ -3,25 +3,30 @@
         $player = $data['bundles'];
     ?>
     <h3 class="title">Bundles</h3>
-    <ul class="events">
-        <?php
-            foreach($player as $bundle)
-            {
-        ?>
-        <li><?=$bundle->getBundleName();?>: 
-            <?php 
-                if($bundle->getComplete() === true)
+    <section class="events">
+        <ul>
+            <?php
+                foreach($player as $bundle)
                 {
-                    echo " Completed";
-                }
-                else
-                {
-                    echo " Not completed";
+            ?>
+            <li>
+                <img src="/res04-projet-soutenance/assets/images/<?= $bundle->getBundleName(); ?>" alt="Picture of a bundle" />
+                <p><?=$bundle->getBundleName();?>: 
+                <?php 
+                    if($bundle->getComplete() === true)
+                    {
+                        echo " Completed";
+                    }
+                    else
+                    {
+                        echo " Not completed";
+                    }
+                ?>
+                </p>
+            </li>
+            <?php
                 }
             ?>
-        </li>
-        <?php
-            }
-        ?>
-    </ul>
+        </ul>
+    </section>
 </article>
