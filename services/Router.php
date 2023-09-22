@@ -149,7 +149,7 @@ class Router {
             }
             else if($routeTab['route'] === "my-account" && $routeTab['user'] === "delete")
             {
-                $this->uc->deleteUserAndData();
+                $this->fc->deleteUserAndData();
             }
         }
         else if($routeTab['route'] === "my-games" && isset($_SESSION['user']))
