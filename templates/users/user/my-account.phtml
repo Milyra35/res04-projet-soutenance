@@ -5,16 +5,16 @@
 
     <h2>Hello <?=$user->getUsername();?></h2>
 
-    <section>
+    <section class="account">
         <h3>My informations</h3>
         <dl>
-            <dt>My username</dt>
+            <dt>Username</dt>
             <dd><?=$user->getUsername();?></dd>
 
-            <dt>My email</dt>
+            <dt>Email</dt>
             <dd><?=$user->getEmail();?></dd>
 
-            <dt>My registration date</dt>
+            <dt>Registration date</dt>
             <dd><?=$user->getRegistrationDate();?></dd>
         </dl>
 

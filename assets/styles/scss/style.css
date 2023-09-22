@@ -387,6 +387,9 @@ footer nav ul li a {
   border: 1px solid #D61E92;
   padding: 0.5rem 1rem;
   background-color: rgba(214, 30, 146, 0.2);
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+  text-underline-offset: 0.2rem;
 }
 .games section:first-of-type form input[type=file] {
   display: none;
@@ -415,6 +418,28 @@ footer nav ul li a {
           text-decoration: underline dotted;
   text-decoration-color: #0CC09E;
   color: #0C092B;
+}
+
+.account {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
+}
+.account h3 {
+  grid-area: 1/1/2/3;
+}
+.account dl {
+  grid-area: 2/1/4/2;
+}
+.account a {
+  text-decoration: none;
+  color: #0C092B;
+}
+.account a:first-of-type {
+  grid-area: 2/2/3/3;
+}
+.account a:last-of-type {
+  grid-area: 3/2/4/3;
 }
 
 form.register-login-edit {

@@ -1,0 +1,25 @@
+.account {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+
+    h3 {
+        grid-area: 1/1/2/3;
+    }
+
+    dl {
+        grid-area: 2/1/4/2;
+    }
+
+    a {
+        text-decoration: none;
+        color: $text-color;
+        
+        &:first-of-type {
+            grid-area: 2/2/3/3;
+        }
+        &:last-of-type {
+            grid-area: 3/2/4/3;
+        }
+    }
+}
