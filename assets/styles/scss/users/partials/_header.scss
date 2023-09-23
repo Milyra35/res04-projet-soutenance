@@ -57,3 +57,24 @@ header {
         }
     }
 }
+
+/**** MEDIA QUERIES FOR TABLETS ****/
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+
+        img {
+            padding: 1rem 0;
+        }
+
+        nav {
+            ul {
+                li {
+                    padding: 0 1.5rem;
+                }
+            }
+        }
+    }
+}
