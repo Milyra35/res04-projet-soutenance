@@ -20,7 +20,19 @@ function collapseData()
                 title[i].classList.remove('button-focus');
             }
         })
+
+        // title[i].addEventListener("click", function() {
+        //     if(events[i].classList.contains('open'))
+        //     {
+        //         events[i].classList.remove('open');
+        //     }
+        //     else 
+        //     {
+        //         events[i].classList.add('open');
+        //     }
+        // });
     }
 }
 
 export { collapseData };
+

@@ -80,7 +80,7 @@ html {
         h2 {
             font-size: 2rem;
             text-align: center;
-            padding: 2.5rem 0;
+            padding: 2rem 0;
         }
 
         h3 {
@@ -90,6 +90,17 @@ html {
 
         table {
             border-collapse: collapse;
+        }
+    }
+}
+
+/**** MEDIA QUERIES FOR TABLETS ****/
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    html {
+        body {
+            main {
+                max-width: 85vw;
+            }
         }
     }
 }
