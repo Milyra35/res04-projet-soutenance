@@ -42,7 +42,6 @@ html {
 
             .title {
                 width: fit-content;
-                justify-self:center;
                 border: none;
                 background-color: $blue;
                 padding: 0.6rem .8rem;
@@ -61,6 +60,11 @@ html {
                 }
                 
             }
+        }
+
+        a {
+            text-decoration: none;
+            display: inline-block; // To able the transform property on it
         }
 
         p {
