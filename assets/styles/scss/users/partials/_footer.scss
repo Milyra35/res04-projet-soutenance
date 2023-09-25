@@ -2,18 +2,13 @@ footer {
     background-color: $blue;
 
     nav {
-        max-width: 65vw;
-        margin: 0 auto;
         padding: .8rem 0;
-        display:flex;
-        justify-content:center;
 
         ul {
             display:flex;
+            justify-content: space-evenly;
 
             li {
-                margin: 0 6rem;
-
                 a {
                     font-size:1rem;
                     color: $background-main;
@@ -33,10 +28,6 @@ footer {
             ul {
                 width: 100%;
                 justify-content: space-evenly;
-                
-                li {
-                    margin: 0 4rem;
-                }
             }
         }
     }
