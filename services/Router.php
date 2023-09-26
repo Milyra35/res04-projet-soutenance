@@ -230,7 +230,7 @@ class Router {
         }
         else
         {
-            $this->spc->renderHomepage();
+            $this->spc->render404();
         }
     }
 }

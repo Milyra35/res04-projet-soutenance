@@ -797,7 +797,7 @@ html body .hidden {
 }
 html body main {
   max-width: 65vw;
-  min-height: 73vh;
+  min-height: 75vh;
   margin: 0 auto;
   padding: 2rem;
   background-color: #FAFAFA;
@@ -824,6 +824,7 @@ html body main .title.button-focus {
 html body a {
   text-decoration: none;
   display: inline-block;
+  color: #0C092B;
 }
 html body p {
   margin: 0;

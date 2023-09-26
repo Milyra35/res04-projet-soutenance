@@ -24,6 +24,12 @@ class StaticPageController extends AbstractController {
     {
         $this->render("staticpages/credits.phtml", []);
     }
+
+    // Page 404
+    public function render404()
+    {
+        $this->render("staticpages/404.phtml", []);
+    }
 }
 
 ?>

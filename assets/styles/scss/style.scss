@@ -31,7 +31,7 @@ html {
 
         main {
             max-width: 65vw;
-            min-height:73vh;
+            min-height:75vh;
             margin: 0 auto;
             padding: 2rem;
             background-color: $background-main;
@@ -65,6 +65,7 @@ html {
         a {
             text-decoration: none;
             display: inline-block; // To enable the transform property on it
+            color: $text-color;
         }
 
         p {
