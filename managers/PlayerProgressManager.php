@@ -58,8 +58,8 @@ class PlayerProgressManager extends AbstractManager {
                 'cat' => $player->getCat() ? 1 : 0,
                 'dog' => $player->getDog() ? 1 : 0,
                 'pet_name' => $player->getPetName(),
-                'is_married' => $player->getIsMarried(),
-                'has_children' => $player->getHasChildren(),
+                'is_married' => $player->getIsMarried() ? 1 : 0,
+                'has_children' => $player->getHasChildren() ? 1 : 0,
                 'spouse' => $player->getSpouse()
             ];
             $insert->execute($insertParam);
@@ -90,8 +90,8 @@ class PlayerProgressManager extends AbstractManager {
                 'cat' => $player->getCat() ? 1 : 0,
                 'dog' => $player->getDog() ? 1 : 0,
                 'pet_name' => $player->getPetName(),
-                'is_married' => $player->getIsMarried(),
-                'has_children' => $player->getHasChildren(),
+                'is_married' => $player->getIsMarried() ? 1 : 0,
+                'has_children' => $player->getHasChildren() ? 1 : 0,
                 'spouse' => $player->getSpouse()
             ];
             $update->execute($updateParam);

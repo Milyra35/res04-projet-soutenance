@@ -27,7 +27,7 @@ class LocationManager extends AbstractManager {
             $insertParam= [
                 'file_id' => $location->getFile()->getId(),
                 'name' => $location->getName(),
-                'is_discovered' => $location->getIsDiscovered()
+                'is_discovered' => $location->getIsDiscovered() ? 1 : 0
             ];
             $insert->execute($insertParam);
 
@@ -43,7 +43,7 @@ class LocationManager extends AbstractManager {
             $updateParam= [
                 'file_id' => $location->getFile()->getId(),
                 'name' => $location->getName(),
-                'is_discovered' => $location->getIsDiscovered()
+                'is_discovered' => $location->getIsDiscovered() ? 1 : 0
             ];
             $update->execute($updateParam);
         }

@@ -26,7 +26,7 @@ class MuseumManager extends AbstractManager {
             $insertParam = [
                 'file_id' => $item->getFile()->getId(),
                 'name' => $item->getName(),
-                'has' => $item->getHas()
+                'has' => $item->getHas() ? 1 : 0
             ];
             $insert->execute($insertParam);
 
@@ -42,7 +42,7 @@ class MuseumManager extends AbstractManager {
             $updateParam = [
                 'file_id' => $item->getFile()->getId(),
                 'name' => $item->getName(),
-                'has' => $item->getHas()
+                'has' => $item->getHas() ? 1 : 0
             ];
             $update->execute($updateParam);
         }
