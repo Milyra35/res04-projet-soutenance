@@ -12,14 +12,33 @@
     }
 
     a {
-        text-decoration: none;
+        text-align: center;
         color: $text-color;
+        background-color:$green;
+        padding: .5rem 1rem;
+        clip-path:polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 
+                        100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+        width: fit-content;
+        height: fit-content;
+        align-self: center;
         
         &:first-of-type {
             grid-area: 2/2/3/3;
         }
         &:last-of-type {
             grid-area: 3/2/4/3;
+        }
+    }
+}
+
+/**** MEDIA QUERIES FOR SMARTPHONES ****/
+@media only screen and (max-width: 767px) {
+    .account {
+        display: flex;
+        flex-direction: column;
+
+        a {
+            margin: .8rem 0;
         }
     }
 }

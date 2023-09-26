@@ -152,7 +152,7 @@
 
                         img {
                             display: inline-block;
-                            width: 16rem;
+                            width: 45%;
                             margin-right: .6rem;
                         }
                     }
@@ -160,5 +160,20 @@
             }
         }
     }
-    
+}
+
+/**** MEDIA QUERIES FOR SMARTPHONES ****/
+@media only screen and (max-width: 767px) {
+    .player-progress {
+        display: flex;
+        flex-direction: column;
+
+        article {
+            &.bundles {
+                ul {
+                    column-gap: 2rem;
+                }
+            }
+        }
+    }
 }
