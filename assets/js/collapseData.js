@@ -6,6 +6,7 @@ function collapseData()
     for(let i=0; i<title.length; i++)
     {
         events[i].style.display = 'none';
+        title[i].innerHTML = title[i].textContent + " ↓";
         
         title[i].addEventListener("click", function() {
 
@@ -13,24 +14,15 @@ function collapseData()
             {
                 events[i].style.display = 'table';
                 title[i].classList.add('button-focus');
+                title[i].innerHTML = title[i].textContent.replace(" ↓", " ↑"); // I replace the arrow when i clicked on it
             }
             else
             {
                 events[i].style.display = 'none';
                 title[i].classList.remove('button-focus');
+                title[i].innerHTML = title[i].textContent.replace(" ↑", " ↓");
             }
         })
-
-        // title[i].addEventListener("click", function() {
-        //     if(events[i].classList.contains('open'))
-        //     {
-        //         events[i].classList.remove('open');
-        //     }
-        //     else 
-        //     {
-        //         events[i].classList.add('open');
-        //     }
-        // });
     }
 }
 

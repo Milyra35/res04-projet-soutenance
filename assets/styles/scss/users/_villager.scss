@@ -95,6 +95,10 @@
             border: 2px dashed $pink;
             padding: 1rem;
 
+            .title:enabled {
+                content: "Schedule ↑";
+            }
+
             .events {
                 width: 100%;
                 // height: 0;
@@ -132,11 +136,6 @@
                     }
                 }
             }
-
-            // .events.open {
-            //     display: table;
-            //     height: 400rem;
-            // }
         }
     }
 }
