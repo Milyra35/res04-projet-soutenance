@@ -68,6 +68,25 @@ header nav ul li form input:hover {
     padding: 0 1.5rem;
   }
 }
+/**** MEDIA QUERIES FOR SMARTPHONES ****/
+@media only screen and (max-width: 767px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  header img {
+    padding-top: 0.8rem;
+    padding-bottom: 0.4rem;
+  }
+  header nav ul {
+    display: flex;
+    flex-direction: column;
+  }
+  header nav ul li {
+    padding: 0.4rem 0;
+  }
+}
 footer {
   background-color: #4361EE;
 }
@@ -158,7 +177,6 @@ footer nav ul li a {
   color: #0C092B;
 }
 .all-villagers .villagers ul {
-  margin: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -186,7 +204,16 @@ footer nav ul li a {
   transform: scale(1.15);
 }
 
-/**** CSS of a single villager ****/
+/**** MEDIA QUERIES FOR SMARTPHONES ****/
+@media only screen and (max-width: 767px) {
+  .all-villagers .villagers ul {
+    justify-content: space-around;
+  }
+  .all-villagers .villagers ul li {
+    width: 30%;
+  }
+}
+/**** SCSS of a single villager ****/
 .villager {
   background-color: #FAFAFA;
 }
@@ -241,6 +268,7 @@ footer nav ul li a {
 .villager .single-villager .villager-events table tr th {
   padding: 0.7rem 0;
   background-color: #D9D9D9;
+  border: 1px solid #D61E92;
 }
 .villager .single-villager .villager-events table tr td {
   padding-bottom: 0.8rem;
@@ -253,6 +281,7 @@ footer nav ul li a {
 .villager .single-villager .gifts table tr th {
   padding: 0.7rem 0;
   background-color: #D9D9D9;
+  border: 1px solid #D61E92;
 }
 .villager .single-villager .gifts table tr td {
   padding-bottom: 0.8rem;
@@ -261,9 +290,6 @@ footer nav ul li a {
   grid-area: 4/1/5/3;
   border: 2px dashed #D61E92;
   padding: 1rem;
-}
-.villager .single-villager .planning .title:enabled {
-  content: "Schedule ↑";
 }
 .villager .single-villager .planning .events {
   width: 100%;
@@ -275,6 +301,7 @@ footer nav ul li a {
 .villager .single-villager .planning .events table thead tr th {
   padding: 0.4rem 0;
   background-color: #D9D9D9;
+  border: 1px solid #D61E92;
 }
 .villager .single-villager .planning .events table thead tr th button {
   background-color: #D9D9D9;
@@ -289,6 +316,25 @@ footer nav ul li a {
   font-weight: 600;
 }
 
+/**** MEDIA QUERIES FOR SMARTPHONES ****/
+@media only screen and (max-width: 767px) {
+  .villager .single-villager {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .villager .single-villager .villager-picture {
+    width: 10rem;
+  }
+  .villager .single-villager .planning {
+    align-self: flex-start;
+    width: 90%;
+  }
+  .villager .single-villager .planning .events table tbody tr td:first-of-type {
+    width: 7rem;
+    padding-right: 0.6rem;
+  }
+}
 .player-progress {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -551,6 +597,19 @@ form.register-login-edit input[type=submit]:hover {
   background-color: #D61E92;
 }
 
+/**** MEDIA QUERIES FOR SMARTPHONES ****/
+@media only screen and (max-width: 767px) {
+  form.register-login-edit {
+    max-width: 90%;
+    padding: 0.6rem;
+  }
+  form.register-login-edit fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.5rem auto;
+  }
+}
 .admin-header {
   display: grid;
   grid-template-columns: repeat(2, auto);
@@ -742,6 +801,7 @@ html body p {
 html body ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 html body h1, html body h2, html body h3, html body h4 {
   font-family: "Chakra Petch", sans-serif;
@@ -764,5 +824,13 @@ html body table {
 @media only screen and (min-width: 768px) and (max-width: 992px) {
   html body main {
     max-width: 85vw;
+  }
+}
+/**** MEDIA QUERIES FOR SMARTPHONES ****/
+@media only screen and (max-width: 767px) {
+  html body main {
+    max-width: 100%;
+    box-shadow: none;
+    padding: 0.6rem;
   }
 }/*# sourceMappingURL=style.css.map */

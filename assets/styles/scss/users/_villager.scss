@@ -1,4 +1,4 @@
-/**** CSS of a single villager ****/
+/**** SCSS of a single villager ****/
 
 .villager {
     background-color: $background-main;
@@ -61,6 +61,7 @@
                     th {
                         padding: .7rem 0;
                         background-color: $background-body;
+                        border: 1px solid $pink;
                     }
 
                     td {
@@ -81,6 +82,7 @@
                     th {
                         padding: .7rem 0;
                         background-color: $background-body;
+                        border: 1px solid $pink;
                     }
 
                     td {
@@ -95,15 +97,8 @@
             border: 2px dashed $pink;
             padding: 1rem;
 
-            .title:enabled {
-                content: "Schedule ↑";
-            }
-
             .events {
                 width: 100%;
-                // height: 0;
-                // overflow:hidden;
-                // transition: height 0.3s ease-in-out;
 
                 table {
                     width: 100%;
@@ -114,6 +109,7 @@
                             th {
                                 padding: .4rem 0;
                                 background-color: $background-body;
+                                border: 1px solid $pink;
 
                                 button {
                                     background-color: $background-body;
@@ -131,6 +127,40 @@
                                 text-align:center;
                                 padding: .4rem 0;
                                 font-weight: 600;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/**** MEDIA QUERIES FOR SMARTPHONES ****/
+@media only screen and (max-width: 767px) {
+    .villager {
+        .single-villager {
+            display: flex;
+            flex-direction: column;
+            align-items:center;
+
+            .villager-picture {
+                width: 10rem;
+            }
+
+            .planning {
+                align-self: flex-start;
+                width: 90%;
+
+                .events {
+                    table {
+                        tbody {
+                            tr {
+                                td:first-of-type {
+                                    width: 7rem;
+                                    padding-right: .6rem;
+                                }
                             }
                         }
                     }

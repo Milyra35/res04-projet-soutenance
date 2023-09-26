@@ -84,3 +84,29 @@ header {
         }
     }
 }
+
+
+/**** MEDIA QUERIES FOR SMARTPHONES ****/
+@media only screen and (max-width: 767px) {
+    header {
+        display:flex;
+        flex-direction: column;
+        align-items:center;
+
+        img {
+            padding-top: .8rem;
+            padding-bottom: .4rem;
+        }
+
+        nav {
+            ul {
+                display:flex;
+                flex-direction:column;
+
+                li {
+                    padding: .4rem 0;
+                }
+            }
+        }
+    }
+}

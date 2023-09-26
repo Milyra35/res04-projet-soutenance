@@ -66,3 +66,20 @@ form {
         }
     }
 }
+
+/**** MEDIA QUERIES FOR SMARTPHONES ****/
+@media only screen and (max-width: 767px) {
+    form {
+        &.register-login-edit {
+            max-width: 90%;
+            padding: .6rem;
+
+            fieldset {
+                display: flex;
+                flex-direction: column;
+                align-items:center;
+                margin: .5rem auto;
+            }
+        }
+    }
+}
