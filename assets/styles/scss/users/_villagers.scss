@@ -1,4 +1,4 @@
-/**** CSS of index Villagers ****/
+/**** SCSS OF THE INDEX OF THE VILLAGERS ****/
 
 .all-villagers {
     background-color: $background-main;
@@ -27,13 +27,13 @@
         ul {
             display:flex;
             flex-wrap: wrap;
-            justify-content:space-between;
+            justify-content:space-around;
     
             li {
                 display:flex;
                 flex-direction: column;
                 align-items:center;
-                margin: 1rem 1.2rem;
+                margin: 1rem;
                 transition: transform 0.3s ease;
     
                 img {
@@ -65,10 +65,9 @@
     .all-villagers {
         .villagers {
             ul {
-                justify-content:space-around;
-    
                 li {
                     width: 30%;
+                    margin: .6rem;
                 }
             }
         }
