@@ -6,17 +6,18 @@ function reloadAllUsers()
     
     editRoleForm.addEventListener("submit", function(event) {
         event.preventDefault();
-        
+        console.log("hello");
         let formData = new FormData(editRoleForm);
 
         fetch('http://helloworld/res04-projet-soutenance/admin/all-users', {
             method: 'POST',
             body: formData,
         })
-        .then((response) => response.json())
-        .then((data) => {
+        .then(response => response.json())
+        .then(data => {
             console.log(data);
-            window.location.reload();
+            console.log("hello");
+            location.reload();
         })
     })
 }
