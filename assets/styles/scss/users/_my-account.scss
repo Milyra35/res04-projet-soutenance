@@ -1,7 +1,11 @@
+/**** SCSS FOR THE ACCOUNT PAGE ****/
+
 .account {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, auto);
+    padding: 1rem;
+    border: 2px dashed $pink;
 
     h3 {
         grid-area: 1/1/2/3;
@@ -9,18 +13,23 @@
 
     dl {
         grid-area: 2/1/4/2;
+
+        dt {
+            font-weight: bolder;
+            font-size: 1.1rem;
+        }
     }
 
     a {
-        text-align: center;
+        width: fit-content;
+        height: fit-content;
+        align-self: center;
+        justify-self: center;
         color: $text-color;
         background-color:$green;
         padding: .5rem 1rem;
         clip-path:polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 
                         100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
-        width: fit-content;
-        height: fit-content;
-        align-self: center;
         
         &:first-of-type {
             grid-area: 2/2/3/3;
