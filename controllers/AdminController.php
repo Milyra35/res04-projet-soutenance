@@ -81,7 +81,7 @@ class AdminController extends AbstractController {
     {
         if(isset($_POST['submit-change-role']))
         {
-            $this->um->editRole($_POST['user_id_role']);
+            $this->um->editRole($_POST['user_to_edit_id'], $_POST['user_role_id']);
         }
     }
 

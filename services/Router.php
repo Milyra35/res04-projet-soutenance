@@ -214,6 +214,7 @@ class Router {
             {
                 $this->ac->getAllUsers();
                 $this->ac->deleteUserFromAdmin();
+                $this->ac->changeRoleOfUser();
             }
             else if($routeTab['admin'] === "all-saved-games")
             {
