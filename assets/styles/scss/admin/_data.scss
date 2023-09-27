@@ -25,6 +25,10 @@
                 text-align:start;
                 font-size: 1.2rem;
                 padding: .8rem 0;
+
+                &:last-of-type {
+                    width: 25%;
+                }
             }
         }
 
@@ -32,21 +36,26 @@
 
             tr {
                 border-bottom: 1px solid rgba(0, 0, 0, .2);
-            }
 
-            td {
-                padding: .5rem 0;
-
-                input[type=submit] {
-                    border: 1px solid $green;
-                    background-color: $green;
-                    font-family: $text-font;
-                    font-size: $font-size-default;
-                    padding: .3rem .5rem;
-                    cursor: pointer;
-
-                    &:hover {
-                        background-color: $background-main;
+                td {
+                    padding: .5rem 0;
+    
+                    input[type=submit] {
+                        border: 1px solid $green;
+                        background-color: $green;
+                        font-family: $text-font;
+                        font-size: $font-size-default;
+                        padding: .3rem .5rem;
+                        cursor: pointer;
+    
+                        &:hover {
+                            background-color: $background-main;
+                        }
+                    }
+    
+                    &:last-of-type {
+                        display: flex;
+                        justify-content: space-between;
                     }
                 }
             }

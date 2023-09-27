@@ -76,6 +76,15 @@ class AdminController extends AbstractController {
         }
     }
 
+    // To change the role of an admin
+    public function changeRoleOfUser()
+    {
+        if(isset($_POST['submit-change-role']))
+        {
+            $this->um->editRole($_POST['user_id_role']);
+        }
+    }
+
     public function editAdmin()
     {
         if(isset($_POST['submit-edit-admin']))
