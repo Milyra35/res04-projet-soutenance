@@ -2,9 +2,9 @@ import { validateRegisterForm } from './validateRegisterForm.js';
 import { collapseData } from './collapseData.js';
 import { validateLoginForm } from './validateLoginForm.js';
 import { filter } from './filter.js';
+import { reloadAllUsers } from './reloadAllUsers.js';
 
 window.addEventListener("DOMContentLoaded", function() {
-    // console.log('hello');
     let defaultPath = "/res04-projet-soutenance/";
 
     if(window.location.pathname.includes(defaultPath + "villagers/") || this.window.location.pathname.includes(defaultPath + "my-games/"))
@@ -21,6 +21,11 @@ window.addEventListener("DOMContentLoaded", function() {
     }
     if(window.location.pathname === defaultPath + "admin/all-users" || window.location.pathname === defaultPath + "villagers")
     {
+        if(window.location.pathname === defaultPath + "admin/all-users")
+        {
+            reloadAllUsers();
+        }
         filter();
     }
+    
 })

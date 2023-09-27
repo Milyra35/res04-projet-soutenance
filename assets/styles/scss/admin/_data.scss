@@ -40,7 +40,7 @@
                 td {
                     padding: .5rem 0;
     
-                    input[type=submit] {
+                    input[type=submit], button[type=submit] {
                         border: 1px solid $green;
                         background-color: $green;
                         font-family: $text-font;

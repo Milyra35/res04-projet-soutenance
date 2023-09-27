@@ -807,7 +807,7 @@ form.register-login-edit input[type=submit]:hover {
 .admin-layout table tbody tr td {
   padding: 0.5rem 0;
 }
-.admin-layout table tbody tr td input[type=submit] {
+.admin-layout table tbody tr td input[type=submit], .admin-layout table tbody tr td button[type=submit] {
   border: 1px solid #0CC09E;
   background-color: #0CC09E;
   font-family: "Inconsolata", sans-serif;
@@ -815,7 +815,7 @@ form.register-login-edit input[type=submit]:hover {
   padding: 0.3rem 0.5rem;
   cursor: pointer;
 }
-.admin-layout table tbody tr td input[type=submit]:hover {
+.admin-layout table tbody tr td input[type=submit]:hover, .admin-layout table tbody tr td button[type=submit]:hover {
   background-color: #FAFAFA;
 }
 .admin-layout table tbody tr td:last-of-type {

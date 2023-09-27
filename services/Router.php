@@ -137,42 +137,56 @@ class Router {
         {
             $this->uc->createUser();
         }
-        else if($routeTab['route'] === "my-account" && isset($_SESSION['user']))
+        else if($routeTab['route'] === "my-account")
         {
-            if($routeTab['user'] === null)
+            if(isset($_SESSION['user']))
             {
-                $this->uc->account($_SESSION['user_id']);
+                if($routeTab['user'] === null)
+                {
+                    $this->uc->account($_SESSION['user_id']);
+                }
+                else if($routeTab['route'] === "my-account" && $routeTab['user'] === "edit")
+                {
+                    $this->uc->editUser();
+                }
+                else if($routeTab['route'] === "my-account" && $routeTab['user'] === "delete")
+                {
+                    $this->fc->deleteUserAndData();
+                }
             }
-            else if($routeTab['route'] === "my-account" && $routeTab['user'] === "edit")
+            else
             {
-                $this->uc->editUser();
-            }
-            else if($routeTab['route'] === "my-account" && $routeTab['user'] === "delete")
-            {
-                $this->fc->deleteUserAndData();
+                $this->uc->login();
             }
         }
-        else if($routeTab['route'] === "my-games" && isset($_SESSION['user']))
+        else if($routeTab['route'] === "my-games")
         {
-            if($routeTab['fileSlug'] === null)
+            if(isset($_SESSION['user']))
             {
-                $this->fc->indexGames();
-                $this->fc->uploadFile();
-            }
-            else if($routeTab['route'] === "my-games")
-            {
-                $file = $this->fc->getFileById(intval($routeTab['fileSlug']));
-                $fileUser = $file->getUser()->getId();
+                if($routeTab['fileSlug'] === null)
+                {
+                    $this->fc->indexGames();
+                    $this->fc->uploadFile();
+                }
+                else if($routeTab['route'] === "my-games")
+                {
+                    $file = $this->fc->getFileById(intval($routeTab['fileSlug']));
+                    $fileUser = $file->getUser()->getId();
 
-                if($fileUser === $_SESSION['user_id'])
-                {
-                    $this->fc->readSavedFile(intval($routeTab['fileSlug']));
-                    $this->pbc->displayProgress(intval($routeTab['fileSlug']));
+                    if($fileUser === $_SESSION['user_id'])
+                    {
+                        $this->fc->readSavedFile(intval($routeTab['fileSlug']));
+                        $this->pbc->displayProgress(intval($routeTab['fileSlug']));
+                    }
+                    else
+                    {
+                        header("Location:/res04-projet-soutenance/my-games");
+                    }
                 }
-                else
-                {
-                    header("Location:/res04-projet-soutenance/my-games");
-                }
+            }
+            else
+            {
+                $this->uc->login();
             }
         }
         else if($routeTab['route'] === "logout")
@@ -200,33 +214,40 @@ class Router {
         {
             $this->spc->renderCredits();
         }
-        else if($routeTab['route'] === "admin" && isset($_SESSION['role']) && $_SESSION['role'] === "admin")
+        else if($routeTab['route'] === "admin")
         {
-            if($routeTab['admin'] === null)
+            if(isset($_SESSION['role']) && $_SESSION['role'] === "admin")
             {
-                $this->ac->index($_SESSION['admin_id']);
-                $this->mc->addPicture();
-                // $this->npc->addVillagers(); I only need it once to add all the villagers to the database
-                // $this->npc->addVillagerPlanning(); I only need it once to add the schedule of each villager
-                // $this->ic->addItems(); I only need it once to add the items to the database
+                if($routeTab['admin'] === null)
+                {
+                    $this->ac->index($_SESSION['admin_id']);
+                    $this->mc->addPicture();
+                    // $this->npc->addVillagers(); I only need it once to add all the villagers to the database
+                    // $this->npc->addVillagerPlanning(); I only need it once to add the schedule of each villager
+                    // $this->ic->addItems(); I only need it once to add the items to the database
+                }
+                else if($routeTab['admin'] === "all-users")
+                {
+                    $this->ac->getAllUsers();
+                    $this->ac->deleteUserFromAdmin();
+                    $this->ac->changeRoleOfUser();
+                }
+                else if($routeTab['admin'] === "all-saved-games")
+                {
+                    $this->ac->getAllGames();
+                }
+                else if($routeTab['admin'] === "statistics")
+                {
+                    $this->ac->displayStatistics();
+                }
+                else if($routeTab['admin'] === "edit")
+                {
+                    $this->ac->editAdmin();
+                }
             }
-            else if($routeTab['admin'] === "all-users")
+            else
             {
-                $this->ac->getAllUsers();
-                $this->ac->deleteUserFromAdmin();
-                $this->ac->changeRoleOfUser();
-            }
-            else if($routeTab['admin'] === "all-saved-games")
-            {
-                $this->ac->getAllGames();
-            }
-            else if($routeTab['admin'] === "statistics")
-            {
-                $this->ac->displayStatistics();
-            }
-            else if($routeTab['admin'] === "edit")
-            {
-                $this->ac->editAdmin();
+                $this->uc->login();
             }
         }
         else
