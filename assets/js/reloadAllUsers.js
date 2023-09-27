@@ -2,21 +2,31 @@
 
 function reloadAllUsers()
 {
-    let editRoleForm = document.getElementById('edit-the-role');
+    let editRoleForm = document.querySelector('#edit-the-role');
     
-    editRoleForm.addEventListener("submit", function(event) {
+    editRoleForm.addEventListener('submit', function(event) {
         event.preventDefault();
-        console.log("hello");
-        let formData = new FormData(editRoleForm);
 
-        fetch('http://helloworld/res04-projet-soutenance/admin/all-users', {
+        console.log("hello");
+
+        let $formData = new FormData();
+        $formData.append('user_to_edit_id', document.getElementById('user_to_edit_id').value);
+        $formData.append('user_role_id', document.getElementById('user_role_id').value);
+
+        fetch('http://helloword/res04-projet-soutenance/admin/all-users', {
             method: 'POST',
-            body: formData,
+            body: $formData,
         })
         .then(response => response.json())
         .then(data => {
+
+            let p = document.createElement('p');
+            let main = document.querySelector('.all-users');
+
+            p.textContent = "Role changed with success";
+            main.appendChild(p);
+
             console.log(data);
-            console.log("hello");
             location.reload();
         })
     })

@@ -27,7 +27,11 @@
                 padding: .8rem 0;
 
                 &:last-of-type {
-                    width: 25%;
+                    width: 30%;
+                }
+
+                &:nth-of-type(3) {
+                    width: 15%;
                 }
             }
         }

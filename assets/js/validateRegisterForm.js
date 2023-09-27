@@ -12,7 +12,6 @@ function validateRegisterForm()
         let confirmPassword = document.getElementById('confirm-password').value;
 
         let user = new User(username, email, password, confirmPassword);
-        // console.log(user);
 
         let validate = user.validate();
 

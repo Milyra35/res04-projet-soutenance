@@ -799,7 +799,10 @@ form.register-login-edit input[type=submit]:hover {
   padding: 0.8rem 0;
 }
 .admin-layout table thead th:last-of-type {
-  width: 25%;
+  width: 30%;
+}
+.admin-layout table thead th:nth-of-type(3) {
+  width: 15%;
 }
 .admin-layout table tbody tr {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);

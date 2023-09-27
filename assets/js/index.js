@@ -1,13 +1,15 @@
 import { validateRegisterForm } from './validateRegisterForm.js';
-import { collapseData } from './collapseData.js';
 import { validateLoginForm } from './validateLoginForm.js';
+import { validateEditForm } from './validateEditForm.js';
+import { collapseData } from './collapseData.js';
 import { filter } from './filter.js';
 import { reloadAllUsers } from './reloadAllUsers.js';
 
 window.addEventListener("DOMContentLoaded", function() {
     let defaultPath = "/res04-projet-soutenance/";
 
-    if(window.location.pathname.includes(defaultPath + "villagers/") || this.window.location.pathname.includes(defaultPath + "my-games/"))
+    // I want to load only specific functions on specific pages
+    if(window.location.pathname.includes(defaultPath + "villagers/") || window.location.pathname.includes(defaultPath + "my-games/"))
     {
         collapseData();
     }
@@ -17,7 +19,7 @@ window.addEventListener("DOMContentLoaded", function() {
     }
     if(window.location.pathname === defaultPath + "login")
     {
-        // validateLoginForm();  
+        validateLoginForm();  
     }
     if(window.location.pathname === defaultPath + "admin/all-users" || window.location.pathname === defaultPath + "villagers")
     {
@@ -26,6 +28,10 @@ window.addEventListener("DOMContentLoaded", function() {
             reloadAllUsers();
         }
         filter();
+    }
+    if(this.window.location.pathname === defaultPath + "admin/edit")
+    {
+        validateEditForm();
     }
     
 })
