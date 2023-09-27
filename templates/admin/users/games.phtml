@@ -1,33 +1,35 @@
-<h2>All files</h2>
+<main>
+    <h2>All files</h2>
 
-<table>
-    <thead>
-        <tr>
-            <th>Username</th>
-            <th>Name of the file</th>
-            <th>Date of upload</th>
-        </tr>
-    </thead>
-    <tbody>
-        <?php
-            foreach($data as $file)
-            {
-                echo 
-                    "<tr>
-                        <td>".$file->getUser()->getUsername()."</td>
-                        <td>".$file->getName()."</td>
-                        <td>".$file->getDate()."</td>
-                    </tr>";
-            }
-        ?>
-    </tbody>
-    <tfoot>
-        <tr>
-            <td rowspan=2>
-                <?php
-                    echo "Total games : ".count($data);
-                ?>
-            </td>
-        </tr>
-    </tfoot>
-</table>
+    <table>
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Name of the file</th>
+                <th>Date of upload</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+                foreach($data as $file)
+                {
+                    echo 
+                        "<tr>
+                            <td>".$file->getUser()->getUsername()."</td>
+                            <td>".$file->getName()."</td>
+                            <td>".$file->getDate()."</td>
+                        </tr>";
+                }
+            ?>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td rowspan=2>
+                    <?php
+                        echo "Total games : ".count($data);
+                    ?>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</main>

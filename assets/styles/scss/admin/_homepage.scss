@@ -1,6 +1,6 @@
 .admin-layout {
     display:grid;
-    grid-template-columns: 20vw 80vw;
+    grid-template-columns: .25fr .75fr;
     height:100vh;
 
     .admin-header {
@@ -9,7 +9,7 @@
 
     main {
         grid-column: 2/3;
-        width: 100%;
+        width: 80%;
 
         h2 {
             padding: 2rem 0;
@@ -44,6 +44,10 @@
                     font-size: $font-size-default;
                     background-color: $green;
                     font-weight: bolder;
+
+                    &:hover {
+                        background-color: $background-main;
+                    }
                 }
             }
         }

@@ -678,14 +678,13 @@ form.register-login-edit input[type=submit]:hover {
     margin: 0.5rem auto;
   }
 }
+/**** SCSS FOR THE HEADER OF THE BACK OFFICE ****/
 .admin-header {
   display: grid;
   grid-template-columns: repeat(2, auto);
   grid-template-rows: 20% 80%;
-  grid-column-gap: 1.5rem;
   background-color: #4361EE;
-  width: 100%;
-  box-shadow: 0.3rem 0px 0px 0px rgba(67, 97, 238, 0.6), 0.6rem 0px 0px 0px rgba(67, 97, 238, 0.4), 0.9rem 0px 0px 0px rgba(67, 97, 238, 0.2);
+  padding: 0;
 }
 .admin-header h1 {
   grid-area: 1/1/2/2;
@@ -719,7 +718,7 @@ form.register-login-edit input[type=submit]:hover {
   align-items: center;
 }
 .admin-header nav ul li {
-  margin: 2rem 0;
+  margin: 1.5rem 0;
 }
 .admin-header nav ul li a {
   background-color: #FAFAFA;
@@ -729,7 +728,7 @@ form.register-login-edit input[type=submit]:hover {
 
 .admin-layout {
   display: grid;
-  grid-template-columns: 20vw 80vw;
+  grid-template-columns: 0.25fr 0.75fr;
   height: 100vh;
 }
 .admin-layout .admin-header {
@@ -737,7 +736,7 @@ form.register-login-edit input[type=submit]:hover {
 }
 .admin-layout main {
   grid-column: 2/3;
-  width: 100%;
+  width: 80%;
 }
 .admin-layout main h2 {
   padding: 2rem 0;
@@ -766,6 +765,9 @@ form.register-login-edit input[type=submit]:hover {
   font-size: 1rem;
   background-color: #0CC09E;
   font-weight: bolder;
+}
+.admin-layout main .add-picture form input[type=submit]:hover {
+  background-color: #FAFAFA;
 }
 
 .admin-layout .search-user {

@@ -1,46 +1,48 @@
-<h2>All users</h2>
+<main>
+    <h2>All users</h2>
 
-<input type="search" id="search" name="search" placeholder="Search for a user" class="search-user">
+    <input type="search" id="search" name="search" placeholder="Search for a user" class="search-user">
 
-<table>
-    <thead>
-        <tr>
-            <th>Username</th>
-            <th>Email</th>
-            <th>Role</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        <?php
-            foreach($data as $user)
-            {
-                echo 
-                    "<tr class='data-row'>
-                        <td class='data'>".$user->getUsername()."</td>
-                        <td>".$user->getEmail()."</td>
-                        <td>".$user->getRole()->getName()."</td>";
-                        if($user->getRole()->getName() === 'user')
-                        {
-                        echo 
-                            "<td>
-                                <form action='/res04-projet-soutenance/admin/all-users' method='POST'>
-                                    <input type='hidden' name='user_id' id='user_id' value='".$user->getId()."'>
-                                    <input type='submit' name='submit-delete-account-admin' id='submit-delete-account-admin' value='Delete'>
-                                </form>
-                            </td>";
-                        }
-                    "</tr>";
-            }
-        ?>
-    </tbody>
-    <tfoot>
-        <tr>
-            <td colspan=4>
-                <?php
-                    echo "Total users : ".count($data);
-                ?>
-            </td>
-        </tr>
-    </tfoot>
-</table>
+    <table>
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+                foreach($data as $user)
+                {
+                    echo 
+                        "<tr class='data-row'>
+                            <td class='data'>".$user->getUsername()."</td>
+                            <td>".$user->getEmail()."</td>
+                            <td>".$user->getRole()->getName()."</td>";
+                            if($user->getRole()->getName() === 'user')
+                            {
+                            echo 
+                                "<td>
+                                    <form action='/res04-projet-soutenance/admin/all-users' method='POST'>
+                                        <input type='hidden' name='user_id' id='user_id' value='".$user->getId()."'>
+                                        <input type='submit' name='submit-delete-account-admin' id='submit-delete-account-admin' value='Delete'>
+                                    </form>
+                                </td>";
+                            }
+                        "</tr>";
+                }
+            ?>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan=4>
+                    <?php
+                        echo "Total users : ".count($data);
+                    ?>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</main>

@@ -1,8 +1,10 @@
 <?php $admin = $data['admin']; ?>
 
-<h2>Hello <?=$admin->getUsername();?></h2>
+<main>
+    <h2>Hello <?=$admin->getUsername();?></h2>
 
-<?php
-    require 'templates/admin/data/picture.phtml';
-    // var_dump($_FILES);
-?>
+    <?php
+        require 'templates/admin/data/picture.phtml';
+        // var_dump($_FILES);
+    ?>
+</main>

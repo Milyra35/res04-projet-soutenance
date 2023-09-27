@@ -1,17 +1,11 @@
+/**** SCSS FOR THE HEADER OF THE BACK OFFICE ****/
+
 .admin-header {
     display:grid;
     grid-template-columns: repeat(2, auto);
     grid-template-rows: 20% 80%;
-    grid-column-gap: 1.5rem;
     background-color: $blue;
-    width: 100%;
-    -webkit-box-shadow: .3rem 0px 0px 0px rgba(67,97,238,0.6), 
-                        .6rem 0px 0px 0px rgba(67,97,238,0.4), 
-                        .9rem 0px 0px 0px rgba(67,97,238,0.2);
-    box-shadow: .3rem 0px 0px 0px rgba(67,97,238,0.6), 
-                .6rem 0px 0px 0px rgba(67,97,238,0.4), 
-                .9rem 0px 0px 0px rgba(67,97,238,0.2);
-
+    padding: 0;
 
     h1 {
         grid-area: 1/1/2/2;
@@ -48,7 +42,7 @@
             align-items:center;
 
             li {
-                margin: 2rem 0;
+                margin: 1.5rem 0;
 
                 a {
                     background-color: $background-main;

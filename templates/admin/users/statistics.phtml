@@ -1,43 +1,45 @@
-<h2>Statistics</h2>
-<?php
-    // var_dump($data['total']);
-?>
-<section>
-    <table>
-        <thead>
-            <tr>
-                <th></th>
-                <th>Hours played</th>
-                <th>Days Spent in game</th>
-                <th>Seasons passed</th>
-                <th>Fish caught</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php
-                foreach($data['stats'] as $stat)
-                {
-                    echo 
-                        "<tr>
-                            <td></td>
-                            <td>".$stat->getHoursPlayed()."</td>
-                            <td>".$stat->getDaysSpent()."</td>
-                            <td>".$stat->getSeasonsPassed()."</td>
-                            <td>".$stat->getFishCatched()."</td>
-                        </tr>";
-                }   
-            ?>
-        </tbody>
-        <tfoot>
-            <tr>
-                <td>Average</td>
+<main>
+    <h2>Statistics</h2>
+    <?php
+        // var_dump($data['total']);
+    ?>
+    <section>
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Hours played</th>
+                    <th>Days Spent in game</th>
+                    <th>Seasons passed</th>
+                    <th>Fish caught</th>
+                </tr>
+            </thead>
+            <tbody>
                 <?php
-                    foreach($data['total'] as $total)
+                    foreach($data['stats'] as $stat)
                     {
-                        echo "<td>".$total."</td>";
+                        echo 
+                            "<tr>
+                                <td></td>
+                                <td>".$stat->getHoursPlayed()."</td>
+                                <td>".$stat->getDaysSpent()."</td>
+                                <td>".$stat->getSeasonsPassed()."</td>
+                                <td>".$stat->getFishCatched()."</td>
+                            </tr>";
                     }   
                 ?>
-            </tr>
-        </tfoot>
-    </table>
-</section>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Average</td>
+                    <?php
+                        foreach($data['total'] as $total)
+                        {
+                            echo "<td>".$total."</td>";
+                        }   
+                    ?>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+</main>

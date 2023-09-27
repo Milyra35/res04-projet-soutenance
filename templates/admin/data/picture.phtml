@@ -2,7 +2,7 @@
     <h3>Add a picture to the database</h3>
 
     <form enctype="multipart/form-data" method="POST" action="/res04-projet-soutenance/admin">
-        <label class="hidden" for="add-picture">Select your picture(s)</label>
+        <label for="add-picture">Select your picture(s)</label>
         <input type="hidden" name="MAX_FILE_SIZE" value="7000000">
         <input type="file" name="add-picture[]" id="add-picture" value="Choose a file" accept="image/*" multiple>
         <input type="submit" name="upload-picture" id="upload-picture" value="Submit">
