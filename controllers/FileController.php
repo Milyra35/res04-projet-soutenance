@@ -1500,37 +1500,41 @@ class FileController extends AbstractController {
     private function deleteData(int $id)
     {
         $userFiles = $this->fm->getGamesByUser($id);
-        $fileId = $userFiles->getId();
 
-        // I delete the books
-        $this->bm->deleteBookByFile($fileId);
+        foreach($userFiles as $file)
+        {
+            $fileId = $file['id'];
 
-        // I delete the bundles
-        $this->ccm->deleteBundlesByFile($fileId);
-        
-        // I delete the locations
-        $this->lm->deleteLocationsByFile($fileId);
+            // I delete the books
+            $this->bm->deleteBookByFile($fileId);
 
-        // I delete the museum items
-        $this->mm->deleteMuseumItemsByFile($fileId);
+            // I delete the bundles
+            $this->ccm->deleteBundlesByFile($fileId);
+            
+            // I delete the locations
+            $this->lm->deleteLocationsByFile($fileId);
 
-        // I delete the player progress
-        $this->pp->deletePlayerByFile($fileId);
+            // I delete the museum items
+            $this->mm->deleteMuseumItemsByFile($fileId);
 
-        // I delete the skills
-        $this->psm->deleteSkillsByFile($fileId);
+            // I delete the player progress
+            $this->pp->deletePlayerByFile($fileId);
 
-        // I delete the possessed items 
-        $this->pim->deleteItemsByFile($fileId);
+            // I delete the skills
+            $this->psm->deleteSkillsByFile($fileId);
 
-        // I delete the relationships
-        $this->rm->deleteRelationshipByFile($fileId);
+            // I delete the possessed items 
+            $this->pim->deleteItemsByFile($fileId);
 
-        // I delete the statistics
-        $this->sm->deleteStatsByFile($fileId);
+            // I delete the relationships
+            $this->rm->deleteRelationshipByFile($fileId);
 
-        // And then i delete the file
-        $this->fm->deleteFile($fileId);
+            // I delete the statistics
+            $this->sm->deleteStatsByFile($fileId);
+
+            // And then i delete the file
+            $this->fm->deleteFile($fileId);
+        }
     }
 
     public function deleteUserAndData()

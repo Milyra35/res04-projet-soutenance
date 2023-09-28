@@ -72,7 +72,6 @@ class AdminController extends AbstractController {
         if(isset($_POST['submit-delete-account-admin']))
         {
             $this->um->deleteUser($_POST['user_id']);
-            header("Location:/res04-projet-soutenance/admin/all-users");
         }
     }
 

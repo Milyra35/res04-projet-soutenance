@@ -3,9 +3,8 @@
 function reloadAllUsers()
 {
     let editRoleForm = document.querySelector('#edit-the-role');
-    let submit = document.getElementById('submit-change-role');
     
-    submit.addEventListener('click', function(event) {
+    editRoleForm.addEventListener("submit", function(event) {
         event.preventDefault();
 
         console.log("hello");
@@ -14,7 +13,7 @@ function reloadAllUsers()
         $formData.append('user_to_edit_id', document.getElementById('user_to_edit_id').value);
         $formData.append('user_role_id', document.getElementById('user_role_id').value);
 
-        fetch('http://helloworld/res04-projet-soutenance/admin/all-users', {
+        fetch('/res04-projet-soutenance/admin/all-users', {
             method: 'POST',
             body: $formData,
         })
@@ -28,7 +27,7 @@ function reloadAllUsers()
             main.appendChild(p);
 
             console.log(data);
-            location.reload();
+            window.location.reload();
         })
     })
 }

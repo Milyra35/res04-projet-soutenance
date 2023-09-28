@@ -611,7 +611,7 @@ form.register-login-edit {
 }
 form.register-login-edit fieldset {
   display: grid;
-  grid-template-columns: auto 20rem;
+  grid-template-columns: auto auto 20rem;
   grid-template-rows: repeat(2, auto);
   grid-column-gap: 1.5rem;
   border: none;
@@ -619,12 +619,15 @@ form.register-login-edit fieldset {
   padding: 0;
 }
 form.register-login-edit fieldset label {
-  grid-area: 1/1/2/2;
+  grid-area: 1/1/2/3;
   font-size: 1.2rem;
   align-self: center;
 }
+form.register-login-edit fieldset label[for=password] {
+  grid-area: 1/1/2/2;
+}
 form.register-login-edit fieldset input {
-  grid-area: 1/2/2/3;
+  grid-area: 1/3/2/4;
   justify-self: self-end;
   width: 100%;
   padding: 0.5rem 1rem;
@@ -645,9 +648,19 @@ form.register-login-edit fieldset input:focus {
   color: #0C092B;
 }
 form.register-login-edit fieldset p {
-  grid-area: 2/1/3/3;
+  grid-area: 2/1/3/4;
   font-size: 0.8rem;
   color: #D61E92;
+}
+form.register-login-edit fieldset p.info {
+  grid-area: 1/2/2/3;
+  align-self: center;
+  color: #0C092B;
+  font-size: 1rem;
+  opacity: 0;
+}
+form.register-login-edit fieldset p.info:hover {
+  opacity: 1;
 }
 form.register-login-edit input[type=submit] {
   justify-self: center;
