@@ -3,8 +3,9 @@
 function reloadAllUsers()
 {
     let editRoleForm = document.querySelector('#edit-the-role');
+    let submit = document.getElementById('submit-change-role');
     
-    editRoleForm.addEventListener('submit', function(event) {
+    submit.addEventListener('click', function(event) {
         event.preventDefault();
 
         console.log("hello");
@@ -13,7 +14,7 @@ function reloadAllUsers()
         $formData.append('user_to_edit_id', document.getElementById('user_to_edit_id').value);
         $formData.append('user_role_id', document.getElementById('user_role_id').value);
 
-        fetch('http://helloword/res04-projet-soutenance/admin/all-users', {
+        fetch('http://helloworld/res04-projet-soutenance/admin/all-users', {
             method: 'POST',
             body: $formData,
         })
