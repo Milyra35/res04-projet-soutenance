@@ -4,6 +4,7 @@ import { validateEditForm } from './validateEditForm.js';
 import { collapseData } from './collapseData.js';
 import { filter } from './filter.js';
 import { reloadAllUsers } from './reloadAllUsers.js';
+import { reloadPage } from './reloadPage.js';
 
 window.addEventListener("DOMContentLoaded", function() {
     let defaultPath = "/res04-projet-soutenance/";
@@ -29,9 +30,13 @@ window.addEventListener("DOMContentLoaded", function() {
         }
         filter();
     }
-    if(this.window.location.pathname === defaultPath + "admin/edit")
+    if(window.location.pathname === defaultPath + "admin/edit")
     {
         validateEditForm();
     }
+    // if(window.location.pathname === defaultPath + "my-games")
+    // {
+    //     reloadPage();
+    // }
     
 })

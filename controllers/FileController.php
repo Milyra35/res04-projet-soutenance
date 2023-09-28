@@ -1461,6 +1461,9 @@ class FileController extends AbstractController {
                 $newFile->setDate($uploadDate);
                 
                 $this->fm->addFile($newFile);
+
+                $response = ['success' => true];
+                // $this->toJson($response);
                 // $fileId = $newFile->getId();
                 // $_SESSION['file_id'] = $fileId;
                 

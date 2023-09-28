@@ -3,10 +3,10 @@
     <section>
         <h3>Add your file</h3>
         <p>If you don't know which file to upload, go to the homepage, a tutorial is provided !</p>
-        <form enctype="multipart/form-data" method="POST" action="/res04-projet-soutenance/my-games">
-            <label for="saved-file">Upload your file</label> <!-- Hide it in css -->
+        <form enctype="multipart/form-data" method="POST" action="/res04-projet-soutenance/my-games" id="file-upload">
+            <label for="saved-file">Upload your file</label> 
             <input type="hidden" name="MAX_FILE_SIZE" value="10000000">
-            <input type="file" name="saved-file" id="saved-file" value="Choose a file">
+            <input type="file" name="saved-file" id="saved-file" value="Choose a file"> <!-- Hide it in css -->
             <input type="submit" name="upload-file" id="upload-file" value="Submit">
         </form>
     </section>

@@ -173,7 +173,7 @@ class Router {
                     $this->fc->indexGames();
                     $this->fc->uploadFile();
                 }
-                else if($routeTab['route'] === "my-games")
+                else if($routeTab['route'] === "my-games" && $routeTab['fileSlug'] !== null)
                 {
                     $file = $this->fc->getFileById(intval($routeTab['fileSlug']));
                     $fileUser = $file->getUser()->getId();
