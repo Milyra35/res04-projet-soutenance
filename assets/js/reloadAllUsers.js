@@ -2,34 +2,36 @@
 
 function reloadAllUsers()
 {
-    let editRoleForm = document.querySelector('#edit-the-role');
+    let editRoleForm = document.getElementById('edit-the-role');
+    console.log(editRoleForm);
     
-    editRoleForm.addEventListener("submit", function(event) {
-        event.preventDefault();
+    editRoleForm.addEventListener('submit', function(e) {
+        e.preventDefault();
 
-        console.log("hello");
+        console.log("please work");
 
-        let $formData = new FormData();
-        $formData.append('user_to_edit_id', document.getElementById('user_to_edit_id').value);
-        $formData.append('user_role_id', document.getElementById('user_role_id').value);
+        // This is the representation of a form in JS
+        let formData = new FormData();
+        formData.append('submit-change-role', true);
+        formData.append('user_to_edit_id', document.getElementById('user_to_edit_id').value);
+        formData.append('user_role_id', document.getElementById('user_role_id').value);
 
-        fetch('/res04-projet-soutenance/admin/all-users', {
+        let options = {
             method: 'POST',
-            body: $formData,
+            body: formData
+        };
+
+        fetch('role-edit', options)
+        .then(function(response)
+        {
+            return response.json();
         })
-        .then(response => response.json())
-        .then(data => {
-
-            let p = document.createElement('p');
-            let main = document.querySelector('.all-users');
-
-            p.textContent = "Role changed with success";
-            main.appendChild(p);
-
+        .then(function(data) 
+        {
             console.log(data);
             window.location.reload();
-        })
-    })
+        });
+    });
 }
 
 export { reloadAllUsers };

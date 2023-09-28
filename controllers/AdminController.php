@@ -81,6 +81,9 @@ class AdminController extends AbstractController {
         if(isset($_POST['submit-change-role']))
         {
             $this->um->editRole($_POST['user_to_edit_id'], $_POST['user_role_id']);
+            $user = $this->um->getUserById($_POST['user_to_edit_id']);
+            $this->toJson($user->getUsername());
+            var_dump($this->toJson($user->getUsername()));
         }
     }
 
