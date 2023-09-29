@@ -6,8 +6,10 @@ import { collapseData } from './collapseData.js';
 import { filter } from './filter.js';
 import { reloadAllUsers } from './reloadAllUsers.js';
 import { reloadPage } from './reloadPage.js';
+import { darkMode } from './darkMode.js';
 
 window.addEventListener("DOMContentLoaded", function() {
+    darkMode();
     let defaultPath = "/res04-projet-soutenance/";
 
     // I want to load only specific functions on specific pages
