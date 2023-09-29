@@ -862,6 +862,7 @@ form.forms input[type=submit]:hover {
 
 html {
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 html body {
   font-family: "Inconsolata", sans-serif;
@@ -931,6 +932,19 @@ html body h4 {
 }
 html body table {
   border-collapse: collapse;
+}
+html body .accessibility a {
+  padding: 0.6rem;
+  color: #0C092B;
+  background-color: #0CC09E;
+  opacity: 0;
+  position: absolute;
+  top: -1000px;
+  left: 0;
+}
+html body .accessibility a:focus {
+  opacity: 1;
+  top: 8rem;
 }
 
 /**** MEDIA QUERIES FOR TABLETS ****/
