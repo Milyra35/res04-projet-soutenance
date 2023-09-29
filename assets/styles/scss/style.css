@@ -978,6 +978,7 @@ html body.dark-mode header nav ul li a {
 }
 html body.dark-mode header nav ul li button {
   background-image: url("/res04-projet-soutenance/assets/images/sun.png");
+  background-color: #0c092b;
 }
 html body.dark-mode main {
   background-color: #0c092b;
