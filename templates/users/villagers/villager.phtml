@@ -8,9 +8,11 @@
     <h2><?= $villager->getName() ;?></h2>
 
     <article class="single-villager">
+        <h3 class="hidden"><?= $villager->getName() ;?></h3>
         <img src="/res04-projet-soutenance/<?= $villager->getPicture()->getUrl() ;?>" alt="<?= $villager->getPicture()->getAlt() ;?>" class="villager-picture">
 
         <section id="general" class="villager-general">
+            <h3 class="hidden">General informations</h3>
             <p>Birthday : <?= $villager->getBirthday() ;?></p>
             <p>Can you date them ? 
                 <?php 

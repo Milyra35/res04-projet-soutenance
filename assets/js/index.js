@@ -1,6 +1,7 @@
 import { validateRegisterForm } from './validateRegisterForm.js';
 import { validateLoginForm } from './validateLoginForm.js';
 import { validateEditForm } from './validateEditForm.js';
+import { validateEditUserForm } from './validateEditUserForm.js';
 import { collapseData } from './collapseData.js';
 import { filter } from './filter.js';
 import { reloadAllUsers } from './reloadAllUsers.js';
@@ -29,6 +30,10 @@ window.addEventListener("DOMContentLoaded", function() {
             reloadAllUsers();
         }
         filter();
+    }
+    if(window.location.pathname === defaultPath + "my-account/edit")
+    {
+        validateEditUserForm();
     }
     if(window.location.pathname === defaultPath + "admin/edit")
     {

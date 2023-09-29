@@ -330,6 +330,7 @@ footer nav ul li a {
   border: 1px solid #D61E92;
 }
 .villager .single-villager .planning .events table thead tr th button {
+  font-size: 1.1rem;
   background-color: #D9D9D9;
   -webkit-clip-path: none;
           clip-path: none;
@@ -602,14 +603,14 @@ footer nav ul li a {
     margin: 0.8rem 0;
   }
 }
-form.register-login-edit {
+form.forms {
   display: grid;
   border: 2px dashed #D61E92;
   width: 40rem;
   margin: 0 auto;
   padding: 1rem;
 }
-form.register-login-edit fieldset {
+form.forms fieldset {
   display: grid;
   grid-template-columns: auto auto 20rem;
   grid-template-rows: repeat(2, auto);
@@ -618,51 +619,67 @@ form.register-login-edit fieldset {
   margin: 1rem 0;
   padding: 0;
 }
-form.register-login-edit fieldset label {
+form.forms fieldset label {
   grid-area: 1/1/2/3;
   font-size: 1.2rem;
   align-self: center;
 }
-form.register-login-edit fieldset label[for=password] {
+form.forms fieldset label[for=password] {
   grid-area: 1/1/2/2;
 }
-form.register-login-edit fieldset input {
+form.forms fieldset input {
   grid-area: 1/3/2/4;
-  justify-self: self-end;
-  width: 100%;
+  justify-self: end;
+  width: 95%;
   padding: 0.5rem 1rem;
   border: 1px solid #0CC09E;
   background-color: rgba(12, 192, 158, 0.4);
 }
-form.register-login-edit fieldset input::-moz-placeholder {
+form.forms fieldset input::-moz-placeholder {
   color: #0C092B;
   font-family: "Inconsolata", sans-serif;
 }
-form.register-login-edit fieldset input::placeholder {
+form.forms fieldset input::placeholder {
   color: #0C092B;
   font-family: "Inconsolata", sans-serif;
 }
-form.register-login-edit fieldset input:focus {
+form.forms fieldset input:focus {
   outline: none;
   font-family: "Inconsolata", sans-serif;
   color: #0C092B;
 }
-form.register-login-edit fieldset p {
+form.forms fieldset p {
   grid-area: 2/1/3/4;
   font-size: 0.8rem;
   color: #D61E92;
 }
-form.register-login-edit fieldset p.info {
+form.forms fieldset p.info {
   grid-area: 1/2/2/3;
   align-self: center;
+  justify-self: end;
+  width: -moz-fit-content;
+  width: fit-content;
   color: #0C092B;
   font-size: 1rem;
-  opacity: 0;
+  position: relative;
+  background-color: #0CC09E;
+  padding: 0.3rem 0.5rem;
 }
-form.register-login-edit fieldset p.info:hover {
-  opacity: 1;
+form.forms fieldset p.info span {
+  font-size: 0.9rem;
+  visibility: hidden;
+  width: 10rem;
+  background-color: #0C092B;
+  color: #D9D9D9;
+  text-align: center;
+  padding: 0.5rem;
+  position: absolute;
+  z-index: 1;
 }
-form.register-login-edit input[type=submit] {
+form.forms fieldset p.info:hover span {
+  visibility: visible;
+}
+form.forms input[type=submit] {
   justify-self: center;
   margin-top: 1rem;
   border: none;
@@ -674,7 +691,7 @@ form.register-login-edit input[type=submit] {
           clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
   cursor: pointer;
 }
-form.register-login-edit input[type=submit]:hover {
+form.forms input[type=submit]:hover {
   background-color: #D61E92;
 }
 

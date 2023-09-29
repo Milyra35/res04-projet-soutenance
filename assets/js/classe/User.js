@@ -63,13 +63,13 @@ export class User {
     {
         if(this.username.length >= 4 && this.username.length <= 64)
         {
-            let username = document.getElementById('errorUsername');
+            let username = document.querySelector('.errorUsername');
             username.innerHTML = "";
             return true;
         }
         else
         {
-            let username = document.getElementById('errorUsername');
+            let username = document.querySelector('.errorUsername');
             username.innerHTML = "The username has to be between 4 and 64 characters";
             this.addError("username", "The username has to be between 4 and 64 characters");
             return false;
@@ -82,13 +82,13 @@ export class User {
 
         if(emailPattern.test(this.email))
         {
-            let email = document.getElementById('errorEmail');
+            let email = document.querySelector('.errorEmail');
             email.innerHTML = "";
             return true;
         }
         else
         {
-            let email = document.getElementById('errorEmail');
+            let email = document.querySelector('.errorEmail');
             email.innerHTML = "The email is not valid";
             this.addError("email", "The email is not valid");
             return false;
@@ -101,20 +101,20 @@ export class User {
 
         if(this.password === this.confirmPassword && passwordPattern.test(this.password))
         {
-            let password = document.getElementById('errorPassword');
+            let password = document.querySelector('.errorPassword');
             password.innerHTML = "";
             return true;
         }
         else if(this.password !== this.confirmPassword)
         {
-            let password = document.getElementById('errorPassword');
+            let password = document.querySelector('.errorConfirmPassword');
             password.innerHTML = "Both password have to be the same";
             this.addError("password", "Both password have to be the same");
             return false;
         }
         else
         {
-            let password = document.getElementById('errorPassword');
+            let password = document.querySelector('.errorPassword');
             password.innerHTML = "The password has to include 1 uppercase letter, 1 number, 1 special character and at least 12 characters.";
             this.addError("password", "The password has to include 1 uppercase letter, 1 number, 1 special character and at least 12 characters.");
             return false;

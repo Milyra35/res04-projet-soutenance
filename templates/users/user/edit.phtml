@@ -1,22 +1,26 @@
 <main>
     <h2>Edit my informations</h2>
 
-    <form action="/res04-projet-soutenance/my-account/edit" method="POST" class="register-login-edit">
+    <form action="/res04-projet-soutenance/my-account/edit" method="POST" class="forms" id="edit-user-form">
         <fieldset>
-            <label for="new-username">New username</label>
-            <input type="text" name="new-username" id="new-username">
+            <label for="new-user-username">New username</label>
+            <input type="text" name="new-user-username" id="new-user-username">
+            <p class="errorUsername"></p>
         </fieldset>
         <fieldset>
-            <label for="new-email">New email</label>
-            <input type="text" name="new-email" id="new-email">
+            <label for="new-user-email">New email</label>
+            <input type="text" name="new-user-email" id="new-user-email">
+            <p class="errorEmail"></p>
         </fieldset>
         <fieldset>
-            <label for="new-password">New password</label>
-            <input type="password" name="new-password" id="new-password">
+            <label for="new-user-password">New password</label>
+            <input type="password" name="new-user-password" id="new-user-password">
+            <p class="errorPassword"></p>
         </fieldset>
         <fieldset>
-            <label for="confirm-new-password">Confirm your password</label>
-            <input type="password" name="confirm-new-password" id="confirm-new-password">
+            <label for="confirm-new-user-password">Confirm your password</label>
+            <input type="password" name="confirm-new-user-password" id="confirm-new-user-password">
+            <p class="errorConfirmPassword"></p>
         </fieldset>
 
         <input type="submit" value="Confirm" name="submit-edit-user" id="submit-edit-user">

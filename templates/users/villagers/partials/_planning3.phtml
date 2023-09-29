@@ -1,5 +1,6 @@
 <h3 class="title">Schedule</h3>
-<article class="events">
+<section class="events">
+    <h4 class="hidden">Schedule organised in tables</h4>
     <?php
         foreach($_SESSION['planning']->getSchedule() as $key => $schedules)
         {
@@ -28,4 +29,4 @@
             echo '</tbody></table>';
         }
     ?>
-</article>
+</section>

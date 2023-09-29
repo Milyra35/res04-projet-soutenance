@@ -128,23 +128,23 @@ class UserController extends AbstractController {
     {
         if(isset($_POST['submit-edit-user']))
         {
-            $existingUser = $this->um->verifyUsername(htmlspecialchars($_POST['new-username']));
+            $existingUser = $this->um->verifyUsername(htmlspecialchars($_POST['new-user-username']));
 
             // Checking if the username already exists
             if(!$existingUser)
             {
                 // We get the new informations
-                if(!empty($_POST['new-username']))
+                if(!empty($_POST['new-user-username']))
                 {
-                    $newUsername = htmlspecialchars($_POST['new-username']);
+                    $newUsername = htmlspecialchars($_POST['new-user-username']);
                 }
-                if(!empty($_POST['new-email']))
+                if(!empty($_POST['new-user-email']))
                 {
-                    $newEmail = htmlspecialchars($_POST['new-email']);
+                    $newEmail = htmlspecialchars($_POST['new-user-email']);
                 }
-                if(!empty($_POST['new-password']) && $_POST['new-password'] === $_POST['confirm-new-password'])
+                if(!empty($_POST['new-user-password']) && $_POST['new-user-password'] === $_POST['confirm-new-user-password'])
                 {
-                    $newPassword = password_hash($_POST['new-password'], PASSWORD_DEFAULT);
+                    $newPassword = password_hash($_POST['new-user-password'], PASSWORD_DEFAULT);
                 }
 
                 $role = new Role(2, "user");

@@ -1,22 +1,26 @@
 <main>
     <h2>Edit my informations</h2>
 
-    <form action="/res04-projet-soutenance/admin/edit" method="POST" class="register-login-edit" id="edit-admin-form">
+    <form action="/res04-projet-soutenance/admin/edit" method="POST" class="forms" id="edit-admin-form">
         <fieldset>
             <label for="new-username">New username</label>
             <input type="text" name="new-username" id="new-username">
+            <p class="errorUsername"></p>
         </fieldset>
         <fieldset>
             <label for="new-email">New email</label>
             <input type="text" name="new-email" id="new-email">
+            <p class="errorEmail"></p>
         </fieldset>
         <fieldset>
             <label for="new-password">New password</label>
             <input type="password" name="new-password" id="new-password">
+            <p class="errorPassword"></p>
         </fieldset>
         <fieldset>
             <label for="confirm-new-password">Confirm your password</label>
             <input type="password" name="confirm-new-password" id="confirm-new-password">
+            <p class="errorConfirmPassword"></p>
         </fieldset>
 
         <input type="submit" value="Confirm" name="submit-edit-admin" id="submit-edit-admin">
