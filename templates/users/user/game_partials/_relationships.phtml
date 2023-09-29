@@ -14,7 +14,7 @@
                             <!-- <?=$relationship->getVillager()->getName();?> -->
                             <img src="/res04-projet-soutenance/<?=$relationship->getVillager()->getPicture()->getUrl();?>" alt="<?=$relationship->getVillager()->getPicture()->getAlt();?>">
                         </a>
-                        <p><?=intval($relationship->getLevel() / 250);?> heart(s) out of 10.</p>
+                        <p><span><?=intval($relationship->getLevel() / 250);?></span> heart(s) out of 10.</p>
                     </li>
             <?php
                 }

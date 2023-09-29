@@ -140,6 +140,14 @@
                         &:hover {
                             transform: scale(1.15);
                         }
+
+                        p {
+                            span {
+                                color: $pink;
+                                font-weight: bolder;
+                                font-size: 1.3rem;
+                            }
+                        }
                     }
                 }
             }

@@ -483,6 +483,11 @@ footer nav ul li a {
 .player-progress article.relationships .events ul li:hover {
   transform: scale(1.15);
 }
+.player-progress article.relationships .events ul li p span {
+  color: #D61E92;
+  font-weight: bolder;
+  font-size: 1.3rem;
+}
 .player-progress article.locations {
   grid-area: 7/1/8/4;
 }
