@@ -80,11 +80,14 @@ class AdminController extends AbstractController {
     {
         if(isset($_POST['submit-change-role']))
         {
+            var_dump('Start');
             $this->um->editRole($_POST['user_to_edit_id'], $_POST['user_role_id']);
-            $user = $this->um->getUserById($_POST['user_to_edit_id']);
-            $this->toJson(['user' => $user]);
+            echo json_encode(['message' => 'Success']);
+            header('Content-Type: application/json');
+            // $user = $this->um->getUserById($_POST['user_to_edit_id']);
+            // $this->toJson(['user' => $user]);
 
-            header('Location:/res04-projet-soutenance/admin/all-users');
+            // header('Location:/res04-projet-soutenance/admin/all-users');
         }
     }
 

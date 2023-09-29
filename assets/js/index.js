@@ -9,10 +9,13 @@ import { reloadPage } from './reloadPage.js';
 import { darkMode } from './darkMode.js';
 
 window.addEventListener("DOMContentLoaded", function() {
-    darkMode();
     let defaultPath = "/res04-projet-soutenance/";
 
     // I want to load only specific functions on specific pages
+    if(!window.location.pathname.includes(defaultPath + "admin"))
+    {
+        darkMode();
+    }
     if(window.location.pathname.includes(defaultPath + "villagers/") || window.location.pathname.includes(defaultPath + "my-games/"))
     {
         collapseData();

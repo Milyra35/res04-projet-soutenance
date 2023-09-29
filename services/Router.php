@@ -235,7 +235,7 @@ class Router {
                 {
                     $this->ac->getAllUsers();
                     $this->ac->deleteUserFromAdmin();
-                    // $this->ac->changeRoleOfUser();
+                    $this->ac->changeRoleOfUser();
                 }
                 else if($routeTab['admin'] === "all-saved-games")
                 {
@@ -249,10 +249,10 @@ class Router {
                 {
                     $this->ac->editAdmin();
                 }
-                else if($routeTab['admin'] === "role-edit")
-                {
-                    $this->ac->changeRoleOfUser();
-                }
+                // else if($routeTab['admin'] === "role-edit")
+                // {
+                //     $this->ac->changeRoleOfUser();
+                // }
             }
             else
             {
