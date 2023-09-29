@@ -34,9 +34,9 @@ window.addEventListener("DOMContentLoaded", function() {
     {
         validateEditForm();
     }
-    // if(window.location.pathname === defaultPath + "my-games")
-    // {
-    //     reloadPage();
-    // }
+    if(window.location.pathname === defaultPath + "my-games")
+    {
+        reloadPage();
+    }
     
 })

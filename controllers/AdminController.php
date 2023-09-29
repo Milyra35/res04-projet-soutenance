@@ -82,7 +82,9 @@ class AdminController extends AbstractController {
         {
             $this->um->editRole($_POST['user_to_edit_id'], $_POST['user_role_id']);
             $user = $this->um->getUserById($_POST['user_to_edit_id']);
-            $this->toJson($user->getUsername());
+            $this->toJson(['user' => $user]);
+
+            header('Location:/res04-projet-soutenance/admin/all-users');
         }
     }
 

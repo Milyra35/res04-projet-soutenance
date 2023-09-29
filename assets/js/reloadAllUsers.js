@@ -2,28 +2,30 @@
 
 function reloadAllUsers()
 {
-    let editRoleForm = document.getElementById('file-upload');
+    let editRoleForm = document.getElementById('edit-the-role');
     console.log(editRoleForm);
     
-    editRoleForm.addEventListener('submit', function(e) {
-        e.preventDefault();
+    editRoleForm.addEventListener('submit', function(event) {
+        event.preventDefault();
 
         console.log("please work");
 
-        // This is the representation of a form in JS
-        let formData = new FormData(editRoleForm);
-        formData.append('upload-file', true);
-        formData.append('saved-file', document.getElementById('saved-file').value);
-        // formData.append('submit-change-role', true);
-        // formData.append('user_to_edit_id', document.getElementById('user_to_edit_id').value);
-        // formData.append('user_role_id', document.getElementById('user_role_id').value);
+        let formName = document.getElementById('form-name').value;
+        let id = document.getElementById('user_to_edit_id').value;
+        let roleId = document.getElementById('user_role_id').value;
+
+        // Representation of a form in JS
+        let formData = new FormData();
+        formData.append('form-name', formName);
+        formData.append('user-id', id);
+        formData.append('role-id', roleId);
 
         let options = {
             method: 'POST',
             body: formData
         };
 
-        fetch('/res04-projet-soutenance/my-games', options)
+        fetch('role-edit', options)
         .then(function(response)
         {
             if(!response.ok)
@@ -36,11 +38,14 @@ function reloadAllUsers()
         {
             console.log(data);
             window.location.reload();
+
+            let tr = document.querySelector('tbody .data');
+            tr.value = "";
         })
         .catch(function(error) 
         {
-            console.error('Erreur de fetch', error);
-        })
+            console.error('Erreur fetch', error);
+        });
     });
 }
 
