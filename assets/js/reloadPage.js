@@ -9,10 +9,9 @@ function reloadPage()
         e.preventDefault();
         
         let formData = new FormData(form);
-        console.log(formData);
 
         let options = {
-            method: 'POST',
+            method: "POST",
             body: formData
         };
         
@@ -22,15 +21,16 @@ function reloadPage()
             console.log(data);
             list.innerHTML = '';
 
-            data.forEach(game => {
+            for(let i=0; i<data.length; i++)
+            {
                 let li = document.createElement('li');
                 let a = document.createElement('a');
-                a.href = `/res04-projet-soutenance/my-games/${game.name}`;
-                a.textContent = game.name;
+                a.href = `/res04-projet-soutenance/my-games/${data[i].id}`;
+                a.textContent = data[i].name;
 
                 li.appendChild(a);
                 list.appendChild(li);
-            })
+            }
         })
         .catch(error => {
             console.error('Erreur lors de la requête fetch', error);

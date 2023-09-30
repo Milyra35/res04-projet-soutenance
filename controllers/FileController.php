@@ -1462,8 +1462,8 @@ class FileController extends AbstractController {
                 
                 $this->fm->addFile($newFile);
 
-                $response = ['success' => true];
                 header('Content-Type: application/json');
+                $response = ['name' => $fileName];
                 echo json_encode($response);
             }
             else
@@ -1492,6 +1492,7 @@ class FileController extends AbstractController {
     {
         $gamesSaved = $this->fm->getGamesByUser($_SESSION['user_id']);
         $this->render('user/games.phtml', $gamesSaved);
+        // $this->toJson($gamesSaved);
     }
 
     // When a user is deleted, their file and the data stored in the database is also deleted

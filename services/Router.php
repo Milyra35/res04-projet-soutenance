@@ -164,14 +164,10 @@ class Router {
         {
             if(isset($_SESSION['user']))
             {
-                // if($routeTab['route'] === "upload-files")
-                // {
-                //     $this->fc->uploadFile();
-                // }
                 if($routeTab['fileSlug'] === null)
                 {
-                    $this->fc->indexGames();
                     $this->fc->uploadFile();
+                    $this->fc->indexGames();
                 }
                 else if($routeTab['route'] === "my-games" && $routeTab['fileSlug'] !== null)
                 {
