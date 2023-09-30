@@ -86,10 +86,6 @@ class Router {
                 {
                     $routeAndParams['admin'] = $tab[1];
                 }
-                else if(isset($tab[1]) && $tab[1] === "role-edit")
-                {
-                    $routeAndParams['admin'] = $tab[1];
-                }
             }
             else if($tab[0] === "login")
             {
@@ -168,6 +164,10 @@ class Router {
         {
             if(isset($_SESSION['user']))
             {
+                // if($routeTab['route'] === "upload-files")
+                // {
+                //     $this->fc->uploadFile();
+                // }
                 if($routeTab['fileSlug'] === null)
                 {
                     $this->fc->indexGames();
@@ -235,7 +235,7 @@ class Router {
                 {
                     $this->ac->getAllUsers();
                     $this->ac->deleteUserFromAdmin();
-                    $this->ac->changeRoleOfUser();
+                    // $this->ac->changeRoleOfUser();
                 }
                 else if($routeTab['admin'] === "all-saved-games")
                 {
@@ -249,10 +249,10 @@ class Router {
                 {
                     $this->ac->editAdmin();
                 }
-                // else if($routeTab['admin'] === "role-edit")
-                // {
-                //     $this->ac->changeRoleOfUser();
-                // }
+                else if($routeTab['admin'] === "role-edit")
+                {
+                    $this->ac->changeRoleOfUser();
+                }
             }
             else
             {

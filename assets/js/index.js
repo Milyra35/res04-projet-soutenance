@@ -30,10 +30,10 @@ window.addEventListener("DOMContentLoaded", function() {
     }
     if(window.location.pathname === defaultPath + "admin/all-users" || window.location.pathname === defaultPath + "villagers")
     {
-        if(window.location.pathname === defaultPath + "admin/all-users")
-        {
-            reloadAllUsers();
-        }
+        // if(window.location.pathname === defaultPath + "admin/all-users")
+        // {
+        //     reloadAllUsers();
+        // }
         filter();
     }
     if(window.location.pathname === defaultPath + "my-account/edit")

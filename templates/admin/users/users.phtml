@@ -23,6 +23,8 @@
                     $userId = 'user-id-'.$count;
                     $userRoleId = 'user-role-id-'.$count;
                     $submitForm = 'submit-change-role-'.$count;
+                    $submitDeleteForm = 'submit-delete-account-admin-'.$count;
+                    $userIdToDelete = 'user_id_'.$count;
 
                     echo 
                         "<tr class='data'>
@@ -34,10 +36,10 @@
                             echo 
                                 "<td>
                                     <form action='/res04-projet-soutenance/admin/all-users' method='POST'>
-                                        <input type='hidden' name='user_id' id='user_id' value='".$user->getId()."'>
-                                        <input type='submit' name='submit-delete-account-admin' id='submit-delete-account-admin' value='Delete'>
+                                        <input type='hidden' name='user_id' id='".$userIdToDelete."' value='".$user->getId()."'>
+                                        <input type='submit' name='submit-delete-account-admin' id='".$submitDeleteForm."' value='Delete'>
                                     </form>
-                                    <form action='/res04-projet-soutenance/admin/all-users' method='POST'>
+                                    <form action='role-edit' method='POST'>
                                         <input type='hidden' name='form-name' id='".$formName."' value='change-role'>
                                         <input type='hidden' name='user_to_edit_id' id='".$userId."' value='".$user->getId()."'>
                                         <input type='hidden' name='user_role_id' id='".$userRoleId."' value='1'>

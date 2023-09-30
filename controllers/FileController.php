@@ -1463,13 +1463,8 @@ class FileController extends AbstractController {
                 $this->fm->addFile($newFile);
 
                 $response = ['success' => true];
-                // $this->toJson($response);
-                // $fileId = $newFile->getId();
-                // $_SESSION['file_id'] = $fileId;
-                
-                // $this->readSavedFile($_SESSION['file_id']);
-                
-                echo "File uploaded with success";
+                header('Content-Type: application/json');
+                echo json_encode($response);
             }
             else
             {

@@ -3,12 +3,13 @@
 function reloadAllUsers()
 {
     let editRoleForm = document.querySelectorAll('.data td:last-of-type form:last-of-type');
-    console.log(editRoleForm);
+    // console.log(editRoleForm);
     
     for(let i=0; i<editRoleForm.length; i++)
     {
         editRoleForm[i].addEventListener('submit', function(event) {
             event.preventDefault();
+            let td = document.querySelectorAll('.data td:last-of-type');
 
             // I retrieve the different IDs
             let submit = 'submit-change-role-'+i;
@@ -26,7 +27,7 @@ function reloadAllUsers()
                 body: formData
             };
     
-            fetch('/res04-projet-soutenance/admin/all-users', options)
+            fetch('all-users', options)
             .then(function(response)
             {
                 if(!response.ok)
@@ -38,7 +39,9 @@ function reloadAllUsers()
             .then(function(data) 
             {
                 console.log(data);
-                window.location.reload();
+
+                td[i + 1].value = "";
+                // window.location.reload();
             })
             .catch(function(error) {
                 console.error('Erreur lors de la requête fetch :', error);
