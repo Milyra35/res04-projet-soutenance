@@ -18,7 +18,7 @@ function reloadPage()
             body: formData
         };
         
-        fetch('list-games', options)
+        fetch('my-games', options)
         .then(response => response.json())
         .then(data => {
             console.log(data);

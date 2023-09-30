@@ -1465,7 +1465,7 @@ class FileController extends AbstractController {
                 $this->fm->addFile($newFile);
 
                 // header('Content-Type: application/json');
-                echo $this->toJson(['file' => $fileName]);
+                // echo $this->toJson(['file' => $fileName]);
             }
             else
             {
