@@ -10,7 +10,7 @@ import { darkMode } from './darkMode.js';
 
 window.addEventListener("DOMContentLoaded", function() {
     let defaultPath = "/res04-projet-soutenance/";
-
+    
     // I want to load only specific functions on specific pages
     if(!window.location.pathname.includes(defaultPath + "admin"))
     {
@@ -30,10 +30,6 @@ window.addEventListener("DOMContentLoaded", function() {
     }
     if(window.location.pathname === defaultPath + "admin/all-users" || window.location.pathname === defaultPath + "villagers")
     {
-        // if(window.location.pathname === defaultPath + "admin/all-users")
-        // {
-        //     reloadAllUsers();
-        // }
         filter();
     }
     if(window.location.pathname === defaultPath + "my-account/edit")
@@ -44,9 +40,8 @@ window.addEventListener("DOMContentLoaded", function() {
     {
         validateEditForm();
     }
-    if(window.location.pathname === defaultPath + "my-games")
-    {
-        reloadPage();
-    }
-    
+    // if(window.location.pathname === defaultPath + "my-games")
+    // {
+    //     reloadPage();
+    // }
 })

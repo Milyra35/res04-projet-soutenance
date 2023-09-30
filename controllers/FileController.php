@@ -1439,7 +1439,7 @@ class FileController extends AbstractController {
     // To add the file with the form
     public function uploadFile()
     {
-        $this->render('user/games.phtml', []);
+        // $this->render('user/games.phtml', []);
 
         if(isset($_POST['upload-file']))
         {
@@ -1464,8 +1464,8 @@ class FileController extends AbstractController {
                 
                 $this->fm->addFile($newFile);
 
-                header('Content-Type: application/json');
-                $this->toJson(['file' => $newFile]);
+                // header('Content-Type: application/json');
+                echo $this->toJson(['file' => $fileName]);
             }
             else
             {

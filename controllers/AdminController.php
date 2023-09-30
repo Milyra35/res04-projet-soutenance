@@ -62,7 +62,7 @@ class AdminController extends AbstractController {
         $total[] = $averageSeasons;
         $total[] = $averageFishes;
         // var_dump($total);
-
+        
         $this->render('users/statistics.phtml', ['stats' => $stats, 'total' => $total], "admin");
     }
 

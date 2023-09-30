@@ -4,11 +4,14 @@ function reloadPage()
 {
     let form = document.getElementById('file-upload');
     let list = document.querySelector('.games section ul');
+    let submit = document.getElementById('upload-file');
 
     form.addEventListener('submit', function(e) {
         e.preventDefault();
         
-        let formData = new FormData(form);
+        let formData = new FormData();
+        formData.append('file', document.getElementById('saved-file'));
+        formData.append(submit, true);
 
         let options = {
             method: "POST",
@@ -19,6 +22,7 @@ function reloadPage()
         .then(response => response.json())
         .then(data => {
             console.log(data);
+            
             list.innerHTML = '';
 
             for(let i=0; i<data.length; i++)
