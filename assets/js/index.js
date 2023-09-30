@@ -4,9 +4,9 @@ import { validateEditForm } from './validateEditForm.js';
 import { validateEditUserForm } from './validateEditUserForm.js';
 import { collapseData } from './collapseData.js';
 import { filter } from './filter.js';
-import { reloadAllUsers } from './reloadAllUsers.js';
 import { reloadPage } from './reloadPage.js';
 import { darkMode } from './darkMode.js';
+import { resizeText } from './fontSize.js';
 
 window.addEventListener("DOMContentLoaded", function() {
     let defaultPath = "/res04-projet-soutenance/";
@@ -15,6 +15,7 @@ window.addEventListener("DOMContentLoaded", function() {
     if(!window.location.pathname.includes(defaultPath + "admin"))
     {
         darkMode();
+        resizeText();
     }
     if(window.location.pathname.includes(defaultPath + "villagers/") || window.location.pathname.includes(defaultPath + "my-games/"))
     {
