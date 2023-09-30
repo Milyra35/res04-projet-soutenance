@@ -54,6 +54,10 @@ class Router {
                 {
                     $routeAndParams['fileSlug'] = $tab[1];
                 }
+                if($tab[0] === "list-games")
+                {
+                    $routeAndParams['route'] = "list-games";
+                }
             }
             else if($tab[0] === "my-account")
             {
@@ -166,7 +170,7 @@ class Router {
             {
                 if($routeTab['fileSlug'] === null)
                 {
-                    $this->fc->uploadFile();
+                    // $this->fc->uploadFile();
                     $this->fc->indexGames();
                 }
                 else if($routeTab['route'] === "my-games" && $routeTab['fileSlug'] !== null)
@@ -183,6 +187,10 @@ class Router {
                     {
                         header("Location:/res04-projet-soutenance/my-games");
                     }
+                }
+                else if($routeTab['route'] === "list-games")
+                {
+                    $this->fc->uploadFile();
                 }
             }
             else

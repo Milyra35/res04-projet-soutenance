@@ -1439,6 +1439,8 @@ class FileController extends AbstractController {
     // To add the file with the form
     public function uploadFile()
     {
+        $this->render('user/games.phtml', []);
+
         if(isset($_POST['upload-file']))
         {
             // Verify if the file has been uploaded with success
@@ -1463,8 +1465,7 @@ class FileController extends AbstractController {
                 $this->fm->addFile($newFile);
 
                 header('Content-Type: application/json');
-                $response = ['name' => $fileName];
-                echo json_encode($response);
+                $this->toJson(['file' => $newFile]);
             }
             else
             {
@@ -1492,7 +1493,6 @@ class FileController extends AbstractController {
     {
         $gamesSaved = $this->fm->getGamesByUser($_SESSION['user_id']);
         $this->render('user/games.phtml', $gamesSaved);
-        // $this->toJson($gamesSaved);
     }
 
     // When a user is deleted, their file and the data stored in the database is also deleted
