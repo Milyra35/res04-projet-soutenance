@@ -54,10 +54,11 @@ class UserController extends AbstractController {
                 // We add it to the database
                 $this->um->createUser($user);
 
-                header("Location:/res04-projet-soutenance/login");
+                // header("Location:/res04-projet-soutenance/login");
             }
-            else
+            else if($existingUser)
             {
+                http_response_code(400);
                 $error = $this->toJson(['message' => "This username already exists"]);
                 // If it already exists, return on the register form
                 // $this->render("user/create.phtml", $error);

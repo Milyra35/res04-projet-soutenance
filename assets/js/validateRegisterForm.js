@@ -12,7 +12,8 @@ function validateRegisterForm()
         let password = document.getElementById('password').value;
         let confirmPassword = document.getElementById('confirm-password').value;
 
-        // Effectuez une validation plus détaillée ici (longueur minimale, adresse e-mail valide, correspondance des mots de passe, etc.)
+        let user = new User(username, email, password, confirmPassword);
+        let validate = user.validate();
 
         // Créez un objet FormData pour envoyer les données au serveur
         let formData = new FormData();
@@ -21,29 +22,29 @@ function validateRegisterForm()
         formData.append('password', password);
         formData.append('confirmPassword', confirmPassword);
 
-        try {
-            let response = await fetch('/res04-projet-soutenance/register', {
-                method: 'POST',
-                body: formData
-            });
+        let options = {
+            method: 'POST',
+            body: formData
+        };
 
-            if (response.ok) {
-                console.log(response);
-                // L'inscription s'est bien déroulée, redirigez l'utilisateur vers une page de confirmation
+        fetch('/res04-projet-soutenance/register', options)
+        .then(response => {
+            if (validate && response.ok) {
+                console.log(response.status);
                 // window.location.href = '/res04-projet-soutenance/login';
-            } else {
-                // Gérez les erreurs du serveur et fournissez un message d'erreur approprié à l'utilisateur
-                let errorResponse = await response.json();
-                if (errorResponse && errorResponse.error) {
-                    let errorElement = document.querySelector('.errorUsername');
-                    errorElement.textContent = errorResponse.error;
-                } else {
-                    console.error('Erreur inattendue du serveur');
-                }
+            } 
+            else if (response.status === 400) 
+            {
+                // Gérez les erreurs du serveur et affichez le message d'erreur
+                return response.json().then(data => {
+                    let error = document.querySelector('.errorUsername');
+                    error.textContent = data.message;
+                });
             }
-        } catch (error) {
-            console.error('Erreur lors de la requête fetch', error);
-        }
+        })
+        .catch(error => {
+            console.error('Erreur de la requête fetch', error);
+        });
     });
 }
 
