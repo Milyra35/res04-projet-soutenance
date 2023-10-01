@@ -162,6 +162,11 @@ footer nav ul li a {
   color: #FAFAFA;
   text-decoration: none;
 }
+footer p {
+  text-align: center;
+  color: #FAFAFA;
+  padding-top: 0.5rem;
+}
 
 /**** MEDIA QUERIES FOR TABLETS ****/
 @media only screen and (min-width: 768px) and (max-width: 992px) {
@@ -469,7 +474,7 @@ footer nav ul li a {
   justify-self: self-start;
 }
 .player-progress article.artifacts h4 {
-  color: #FAFAFA;
+  color: #0C092B;
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
@@ -1023,6 +1028,25 @@ html body.dark-mode main .search::-moz-placeholder {
 }
 html body.dark-mode main .search::placeholder {
   color: #D9D9D9;
+}
+html body.dark-mode main form.forms fieldset input[type=text]::-moz-placeholder, html body.dark-mode main form.forms fieldset input[type=password]::-moz-placeholder, html body.dark-mode main form.forms fieldset input[type=email]::-moz-placeholder {
+  color: #FAFAFA;
+}
+html body.dark-mode main form.forms fieldset input[type=text]::placeholder, html body.dark-mode main form.forms fieldset input[type=password]::placeholder, html body.dark-mode main form.forms fieldset input[type=email]::placeholder {
+  color: #FAFAFA;
+}
+html body.dark-mode main form.forms fieldset input[type=text]:focus, html body.dark-mode main form.forms fieldset input[type=password]:focus, html body.dark-mode main form.forms fieldset input[type=email]:focus {
+  color: #FAFAFA;
+}
+html body.dark-mode main form.forms fieldset p.info span {
+  background-color: #FAFAFA;
+  color: #0c092b;
+}
+html body.dark-mode main table tbody tr th {
+  color: #0c092b;
+}
+html body.dark-mode main.games ul li a {
+  color: #FAFAFA;
 }
 
 /**** MEDIA QUERIES FOR TABLETS ****/

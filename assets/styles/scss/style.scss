@@ -169,6 +169,51 @@ html {
                         color: $background-body;
                     }
                 }
+
+                form {
+                    &.forms {
+                        fieldset {
+                            input[type=text], input[type=password], input[type=email] {
+                                &::placeholder {
+                                    color: $background-main;
+                                }
+
+                                &:focus {
+                                    color: $background-main;
+                                }
+                            }
+
+                            p {
+                                &.info {
+                                    span {
+                                        background-color: $background-main;
+                                        color: $background-main-dark;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                table {
+                    tbody {
+                        tr {
+                            th {
+                                color: $background-main-dark;
+                            }
+                        }
+                    }
+                }
+
+                &.games {
+                    ul {
+                        li {
+                            a {
+                                color: $background-main;
+                            }
+                        }
+                    }
+                }
             }
         }
     }

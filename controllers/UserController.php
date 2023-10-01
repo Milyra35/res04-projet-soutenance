@@ -58,8 +58,9 @@ class UserController extends AbstractController {
             }
             else
             {
+                $error = $this->toJson(['message' => "This username already exists"]);
                 // If it already exists, return on the register form
-                $this->render("user/create.phtml", ['message' => "Username already exists"]);
+                // $this->render("user/create.phtml", $error);
             }
         }
         else
