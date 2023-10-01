@@ -61,6 +61,26 @@ header nav ul li button, header nav ul li input {
 header nav ul li button {
   background-image: url("/res04-projet-soutenance/assets/images/moon.png");
 }
+header .font-size {
+  position: absolute;
+  top: 8rem;
+  left: 2rem;
+}
+header .font-size button {
+  border: none;
+  background-color: #4361EE;
+  -webkit-clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+          clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+  cursor: pointer;
+}
+header .font-size button:first-of-type {
+  font-size: 1.1rem;
+  padding: 0.5rem 0.7rem;
+}
+header .font-size button:last-of-type {
+  font-size: 0.9rem;
+  padding: 0.7rem 0.9rem;
+}
 
 /**** MEDIA QUERIES FOR TABLETS ****/
 @media only screen and (min-width: 768px) and (max-width: 992px) {
@@ -75,6 +95,13 @@ header nav ul li button {
   }
   header nav ul li {
     padding: 0 1.5rem;
+  }
+  header .font-size {
+    top: 1rem;
+    left: 1rem;
+  }
+  header .font-size button {
+    background-color: #FAFAFA;
   }
 }
 /**** MEDIA QUERIES FOR SMARTPHONES ****/
@@ -95,6 +122,13 @@ header nav ul li button {
   }
   header nav ul li {
     padding: 0.4rem 0;
+  }
+  header .font-size {
+    top: 1rem;
+    left: 1rem;
+  }
+  header .font-size button {
+    background-color: #FAFAFA;
   }
 }
 /**** MEDIA QUERIES FOR SMALLER LAPTOPS ****/

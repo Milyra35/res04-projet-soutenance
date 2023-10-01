@@ -17,6 +17,10 @@ window.addEventListener("DOMContentLoaded", function() {
         darkMode();
         resizeText();
     }
+    if(window.location.pathname === defaultPath + "admin/all-users" || window.location.pathname === defaultPath + "villagers")
+    {
+        filter();
+    }
     if(window.location.pathname.includes(defaultPath + "villagers/") || window.location.pathname.includes(defaultPath + "my-games/"))
     {
         collapseData();
@@ -28,10 +32,6 @@ window.addEventListener("DOMContentLoaded", function() {
     if(window.location.pathname === defaultPath + "login")
     {
         validateLoginForm();  
-    }
-    if(window.location.pathname === defaultPath + "admin/all-users" || window.location.pathname === defaultPath + "villagers")
-    {
-        filter();
     }
     if(window.location.pathname === defaultPath + "my-account/edit")
     {

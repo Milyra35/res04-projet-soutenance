@@ -15,9 +15,9 @@
             {
         ?>
 
-        <li class="data-row">
+        <li class="data">
             <img src="<?= $villager->getPicture()->getUrl() ;?>" alt="<?= $villager->getPicture()->getAlt();?>">
-            <a href="/res04-projet-soutenance/villagers/<?= $villager->getId();?>"><?= $villager->getName();?></a>
+            <a href="/res04-projet-soutenance/villagers/<?= $villager->getId();?>" class="data-row"><?= $villager->getName();?></a>
         </li>
 
         <?php        
