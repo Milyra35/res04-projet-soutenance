@@ -991,7 +991,7 @@ html body .accessibility a {
 }
 html body .accessibility a:focus {
   opacity: 1;
-  top: 8rem;
+  top: 12rem;
 }
 html body.dark-mode {
   background-color: #050314;
