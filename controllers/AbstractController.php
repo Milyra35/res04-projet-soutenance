@@ -11,7 +11,7 @@ abstract class AbstractController {
 
     public function toJson(array $data)
     {
-        return json_encode($data);
+        echo json_encode($data);
     }
 }
 

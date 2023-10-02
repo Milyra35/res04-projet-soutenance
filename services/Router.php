@@ -54,10 +54,6 @@ class Router {
                 {
                     $routeAndParams['fileSlug'] = $tab[1];
                 }
-                // if(isset($tab[1]) && $tab[1] === "list-games")
-                // {
-                //     $routeAndParams['my-games'] = $tab[1];
-                // }
             }
             else if($tab[0] === "list-games")
             {

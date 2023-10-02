@@ -3,8 +3,9 @@ import { User } from './classe/User.js';
 function validateRegisterForm()
 {
     let registerForm = document.getElementById('register-form');
+    let isValid = null;
 
-    registerForm.addEventListener("submit", async function(event) {
+    registerForm.addEventListener("submit", function(event) {
         event.preventDefault();
 
         let username = document.getElementById('username').value;
@@ -15,12 +16,9 @@ function validateRegisterForm()
         let user = new User(username, email, password, confirmPassword);
         let validate = user.validate();
 
-        // Créez un objet FormData pour envoyer les données au serveur
         let formData = new FormData();
         formData.append('username', username);
-        formData.append('email', email);
-        formData.append('password', password);
-        formData.append('confirmPassword', confirmPassword);
+        formData.append('submit-new-user', true);
 
         let options = {
             method: 'POST',
@@ -28,23 +26,32 @@ function validateRegisterForm()
         };
 
         fetch('/res04-projet-soutenance/register', options)
-        .then(response => {
-            if (validate && response.ok) {
-                console.log(response.status);
-                // window.location.href = '/res04-projet-soutenance/login';
-            } 
-            else if (response.status === 400) 
+        .then(response => response.json())
+        .then(data => {
+            if(data.exists)
             {
-                // Gérez les erreurs du serveur et affichez le message d'erreur
-                return response.json().then(data => {
-                    let error = document.querySelector('.errorUsername');
-                    error.textContent = data.message;
-                });
+                let errorUsername = document.querySelector('.errorUsername');
+                errorUsername.textContent = "This username already exists";
+                isValid = false;
+            }
+            else if(!validate)
+            {
+                isValid = false;
+            }
+            else
+            {
+                isValid = true;
             }
         })
         .catch(error => {
-            console.error('Erreur de la requête fetch', error);
-        });
+            console.error('An error occured: ' + error);
+        })
+        .finally(() => {
+            if(isValid === true)
+            {
+                registerForm.submit();
+            }
+        })
     });
 }
 
