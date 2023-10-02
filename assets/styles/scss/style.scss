@@ -169,10 +169,16 @@ html {
                     color: $background-body;
                 }
 
-                .search {
-                    background-color: rgba(214, 30, 146, 0.4);;
-                    &::placeholder {
-                        color: $background-body;
+                &.all-villagers {
+                    .search {
+                        background-color: rgba(214, 30, 146, 0.4);;
+                        &::placeholder {
+                            color: $background-body;
+                        }
+
+                        &:focus {
+                            color: $background-main;
+                        }
                     }
                 }
 

@@ -234,8 +234,9 @@ class Router {
                 else if($routeTab['admin'] === "all-users")
                 {
                     $this->ac->getAllUsers();
-                    $this->ac->deleteUserFromAdmin();
-                    // $this->ac->changeRoleOfUser();
+                    $this->fc->deleteUserFromAdmin();
+                    $this->ac->changeRoleOfUser();
+                    $this->ac->changeRoleofAdmin();
                 }
                 else if($routeTab['admin'] === "all-saved-games")
                 {
@@ -248,10 +249,6 @@ class Router {
                 else if($routeTab['admin'] === "edit")
                 {
                     $this->ac->editAdmin();
-                }
-                else if($routeTab['admin'] === "role-edit")
-                {
-                    $this->ac->changeRoleOfUser();
                 }
             }
             else

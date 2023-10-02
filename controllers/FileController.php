@@ -1547,6 +1547,16 @@ class FileController extends AbstractController {
             $this->render("user/delete.phtml", []);
         }
     }
+
+    // To delete a User in the list of all users in the back-office
+    public function deleteUserFromAdmin()
+    {
+        if(isset($_POST['submit-delete-account-admin']))
+        {
+            $this->deleteData($_POST['user_id']);
+            $this->um->deleteUser($_POST['user_id']);
+        }
+    }
 }
 
 ?>

@@ -66,15 +66,6 @@ class AdminController extends AbstractController {
         $this->render('users/statistics.phtml', ['stats' => $stats, 'total' => $total], "admin");
     }
 
-    // To delete a User in the list of all users
-    public function deleteUserFromAdmin()
-    {
-        if(isset($_POST['submit-delete-account-admin']))
-        {
-            $this->um->deleteUser($_POST['user_id']);
-        }
-    }
-
     // To change the role of an admin
     public function changeRoleOfUser()
     {
@@ -82,8 +73,15 @@ class AdminController extends AbstractController {
         {
             $this->um->editRole($_POST['user_to_edit_id'], $_POST['user_role_id']);
             // echo json_encode(['message' => 'Success']);
+        }
+    }
 
-            header('Location:/res04-projet-soutenance/admin/all-users');
+    // To change the role of one of the admin
+    public function changeRoleOfAdmin()
+    {
+        if(isset($_POST['submit-change-to-user']))
+        {
+            $this->um->editRole($_POST['admin_to_edit_id'], $_POST['admin_role_id']);
         }
     }
 

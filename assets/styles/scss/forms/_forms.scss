@@ -82,6 +82,12 @@ form {
             }
         }
 
+        a {
+            &.pink {
+                color: $pink;
+            }
+        }
+
         input[type=submit] {
             justify-self: center;
             margin-top: 1rem;

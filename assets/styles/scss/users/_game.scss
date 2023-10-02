@@ -63,6 +63,16 @@
 
                     p {
                         margin-left: .6rem;
+
+                        span {
+                            &.green {
+                                color: $green;
+                            }
+
+                            &.pink {
+                                color: $pink;
+                            }
+                        }
                     }
                 }
             }
