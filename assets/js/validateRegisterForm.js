@@ -23,7 +23,7 @@ function validateRegisterForm()
         }
         else
         {
-            let formData = new FormData();
+            let formData = new FormData(); // Representation of a form in JS
             formData.append('username', username);
             formData.append('email', email);
             formData.append('password', password);

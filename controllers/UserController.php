@@ -153,11 +153,14 @@ class UserController extends AbstractController {
                 $user->setId($_SESSION['user_id']);
                 $this->um->editUser($user);
 
-                header("Location:/res04-projet-soutenance/my-account");
+                header('Content-Type: application/json');
+                $this->toJson(['exists' => false]);
             }
             else 
             {
-                $this->render("user/edit.phtml", ['message' => 'This username already exists']);
+                header('Content-Type: application/json');
+                $this->toJson(['exists' => true]);
+                // $this->render("user/edit.phtml", ['message' => 'This username already exists']);
             }
         }
         else
