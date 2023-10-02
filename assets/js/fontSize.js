@@ -6,26 +6,34 @@ function resizeText()
     let decreaseBtn = document.querySelector(".font-size button:last-of-type");
     let body = document.querySelector('.user-layout');
 
+    // I want to de define a max and min size of the font
+    let maxFont = 26;
+    let minFont = 12;
+
     // Returns the value of the font-size of the body
     let fontSize = parseFloat(getComputedStyle(body).fontSize);
 
     increaseBtn.addEventListener('click', function() {
         fontSize += 4;
-        body.style.fontSize = fontSize + "px";
-        // body.style.lineHeight = 1.8 + "rem";
 
-        // To prevent the buttons from moving, I have to define a default font-size for them
-        increaseBtn.style.fontSize = 1.1 + "rem";
-        decreaseBtn.style.fontSize = 0.9 + "rem";
+        if(fontSize > maxFont)
+        {
+            fontSize = maxFont;
+        }
+
+        body.style.fontSize = fontSize + "px";
+        body.style.lineHeight = 1.8 + "rem";
     });
 
     decreaseBtn.addEventListener('click', function() {
         fontSize -= 4;
-        body.style.fontSize = fontSize + "px";
-        // body.style.lineHeight = 1.4 + "rem";
 
-        increaseBtn.style.fontSize = 1.1 + "rem";
-        decreaseBtn.style.fontSize = 0.9 + "rem";
+        if(fontSize < minFont)
+        {
+            fontSize = minFont;
+        }
+        body.style.fontSize = fontSize + "px";
+        body.style.lineHeight = 1.4 + "rem";
     })
 }
 
