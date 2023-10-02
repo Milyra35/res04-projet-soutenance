@@ -54,16 +54,13 @@ class UserController extends AbstractController {
                 // We add it to the database
                 $this->um->createUser($user);
 
+                header('Content-Type: application/json');
                 $this->toJson(['exists' => false]);
-
-                // header("Location:/res04-projet-soutenance/login");
             }
             else
             {
                 header('Content-Type: application/json');
                 $this->toJson(['exists' => true]);
-                // If it already exists, return on the register form
-                // $this->render("user/create.phtml", $error);
             }
         }
         else

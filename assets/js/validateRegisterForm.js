@@ -3,7 +3,7 @@ import { User } from './classe/User.js';
 function validateRegisterForm()
 {
     let registerForm = document.getElementById('register-form');
-    let isValid = null;
+    let isValid = true;
 
     registerForm.addEventListener("submit", function(event) {
         event.preventDefault();
@@ -18,6 +18,9 @@ function validateRegisterForm()
 
         let formData = new FormData();
         formData.append('username', username);
+        formData.append('email', email);
+        formData.append('password', password);
+        formData.append('confirm-password', confirmPassword);
         formData.append('submit-new-user', true);
 
         let options = {
@@ -41,16 +44,12 @@ function validateRegisterForm()
             else
             {
                 isValid = true;
+                registerForm.submit();
+                window.location.href = "/res04-projet-soutenance/login";
             }
         })
         .catch(error => {
             console.error('An error occured: ' + error);
-        })
-        .finally(() => {
-            if(isValid === true)
-            {
-                registerForm.submit();
-            }
         })
     });
 }
