@@ -65,6 +65,12 @@ html {
             &.staticpages {
                 section {
                     margin-top: 1.6rem;
+
+                    p {
+                        a {
+                            color:$pink;
+                        }
+                    }
                 }
             }
         }

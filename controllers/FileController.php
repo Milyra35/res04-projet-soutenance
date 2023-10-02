@@ -1463,9 +1463,6 @@ class FileController extends AbstractController {
                 $newFile->setDate($uploadDate);
                 
                 $this->fm->addFile($newFile);
-
-                // header('Content-Type: application/json');
-                // echo $this->toJson(['file' => $fileName]);
             }
             else
             {
@@ -1482,7 +1479,7 @@ class FileController extends AbstractController {
                 else
                 {
                     // var_dump($_FILES['saved-file']['error']);
-                    echo "Try again later";
+                    $this->toJson(['message' => "Try again later"]);
                 }
             }
         }

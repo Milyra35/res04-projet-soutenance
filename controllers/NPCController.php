@@ -56,7 +56,6 @@ class NPCController extends AbstractController {
             $picture = $this->pm->getPictureByName($name);
 
             $newVillager = new Villager($name, $love, $like, $neutral, $dislike, $hate, $isDatable, $birthday, $events, $picture);
-            // $json=$newVillager;
             $this->vm->addVillager($newVillager);
             // var_dump($villager->loves);
         }

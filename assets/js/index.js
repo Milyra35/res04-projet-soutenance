@@ -4,7 +4,6 @@ import { validateEditForm } from './validateEditForm.js';
 import { validateEditUserForm } from './validateEditUserForm.js';
 import { collapseData } from './collapseData.js';
 import { filter } from './filter.js';
-import { reloadPage } from './reloadPage.js';
 import { darkMode } from './darkMode.js';
 import { resizeText } from './fontSize.js';
 
@@ -41,8 +40,4 @@ window.addEventListener("DOMContentLoaded", function() {
     {
         validateEditForm();
     }
-    // if(window.location.pathname === defaultPath + "my-games")
-    // {
-    //     reloadPage();
-    // }
 })

@@ -6,6 +6,7 @@ function validateRegisterForm()
     let isValid = true;
 
     registerForm.addEventListener("submit", function(event) {
+        // I prevent the form from submitting
         event.preventDefault();
 
         let username = document.getElementById('username').value;
@@ -16,11 +17,9 @@ function validateRegisterForm()
         let user = new User(username, email, password, confirmPassword);
         let validate = user.validate();
 
-        
-
         if(!validate)
         {
-            isValid = false;
+            isValid = false; // If the user.validate returns false, the submit won't work
         }
         else
         {
@@ -36,18 +35,18 @@ function validateRegisterForm()
                 body: formData
             };
 
-            fetch('/res04-projet-soutenance/register', options)
+            fetch('/res04-projet-soutenance/register', options) // I fetch the informations on the server side
             .then(response => response.json())
             .then(data => {
                 if(data.exists)
                 {
-                    let errorUsername = document.querySelector('.errorUsername');
+                    let errorUsername = document.querySelector('.errorUsername'); // I show the error if the username already exists
                     errorUsername.textContent = "This username already exists";
                     isValid = false;
                 }
                 else
                 {
-                    isValid = true;
+                    isValid = true; // If everything's okay, the form is submitted and the user is saved in the database
                     registerForm.submit();
                     window.location.href = "/res04-projet-soutenance/login";
                 }
@@ -56,29 +55,6 @@ function validateRegisterForm()
                 console.error('An error occured: ' + error);
             })
         }
-
-        // fetch('/res04-projet-soutenance/register', options)
-        // .then(response => response.json())
-        // .then(data => {
-        //     if(data.exists || !validate)
-        //     {
-        //         if(data.exists)
-        //         {
-        //             let errorUsername = document.querySelector('.errorUsername');
-        //             errorUsername.textContent = "This username already exists";
-        //         }
-        //         isValid = false;
-        //     }
-        //     else
-        //     {
-        //         isValid = true;
-        //         registerForm.submit();
-        //         window.location.href = "/res04-projet-soutenance/login";
-        //     }
-        // })
-        // .catch(error => {
-        //     console.error('An error occured: ' + error);
-        // })
     });
 }
 

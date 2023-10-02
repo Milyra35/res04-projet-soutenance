@@ -953,6 +953,9 @@ html body main .title.button-focus {
 html body main.staticpages section {
   margin-top: 1.6rem;
 }
+html body main.staticpages section p a {
+  color: #D61E92;
+}
 html body a {
   text-decoration: none;
   display: inline-block;
