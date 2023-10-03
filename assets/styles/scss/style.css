@@ -1087,7 +1087,7 @@ html body.dark-mode main.games ul li a {
 html body.transition {
   transition: background-color 0.3s ease-in-out;
 }
-html body.transition * {
+html body.transition main, html body.transition main > * {
   transition: background-color 0.3s ease-in-out;
 }
 
