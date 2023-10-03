@@ -13,6 +13,34 @@ header {
     img {
         grid-area: 1/1/2/2;
         width: 16rem;
+        
+        &:hover {
+            animation: moving 1s both;
+
+            @keyframes moving {
+                0% {
+                    transform: translateX(0%);
+                }
+                10% {
+                    transform: translateX(-10px) rotate(-3deg);
+                }
+                20% {
+                    transform: translateX(5px) rotate(3deg);
+                }
+                30% {
+                    transform: translateX(-5px) rotate(-1.7deg);
+                }
+                40% {
+                    transform: translateX(2px) rotate(2.2deg);
+                }
+                50% {
+                    transform: translateX(-1px) rotate(-1.2deg);
+                }
+                100% {
+                    transform: translateX();
+                }
+            }
+        }
     }
 
     nav {

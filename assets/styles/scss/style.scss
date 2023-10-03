@@ -229,6 +229,15 @@ html {
                 }
             }
         }
+
+        // To ease the transition between light and dark mode
+        &.transition {
+            transition: background-color .3s ease-in-out;
+
+            & * {
+                transition: background-color .3s ease-in-out;
+            }
+        }
     }
 }
 
