@@ -86,6 +86,18 @@ class Router {
                 {
                     $routeAndParams['admin'] = $tab[1];
                 }
+                else if(isset($tab[1]) && $tab[1] === "edit-user")
+                {
+                    $routeAndParams['admin'] = $tab[1];
+                }
+                else if(isset($tab[1]) && $tab[1] === "delete-user")
+                {
+                    $routeAndParams['admin'] = $tab[1];
+                }
+                else if(isset($tab[1]) && $tab[1] === "edit-role")
+                {
+                    $routeAndParams['admin'] = $tab[1];
+                }
             }
             else if($tab[0] === "login")
             {
@@ -230,9 +242,6 @@ class Router {
                 else if($routeTab['admin'] === "all-users")
                 {
                     $this->ac->getAllUsers();
-                    $this->fc->deleteUserFromAdmin();
-                    $this->ac->changeRoleOfUser();
-                    $this->ac->changeRoleofAdmin();
                 }
                 else if($routeTab['admin'] === "all-saved-games")
                 {
@@ -245,6 +254,18 @@ class Router {
                 else if($routeTab['admin'] === "edit")
                 {
                     $this->ac->editAdmin();
+                }
+                else if($routeTab['admin'] === "edit-user")
+                {
+                    $this->ac->changeRoleOfUser();
+                }
+                else if($routeTab['admin'] === "delete-user")
+                {
+                    $this->fc->deleteUserFromAdmin();
+                }
+                else if($routeTab['admin'] === "edit-role")
+                {
+                    $this->ac->changeRoleofAdmin();
                 }
             }
             else

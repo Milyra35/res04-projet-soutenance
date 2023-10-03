@@ -61,7 +61,7 @@ export class User {
 
     validateUsername()
     {
-        if(this.username.length >= 4 && this.username.length <= 64)
+        if(this.username.length >= 4 && this.username.length <= 64 && this.username.trim() !== "")
         {
             let username = document.querySelector('.errorUsername');
             username.innerHTML = "";

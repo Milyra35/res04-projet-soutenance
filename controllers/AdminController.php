@@ -72,7 +72,7 @@ class AdminController extends AbstractController {
         if(isset($_POST['submit-change-role']))
         {
             $this->um->editRole($_POST['user_to_edit_id'], $_POST['user_role_id']);
-            // echo json_encode(['message' => 'Success']);
+            header('Location:/res04-projet-soutenance/admin/all-users');
         }
     }
 
@@ -82,6 +82,7 @@ class AdminController extends AbstractController {
         if(isset($_POST['submit-change-to-user']))
         {
             $this->um->editRole($_POST['admin_to_edit_id'], $_POST['admin_role_id']);
+            header('Location:/res04-projet-soutenance/admin/all-users');
         }
     }
 

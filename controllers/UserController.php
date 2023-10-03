@@ -131,8 +131,28 @@ class UserController extends AbstractController {
         {
             $existingUser = $this->um->verifyUsername(htmlspecialchars($_POST['new-user-username']));
 
+            if($_SESSION['user']->getUsername() === $_POST['new-user-username'])
+            {
+                if(!empty($_POST['new-user-email']))
+                {
+                    $newEmail = htmlspecialchars($_POST['new-user-email']);
+                }
+                if(!empty($_POST['new-user-password']) && $_POST['new-user-password'] === $_POST['confirm-new-user-password'])
+                {
+                    $newPassword = password_hash($_POST['new-user-password'], PASSWORD_DEFAULT);
+                }
+
+                $newUsername = $_SESSION['user']->getUsername();
+                $role = new Role(2, "user");
+                $user = new User($newUsername, $newPassword, $newEmail, $role);
+                $user->setId($_SESSION['user_id']);
+                $this->um->editUser($user);
+
+                header('Location:/res04-projet-soutenance/my-account');
+            }
+
             // Checking if the username already exists
-            if(!$existingUser)
+            else if(!$existingUser)
             {
                 // We get the new informations
                 if(!empty($_POST['new-user-username']))
@@ -153,14 +173,12 @@ class UserController extends AbstractController {
                 $user->setId($_SESSION['user_id']);
                 $this->um->editUser($user);
 
-                header('Content-Type: application/json');
-                $this->toJson(['exists' => false]);
+                header('Location:/res04-projet-soutenance/my-account');
             }
-            else 
+            else
             {
-                header('Content-Type: application/json');
-                $this->toJson(['exists' => true]);
-                // $this->render("user/edit.phtml", ['message' => 'This username already exists']);
+                echo '<p>This username already exists</p>';
+                $this->render('user/edit.phtml', []);
             }
         }
         else

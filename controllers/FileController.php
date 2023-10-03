@@ -1555,6 +1555,7 @@ class FileController extends AbstractController {
         {
             $this->deleteData($_POST['user_id']);
             $this->um->deleteUser($_POST['user_id']);
+            header('Location:/res04-projet-soutenance/admin/all-users');
         }
     }
 }
