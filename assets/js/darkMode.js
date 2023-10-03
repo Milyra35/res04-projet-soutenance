@@ -20,7 +20,7 @@ function darkMode()
 
         if(body.classList.contains('dark-mode'))
         {
-            localStorage.setItem('darkMode', true);
+            localStorage.setItem('darkMode', true); // I store the bool of darkmode so that when i change page, it stays on light or dark mode
         }
         else 
         {
