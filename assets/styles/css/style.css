@@ -53,8 +53,7 @@ header nav ul li a {
   color: #4361EE;
   background-color: #FAFAFA;
   padding: 0.8rem 1.2rem;
-  -webkit-clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
-          clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+  clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
   transition: all 0.2s ease-in-out;
 }
 header nav ul li a:hover {
@@ -80,8 +79,7 @@ header nav ul li button, header nav ul li input {
   background-size: 80%;
   background-repeat: no-repeat;
   background-color: #FAFAFA;
-  -webkit-clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
-          clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+  clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
   cursor: pointer;
 }
 header nav ul li button {
@@ -95,8 +93,7 @@ header .font-size {
 header .font-size button {
   border: none;
   background-color: #4361EE;
-  -webkit-clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
-          clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+  clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
   cursor: pointer;
 }
 header .font-size button:first-of-type {
@@ -255,10 +252,6 @@ footer p {
   padding: 0.5rem 0.4rem;
   background-color: rgba(214, 30, 146, 0.2);
 }
-.all-villagers .search::-moz-placeholder {
-  color: #0C092B;
-  font-family: "Inconsolata", sans-serif;
-}
 .all-villagers .search::placeholder {
   color: #0C092B;
   font-family: "Inconsolata", sans-serif;
@@ -284,8 +277,7 @@ footer p {
   padding-top: 0.6rem;
   padding: 0 0.6rem;
   background-color: #0CC09E;
-  -webkit-clip-path: polygon(20% 0, 20% 10%, 10% 10%, 10% 20%, 0 20%, 0 80%, 10% 80%, 10% 90%, 20% 90%, 20% 100%, 80% 100%, 80% 90%, 90% 90%, 90% 80%, 100% 80%, 100% 20%, 90% 20%, 90% 10%, 80% 10%, 80% 0);
-          clip-path: polygon(20% 0, 20% 10%, 10% 10%, 10% 20%, 0 20%, 0 80%, 10% 80%, 10% 90%, 20% 90%, 20% 100%, 80% 100%, 80% 90%, 90% 90%, 90% 80%, 100% 80%, 100% 20%, 90% 20%, 90% 10%, 80% 10%, 80% 0);
+  clip-path: polygon(20% 0, 20% 10%, 10% 10%, 10% 20%, 0 20%, 0 80%, 10% 80%, 10% 90%, 20% 90%, 20% 100%, 80% 100%, 80% 90%, 90% 90%, 90% 80%, 100% 80%, 100% 20%, 90% 20%, 90% 10%, 80% 10%, 80% 0);
 }
 .all-villagers .villagers ul li a {
   text-decoration: none;
@@ -314,7 +306,6 @@ footer p {
   grid-column-gap: 2rem;
 }
 .villager .single-villager h3:not(.title) {
-  width: -moz-fit-content;
   width: fit-content;
   border: none;
   background-color: #4361EE;
@@ -323,8 +314,7 @@ footer p {
   font-weight: bolder;
   color: #FAFAFA;
   font-size: 1.2rem;
-  -webkit-clip-path: polygon(20% 0, 20% 10%, 10% 10%, 10% 20%, 0 20%, 0 80%, 10% 80%, 10% 90%, 20% 90%, 20% 100%, 80% 100%, 80% 90%, 90% 90%, 90% 80%, 100% 80%, 100% 20%, 90% 20%, 90% 10%, 80% 10%, 80% 0);
-          clip-path: polygon(20% 0, 20% 10%, 10% 10%, 10% 20%, 0 20%, 0 80%, 10% 80%, 10% 90%, 20% 90%, 20% 100%, 80% 100%, 80% 90%, 90% 90%, 90% 80%, 100% 80%, 100% 20%, 90% 20%, 90% 10%, 80% 10%, 80% 0);
+  clip-path: polygon(20% 0, 20% 10%, 10% 10%, 10% 20%, 0 20%, 0 80%, 10% 80%, 10% 90%, 20% 90%, 20% 100%, 80% 100%, 80% 90%, 90% 90%, 90% 80%, 100% 80%, 100% 20%, 90% 20%, 90% 10%, 80% 10%, 80% 0);
 }
 .villager .single-villager h3:not(.title).title:after {
   content: "Schedule ↑";
@@ -334,8 +324,7 @@ footer p {
   justify-self: center;
   width: 14rem;
   background-color: #0CC09E;
-  -webkit-clip-path: polygon(20% 0, 20% 10%, 10% 10%, 10% 20%, 0 20%, 0 80%, 10% 80%, 10% 90%, 20% 90%, 20% 100%, 80% 100%, 80% 90%, 90% 90%, 90% 80%, 100% 80%, 100% 20%, 90% 20%, 90% 10%, 80% 10%, 80% 0);
-          clip-path: polygon(20% 0, 20% 10%, 10% 10%, 10% 20%, 0 20%, 0 80%, 10% 80%, 10% 90%, 20% 90%, 20% 100%, 80% 100%, 80% 90%, 90% 90%, 90% 80%, 100% 80%, 100% 20%, 90% 20%, 90% 10%, 80% 10%, 80% 0);
+  clip-path: polygon(20% 0, 20% 10%, 10% 10%, 10% 20%, 0 20%, 0 80%, 10% 80%, 10% 90%, 20% 90%, 20% 100%, 80% 100%, 80% 90%, 90% 90%, 90% 80%, 100% 80%, 100% 20%, 90% 20%, 90% 10%, 80% 10%, 80% 0);
 }
 .villager .single-villager .villager-general {
   grid-area: 2/1/3/3;
@@ -396,8 +385,7 @@ footer p {
   width: 100%;
   font-size: 1.1rem;
   background-color: #D9D9D9;
-  -webkit-clip-path: none;
-          clip-path: none;
+  clip-path: none;
   color: #0C092B;
   font-weight: bolder;
 }
@@ -441,7 +429,6 @@ footer p {
   padding: 1rem;
 }
 .player-progress article h3 {
-  width: -moz-fit-content;
   width: fit-content;
   text-align: center;
   border: none;
@@ -449,8 +436,7 @@ footer p {
   padding: 0.6rem 0.8rem;
   font-family: "Inconsolata", sans-serif;
   color: #FAFAFA;
-  -webkit-clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
-          clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+  clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
 }
 .player-progress article.player {
   grid-area: 2/1/3/3;
@@ -471,10 +457,8 @@ footer p {
   grid-area: 4/1/5/4;
 }
 .player-progress article.bundles ul {
-  -moz-column-count: 2;
-       column-count: 2;
-  -moz-column-gap: 12rem;
-       column-gap: 12rem;
+  column-count: 2;
+  column-gap: 12rem;
 }
 .player-progress article.bundles ul li {
   display: flex;
@@ -502,13 +486,11 @@ footer p {
 }
 .player-progress article.artifacts h4 {
   color: #0C092B;
-  width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
   padding: 0.4rem 0.6rem;
   background-color: #0CC09E;
-  -webkit-clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
-          clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+  clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
 }
 .player-progress article.artifacts h4:first-of-type {
   grid-row: 1/2;
@@ -547,8 +529,7 @@ footer p {
   width: 80%;
   padding: 0.6rem;
   background-color: #0CC09E;
-  -webkit-clip-path: polygon(20% 0, 20% 10%, 10% 10%, 10% 20%, 0 20%, 0 80%, 10% 80%, 10% 90%, 20% 90%, 20% 100%, 80% 100%, 80% 90%, 90% 90%, 90% 80%, 100% 80%, 100% 20%, 90% 20%, 90% 10%, 80% 10%, 80% 0);
-          clip-path: polygon(20% 0, 20% 10%, 10% 10%, 10% 20%, 0 20%, 0 80%, 10% 80%, 10% 90%, 20% 90%, 20% 100%, 80% 100%, 80% 90%, 90% 90%, 90% 80%, 100% 80%, 100% 20%, 90% 20%, 90% 10%, 80% 10%, 80% 0);
+  clip-path: polygon(20% 0, 20% 10%, 10% 10%, 10% 20%, 0 20%, 0 80%, 10% 80%, 10% 90%, 20% 90%, 20% 100%, 80% 100%, 80% 90%, 90% 90%, 90% 80%, 100% 80%, 100% 20%, 90% 20%, 90% 10%, 80% 10%, 80% 0);
 }
 .player-progress article.relationships .events ul li:hover {
   transform: scale(1.15);
@@ -579,8 +560,7 @@ footer p {
     flex-direction: column;
   }
   .player-progress article.bundles ul {
-    -moz-column-gap: 2rem;
-         column-gap: 2rem;
+    column-gap: 2rem;
   }
 }
 /**** SCSS FOR THE INDEX OF THE GAMES AND THE UPLOADER ****/
@@ -597,8 +577,7 @@ footer p {
   border: 1px solid #D61E92;
   padding: 0.5rem 1rem;
   background-color: rgba(214, 30, 146, 0.2);
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
   text-underline-offset: 0.2rem;
 }
 .games section:first-of-type form input[type=file] {
@@ -624,8 +603,7 @@ footer p {
   margin-left: 1rem;
 }
 .games section:last-of-type ul li a {
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
   text-decoration-color: #0CC09E;
   color: #0C092B;
 }
@@ -649,17 +627,14 @@ footer p {
   font-size: 1.1rem;
 }
 .account a {
-  width: -moz-fit-content;
   width: fit-content;
-  height: -moz-fit-content;
   height: fit-content;
   align-self: center;
   justify-self: center;
   color: #0C092B;
   background-color: #0CC09E;
   padding: 0.5rem 1rem;
-  -webkit-clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
-          clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+  clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
 }
 .account a:first-of-type {
   grid-area: 2/2/3/3;
@@ -710,10 +685,6 @@ form.forms fieldset input {
   border: 1px solid #0CC09E;
   background-color: rgba(12, 192, 158, 0.4);
 }
-form.forms fieldset input::-moz-placeholder {
-  color: #0C092B;
-  font-family: "Inconsolata", sans-serif;
-}
 form.forms fieldset input::placeholder {
   color: #0C092B;
   font-family: "Inconsolata", sans-serif;
@@ -732,7 +703,6 @@ form.forms fieldset p.info {
   grid-area: 1/2/2/3;
   align-self: center;
   justify-self: end;
-  width: -moz-fit-content;
   width: fit-content;
   color: #0C092B;
   font-size: 1rem;
@@ -765,8 +735,7 @@ form.forms input[type=submit] {
   color: #FAFAFA;
   font-size: 1.1rem;
   padding: 0.8rem 1.2rem;
-  -webkit-clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
-          clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+  clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
   cursor: pointer;
 }
 form.forms input[type=submit]:hover {
@@ -811,8 +780,7 @@ form.forms input[type=submit]:hover {
 .admin-header form input {
   border: none;
   background-color: #FAFAFA;
-  -webkit-clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
-          clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+  clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
   color: #4361EE;
   padding: 0.5rem 1rem;
 }
@@ -883,10 +851,6 @@ form.forms input[type=submit]:hover {
   border: 1px solid #D61E92;
   padding: 0.5rem 1rem;
   background-color: rgba(214, 30, 146, 0.2);
-}
-.admin-layout .search-user::-moz-placeholder {
-  font-family: "Inconsolata", sans-serif;
-  color: #0C092B;
 }
 .admin-layout .search-user::placeholder {
   font-family: "Inconsolata", sans-serif;
@@ -964,21 +928,18 @@ html body main {
   box-shadow: inset 0.3rem 0px 0px 0px rgba(217, 217, 217, 0.6), inset -0.3rem 0px 0px 0px rgba(217, 217, 217, 0.6), inset 0.6rem 0px 0px 0px rgba(217, 217, 217, 0.4), inset -0.6rem 0px 0px 0px rgba(217, 217, 217, 0.4);
 }
 html body main .title {
-  width: -moz-fit-content;
   width: fit-content;
   border: none;
   background-color: #4361EE;
   padding: 0.6rem 0.8rem;
   font-family: "Inconsolata", sans-serif;
   color: #FAFAFA;
-  -webkit-clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
-          clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+  clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
   cursor: pointer;
 }
 html body main .title.button-focus {
   font-weight: bolder;
-  -webkit-clip-path: polygon(20% 0, 20% 10%, 10% 10%, 10% 20%, 0 20%, 0 80%, 10% 80%, 10% 90%, 20% 90%, 20% 100%, 80% 100%, 80% 90%, 90% 90%, 90% 80%, 100% 80%, 100% 20%, 90% 20%, 90% 10%, 80% 10%, 80% 0);
-          clip-path: polygon(20% 0, 20% 10%, 10% 10%, 10% 20%, 0 20%, 0 80%, 10% 80%, 10% 90%, 20% 90%, 20% 100%, 80% 100%, 80% 90%, 90% 90%, 90% 80%, 100% 80%, 100% 20%, 90% 20%, 90% 10%, 80% 10%, 80% 0);
+  clip-path: polygon(20% 0, 20% 10%, 10% 10%, 10% 20%, 0 20%, 0 80%, 10% 80%, 10% 90%, 20% 90%, 20% 100%, 80% 100%, 80% 90%, 90% 90%, 90% 80%, 100% 80%, 100% 20%, 90% 20%, 90% 10%, 80% 10%, 80% 0);
 }
 html body main.staticpages section {
   margin-top: 1.6rem;
@@ -1056,16 +1017,10 @@ html body.dark-mode main a {
 html body.dark-mode main.all-villagers .search {
   background-color: rgba(214, 30, 146, 0.4);
 }
-html body.dark-mode main.all-villagers .search::-moz-placeholder {
-  color: #D9D9D9;
-}
 html body.dark-mode main.all-villagers .search::placeholder {
   color: #D9D9D9;
 }
 html body.dark-mode main.all-villagers .search:focus {
-  color: #FAFAFA;
-}
-html body.dark-mode main form.forms fieldset input[type=text]::-moz-placeholder, html body.dark-mode main form.forms fieldset input[type=password]::-moz-placeholder, html body.dark-mode main form.forms fieldset input[type=email]::-moz-placeholder {
   color: #FAFAFA;
 }
 html body.dark-mode main form.forms fieldset input[type=text]::placeholder, html body.dark-mode main form.forms fieldset input[type=password]::placeholder, html body.dark-mode main form.forms fieldset input[type=email]::placeholder {
@@ -1086,9 +1041,11 @@ html body.dark-mode main.games ul li a {
 }
 html body.transition {
   transition: background-color 0.3s ease-in-out;
+  -webkit-transition: background-color 0.3s ease-in-out;
 }
 html body.transition main, html body.transition main > * {
   transition: background-color 0.3s ease-in-out;
+  -webkit-transition: background-color 0.3s ease-in-out;
 }
 
 /**** MEDIA QUERIES FOR TABLETS ****/
@@ -1104,4 +1061,6 @@ html body.transition main, html body.transition main > * {
     box-shadow: none;
     padding: 1.6rem 0.6rem;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
