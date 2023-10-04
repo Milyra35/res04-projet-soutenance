@@ -97,7 +97,9 @@ class UserController extends AbstractController {
                     $_SESSION['user'] = $user;
                     $_SESSION['role'] = $user->getRole()->getName();
 
-                    header("Location:/res04-projet-soutenance/my-games");
+                    header('Content-Type: application/json');
+                    $this->toJson(['login' => true, 'admin' => false]);
+                    // header("Location:/res04-projet-soutenance/my-games");
                 }
                 // If an admin logins
                 else if(isset($user) && $user->getRole()->getName() === "admin" && password_verify($password, $user->getPassword()))
@@ -106,16 +108,22 @@ class UserController extends AbstractController {
                     $_SESSION['admin'] = $user;
                     $_SESSION['role'] = $user->getRole()->getName();
                     
-                    header("Location:/res04-projet-soutenance/admin");
+                    header('Content-Type: application/json');
+                    $this->toJson(['login' => true, 'admin' => true]);
+                    // header("Location:/res04-projet-soutenance/admin");
                 }
                 else
                 {
-                    $this->render("user/login.phtml", ['message' => "Invalid username"]);
+                    header('Content-Type: application/json');
+                    $this->toJson(['login' => false]);
+                    // $this->render("user/login.phtml", ['message' => "Invalid username"]);
                 }
             }
             else
             {
-                $this->render("user/login.phtml", ['message' => "Invalid username or password"]);
+                header('Content-Type: application/json');
+                $this->toJson(['login' => false]);
+                // $this->render("user/login.phtml", ['message' => "Invalid username or password"]);
             }
         }
         else

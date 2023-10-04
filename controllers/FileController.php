@@ -228,27 +228,27 @@ class FileController extends AbstractController {
             {
                 $isMine = true;
             }
-            else if((string) $location === "TH_Railroad")
+            if((string) $location === "TH_Railroad")
             {
                 $isRailroad = true;
             }
-            else if((string) $location === "VisitedQuarryMine")
+            if((string) $location === "VisitedQuarryMine")
             {
                 $isQuarry = true;
             }
-            else if((string) $location === "skullCave")
+            if((string) $location === "skullCave")
             {
                 $isSkull = true;
             }
-            else if((string) $location === "OpenedSewer")
+            if((string) $location === "OpenedSewer")
             {
                 $isSewer = true;
             }
-            else if((string) $location === "Visited_Island")
+            if((string) $location === "Visited_Island")
             {
                 $isGinger = true;
             }
-            else if((string) $location === "Summit_event")
+            if((string) $location === "Summit_event")
             {
                 $isSummit = true;
             }

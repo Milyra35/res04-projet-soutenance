@@ -724,8 +724,12 @@ form.forms fieldset p.info span {
 form.forms fieldset p.info:hover span {
   visibility: visible;
 }
-form.forms a.pink {
+form.forms .error {
   color: #D61E92;
+}
+form.forms a.pink {
+  color: #0CC09E;
+  font-weight: bolder;
 }
 form.forms input[type=submit] {
   justify-self: center;
