@@ -1454,15 +1454,25 @@ class FileController extends AbstractController {
                 // To get the file name
                 $fileName = htmlspecialchars($file['name']);
                 
-                // To move the file to the right path
-                $path = 'data/uploadedfile/' . $fileName . '.xml';
-                $filePath = "/".$path;
-                move_uploaded_file($file['tmp_name'], $path);
+                // To check if the file has an extension
+                $fileExtension = pathinfo($fileName, PATHINFO_EXTENSION);
 
-                $newFile = new SavedFile($_SESSION['user'], $fileName, $filePath);
-                $newFile->setDate($uploadDate);
-                
-                $this->fm->addFile($newFile);
+                if(empty($fileExtension))
+                {
+                    // To move the file to the right path
+                    $path = 'data/uploadedfile/' . $fileName . '.xml';
+                    $filePath = "/".$path;
+                    move_uploaded_file($file['tmp_name'], $path);
+
+                    $newFile = new SavedFile($_SESSION['user'], $fileName, $filePath);
+                    $newFile->setDate($uploadDate);
+                    
+                    $this->fm->addFile($newFile);
+                }
+                else
+                {
+                    echo "<p>Wrong file format</p>";
+                }
             }
             else
             {
@@ -1478,6 +1488,7 @@ class FileController extends AbstractController {
                 }
                 else
                 {
+                    echo "Trye again later";
                     // var_dump($_FILES['saved-file']['error']);
                     $this->toJson(['message' => "Try again later"]);
                 }

@@ -11,7 +11,7 @@ function darkMode()
     if(isDarkMode)
     {
         // If isDarkMode is in the local storage, i add the class dark-mode
-        body.classList.add('dark-mode', 'transition');
+        body.classList.add('dark-mode');
     }
 
     // And when i click on the button, i change the state of the dark mode

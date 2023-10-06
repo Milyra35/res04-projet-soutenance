@@ -754,8 +754,12 @@ form.forms fieldset p.info span {
 form.forms fieldset p.info:hover span {
   visibility: visible;
 }
-form.forms a.pink {
+form.forms .error {
   color: #D61E92;
+}
+form.forms a.pink {
+  color: #0CC09E;
+  font-weight: bolder;
 }
 form.forms input[type=submit] {
   justify-self: center;
@@ -1086,9 +1090,11 @@ html body.dark-mode main.games ul li a {
 }
 html body.transition {
   transition: background-color 0.3s ease-in-out;
+  -webkit-transition: background-color 0.3s ease-in-out;
 }
 html body.transition main, html body.transition main > * {
   transition: background-color 0.3s ease-in-out;
+  -webkit-transition: background-color 0.3s ease-in-out;
 }
 
 /**** MEDIA QUERIES FOR TABLETS ****/

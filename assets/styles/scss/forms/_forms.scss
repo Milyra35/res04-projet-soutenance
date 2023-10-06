@@ -82,9 +82,14 @@ form {
             }
         }
 
+        .error {
+            color: $pink;
+        }
+
         a {
             &.pink {
-                color: $pink;
+                color: $green;
+                font-weight: bolder;
             }
         }
 
