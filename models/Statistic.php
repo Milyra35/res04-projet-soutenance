@@ -7,8 +7,10 @@ class Statistic {
     private int $daysSpent;
     private int $seasonsPassed;
     private int $fishCatched;
+	private int $monstersKilled;
+	private int $moneyEarned;
 
-    public function __construct(SavedFile $file, int $hoursPlayed, int $daysSpent, int $seasonsPassed, int $fishCatched)
+    public function __construct(SavedFile $file, int $hoursPlayed, int $daysSpent, int $seasonsPassed, int $fishCatched, int $monstersKilled, int $moneyEarned)
     {
         $this->id = null;
         $this->file = $file;
@@ -16,6 +18,8 @@ class Statistic {
         $this->daysSpent = $daysSpent;
         $this->seasonsPassed = $seasonsPassed;
         $this->fishCatched = $fishCatched;
+		$this->monstersKilled = $monstersKilled;
+		$this->moneyEarned = $moneyEarned;
     }
     
 
@@ -71,6 +75,24 @@ class Statistic {
 	public function setFishCatched(int $fishCatched) : void
 	{
 		$this->fishCatched = $fishCatched;
+	}
+
+	public function getMonstersKilled() : int
+	{
+		return $this->monstersKilled;
+	}
+	public function setMonstersKilled(int $monstersKilled) : void
+	{
+		$this->monstersKilled = $monstersKilled;
+	}
+
+	public function getMoneyEarned() : int
+	{
+		return $this->moneyEarned;
+	}
+	public function setMoneyEarned(int $moneyEarned) : void
+	{
+		$this->moneyEarned = $moneyEarned;
 	}
 }
 

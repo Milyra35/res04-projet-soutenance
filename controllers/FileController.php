@@ -150,8 +150,10 @@ class FileController extends AbstractController {
         $daysSpent = intval($xml->player->stats->daysPlayed);
         $seasonsPassed = intval($daysSpent / 28);
         $fishCaught = intval($xml->player->stats->fishCaught);
+        $monstersKilled = intval($xml->player->stats->monstersKilled);
+        $moneyEarned = intval($xml->player->totalMoneyEarned);
 
-        $newStat = new Statistic($file, $hoursPlayed, $daysSpent, $seasonsPassed, $fishCaught);
+        $newStat = new Statistic($file, $hoursPlayed, $daysSpent, $seasonsPassed, $fishCaught, $monstersKilled, $moneyEarned);
         $this->sm->addStatistics($newStat);
 
 

@@ -21,14 +21,16 @@ class StatisticManager extends AbstractManager {
 
         if(!$existingStat)
         {
-            $insert=$this->db->prepare("INSERT INTO statistics (file_id, hours_played, days_spent, seasons_passed, fish_catched)
-                                VALUES (:file_id, :hours, :days, :seasons, :fish)");
+            $insert=$this->db->prepare("INSERT INTO statistics (file_id, hours_played, days_spent, seasons_passed, fish_catched, monsters_killed, money_earned)
+                                VALUES (:file_id, :hours, :days, :seasons, :fish, :monster, :money)");
             $insertParam=[
                 'file_id' => $stat->getFile()->getId(),
                 'hours' => $stat->getHoursPlayed(),
                 'days' => $stat->getDaysSpent(),
                 'seasons' => $stat->getSeasonsPassed(),
-                'fish' => $stat->getFishCatched()
+                'fish' => $stat->getFishCatched(),
+                'monster' => $stat->getMonstersKilled(),
+                'money' => $stat->getMoneyEarned()
             ];
             $insert->execute($insertParam);
 
@@ -41,14 +43,18 @@ class StatisticManager extends AbstractManager {
                 hours_played = :hours,
                 days_spent = :days,
                 seasons_passed = :seasons,
-                fish_catched = :fish
+                fish_catched = :fish,
+                monsters_killed = :monster,
+                money_earned = :money
                 WHERE file_id = :file_id");
             $updateParam= [
                 'file_id' => $stat->getFile()->getId(),
                 'hours' => $stat->getHoursPlayed(),
                 'days' => $stat->getDaysSpent(),
                 'seasons' => $stat->getSeasonsPassed(),
-                'fish' => $stat->getFishCatched()
+                'fish' => $stat->getFishCatched(),
+                'monster' => $stat->getMonstersKilled(),
+                'money' => $stat->getMoneyEarned()
             ];
             $update->execute($updateParam);
         }
@@ -64,7 +70,7 @@ class StatisticManager extends AbstractManager {
         $query->execute($parameters);
         $data=$query->fetch(PDO::FETCH_ASSOC);
 
-        $newStat = new Statistic($this->fm->getFileById($data['file_id']), $data['hours_played'], $data['days_spent'], $data['seasons_passed'], $data['fish_catched']);
+        $newStat = new Statistic($this->fm->getFileById($data['file_id']), $data['hours_played'], $data['days_spent'], $data['seasons_passed'], $data['fish_catched'], $data['monsters_killed'], $data['money_earned']);
         $newStat->setId($data['id']);
 
         return $newStat;
@@ -81,7 +87,7 @@ class StatisticManager extends AbstractManager {
 
         foreach($data as $stat)
         {
-            $newStat = new Statistic($this->fm->getFileById($stat['file_id']), $stat['hours_played'], $stat['days_spent'], $stat['seasons_passed'], $stat['fish_catched']);
+            $newStat = new Statistic($this->fm->getFileById($stat['file_id']), $stat['hours_played'], $stat['days_spent'], $stat['seasons_passed'], $stat['fish_catched'], $data['monsters_killed'], $data['money_earned']);
             $newStat->setId($stat['id']);
             $stats[] = $newStat;
         }

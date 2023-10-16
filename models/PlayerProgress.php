@@ -4,7 +4,6 @@ class PlayerProgress {
     private ?int $id;
     private SavedFile $file;
     private string $playerName;
-    // private int $experienceLevel;
     private int $money;
     private int $health;
     private int $energy;
@@ -20,7 +19,6 @@ class PlayerProgress {
         $this->id = null;
         $this->file = $file;
         $this->playerName = $playerName;
-        // $this->experienceLevel = $experienceLevel;
         $this->money = $money;
         $this->health = $health;
         $this->energy = $energy;
