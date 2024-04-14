@@ -10,7 +10,7 @@ abstract class AbstractManager
         $this->db = new PDO(
             $connexion,
             "root",
-            "bonjour"
+            "bonjour4628"
         );
     }
 }
